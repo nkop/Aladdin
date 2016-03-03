@@ -1,0 +1,20 @@
+.header .navbar-nav > li:hover > a {
+    color: #b30000;
+}
+
+.header .navbar-nav > .active > a {
+    color: #b30000;
+}
+
+.header .navbar-nav > li > a:hover, .header .navbar-nav > .active > a {
+    border-bottom: solid 2px #b30000;
+}
+
+.header .dropdown-menu {
+    border-top: solid 2px #b30000;
+}
+
+.headline h2, .headline h3, .headline h4 {
+    border-bottom: 2px solid #b30000;
+}
+
