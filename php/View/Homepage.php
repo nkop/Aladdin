@@ -4,14 +4,14 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
 <head>
     <title>Alladin | Home</title>
-	<?php include 'Assets/Head.php';?>
+	<?php include 'Assets/php/Head.php';?>
 
 </head>	
 
 <body>    
 
 <div class="wrapper">    
-   <?php include 'Assets/NavTop.php';?>
+   <?php include 'Assets/php/NavTop.php';?>
 
     <!--=== Slider ===-->
     <div id="layerslider" style="width: 100%; height: 500px; margin: 0px auto;">
@@ -290,11 +290,11 @@ Maecenas orci justo, suscipit eu nisi eu, rutrum eleifend nibh. Pellentesque in 
         <!-- End Owl Clients v1 -->        
     </div><!--/container-->		
     <!-- End Content Part -->
-	<?php include 'Assets/Footer.php';?>
+	<?php include 'Assets/php/Footer.php';?>
    
 </div><!--/wrapper-->
 
-<?php include 'Assets/jsCall.php';?>
+<?php include 'Assets/php/jsCall.php';?>
 
 </body>
 </html>	
