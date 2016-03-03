@@ -2,7 +2,7 @@
     <div class="header">
         <div class="container">
             <!-- Logo -->
-            <a class="logo" href="homepage.html">
+            <a class="logo" href="homepage.php">
                 <img src="images/Alladin.png" alt="Logo" height="50">
             </a>
             <!-- End Logo -->
@@ -23,7 +23,7 @@
                     <li class="topbar-devider"></li>   
                     <li><a href="page_faq.html">Help</a></li>  
                     <li class="topbar-devider"></li>   
-                    <li><a href="page_login.html">Login</a></li>   
+                    <li><a href="page_login.php">Login</a></li>   
                 </ul>
             </div>
             <!-- End Topbar -->
