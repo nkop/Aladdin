@@ -37,10 +37,21 @@ class Database
 		return $this->_connection;
 	}
 	
-	function selectquery($sql)
+	function selectquery($query)
 	{
 		
 	}
+	
+	function insert_user($gebruikersnaam, $voornaam, $achternaam, $tussenvoegsel, $geboortedatum, $email, $straatnaam, $huisnummer, $postcode, $woonplaats, $geslacht, $rechten){
+		$db = this::getInstance();
+		$sql = $db->getConnection();
+		$query = "INSERT INTO MyGuests (gebruikersnaam, voornaam, achternaam, tussenvoegsel, geboortedatum, email, straatnaam, huisnummer, postcode, woonplaats, geslacht, rechten) VALUES ({$gebruikersnaam}, {$voornaam}, {$achternaam}, {$tussenvoegsel}, {$geboortedatum}, {$email}, {$straatnaam}, {$huisnummer}, {$postcode}, {$woonplaats}, {$geslacht}, {$rechten})";                                                                                            
+		if (mysqli_query($sql, $query)) {
+			echo "New record created successfully";
+		} else {
+			echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+		}
+	} 
 }
 ?>
 	
