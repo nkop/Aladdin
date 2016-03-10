@@ -22,8 +22,18 @@
                     </li>
                     <li class="topbar-devider"></li>   
                     <li><a href="page_faq.html">Help</a></li>  
-                    <li class="topbar-devider"></li>   
-                    <li><a href="page_login.php">Login</a></li>   
+                    <li class="topbar-devider"></li> 
+                    <?php 
+                    session_start();
+                    if (isset($_SESSION['email'])){
+                    	echo "<li><a href='page_login.php?logout=true'>Logout</a></li> ";
+                    }
+                    else{
+                    	echo "<li><a href='page_login.php'>Login</a></li> ";
+                    }
+                    
+                    ?>  
+                      
                 </ul>
             </div>
             <!-- End Topbar -->
