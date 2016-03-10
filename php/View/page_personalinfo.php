@@ -12,7 +12,7 @@
 
 <div class="wrapper">    
 <?php include 'assets/php/NavTop.php';?>
-
+<?php include '../DB/Database.class.php';?>
     <!--=== Breadcrumbs ===-->
     <div class="breadcrumbs">
         <div class="container">
@@ -34,24 +34,40 @@
                     <div class="reg-header">
                         <h2>Persoonlijke informatie</h2>                    
                     </div>
-
+					<?php 	
+					$db = Database::getInstance();
+					$mysqli = $db->getConnection();
+					$sql_query = "select * from account where accountid = '1'";
+					$result = $mysqli->query($sql_query);
+					
+					while ($row = $result->fetch_object())
+					{
+						$Firstname = $row->voornaam;
+						$Lastname = $row->achternaam;
+						$Emailaddress = $row->email;
+						$ZipCode = $row->postcode;
+						$HouseNumber = $row->huisnummer;
+					}
+					$result->close();					
+					?>
+              											
                     <label>Voornaam</label>
-                    <input type="text" class="form-control margin-bottom-20">
+                    <input type="text" value=<?php echo $Firstname ?> class="form-control margin-bottom-20">
                    
                     <label>Achternaam</label>
-                    <input type="text" class="form-control margin-bottom-20">
+                    <input type="text" value=<?php echo $Lastname ?> class="form-control margin-bottom-20">
                    
                     <label>Emailadres</label>
-                    <input type="text" class="form-control margin-bottom-20">
+                    <input type="text" value=<?php echo $Emailaddress ?> class="form-control margin-bottom-20">
 
                     <div class="row">
                         <div class="col-sm-6">
                             <label>Postcode</label>
-                            <input type="text" class="form-control margin-bottom-20">
+                            <input type="text" value=<?php echo $ZipCode ?> class="form-control margin-bottom-20">
                         </div>
                         <div class="col-sm-6">
                             <label>Huisnummer</label>
-                            <input type="text" class="form-control margin-bottom-20">
+                            <input type="text" value=<?php echo $HouseNumber ?> class="form-control margin-bottom-20">
                         </div>
                     </div>
 
