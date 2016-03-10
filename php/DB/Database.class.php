@@ -22,6 +22,10 @@ class Database
 			trigger_error("Failed to conencto to MySQL: ".mysqli_connect_error(),
 					E_USER_ERROR);
 		}
+		
+		//include_once 'createscript.inc.php';
+		//doSql($sql);
+	
 	}	
 
 	public static function getInstance() {
@@ -38,9 +42,9 @@ class Database
 		return $this->_connection;
 	}
 	
-	function selectquery($query)
+	function doSQL($query)
 	{
-		
+		return mysqli_query($query);
 	}
 	
 	function insert_user(){
@@ -98,5 +102,4 @@ if (isset($_POST)) {
 	$firstObj= new Database();
 	$myvar = $firstObj->insert_user();
 }
-
 ?>
