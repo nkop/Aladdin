@@ -98,5 +98,4 @@ if (isset($_POST)) {
 	$firstObj= new Database();
 	$myvar = $firstObj->insert_user();
 }
-
 ?>
