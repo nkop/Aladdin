@@ -44,7 +44,8 @@ class Database
 	
 	function doSQL($query)
 	{
-		return mysqli_query($query);
+		$this->_connection->query ( $sql );
+		return $result;
 	}
 	
 	function insert_user(){
