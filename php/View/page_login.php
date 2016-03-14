@@ -58,22 +58,37 @@
     <div class="container content">		
     	<div class="row">
             <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+            <?php 
+            if (isset($_GET['login']))
+            {
+            	echo "
+				<div class='alert alert-danger'>
+				  <strong>Error!</strong> gebruikersnaam en wachtwoord komen niet overeen!
+				</div>
+				";
+            }
+            if (isset($_GET['logout'])){
+            	if (isset($_SESSION['email'])){
+            		session_destroy();
+            	}
+            }
+            ?>
                 <form class="reg-page" action="../Controller/Userlogin.php" method="post">
                     <div class="reg-header">            
                         <h2>Login</h2>
                     </div>
                     <div class="input-group margin-bottom-20">
                         <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                        <input type="text" name="username" placeholder="Username" class="form-control" required="required" value="<?php if(isset($_GET['username']))print $_GET['username']; ?>">
+                        <input type="text" name="username" placeholder="E-mail" class="form-control" required="required" value="<?php if(isset($_GET['username']))print $_GET['username']; ?>">
                     </div>                    
                     <div class="input-group margin-bottom-20">
                         <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                        <input type="password" name="password" placeholder="Password" class="form-control" required="required">
+                        <input type="password" name="password" placeholder="Wachtwoord" class="form-control" required="required">
                     </div>                    
 
                     <div class="row">
                         <div class="col-md-6 checkbox">
-                            <label><input type="checkbox"> Ingelogt blijven</label>                        
+                            <label><input type="checkbox"> Ingelogd blijven</label>                        
                         </div>
                         <div class="col-md-6">
                             <button class="btn btn-danger pull-right" type="submit"  name="login">
