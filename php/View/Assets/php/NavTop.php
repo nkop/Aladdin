@@ -69,38 +69,31 @@
                         </ul>
                     </li>
                     <!-- End Blog -->
-
-                    <!-- Features -->
+					<?php 	
+                    if (isset($_SESSION['email'])){
+                    echo '<!-- Features -->
                     <li class="dropdown">
                         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
                             Wensen en talenten
                         </a>
                         <ul class="dropdown-menu">
                             <li class="dropdown-submenu">
-                                <a href="javascript:void(0);">Headers</a>
+                                <a href="javascript:void(0);">Wensen</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="feature_header_v6_dark_scroll.html">Header v6 Dark on Scroll</a></li>
-                                    <li><a href="feature_header_v6_dark_search.html">Header v6 Dark Search</a></li>
-                                    <li><a href="feature_header_v6_dark_res_nav.html">Header v6 Dark in Responsive</a></li>
+                                    <li><a href="feature_header_v6_dark_scroll.html">Wensen toevoegen</a></li>
                                 </ul>                                
                             </li>                        
                             <li class="dropdown-submenu">
-                                <a href="javascript:void(0);">Footers</a>
+                                <a href="javascript:void(0);">Talenten</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="feature_footer_default.html#footer-default">Footer Default</a></li>
-                                    <li><a href="feature_footer_v1.html#footer-v1">Footer v1</a></li>
-                                    <li><a href="feature_footer_v2.html#footer-v2">Footer v2</a></li>
-                                    <li><a href="feature_footer_v3.html#footer-v3">Footer v3</a></li>
+                                    <li><a href="feature_footer_default.html#footer-default">Talenten toevoegen</a></li>
                                 </ul>                                
                             </li>
-                            <li><a href="feature_gallery.html">Gallery Examples</a></li>
-                            <li><a href="feature_animations.html">Animations on Scroll</a></li>
-                            <li><a href="feature_parallax_counters.html">Parallax Counters</a></li>
-                            <li><a href="feature_parallax_blocks.html">Parallax Blocks</a></li>                                                       
-                            <li><a href="feature_funny_boxes.html">Funny Boxes</a></li>
                         </ul>
                     </li>                    
-                    <!-- End Features -->
+                    <!-- End Features -->';
+        			}
+                    ?>
                     
                     <!-- Portfolio -->
                     <li class="dropdown">

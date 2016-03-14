@@ -87,9 +87,7 @@
                     </div>                    
 
                     <div class="row">
-                        <div class="col-md-6 checkbox">
-                            <label><input type="checkbox"> Ingelogd blijven</label>                        
-                        </div>
+                        <div class="col-md-6"></div>
                         <div class="col-md-6">
                             <button class="btn btn-danger pull-right" type="submit"  name="login">
                             	Login
