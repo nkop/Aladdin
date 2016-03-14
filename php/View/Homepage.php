@@ -11,7 +11,10 @@
 <body>    
 
 <div class="wrapper">    
-   <?php include 'Assets/php/NavTop.php';?>
+   <?php 
+   include 'Assets/php/NavTop.php';
+   ?>
+   
 
     <!--=== Slider ===-->
     <div id="layerslider" style="width: 100%; height: 500px; margin: 0px auto;">
