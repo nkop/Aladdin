@@ -3,7 +3,7 @@
         <div class="container">
             <!-- Logo -->
             <a class="logo" href="homepage.php">
-                <img src="images/Alladin.png" alt="Logo" height="50">
+                <img src="images/logo.png" alt="Logo" height="80">
             </a>
             <!-- End Logo -->
             
@@ -26,10 +26,16 @@
                     <?php 
                     session_start();
                     if (isset($_SESSION['email'])){
-                    	echo "<li><a href='page_login.php?logout=true'>Logout</a></li> ";
+                    	if(strlen($_SESSION['email'])> 0){
+                    		echo "<li><a href='page_login.php?logout=true'>Logout</a></li> ";
+                    	}
+                    	else{
+                    		echo "<li><a href='page_login.php'>Login</a></li> ";
+                    	}
                     }
                     else{
-                    	echo "<li><a href='page_login.php'>Login</a></li> ";
+                    	
+                    	$_SESSION['email'] = "";
                     }
                     
                     ?>  
@@ -71,6 +77,7 @@
                     <!-- End Blog -->
 					<?php 	
                     if (isset($_SESSION['email'])){
+                    	if (strlen($_SESSION['email'])> 0){
                     echo '<!-- Features -->
                     <li class="dropdown">
                         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
@@ -92,6 +99,7 @@
                         </ul>
                     </li>                    
                     <!-- End Features -->';
+                    	}
         			}
                     ?>
                     

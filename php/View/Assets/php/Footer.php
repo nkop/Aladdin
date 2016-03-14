@@ -5,16 +5,23 @@
                 <div class="row">
                     <!-- About -->
                     <div class="col-md-3 md-margin-bottom-40">
-                        <a href="index.html"><img id="logo-footer" class="footer-logo" src="images/Alladin.png" alt="" width="80"></a>
-                        <p>About Unify dolor sit amet, consectetur adipiscing elit. Maecenas eget nisl id libero tincidunt sodales.</p>
-                        <p>Duis eleifend fermentum ante ut aliquam. Cras mi risus, dignissim sed adipiscing ut, placerat non arcu.</p>    
+                        <a href="index.html"><img id="logo-footer" class="footer-logo" src="images/logo.png" alt="" width="80"></a>
+           <p> Geluk komt in beweging<br />
+			Vreemden worden vrienden <br />
+			Er komt geen geld aan te pas <br />
+			Eigenwaarde groeit <br />
+			Kennis en wijsheid worden gedeeld <br />
+			Eenzaamheid vermindert <br />
+			Oordeel vermindert <br />
+			Liefdevolle aarde<br />
+			Meer plezier in het leven<br /> </p>  
                     </div><!--/col-md-3-->
                     <!-- End About -->
 
                     <!-- Latest -->
                     <div class="col-md-3 md-margin-bottom-40">
                         <div class="posts">
-                            <div class="headline"><h2>Latest Posts</h2></div>
+                            <div class="headline"><h2>Laatste berichten</h2></div>
                             <ul class="list-unstyled latest-list">
                                 <li>
                                     <a href="#">Nieuwe website</a>
@@ -47,7 +54,7 @@
 
                     <!-- Address -->
                     <div class="col-md-3 map-img md-margin-bottom-40">
-                        <div class="headline"><h2>Contact Us</h2></div>                         
+                        <div class="headline"><h2>Neem contact op</h2></div>                         
                         <address class="md-margin-bottom-40">
                             25, Lorem Lis Street, Orange <br />
                             Vught <br />
