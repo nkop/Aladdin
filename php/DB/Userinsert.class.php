@@ -1,8 +1,17 @@
 <?php
 class Userinsert{
-	
-function insert_user($sql, $voornaam, $achternaam, $tussenvoegsel, $date, $email, $straatnaam, $huisnummer, $postcode, $woonplaats, $geslacht, $rechten, $wachtwoord){
 
+	function calculateAge($datetime){
+		$birthday = new DateTime($datetime);
+		$now = new DateTime();
+		$interval = $birthday->diff($now);
+		return $interval->y;
+	}
+	
+function insert_user($sql, $gebruikersnaam, $voornaam, $achternaam, $tussenvoegsel, $date, $email, $straatnaam, $huisnummer, $postcode, $woonplaats, $geslacht, $rechten, $wachtwoord){
+
+	
+	echo $gebruikersnaam."<br>";
 	echo $voornaam."<br>";
 	echo $achternaam."<br>";
 	echo $tussenvoegsel."<br>";
@@ -16,7 +25,7 @@ function insert_user($sql, $voornaam, $achternaam, $tussenvoegsel, $date, $email
 	echo $wachtwoord."<br>";
 		
 	// 		$query = "INSERT INTO testing (id, naam, achternaam, nummer) VALUES ('1', 'mick', 'dep', '0634903897')";
-	$query = "INSERT INTO account (gebruikersnaam, voornaam, achternaam, tussenvoegsel, geboortedatum, email, straatnaam, huisnummer, postcode, woonplaats, geslacht, rechten, wachtwoord) VALUES ('Mickey2', '$voornaam', '$achternaam', '$tussenvoegsel' , '$date', '$email' , '$straatnaam', '$huisnummer', '$postcode', '$woonplaats', '$geslacht', '$rechten', '$wachtwoord')";
+	$query = "INSERT INTO account (gebruikersnaam, voornaam, achternaam, tussenvoegsel, geboortedatum, email, straatnaam, huisnummer, postcode, woonplaats, geslacht, rechten, wachtwoord) VALUES ('$gebruikersnaam', '$voornaam', '$achternaam', '$tussenvoegsel' , '$date', '$email' , '$straatnaam', '$huisnummer', '$postcode', '$woonplaats', '$geslacht', '$rechten', '$wachtwoord')";
 	if (mysqli_query($sql, $query)) {
 	echo "New record created successfully";
 	} else {
