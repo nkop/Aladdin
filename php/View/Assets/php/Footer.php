@@ -5,7 +5,7 @@
                 <div class="row">
                     <!-- About -->
                     <div class="col-md-3 md-margin-bottom-40">
-                        <a href="index.html"><img id="logo-footer" class="footer-logo" src="images/logo.png" alt="" width="80"></a>
+                        <a href="index.html"><img id="logo-footer" class="footer-logo" src="images/logo_white.png" alt="" width="80"></a>
            <p> Geluk komt in beweging<br />
 			Vreemden worden vrienden <br />
 			Er komt geen geld aan te pas <br />

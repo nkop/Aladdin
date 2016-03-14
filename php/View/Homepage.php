@@ -87,7 +87,7 @@
         	<div class="col-md-6 col-sm-12">
         	        	<h2 class="heading-sm">
                  <a class="link-bg-icon" href="#">
-                     <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-info"></i> 
+                     <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-star"></i> 
                      <span>Wat maakt Aladdin zo bijzonder?</span>
                  </a>
             </h2>
