@@ -30,32 +30,32 @@
     <div class="container content">
         <div class="row">
             <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-                <form class="reg-page" action="../DB/Database.class.php" method="post">
+                <form class="reg-page" action="../Controller/Userregistration.php" method="post">
                     <div class="reg-header">
                         <h2>Register a new account</h2>
                         <p>Already Signed Up? Click <a href="page_login.html" class="color-green">Sign In</a> to login your account.</p>                    
                     </div>
 				
                     <label>Voornaam<span class="color-red">*</span></label>
-                    <input type="text" name="voornaam" class="form-control margin-bottom-20">
+                    <input type="text" name="voornaam" class="form-control margin-bottom-20" required="required">
                    
                    	<label>Tussenvoegsel</label>
                     <input type="text" name="tussenvoegsel" class="form-control margin-bottom-20">
                    
                     <label>Achternaam<span class="color-red">*</span></label>
-                    <input type="text" name="achternaam" class="form-control margin-bottom-20">
+                    <input type="text" name="achternaam" class="form-control margin-bottom-20" required="required">
                    
                     <label>Email <span class="color-red">*</span></label>
-                    <input type="text" name="email" class="form-control margin-bottom-20">
+                    <input type="text" name="email" class="form-control margin-bottom-20" required="required">
 
                     <div class="row">
                         <div class="col-sm-6">
                             <label>Password <span class="color-red">*</span></label>
-                            <input type="password" name="wachtwoord" class="form-control margin-bottom-20">
+                            <input type="password" name="wachtwoord" class="form-control margin-bottom-20" required="required">
                         </div>
                         <div class="col-sm-6">
                             <label>Confirm Password <span class="color-red">*</span></label>
-                            <input type="password" name="confirmpassword" class="form-control margin-bottom-20">
+                            <input type="password" name="confirmwachtwoord" class="form-control margin-bottom-20" required="required">
                         </div>
                     </div>
 				
@@ -64,15 +64,15 @@
                     <label>Geboortedatum<span class="color-red">*</span></label>
                     <div class="row">
                     	<div class="col-sm-3">
-                    		<input type="text" name="dag" class="form-control margin-bottom-20" placeholder="09">
+                    		<input type="text" name="dag" class="form-control margin-bottom-20" placeholder="09" required="required">
                     	</div>
                     	
                     	<div class="col-sm-3">
-                    		<input type="text" name="maand" class="form-control margin-bottom-20" placeholder="03">
+                    		<input type="text" name="maand" class="form-control margin-bottom-20" placeholder="03" required="required">
                     	</div>
                     	
                     	<div class="col-sm-3">
-                    		<input type="text" name="jaar" class="form-control margin-bottom-20" placeholder="2016">
+                    		<input type="text" name="jaar" class="form-control margin-bottom-20" placeholder="2016" required="required">
                     	</div>
                     </div>
                     
@@ -81,21 +81,21 @@
                    <div class="row">
                    		<div class="col-sm-6">
                     		<label>Straatnaam<span class="color-red">*</span></label>
-                    		<input type="text" name="straatnaam" class="form-control margin-bottom-20">
+                    		<input type="text" name="straatnaam" class="form-control margin-bottom-20" required="required">
                    		</div>
                    		<div class="col-sm-6">
                     		<label>Huisnummer<span class="color-red">*</span></label>
-                    		<input type="text" name="huisnummer" class="form-control margin-bottom-20">
+                    		<input type="text" name="huisnummer" class="form-control margin-bottom-20" required="required">
                     	</div>
                    </div>
                     <label>Postcode<span class="color-red">*</span></label>
-                    <input type="text" name="postcode" class="form-control margin-bottom-20">
+                    <input type="text" name="postcode" class="form-control margin-bottom-20" required="required">
                     
                     <label>Woonplaats<span class="color-red">*</span></label>
-                    <input type="text" name="woonplaats" class="form-control margin-bottom-20">
+                    <input type="text" name="woonplaats" class="form-control margin-bottom-20" required="required">
                     
                     <label>Geslacht<span class="color-red">*</span></label>
-                    <input type="text" name="geslacht" class="form-control margin-bottom-20">
+                    <input type="text" name="geslacht" class="form-control margin-bottom-20" required="required">
                     
                     <hr>
 
@@ -107,7 +107,7 @@
                             </label>                        
                         </div>
                         <div class="col-lg-6 text-right">
-                            <button class="btn-u" type="submit">Register</button>                        
+                            <button class="btn-u" type="submit" name="register">Register</button>                        
                         </div>
                     </div>
                 </form>
