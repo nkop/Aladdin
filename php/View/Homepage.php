@@ -3,7 +3,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
 <head>
-    <title>Alladin | Home</title>
+    <title>Aladdin | Home</title>
 	<?php include 'Assets/php/Head.php';?>
 
 </head>	
@@ -75,30 +75,57 @@
         	<div class="col-md-12">
         	<h2 class="heading-sm">
                  <a class="link-bg-icon" href="#">
-                     <i class="icon-custom icon-sm rounded-x icon-bg-dark fa fa-thumbs-o-up"></i> 
+                     <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-thumbs-o-up"></i> 
                      <span>Alladin</span>
                  </a>
             </h2>
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nunc dolor, volutpat id massa vitae, rhoncus dictum dolor. Suspendisse quis vehicula lectus. Nam ornare nunc id dignissim placerat. Suspendisse potenti. In consequat luctus lectus, suscipit porta est. Pellentesque iaculis efficitur ex, vitae pulvinar dolor commodo id. Integer eget elit non elit lobortis posuere vitae eu mi. Fusce pellentesque leo nunc, vitae condimentum dolor lacinia non. Aliquam congue vitae purus suscipit sodales. Integer ac blandit nulla, eu convallis tellus.
-
-Maecenas orci justo, suscipit eu nisi eu, rutrum eleifend nibh. Pellentesque in tortor eu elit cursus ultricies. Nullam posuere consequat lacus eget gravida. Vestibulum nec congue diam. Nunc efficitur ultrices enim, a hendrerit lectus accumsan eu. Donec non metus turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam quis gravida risus, nec vehicula turpis.
+           Stichting Aladdin wil dat iedereen op de wereld een beetje gelukkiger wordt. Daarom mag je via deze website drie hartenwensen indienen, die je altijd al hebt willen doen of meemaken. Daarnaast weet Aladdin dat iedereen talenten heeft. Ja, ook jij! Met jouw talenten kun je hartenwensen van anderen vervullen. Een leuke bijkomstigheid is dat je van geven zelf ook gelukkiger wordt. Je zet je eigen geluk in beweging. Dat is de kracht van Aladdin en zo werkt iedereen mee aan een wereldsprookje.Wil je meedoen, klik dan op een van de symbolen. (kinderen, volwassenen, ouderen, beperkten, bedrijven) Dan kun je jezelf inschrijven en een vragenlijst invullen. Je wensen en talenten worden verzameld in een database en je kunt meteen al zien of er een match is.  Soms heb je wat meer geduld nodig voordat een wens vervuld is, maar wel kun je alvast wensen van anderen vervullen. Heb je een wens van een ander vervuld, dan mag je een extra wens indienen. Weet je niet zo goed wat je hartenwensen of talenten zijn, zoek dan bij de trefwoorden bij het hart of de ster.
             </p>
         	
         	</div>
-        	<div class="col-md-12">
+        	<div class="col-md-6 col-sm-12">
         	        	<h2 class="heading-sm">
                  <a class="link-bg-icon" href="#">
-                     <i class="icon-custom icon-sm rounded-x icon-bg-dark fa fa-info"></i> 
-                     <span>Hoe werkt het?</span>
+                     <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-info"></i> 
+                     <span>Wat maakt Aladdin zo bijzonder?</span>
                  </a>
             </h2>
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nunc dolor, volutpat id massa vitae, rhoncus dictum dolor. Suspendisse quis vehicula lectus. Nam ornare nunc id dignissim placerat. Suspendisse potenti. In consequat luctus lectus, suscipit porta est. Pellentesque iaculis efficitur ex, vitae pulvinar dolor commodo id. Integer eget elit non elit lobortis posuere vitae eu mi. Fusce pellentesque leo nunc, vitae condimentum dolor lacinia non. Aliquam congue vitae purus suscipit sodales. Integer ac blandit nulla, eu convallis tellus.
-
-Maecenas orci justo, suscipit eu nisi eu, rutrum eleifend nibh. Pellentesque in tortor eu elit cursus ultricies. Nullam posuere consequat lacus eget gravida. Vestibulum nec congue diam. Nunc efficitur ultrices enim, a hendrerit lectus accumsan eu. Donec non metus turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam quis gravida risus, nec vehicula turpis.
+            Geluk komt in beweging<br />
+			Vreemden worden vrienden <br />
+			Er komt geen geld aan te pas <br />
+			Eigenwaarde groeit <br />
+			Kennis en wijsheid worden gedeeld <br />
+			Eenzaamheid vermindert <br />
+			Oordeel vermindert <br />
+			Liefdevolle aarde<br />
+			Meer plezier in het leven<br />
+			<strong><h5>Facebook zonder face, maar met een hart</h5></strong>
             </p>
         	</div>
+        	<div class="col-md-6 col-sm-12">
+        	<h2 class="heading-sm">
+                 <a class="link-bg-icon" href="#">
+                     <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-heart"></i> 
+                     <span>Wat kan?</span>
+                 </a>
+            </h2>
+            <p>
+           De mogelijkheden zijn ongekend; gitaar leren spelen, als ridder rondlopen in de Efteling, een tractor besturen, in een diertuin of weeshuis werken, in een circus optreden, bij een kledingontwerper in de leer, een nieuw ijsje ontwikkelen, met een grote groep mensen een kunstwerk maken of een flashmob organiseren en nog v&eacute;&eacute;l meer. 
+            </p>
+            
+            <h2 class="heading-sm">
+                 <a class="link-bg-icon" href="#">
+                     <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-thumbs-down"></i> 
+                     <span>Wat kan niet?</span>
+                 </a>
+            </h2>
+            <p>
+          Geen materi&euml;le wensen (geen bezit), geen seks, geen geweld, geen drugs, geen klussen.
+            </p>
+        	</div>
+        	
         
         </div>
         <!-- End Service Blokcs --> 
@@ -110,7 +137,7 @@ Maecenas orci justo, suscipit eu nisi eu, rutrum eleifend nibh. Pellentesque in 
     			<div class="headline"><h2>Hallo, dit is Alladin</h2></div>
                 <div class="row">
                     <div class="col-sm-4">
-                        <img class="img-responsive margin-bottom-20" src="assets/img/main/img12.jpg" alt="">
+                        <img class="img-responsive margin-bottom-20" src="assets/img/stock/make_a_wish.jpg" alt="">
                     </div>
                     <div class="col-sm-8">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nunc dolor</p>
