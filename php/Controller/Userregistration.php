@@ -15,6 +15,13 @@ if (isset($_POST["register"])) {
 	}
 }
 
+function calculateAge($datetime){
+	$birthday = new DateTime($datetime);
+	$now = new DateTime();
+	$interval = $birthday->diff($now);
+	return $interval->y;
+}
+
 if($canPass){
 	$db = Database::getInstance();
 	$sql = $db->getConnection();
@@ -38,8 +45,10 @@ if($canPass){
 	$geslacht = $_POST["geslacht"];
 	$rechten = 2;
 	$wachtwoord = $_POST["wachtwoord"];
+	$gebruikersnaam = substr($voornaam, 0, 1).substr($achternaam, 0, 1).calculateAge($date);
+	$gebruikersnaam = strtolower($gebruikersnaam);
 	
 	$insertclass = new Userinsert();
-	$var = $insertclass->insert_user($sql, $voornaam, $achternaam, $tussenvoegsel, $date, $email, $straatnaam, $huisnummer, $postcode, $woonplaats, $geslacht, $rechten, $wachtwoord);
+	$var = $insertclass->insert_user($sql, $gebruikersnaam, $voornaam, $achternaam, $tussenvoegsel, $date, $email, $straatnaam, $huisnummer, $postcode, $woonplaats, $geslacht, $rechten, $wachtwoord);
 	
 }
