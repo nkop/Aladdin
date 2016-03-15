@@ -51,11 +51,11 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <label>Password <span class="color-red">*</span></label>
-                            <input type="password" name="wachtwoord" class="form-control margin-bottom-20" required="required">
+                            <input id="password" type="password" name="wachtwoord" class="form-control margin-bottom-20" required="required">
                         </div>
                         <div class="col-sm-6">
                             <label>Confirm Password <span class="color-red">*</span></label>
-                            <input type="password" name="confirmwachtwoord" class="form-control margin-bottom-20" required="required">
+                            <input type="password" name="confirmwachtwoord" class="form-control margin-bottom-20" required="required" oninput="check(this)" >
                         </div>
                     </div>
 				
@@ -108,6 +108,7 @@
                                 I read <a href="page_terms.html" class="color-green">Terms and Conditions</a>
                             </label>                        
                         </div>
+                        <script src="../View/Assets/js/passwordCheck.js"></script>
                         <div class="col-lg-6 text-right">
                             <button class="btn-u" type="submit" name="register">Register</button>                        
                         </div>
