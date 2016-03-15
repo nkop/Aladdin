@@ -5,35 +5,7 @@
 <head>
     <title>Alladin | Home</title>
 
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.ico">
-
-    <!-- Web Fonts -->
-   <!--  <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>  -->
-
-    <!-- CSS Global Compulsory -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    <!-- CSS Header and Footer -->
-    <link rel="stylesheet" href="assets/css/headers/header-default.css">
-    <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
-
-    <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="assets/plugins/animate.css">
-    <link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
-    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
-    <link rel="stylesheet" href="assets/plugins/layer-slider/layerslider/css/layerslider.css">
-
-    <!-- CSS Customization -->
-    <link rel="stylesheet" href="assets/css/all.css">
+   <?php include'Assets/php/Head.php'?>
 </head>	
 
 <body>    
@@ -70,6 +42,9 @@
             if (isset($_GET['logout'])){
             	if (isset($_SESSION['email'])){
             		session_destroy();
+            		$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+            		$newLink = str_replace(end((explode('?', $actual_link))), "", $actual_link);
+            		header('Location: '.$newLink);
             	}
             }
             ?>
@@ -87,9 +62,7 @@
                     </div>                    
 
                     <div class="row">
-                        <div class="col-md-6 checkbox">
-                            <label><input type="checkbox"> Ingelogd blijven</label>                        
-                        </div>
+                        <div class="col-md-6"></div>
                         <div class="col-md-6">
                             <button class="btn btn-danger pull-right" type="submit"  name="login">
                             	Login
