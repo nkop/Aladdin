@@ -68,11 +68,11 @@
                     	</div>
                     	
                     	<div class="col-sm-3">
-                    		<input type="number" name="maand" class="form-control margin-bottom-20" min="0" max="31" placeholder="B.v: 03" required="required" maxlength="2">
+                    		<input type="number" name="maand" class="form-control margin-bottom-20" min="0" max="12" placeholder="B.v: 03" required="required" maxlength="2">
                     	</div>
                     	
                     	<div class="col-sm-3">
-                    		<input type="number" name="jaar" class="form-control margin-bottom-20" min="1900" placeholder="B.v: 2016" required="required" maxlength="4">
+                    		<input type="number" name="jaar" class="form-control margin-bottom-20" min="1900" max="2016" placeholder="B.v: 2016" required="required" maxlength="4">
                     	</div>
                     </div>
                     
@@ -104,7 +104,7 @@
                     <div class="row">
                         <div class="col-lg-6 checkbox">
                             <label>
-                                <input type="checkbox"> 
+                                <input type="checkbox" required="required"> 
                                 I read <a href="page_terms.html" class="color-green">Terms and Conditions</a>
                             </label>                        
                         </div>
