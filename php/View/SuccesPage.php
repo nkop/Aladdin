@@ -48,7 +48,7 @@
     <div class="container content">		
     	<div class="row">
             <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
-                <h4 class="color-green">Uw registratie is succesvol afgerond!</h4>
+                <h4 class="color-green">Uw registratie is succesvol afgerond!<br/>Bekijk uw inbox om deze registratie te bevestigen</h4>
             </div>
         </div><!--/row-->
     </div><!--/container-->		
