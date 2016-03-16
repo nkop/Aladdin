@@ -3,7 +3,7 @@
         <div class="container">
             <!-- Logo -->
             <a class="logo" href="homepage.php">
-                <img src="images/logo.png" alt="Logo" height="80">
+                <img src="images/logo.png" alt="Logo" height="60">
             </a>
             <!-- End Logo -->
             
@@ -34,7 +34,7 @@
                     	}
                     }
                     else{
-                    	
+                    	echo "<li><a href='page_login.php'>Login</a></li> ";
                     	$_SESSION['email'] = "";
                     }
                     
@@ -57,8 +57,8 @@
             <div class="container">
                 <ul class="nav navbar-nav">
                     <!-- Home -->
-                    <li class="active">
-                        <a href="homepage.html" class="dropdown-toggle" data-toggle="dropdown">
+                    <li >
+                        <a href="homepage.php">
                             Home
                         </a>
                     </li>
@@ -98,7 +98,12 @@
                             </li>
                         </ul>
                     </li>                    
-                    <!-- End Features -->';
+                    <!-- End Features -->
+            		<li >
+                        <a href="page_personalinfo.php">
+                            Profiel
+                        </a>
+                    </li>';
                     	}
         			}
                     ?>
