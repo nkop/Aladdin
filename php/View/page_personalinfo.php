@@ -92,7 +92,7 @@
 							</div>
 							<div class="col-sm-6">
 								<label>Huisnummer</label> 
-								<input type="text" name="HouseNumberInput" value="<?php echo $HouseNumber?>" class="form-control margin-bottom-20">
+								<input type="number" name="HouseNumberInput" value="<?php echo $HouseNumber?>" class="form-control margin-bottom-20">
 							</div>
 						</div>
 						

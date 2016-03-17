@@ -51,28 +51,28 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <label>Password <span class="color-red">*</span></label>
-                            <input type="password" name="wachtwoord" class="form-control margin-bottom-20" required="required">
+                            <input id="password" type="password" name="wachtwoord" class="form-control margin-bottom-20" required="required">
                         </div>
                         <div class="col-sm-6">
                             <label>Confirm Password <span class="color-red">*</span></label>
-                            <input type="password" name="confirmwachtwoord" class="form-control margin-bottom-20" required="required">
+                            <input type="password" name="confirmwachtwoord" class="form-control margin-bottom-20" required="required" oninput="check(this)" >
                         </div>
                     </div>
 				
                     <hr>
                     
-                    <label>Geboortedatum<span class="color-red">*</span></label>
+                    <label>Geboortedatum (dd-mm-yyyy)<span class="color-red">*</span></label>
                     <div class="row">
                     	<div class="col-sm-3">
-                    		<input type="text" name="dag" class="form-control margin-bottom-20" placeholder="09" required="required">
+                    		<input type="number" name="dag" class="form-control margin-bottom-20" min="0" max="31" placeholder="B.v: 09" required="required" maxlength="2">
                     	</div>
                     	
                     	<div class="col-sm-3">
-                    		<input type="text" name="maand" class="form-control margin-bottom-20" placeholder="03" required="required">
+                    		<input type="number" name="maand" class="form-control margin-bottom-20" min="0" max="12" placeholder="B.v: 03" required="required" maxlength="2">
                     	</div>
                     	
                     	<div class="col-sm-3">
-                    		<input type="text" name="jaar" class="form-control margin-bottom-20" placeholder="2016" required="required">
+                    		<input type="number" name="jaar" class="form-control margin-bottom-20" min="1900" max="2016" placeholder="B.v: 2016" required="required" maxlength="4">
                     	</div>
                     </div>
                     
@@ -95,17 +95,20 @@
                     <input type="text" name="woonplaats" class="form-control margin-bottom-20" required="required">
                     
                     <label>Geslacht<span class="color-red">*</span></label>
-                    <input type="text" name="geslacht" class="form-control margin-bottom-20" required="required">
-                    
+                    	<select class="form-control margin-bottom-20" name="geslacht">
+                    		<option value="m">Man</option>
+                    		<option value="v">Vrouw</option>
+                    	</select>
                     <hr>
 
                     <div class="row">
                         <div class="col-lg-6 checkbox">
                             <label>
-                                <input type="checkbox"> 
+                                <input type="checkbox" required="required"> 
                                 I read <a href="page_terms.html" class="color-green">Terms and Conditions</a>
                             </label>                        
                         </div>
+                        <script src="../View/Assets/js/passwordCheck.js"></script>
                         <div class="col-lg-6 text-right">
                             <button class="btn-u" type="submit" name="register">Register</button>                        
                         </div>
