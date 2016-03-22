@@ -1,4 +1,5 @@
 <?php
+
 class Userinsert{
 	
 	function calculateAge($datetime){
@@ -10,19 +11,20 @@ class Userinsert{
 	
 function insert_user($sql, $gebruikersnaam, $voornaam, $achternaam, $tussenvoegsel, $date, $email, $straatnaam, $huisnummer, $postcode, $woonplaats, $geslacht, $rechten, $wachtwoord){
 
-	$gebruikersnaam = mysqli_real_escape_string($gebruikersnaam);
-	$voornaam = mysqli_real_escape_string($voornaam);
-	$achternaam = mysqli_real_escape_string($achternaam);
-	$tussenvoegsel = mysqli_real_escape_string($tussenvoegsel);
-	$email = mysqli_real_escape_string($email);
-	$straatnaam = mysqli_real_escape_string($straatnaam);
-	$huisnummer = mysqli_real_escape_string($huisnummer);
-	$postcode = mysqli_real_escape_string($postcode);
-	$woonplaats = mysqli_real_escape_string($woonplaats);
-	$geslacht = mysqli_real_escape_string($geslacht);
-	$rechten = mysqli_real_escape_string($rechten);
-	$wachtwoord = mysqli_real_escape_string($wachtwoord);
-	$date = mysqli_real_escape_string($date);
+	$gebruikersnaam = mysqli_real_escape_string($sql, $gebruikersnaam);
+	$voornaam = mysqli_real_escape_string($sql, $voornaam);
+	$achternaam = mysqli_real_escape_string($sql, $achternaam);
+	$tussenvoegsel = mysqli_real_escape_string($sql, $tussenvoegsel);
+	$email = mysqli_real_escape_string($sql, $email);
+	$straatnaam = mysqli_real_escape_string($sql, $straatnaam);
+	$huisnummer = mysqli_real_escape_string($sql, $huisnummer);
+	$postcode = mysqli_real_escape_string($sql, $postcode);
+	$woonplaats = mysqli_real_escape_string($sql, $woonplaats);
+	$geslacht = mysqli_real_escape_string($sql, $geslacht);
+	$rechten = mysqli_real_escape_string($sql, $rechten);
+	$wachtwoord = mysqli_real_escape_string($sql, $wachtwoord);
+	$date = mysqli_real_escape_string($sql, $date);
+	$wachtwoord = password_hash("$wachtwoord", PASSWORD_DEFAULT);
 		
 	$result = mysqli_query($sql, "SELECT 1 FROM account WHERE email = '$email'");
 	if ($result && mysqli_num_rows($result) > 0)
@@ -34,7 +36,7 @@ function insert_user($sql, $gebruikersnaam, $voornaam, $achternaam, $tussenvoegs
 	{
 		echo "NIET geregitreerd";
 		$query = "INSERT INTO account (gebruikersnaam, voornaam, achternaam, tussenvoegsel, geboortedatum, email, straatnaam, huisnummer, postcode, woonplaats, geslacht, rechten, wachtwoord) VALUES ('$gebruikersnaam', '$voornaam', '$achternaam', '$tussenvoegsel' , '$date', '$email' , '$straatnaam', '$huisnummer', '$postcode', '$woonplaats', '$geslacht', '$rechten', '$wachtwoord')";
-		if ($sql->doSQL($query)) {
+		if (mysqli_query($sql, $query)) {
 			header('location: ../View/SuccesPage.php');
 		} else {
 		echo mysqli_error($sql);
