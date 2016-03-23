@@ -5,8 +5,8 @@ function login ($email, $password){
 	$sql = $db->getConnection();
 	
 	//prevent sql injection
-	$safe_email = mysql_real_escape_string($email);
-	$safe_password = mysql_real_escape_string($password);
+	$safe_email = mysqli_real_escape_string($email);
+	$safe_password = mysqli_real_escape_string($password);
 	
 	$query = "select * from account where email='$safe_email' AND wachtwoord='$safe_password'";
 	
