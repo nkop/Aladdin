@@ -44,7 +44,7 @@
 
                     ?>
                       <li class="topbar-devider"></li>
-                      <li><a href="../View/page_registration.php">Registreer</a></li>
+                      <li><a href="../Controller/Register/RegisterController.php">Registreer</a></li>
                 </ul>
             </div>
             <!-- End Topbar -->

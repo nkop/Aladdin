@@ -75,7 +75,7 @@
                     <h4>Wachtwoord vergeten ?</h4>
                     <p><a class="color-green" href="page_passwordrecover.php">Klik hier</a> om uw wachtwoord te resetten.</p>
                     <h4>Nog geen account ?</h4>
-                    <p><a class="color-green" href="page_registration.php">Klik hier</a> om een account aan te maken.</p>
+                    <p><a class="color-green" href="../Controller/Register/RegisterController.php">Klik hier</a> om een account aan te maken.</p>
 
                 </form>
             </div>
