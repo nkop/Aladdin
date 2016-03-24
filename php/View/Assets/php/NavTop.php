@@ -24,7 +24,11 @@
                     <li><a href="page_faq.html">Help</a></li>  
                     <li class="topbar-devider"></li> 
                     <?php 
+                    // Make the page validate
+                    ini_set('session.use_trans_sid', '0');
+                    
                     session_start();
+
                     if (isset($_SESSION['email'])){
                     	if(strlen($_SESSION['email'])> 0){
                     		echo "<li><a href='page_login.php?logout=true'>Logout</a></li> ";
@@ -115,7 +119,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="blog_masonry_3col.html">Veelgestelde vragen</a></li>
-                            <li><a href="blog_timeline.html">Contact</a></li>                            
+                            <li><a href="page_contact.php">Contact</a></li>                            
                         </ul>
 
                     </li>
