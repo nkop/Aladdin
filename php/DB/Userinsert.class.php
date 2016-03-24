@@ -30,7 +30,6 @@ function insert_user($sql, $gebruikersnaam, $voornaam, $achternaam, $tussenvoegs
 	if ($result && mysqli_num_rows($result) > 0)
 	{
 		header('location: ../View/ErrorPage.php');
-		echo "AL GEREGISTREERD";
 	}
 	else
 	{
