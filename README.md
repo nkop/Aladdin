@@ -28,9 +28,10 @@ Wat nog te doen:
 
 - Verander alle links die momenteel naar jouw pagina's leiden naar de controller.
       Voorbeeld:
-                <a class="color-green" href="page_registration.php">Klik hier</a>
 
-                  WORDT: v
+                    #<a class="color-green" href="page_registration.php">Klik hier</a>
+
+                  WORDT:
 
                 <a class="color-green" href="../Controller/Register/RegisterController.php">Klik hier</a>
 
