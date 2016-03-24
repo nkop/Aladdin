@@ -35,7 +35,7 @@
                         <h2>Registreer</h2>
                         <p>Heb je al een account? <a href="page_login.html" class="color-green">Login</a></p>
                     </div>
-
+#commennttt
                     <label>Voornaam<span class="color-red">*</span></label>
                     <input type="text" name="voornaam" class="form-control margin-bottom-20" required="required">
 
