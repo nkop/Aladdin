@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
     <title>Aladdin | Home</title>
 	<?php include 'Assets/php/Head.php';?>
 
-</head>	
+</head>
 
-<body>    
+<body>
 
-<div class="wrapper">    
-   <?php 
+<div class="wrapper">
+   <?php
    include 'Assets/php/NavTop.php';
    ?>
-   
+
 
     <!--=== Slider ===-->
     <div id="layerslider" style="width: 100%; height: 500px; margin: 0px auto;">
@@ -22,9 +22,9 @@
         <div class="ls-slide" data-ls="slidedelay:4500;transition2d:25;">
             <img src="assets/img/sliders/layer/bg1.jpg" class="ls-bg" alt="Slide background"/>
 
-            <img src="images/jasmine.png" alt="Slider image" class="ls-s-1" style=" top:62px; left: 29%;" 
+            <img src="images/jasmine.png" alt="Slider image" class="ls-s-1" style=" top:62px; left: 29%;"
             data-ls="offsetxin:left; durationin:1500; delayin:1500; fadein:false; offsetxout:left; durationout:1000; fadeout:false;">
-        
+
             <span class="ls-s-1" style=" text-transform: uppercase; line-height: 45px; font-size:35px; color:#fff; top:200px; left: 590px; slidedirection : top; slideoutdirection : bottom; durationin : 3500; durationout : 3500; delayin : 1000;">
                 Voorbeel text
             </span>
@@ -34,19 +34,19 @@
         <div class="ls-slide" data-ls="transition2d:93;">
             <img src="assets/img/bg/18.jpg" class="ls-bg" alt="Slide background">
 
-            <i class="fa fa-chevron-circle-right ls-s-1" style=" color: #fff; font-size: 24px; top:70px; left: 40px; slidedirection : left; slideoutdirection : top; durationin : 1500; durationout : 500; "></i> 
+            <i class="fa fa-chevron-circle-right ls-s-1" style=" color: #fff; font-size: 24px; top:70px; left: 40px; slidedirection : left; slideoutdirection : top; durationin : 1500; durationout : 500; "></i>
 
             <span class="ls-s-2" style=" color: #fff; font-weight: 200; font-size: 22px; top:70px; left: 70px; slidedirection : top; slideoutdirection : bottom; durationin : 1500; durationout : 500; ">
                 reponsive en aanpasbaar
             </span>
 
-            <i class="fa fa-chevron-circle-right ls-s-1" style=" color: #fff; font-size: 24px; top:120px; left: 40px; slidedirection : left; slideoutdirection : top; durationin : 2500; durationout : 1500; "></i> 
+            <i class="fa fa-chevron-circle-right ls-s-1" style=" color: #fff; font-size: 24px; top:120px; left: 40px; slidedirection : left; slideoutdirection : top; durationin : 2500; durationout : 1500; "></i>
 
             <span class="ls-s-2" style=" color: #fff; font-weight: 200; font-size: 22px; top:120px; left: 70px; slidedirection : top; slideoutdirection : bottom; durationin : 2500; durationout : 1500; ">
                 verschillende sliders voor een dynamische weergaven
             </span>
 
-            <i class="fa fa-chevron-circle-right ls-s-1" style=" color: #fff; font-size: 24px; top:170px; left: 40px; slidedirection : left; slideoutdirection : top; durationin : 3500; durationout : 3500; "></i> 
+            <i class="fa fa-chevron-circle-right ls-s-1" style=" color: #fff; font-size: 24px; top:170px; left: 40px; slidedirection : left; slideoutdirection : top; durationin : 3500; durationout : 3500; "></i>
 
             <span class="ls-s-2" style=" color: #fff; font-weight: 200; font-size: 22px; top:170px; left: 70px; slidedirection : top; slideoutdirection : bottom; durationin : 3500; durationout : 2500; ">
                 gebruik van icons
@@ -57,7 +57,7 @@
             </a>
 
             <img src="images/jasmine.png" alt="Slider Image" class="ls-s-1" style=" top:30px; left: 650px; slidedirection : right; slideoutdirection : bottom; durationin : 1500; durationout : 1500; ">
-        </div>                
+        </div>
 
         <!--Third Slide-->
         <div class="ls-slide" style="slidedirection: right; transition2d: 92,93,105; ">
@@ -75,19 +75,19 @@
         	<div class="col-md-12">
         	<h2 class="heading-sm">
                  <a class="link-bg-icon" href="#">
-                     <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-thumbs-o-up"></i> 
+                     <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-thumbs-o-up"></i>
                      <span>Alladin</span>
                  </a>
             </h2>
             <p>
            Stichting Aladdin wil dat iedereen op de wereld een beetje gelukkiger wordt. Daarom mag je via deze website drie hartenwensen indienen, die je altijd al hebt willen doen of meemaken. Daarnaast weet Aladdin dat iedereen talenten heeft. Ja, ook jij! Met jouw talenten kun je hartenwensen van anderen vervullen. Een leuke bijkomstigheid is dat je van geven zelf ook gelukkiger wordt. Je zet je eigen geluk in beweging. Dat is de kracht van Aladdin en zo werkt iedereen mee aan een wereldsprookje.Wil je meedoen, klik dan op een van de symbolen. (kinderen, volwassenen, ouderen, beperkten, bedrijven) Dan kun je jezelf inschrijven en een vragenlijst invullen. Je wensen en talenten worden verzameld in een database en je kunt meteen al zien of er een match is.  Soms heb je wat meer geduld nodig voordat een wens vervuld is, maar wel kun je alvast wensen van anderen vervullen. Heb je een wens van een ander vervuld, dan mag je een extra wens indienen. Weet je niet zo goed wat je hartenwensen of talenten zijn, zoek dan bij de trefwoorden bij het hart of de ster.
             </p>
-        	
+
         	</div>
         	<div class="col-md-6 col-sm-12">
         	        	<h2 class="heading-sm">
                  <a class="link-bg-icon" href="#">
-                     <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-star"></i> 
+                     <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-star"></i>
                      <span>Wat maakt Aladdin zo bijzonder?</span>
                  </a>
             </h2>
@@ -107,17 +107,17 @@
         	<div class="col-md-6 col-sm-12">
         	<h2 class="heading-sm">
                  <a class="link-bg-icon" href="#">
-                     <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-heart"></i> 
+                     <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-heart"></i>
                      <span>Wat kan?</span>
                  </a>
             </h2>
             <p>
-           De mogelijkheden zijn ongekend; gitaar leren spelen, als ridder rondlopen in de Efteling, een tractor besturen, in een diertuin of weeshuis werken, in een circus optreden, bij een kledingontwerper in de leer, een nieuw ijsje ontwikkelen, met een grote groep mensen een kunstwerk maken of een flashmob organiseren en nog v&eacute;&eacute;l meer. 
+           De mogelijkheden zijn ongekend; gitaar leren spelen, als ridder rondlopen in de Efteling, een tractor besturen, in een diertuin of weeshuis werken, in een circus optreden, bij een kledingontwerper in de leer, een nieuw ijsje ontwikkelen, met een grote groep mensen een kunstwerk maken of een flashmob organiseren en nog v&eacute;&eacute;l meer.
             </p>
-            
+
             <h2 class="heading-sm">
                  <a class="link-bg-icon" href="#">
-                     <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-thumbs-down"></i> 
+                     <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-thumbs-down"></i>
                      <span>Wat kan niet?</span>
                  </a>
             </h2>
@@ -125,11 +125,11 @@
           Geen materi&euml;le wensen (geen bezit), geen seks, geen geweld, geen drugs, geen klussen.
             </p>
         	</div>
-        	
-        
+
+
         </div>
-        <!-- End Service Blokcs --> 
-        
+        <!-- End Service Blokcs -->
+
         <!-- Info Blokcs -->
     	<div class="row margin-bottom-20">
         	<!-- Welcome Block -->
@@ -146,19 +146,19 @@
                             <li><i class="fa fa-check color-green"></i> consectetur adipiscing elit.</li>
                             <li><i class="fa fa-check color-green"></i> consectetur adipiscing elit.</li>
                             <li><i class="fa fa-check color-green"></i> consectetur adipiscing elit.</li>
-                        </ul>   
-                        <button type="button" class="btn btn-danger ">Meld je nu aan!</button>                 
+                        </ul>
+                        <button type="button" class="btn btn-danger ">Meld je nu aan!</button>
                     </div>
-                    
+
                 </div>
 				<br />
                 <blockquote class="hero-unify">
                     <p>Alladin is een leuk initiatief en heeft veel potentie.</p>
                     <small>Karel</small>
                 </blockquote>
-            </div><!--/col-md-8-->        
-    	</div><!--/row-->	
-    	<!-- End Info Blokcs -->   
+            </div><!--/col-md-8-->
+    	</div><!--/row-->
+    	<!-- End Info Blokcs -->
 
         <!-- Nieuws -->
         <div class="owl-carousel-v1 owl-work-v1 margin-bottom-40">
@@ -176,118 +176,118 @@
                     <a href="#">
                         <em class="overflow-hidden">
                             <img class="img-responsive" src="assets/img/main/img1.jpg" alt="">
-                        </em>    
+                        </em>
                         <span>
                             <strong>Gelukkig nieuwjaar!</strong>
                             <i>Anim pariatur cliche reprehenderit</i>
                         </span>
-                    </a>    
+                    </a>
                 </div>
                 <div class="item">
                     <a href="#">
                         <em class="overflow-hidden">
                             <img class="img-responsive" src="assets/img/main/img2.jpg" alt="">
-                        </em>    
+                        </em>
                         <span>
                             <strong>Nieuwe website!</strong>
                             <i>Responsive Bootstrap website</i>
                         </span>
-                    </a>    
+                    </a>
                 </div>
                 <div class="item">
                     <a href="#">
                         <em class="overflow-hidden">
                             <img class="img-responsive" src="assets/img/main/img3.jpg" alt="">
-                        </em>    
+                        </em>
                         <span>
                             <strong>Lorem ipsum</strong>
                             <i>Pariatur prehe cliche reprehrit</i>
                         </span>
-                    </a>    
+                    </a>
                 </div>
                 <div class="item">
                     <a href="#">
                         <em class="overflow-hidden">
                             <img class="img-responsive" src="assets/img/main/img4.jpg" alt="">
-                        </em>    
+                        </em>
                         <span>
                             <strong>Lorem ipsum</strong>
                             <i>Craft labore wes anderson cred</i>
                         </span>
-                    </a>    
+                    </a>
                 </div>
                 <div class="item">
                     <a href="#">
                         <em class="overflow-hidden">
                             <img class="img-responsive" src="assets/img/main/img5.jpg" alt="">
-                        </em>    
+                        </em>
                         <span>
                             <strong>Lorem ipsum</strong>
                             <i>Anim pariatur cliche reprehenderit</i>
                         </span>
-                    </a>    
+                    </a>
                 </div>
                 <div class="item">
                     <a href="#">
                         <em class="overflow-hidden">
                             <img class="img-responsive" src="assets/img/main/img1.jpg" alt="">
-                        </em>    
+                        </em>
                         <span>
                             <strong>Lorem ipsum</strong>
                             <i>Anim pariatur cliche reprehenderit</i>
                         </span>
-                    </a>    
+                    </a>
                 </div>
                 <div class="item">
                     <a href="#">
                         <em class="overflow-hidden">
                             <img class="img-responsive" src="assets/img/main/img2.jpg" alt="">
-                        </em>    
+                        </em>
                         <span>
                             <strong>Lorem ipsum</strong>
                             <i>Responsive Bootstrap Template</i>
                         </span>
-                    </a>    
+                    </a>
                 </div>
                 <div class="item">
                     <a href="#">
                         <em class="overflow-hidden">
                             <img class="img-responsive" src="assets/img/main/img3.jpg" alt="">
-                        </em>    
+                        </em>
                         <span>
                             <strong>Lorem ipsum</strong>
                             <i>Pariatur prehe cliche reprehrit</i>
                         </span>
-                    </a>    
+                    </a>
                 </div>
                 <div class="item">
                     <a href="#">
                         <em class="overflow-hidden">
                             <img class="img-responsive" src="assets/img/main/img4.jpg" alt="">
-                        </em>    
+                        </em>
                         <span>
                             <strong>Lorem ipsum</strong>
                             <i>Craft labore wes anderson cred</i>
                         </span>
-                    </a>    
+                    </a>
                 </div>
                 <div class="item">
                     <a href="#">
                         <em class="overflow-hidden">
                             <img class="img-responsive" src="assets/img/main/img5.jpg" alt="">
-                        </em>    
+                        </em>
                         <span>
                             <strong>Lorem ipsum</strong>
                             <i>Anim pariatur cliche reprehenderit</i>
                         </span>
-                    </a>    
+                    </a>
                 </div>
             </div>
         </div>
         <!-- End Recent Works -->
 
         <!-- Owl Clients v1 -->
-        <div class="headline"><h2>Medemogelijk gemaakt door:</h2></div>        
+        <div class="headline"><h2>Medemogelijk gemaakt door:</h2></div>
         <div class="owl-clients-v1">
             <div class="item">
                 <img src="assets/img/clients4/1.png" alt="">
@@ -317,14 +317,14 @@
                 <img src="assets/img/clients4/9.png" alt="">
             </div>
         </div>
-        <!-- End Owl Clients v1 -->        
-    </div><!--/container-->		
+        <!-- End Owl Clients v1 -->
+    </div><!--/container-->
     <!-- End Content Part -->
 	<?php include 'Assets/php/Footer.php';?>
-   
+
 </div><!--/wrapper-->
 
 <?php include 'Assets/php/jsCall.php';?>
 
 </body>
-</html>	
+</html>

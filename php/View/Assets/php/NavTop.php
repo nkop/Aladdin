@@ -1,4 +1,4 @@
-  <!--=== Header ===-->    
+  <!--=== Header ===-->
     <div class="header">
         <div class="container">
             <!-- Logo -->
@@ -6,7 +6,7 @@
                 <img src="images/logo.png" alt="Logo" height="60">
             </a>
             <!-- End Logo -->
-            
+
             <!-- Topbar -->
             <div class="topbar">
                 <ul class="loginbar pull-right">
@@ -15,18 +15,18 @@
                         <a>Languages</a>
                         <ul class="languages hoverSelectorBlock">
                             <li class="active">
-                                <a href="#">Dutch <i class="fa fa-check"></i></a> 
+                                <a href="#">Dutch <i class="fa fa-check"></i></a>
                             </li>
                             <li><a href="#">English</a></li>
                         </ul>
                     </li>
-                    <li class="topbar-devider"></li>   
-                    <li><a href="page_faq.html">Help</a></li>  
-                    <li class="topbar-devider"></li> 
-                    <?php 
+                    <li class="topbar-devider"></li>
+                    <li><a href="page_faq.html">Help</a></li>
+                    <li class="topbar-devider"></li>
+                    <?php
                     // Make the page validate
                     ini_set('session.use_trans_sid', '0');
-                    
+
                     session_start();
 
                     if (isset($_SESSION['email'])){
@@ -41,9 +41,10 @@
                     	echo "<li><a href='page_login.php'>Login</a></li> ";
                     	$_SESSION['email'] = "";
                     }
-                    
-                    ?>  
-                      
+
+                    ?>
+                      <li class="topbar-devider"></li>
+                      <li><a href="../Controller/Register/RegisterController.php">Registreer</a></li>
                 </ul>
             </div>
             <!-- End Topbar -->
@@ -67,7 +68,7 @@
                         </a>
                     </li>
                     <!-- End Home -->
-                    
+
                     <!-- Blog -->
                     <li class="dropdown">
                         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
@@ -75,11 +76,11 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="blog_masonry_3col.html">Laatste nieuws</a></li>
-                            <li><a href="blog_timeline.html">Blogs</a></li>                            
+                            <li><a href="blog_timeline.html">Blogs</a></li>
                         </ul>
                     </li>
                     <!-- End Blog -->
-					<?php 	
+					<?php
                     if (isset($_SESSION['email'])){
                     	if (strlen($_SESSION['email'])> 0){
                     echo '<!-- Features -->
@@ -92,16 +93,16 @@
                                 <a href="javascript:void(0);">Wensen</a>
                                 <ul class="dropdown-menu">
                                     <li><a href="feature_header_v6_dark_scroll.html">Wensen toevoegen</a></li>
-                                </ul>                                
-                            </li>                        
+                                </ul>
+                            </li>
                             <li class="dropdown-submenu">
                                 <a href="javascript:void(0);">Talenten</a>
                                 <ul class="dropdown-menu">
                                     <li><a href="feature_footer_default.html#footer-default">Talenten toevoegen</a></li>
-                                </ul>                                
+                                </ul>
                             </li>
                         </ul>
-                    </li>                    
+                    </li>
                     <!-- End Features -->
             		<li >
                         <a href="page_personalinfo.php">
@@ -111,7 +112,7 @@
                     	}
         			}
                     ?>
-                    
+
                     <!-- Portfolio -->
                     <li class="dropdown">
                         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
@@ -119,7 +120,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="blog_masonry_3col.html">Veelgestelde vragen</a></li>
-                            <li><a href="page_contact.php">Contact</a></li>                            
+                            <li><a href="page_contact.php">Contact</a></li>
                         </ul>
 
                     </li>
