@@ -5,7 +5,7 @@
 <head>
     <title>Alladin | Home</title>
 
-   <?php include'Assets/php/Head.php'?>
+   <?php include'Assets/php/Head.tpl.php'?>
 </head>
 
 <body>
@@ -48,7 +48,7 @@
             	}
             }
             ?>
-                <form class="reg-page" action="../Controller/Userlogin.php" method="post">
+                <form class="reg-page" action="../Controller/Handlers/Userlogin.php" method="post">
                     <div class="reg-header">
                         <h2>Login</h2>
                     </div>

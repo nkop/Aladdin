@@ -5,7 +5,7 @@
 <head>
     <title>Alladin | Home</title>
 
-   <?php include'Assets/php/Head.php'?>
+   <?php include'Assets/php/Head.tpl.php'?>
 </head>
 
 <body>

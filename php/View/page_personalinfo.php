@@ -6,7 +6,7 @@
 <!--<![endif]-->
 <head>
 <title>Alladin | Home</title>
-<?php include 'Assets/php/Head.php';?>
+<?php include 'Assets/php/Head.tpl.php';?>
 </head>
 
 <body>
@@ -14,9 +14,7 @@
 	<div class="wrapper">    
 <?php 
 	include 'assets/php/NavTop.php';
- 	include '../DB/Database.class.php';
-	include '../Controller/PersonalInfo.php';
-	include '../Controller/UserLogin.php';
+ 	include '../Model/DB/Database.class.php';
 	include '/Assets/php/loginRedirect.php';
 ?>
     <!--=== Breadcrumbs ===-->
