@@ -1,25 +1,26 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-03-24 23:58:02
+/* Smarty version 3.1.29, created on 2016-03-25 17:28:22
   from "C:\xampp\htdocs\Aladdin\php\View\page_registration.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_56f470fa93de58_73276177',
+  'unifunc' => 'content_56f567260364b8_11501497',
   'file_dependency' => 
   array (
     '8ac4d591a6792ea4d892181bd462f0e74a7afc0c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Aladdin\\php\\View\\page_registration.tpl',
-      1 => 1458860228,
+      1 => 1458923300,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
+    'file:Assets/php/Head.tpl' => 1,
   ),
 ),false)) {
-function content_56f470fa93de58_73276177 ($_smarty_tpl) {
+function content_56f567260364b8_11501497 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
@@ -28,7 +29,10 @@ function content_56f470fa93de58_73276177 ($_smarty_tpl) {
 <head>
     <title>Alladin | Home</title>
 
-<?php echo '<?php ';?>include 'Assets/php/Head.php';<?php echo '?>';?>
+<?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:Assets/php/Head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+<?php echo '<?php ';?>include 'Assets/php/Head.tpl.php';<?php echo '?>';?>
 
 </head>
 
