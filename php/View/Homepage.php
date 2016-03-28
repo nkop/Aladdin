@@ -4,7 +4,7 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
     <title>Aladdin | Home</title>
-	<?php include 'Assets/php/Head.php';?>
+	<?php include 'Assets/php/Head.tpl.php';?>
 
 </head>
 
@@ -14,7 +14,7 @@
    <?php
    include 'Assets/php/NavTop.php';
    ?>
-   
+
 
     <!--=== Slider ===-->
     <div id="layerslider" style="width: 100%; height: 500px; margin: 0px auto;">

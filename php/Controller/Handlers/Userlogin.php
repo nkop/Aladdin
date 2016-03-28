@@ -1,6 +1,6 @@
 <?php
-include_once '../DB/Database.class.php';
-include_once '../Model/userlogin.class.php';
+include_once '../../Model/DB/Database.class.php';
+include_once '../../Model/userlogin.class.php';
 
 $canPass = false;
 
@@ -12,10 +12,10 @@ if (isset($_POST['login'])){
 }
 if ($canPass){
 	if(login($_POST['username'],$_POST['password'])){
-		header('Location: ../view/page_personalinfo.php');
+		header('Location: ../../view/page_personalinfo.php');
 	}
 	else{
-		header('Location: ../view/page_login.php?login=false&username='.$_POST['email']);
+		header('Location: ../../view/page_login.php?login=false&username='.$_POST['email']);
 	}
 }
 ?>

@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
@@ -45,17 +44,17 @@
 
 
     <!--=== Content Part ===-->
-    <div class="container content">		
+    <div class="container content">
     	<div class="row">
             <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
                 <h4 class="color-green">Uw registratie is succesvol afgerond!<br/>Bekijk uw inbox om deze registratie te bevestigen</h4>
             </div>
         </div><!--/row-->
-    </div><!--/container-->		
+    </div><!--/container-->
     <!--=== End Content Part ===-->
 <?php include 'Assets/php/Footer.php';?>
 </div><!--/wrapper-->
 <?php include 'Assets/php/jsCall.php';?>
 
 </body>
-</html> 
+</html>

@@ -5,7 +5,9 @@
 <head>
     <title>Alladin | Home</title>
 
-<?php include 'Assets/php/Head.php';?>
+{include 'Assets/php/Head.tpl'}
+<?php include 'Assets/php/Head.tpl.php';?>
+
 </head>
 
 <body>
@@ -30,10 +32,10 @@
     <div class="container content">
         <div class="row">
             <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-                <form class="reg-page" action="../Controller/Userregistration.php" method="post">
+                <form class="reg-page" action="../Register/InsertController.php" method="post">
                     <div class="reg-header">
-                        <h2>Register a new account</h2>
-                        <p>Already Signed Up? Click <a href="page_login.html" class="color-green">Sign In</a> to login your account.</p>
+                        <h2>Registreer</h2>
+                        <p>Heb je al een account? <a href="page_login.html" class="color-green">Login</a></p>
                     </div>
 
                     <label>Voornaam<span class="color-red">*</span></label>
@@ -46,7 +48,7 @@
                     <input type="text" name="achternaam" class="form-control margin-bottom-20" required="required">
 
                     <label>Email <span class="color-red">*</span></label>
-                    <input type="text" name="email" class="form-control margin-bottom-20" required="required">
+                    <input type="email" name="email" class="form-control margin-bottom-20" required="required">
 
                     <div class="row">
                         <div class="col-sm-6">

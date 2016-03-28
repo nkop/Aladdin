@@ -1,3 +1,26 @@
+<?php
+/* Smarty version 3.1.29, created on 2016-03-26 10:51:08
+  from "C:\xampp\htdocs\Aladdin\php\View\assets\php\NavTop.php" */
+
+if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
+  'has_nocache_code' => false,
+  'version' => '3.1.29',
+  'unifunc' => 'content_56f65b8c7ae430_41986610',
+  'file_dependency' => 
+  array (
+    '2d7fb9aa1134b59aa209d3b38d21fc551b71dc6f' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\Aladdin\\php\\View\\assets\\php\\NavTop.php',
+      1 => 1458920275,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_56f65b8c7ae430_41986610 ($_smarty_tpl) {
+?>
   <!--=== Header ===-->
     <div class="header">
         <div class="container">
@@ -23,8 +46,8 @@
                     <li class="topbar-devider"></li>
                     <li><a href="page_faq.html">Help</a></li>
                     <li class="topbar-devider"></li>
-                    <?php
-                    // Make the page validate
+                    <?php echo '<?php
+                    ';?>// Make the page validate
                     ini_set('session.use_trans_sid', '0');
 
                     session_start();
@@ -42,7 +65,7 @@
                     	$_SESSION['email'] = "";
                     }
 
-                    ?>
+                    <?php echo '?>';?>
                       <li class="topbar-devider"></li>
                       <li><a href="../Controller/Register/RegisterController.php">Registreer</a></li>
                 </ul>
@@ -80,8 +103,8 @@
                         </ul>
                     </li>
                     <!-- End Blog -->
-					<?php
-                    if (isset($_SESSION['email'])){
+					<?php echo '<?php
+                    ';?>if (isset($_SESSION['email'])){
                     	if (strlen($_SESSION['email'])> 0){
                     echo '<!-- Features -->
                     <li class="dropdown">
@@ -111,7 +134,7 @@
                     </li>';
                     	}
         			}
-                    ?>
+                    <?php echo '?>';?>
 
                     <!-- Portfolio -->
                     <li class="dropdown">
@@ -130,3 +153,5 @@
         </div><!--/navbar-collapse-->
     </div>
     <!--=== End Header ===-->
+<?php }
+}
