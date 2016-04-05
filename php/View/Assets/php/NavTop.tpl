@@ -23,7 +23,7 @@
                     <li class="topbar-devider"></li>
                     <li><a href="page_faq.html">Help</a></li>
                     <li class="topbar-devider"></li>
-                    <li><a href='page_login.php'>{$Text}</a></li>
+                    <li><a href='page_login.php'>MustFix</a></li>
                       <li class="topbar-devider"></li>
                       <li><a href="../Controller/Register/RegisterController.php">Registreer</a></li>
                 </ul>
