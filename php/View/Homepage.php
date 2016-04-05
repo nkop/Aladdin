@@ -4,16 +4,15 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
     <title>Aladdin | Home</title>
-	<?php include 'Assets/php/Head.tpl';?>
+    {include 'Assets/php/Head.tpl'}
+
 
 </head>
 
 <body>
 
 <div class="wrapper">
-   <?php
-   include 'Assets/php/NavTop.tpl.php';
-   ?>
+{include 'Assets/php/NavTop.tpl'}
 
 
     <!--=== Slider ===-->
@@ -320,11 +319,10 @@
         <!-- End Owl Clients v1 -->
     </div><!--/container-->
     <!-- End Content Part -->
-	<?php include 'Assets/php/Footer.tpl.php';?>
+    {include 'Assets/php/Footer.tpl'}
 
 </div><!--/wrapper-->
-
-<?php include 'Assets/php/jsCall.php';?>
+{include 'Assets/php/Footer.tpl'}
 
 </body>
 </html>

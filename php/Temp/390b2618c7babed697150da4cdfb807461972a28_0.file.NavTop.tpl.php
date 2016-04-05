@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-05 16:03:04
+/* Smarty version 3.1.29, created on 2016-04-05 16:37:16
   from "C:\xampp\htdocs\Aladdin\php\View\Assets\php\NavTop.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5703c598851064_39958691',
+  'unifunc' => 'content_5703cd9cb96d09_68629603',
   'file_dependency' => 
   array (
     '390b2618c7babed697150da4cdfb807461972a28' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Aladdin\\php\\View\\Assets\\php\\NavTop.tpl',
-      1 => 1459863875,
+      1 => 1459867024,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5703c598851064_39958691 ($_smarty_tpl) {
+function content_5703cd9cb96d09_68629603 ($_smarty_tpl) {
 ?>
   <!--=== Header ===-->
     <div class="header">
@@ -46,7 +46,8 @@ function content_5703c598851064_39958691 ($_smarty_tpl) {
                     <li class="topbar-devider"></li>
                     <li><a href="page_faq.html">Help</a></li>
                     <li class="topbar-devider"></li>
-                    <li><a href='page_login.php'>$text</a></li>
+                    <li><a href='page_login.php'><?php echo $_smarty_tpl->tpl_vars['Text']->value;?>
+</a></li>
                       <li class="topbar-devider"></li>
                       <li><a href="../Controller/Register/RegisterController.php">Registreer</a></li>
                 </ul>
@@ -84,38 +85,7 @@ function content_5703c598851064_39958691 ($_smarty_tpl) {
                         </ul>
                     </li>
                     <!-- End Blog -->
-					<?php echo '<?php
-                    ';?>if (isset($_SESSION['email'])){
-                    	if (strlen($_SESSION['email'])> 0){
-                    echo '<!-- Features -->
-                    <li class="dropdown">
-                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-                            Wensen en talenten
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-submenu">
-                                <a href="javascript:void(0);">Wensen</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="feature_header_v6_dark_scroll.html">Wensen toevoegen</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="javascript:void(0);">Talenten</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="feature_footer_default.html#footer-default">Talenten toevoegen</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- End Features -->
-            		<li >
-                        <a href="page_personalinfo.php">
-                            Profiel
-                        </a>
-                    </li>';
-                    	}
-        			}
-                    <?php echo '?>';?>
+					
 
                     <!-- Portfolio -->
                     <li class="dropdown">
