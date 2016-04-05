@@ -23,26 +23,7 @@
                     <li class="topbar-devider"></li>
                     <li><a href="page_faq.html">Help</a></li>
                     <li class="topbar-devider"></li>
-                    <?php
-                    // Make the page validate
-                    ini_set('session.use_trans_sid', '0');
-
-                    session_start();
-
-                    if (isset($_SESSION['email'])){
-                    	if(strlen($_SESSION['email'])> 0){
-                    		echo "<li><a href='page_login.php?logout=true'>Logout</a></li> ";
-                    	}
-                    	else{
-                    		echo "<li><a href='page_login.php'>Login</a></li> ";
-                    	}
-                    }
-                    else{
-                    	echo "<li><a href='page_login.php'>Login</a></li> ";
-                    	$_SESSION['email'] = "";
-                    }
-
-                    ?>
+                    <li><a href='page_login.php'>$text</a></li>
                       <li class="topbar-devider"></li>
                       <li><a href="../Controller/Register/RegisterController.php">Registreer</a></li>
                 </ul>
