@@ -2,7 +2,7 @@
     <div class="header">
         <div class="container">
             <!-- Logo -->
-            <a class="logo" href="homepage.php">
+            <a class="logo" href="Homepage.php">
                 <img src="images/logo.png" alt="Logo" height="60">
             </a>
             <!-- End Logo -->
@@ -23,7 +23,7 @@
                     <li class="topbar-devider"></li>
                     <li><a href="page_faq.html">Help</a></li>
                     <li class="topbar-devider"></li>
-                    <li><a href='page_login.php'>$text</a></li>
+                    <li><a href='page_login.php'>{$Text}</a></li>
                       <li class="topbar-devider"></li>
                       <li><a href="../Controller/Register/RegisterController.php">Registreer</a></li>
                 </ul>
@@ -61,38 +61,7 @@
                         </ul>
                     </li>
                     <!-- End Blog -->
-					<?php
-                    if (isset($_SESSION['email'])){
-                    	if (strlen($_SESSION['email'])> 0){
-                    echo '<!-- Features -->
-                    <li class="dropdown">
-                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-                            Wensen en talenten
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-submenu">
-                                <a href="javascript:void(0);">Wensen</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="feature_header_v6_dark_scroll.html">Wensen toevoegen</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a href="javascript:void(0);">Talenten</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="feature_footer_default.html#footer-default">Talenten toevoegen</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- End Features -->
-            		<li >
-                        <a href="page_personalinfo.php">
-                            Profiel
-                        </a>
-                    </li>';
-                    	}
-        			}
-                    ?>
+					
 
                     <!-- Portfolio -->
                     <li class="dropdown">
