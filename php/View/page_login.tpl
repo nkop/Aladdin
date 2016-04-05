@@ -5,13 +5,13 @@
 <head>
     <title>Alladin | Home</title>
 
-   <?php include'Assets/php/Head.tpl.php'?>
+   {include file='../View/Assets/php/Head.tpl'}
 </head>
 
 <body>
 
 <div class="wrapper">
-<?php include 'assets/php/NavTop.php';?>
+{include file='../View/Assets/php/NavTop.tpl'}
 
 
     <!--=== Breadcrumbs ===-->
@@ -30,31 +30,18 @@
     <div class="container content">
     	<div class="row">
             <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
-            <?php
-            if (isset($_GET['login']))
-            {
-            	echo "
-				<div class='alert alert-danger'>
-				  <strong>Error!</strong> gebruikersnaam en wachtwoord komen niet overeen!
-				</div>
-				";
-            }
-            if (isset($_GET['logout'])){
-            	if (isset($_SESSION['email'])){
-            		session_destroy();
-            		$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-            		$newLink = str_replace(end((explode('?', $actual_link))), "", $actual_link);
-            		header('Location: '.$newLink);
-            	}
-            }
-            ?>
+            {if $loginError}
+	            	<div class='alert alert-danger'>
+					  <strong>Error!</strong> gebruikersnaam en wachtwoord komen niet overeen!
+					</div>
+			{/if}
                 <form class="reg-page" action="../Controller/Handlers/Userlogin.php" method="post">
                     <div class="reg-header">
                         <h2>Login</h2>
                     </div>
                     <div class="input-group margin-bottom-20">
                         <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                        <input type="text" name="username" placeholder="E-mail" class="form-control" required="required" value="<?php if(isset($_GET['username']))print $_GET['username']; ?>">
+                        <input type="text" name="username" placeholder="E-mail" class="form-control" required="required" value="{$username}">
                     </div>
                     <div class="input-group margin-bottom-20">
                         <span class="input-group-addon"><i class="fa fa-lock"></i></span>
@@ -82,7 +69,7 @@
         </div><!--/row-->
     </div><!--/container-->
     <!--=== End Content Part ===-->
-<?php include 'Assets/php/Footer.tpl.php';?>
+{include file='../View/Assets/php/footer.tpl'}
 </div><!--/wrapper-->
 <?php include 'Assets/php/jsCall.php';?>
 
