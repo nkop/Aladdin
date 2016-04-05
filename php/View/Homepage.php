@@ -12,7 +12,7 @@
 
 <div class="wrapper">
    <?php
-   include 'Assets/php/NavTop.php';
+   include 'Assets/php/NavTop.tpl.php';
    ?>
 
 
@@ -320,7 +320,7 @@
         <!-- End Owl Clients v1 -->
     </div><!--/container-->
     <!-- End Content Part -->
-	<?php include 'Assets/php/Footer.php';?>
+	<?php include 'Assets/php/Footer.tpl.php';?>
 
 </div><!--/wrapper-->
 

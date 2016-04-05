@@ -121,7 +121,7 @@
     </div><!--/container-->
     <!--=== End Content Part ===-->
 
-<?php include 'Assets/php/Footer.php';?>
+<?php include 'Assets/php/Footer.tpl.php';?>
 </div>
 
 <?php include 'assets/php/jsCall.php';?>
