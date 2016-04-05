@@ -20,7 +20,7 @@
 </form>
 </div>
 
-<?php include 'Assets/php/Footer.php';?>
+<?php include 'Assets/php/Footer.tpl.php';?>
 </div><!--/wrapper-->
 <?php include 'Assets/php/jsCall.php';?>
 
