@@ -4,7 +4,7 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
     <title>Aladdin | Home</title>
-	<?php include 'Assets/php/Head.tpl.php';?>
+	<?php include 'Assets/php/Head.tpl';?>
 
 </head>
 
