@@ -18,6 +18,6 @@ else{
 	$text = "Login";
 	$_SESSION['email'] = "";
 }
-$smarty->assign('text', $text);
+$smarty->assign('Text', $text);
 $smarty->display('../View/php/NavTop.tpl');
 ?>
