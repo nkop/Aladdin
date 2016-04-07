@@ -3,7 +3,7 @@
         <div class="container">
             <!-- Logo -->
             <a class="logo" href="Homepage.php">
-                <img src="images/logo.png" alt="Logo" height="60">
+                <img src="../view/images/logo.png" alt="Logo" height="60">
             </a>
             <!-- End Logo -->
 
