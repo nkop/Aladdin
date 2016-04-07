@@ -6,14 +6,13 @@
     <title>Alladin | Home</title>
 
 {include 'Assets/php/Head.tpl'}
-<?php include 'Assets/php/Head.tpl.php';?>
 
 </head>
 
 <body>
 
 <div class="wrapper">
-<?php include 'assets/php/NavTop.php';?>
+{include '../view/Assets/php/NavTop.tpl'}
 
     <!--=== Breadcrumbs ===-->
     <div class="breadcrumbs">
@@ -121,10 +120,10 @@
     </div><!--/container-->
     <!--=== End Content Part ===-->
 
-<?php include 'Assets/php/Footer.tpl.php';?>
+{include '../view/Assets/php/Footer.tpl'}
 </div>
 
-<?php include 'assets/php/jsCall.php';?>
+{include '../view/Assets/php/jsCall.tpl'}
 
 </body>
 </html>
