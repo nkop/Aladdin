@@ -33,6 +33,6 @@ Wat nog te doen:
 
                   WORDT:
 
-                -<a class="color-green" href="../Controller/Register/RegisterController.php">Klik hier</a>
+                -<a class="color-green" href="../Controller/RegisterController.php">Klik hier</a>
 
                 Waarin je vervolgens je view laat zien doormiddel van: $smarty-display("Jouw filenaam");
