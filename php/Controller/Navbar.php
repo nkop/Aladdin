@@ -1,5 +1,5 @@
 <?php
-include_once ('../Smarty/header.php');
+include_once ('Smarty/header.php');
 
 $smarty = new Smarty();
 ini_set('session.use_trans_sid', '0');
@@ -19,5 +19,5 @@ else{
 	$_SESSION['email'] = "";
 }
 $smarty->assign('Text', $text);
-$smarty->display('../View/php/NavTop.tpl');
+//$smarty->display('../View/php/NavTop.tpl');
 ?>
