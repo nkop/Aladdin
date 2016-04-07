@@ -2,7 +2,7 @@
     <div class="header">
         <div class="container">
             <!-- Logo -->
-            <a class="logo" href="Homepage.php">
+            <a class="logo" href="HomepageController.php">
                 <img src="../view/images/logo.png" alt="Logo" height="60">
             </a>
             <!-- End Logo -->
@@ -23,9 +23,9 @@
                     <li class="topbar-devider"></li>
                     <li><a href="page_faq.html">Help</a></li>
                     <li class="topbar-devider"></li>
-                    <li><a href='page_login.php'>MustFix</a></li>
+                    <li><a href='loginController.php'>MustFix</a></li>
                       <li class="topbar-devider"></li>
-                      <li><a href="../Controller/Register/RegisterController.php">Registreer</a></li>
+                      <li><a href="../Controller/RegisterController.php">Registreer</a></li>
                 </ul>
             </div>
             <!-- End Topbar -->
@@ -44,7 +44,7 @@
                 <ul class="nav navbar-nav">
                     <!-- Home -->
                     <li >
-                        <a href="homepage.php">
+                        <a href="homepageController.php">
                             Home
                         </a>
                     </li>
