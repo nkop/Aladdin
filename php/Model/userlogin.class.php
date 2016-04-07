@@ -1,5 +1,6 @@
 <?php
 function login ($email, $password){
+	include_once 'password.php';
 	//login and create session
 	$db = Database::getInstance();
 	$sql = $db->getConnection();
