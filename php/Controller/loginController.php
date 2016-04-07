@@ -1,7 +1,7 @@
 <?php
 include ('Smarty/header.php');
-//include 'Navbar.php';
-//include 'Footer.php';
+include 'Navbar.php';
+include 'Footer.php';
 
 $loginError = false;
 $username = "";

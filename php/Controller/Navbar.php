@@ -1,7 +1,6 @@
 <?php
 include_once ('Smarty/header.php');
 
-$smarty = new Smarty();
 ini_set('session.use_trans_sid', '0');
 
 session_start();
