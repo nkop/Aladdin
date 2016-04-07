@@ -1,5 +1,5 @@
 <?php
-include ('./Smarty/header.php');
+include ('Smarty/header.php');
 include ('../Model/DB/Database.class.php');
 
 include ('./Handlers/PersonalInfo.php');
