@@ -12,10 +12,10 @@ if (isset($_POST['login'])){
 }
 if ($canPass){
 	if(login($_POST['username'],$_POST['password'])){
-		header('Location: ../../view/page_personalinfo.php');
+		header('Location: ../personalInfoController.php');
 	}
 	else{
-		header('Location: ../../view/page_login.php?login=false&username='.$_POST['email']);
+		header('Location: ../loginController.php?login=false&username='.$_POST['email']);
 	}
 }
 ?>

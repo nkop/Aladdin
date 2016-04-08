@@ -21,18 +21,18 @@
                         </ul>
                     </li>
                     <li class="topbar-devider"></li>
-                    <li><a href="page_faq.html">Help</a></li>
+                    <li><a href="FaqController.php">Help</a></li>
                     <li class="topbar-devider"></li>
                     <li><a href='loginController.php?logout=true'>{$text}</a></li>
                     {if $loginoptions}
                       <li class="topbar-devider"></li>
                       
-                      <li><a href="../Controller/RegisterController.php">Registreer</a></li>
+                      <li><a href="RegisterController.php">Registreer</a></li>
                       {/if}
                       {if $loginoptions == false}
-                      <li class="topbar-devider"></li>
+                      <!--  <li class="topbar-devider"></li>
                       
-                      <li><a href="#">Extra optie</a></li>
+                      <li><a href="#">Extra optie</a></li>-->
                       {/if}
                 </ul>
             </div>
@@ -58,31 +58,31 @@
                     </li>
                     <!-- End Home -->
 
-                    <!-- Blog -->
+                    <!-- nieuws -->
                     <li class="dropdown">
                         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
                             Nieuws
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="blog_masonry_3col.html">Laatste nieuws</a></li>
-                            <li><a href="blog_timeline.html">Blogs</a></li>
+                            <li><a href="#">Laatste nieuws</a></li>
+                            <li><a href="#">Blogs</a></li>
                         </ul>
                     </li>
-                    <!-- End Blog -->
+                    <!-- End nieuws -->
 					
 
-                    <!-- Portfolio -->
+                    <!-- contact -->
                     <li class="dropdown">
                         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
                             Contact
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="blog_masonry_3col.html">Veelgestelde vragen</a></li>
-                            <li><a href="page_contact.php">Contact</a></li>
+                            <li><a href="FaqController.php">Veelgestelde vragen</a></li>
+                            <li><a href="ContactController.php">Contact</a></li>
                         </ul>
 
                     </li>
-                    <!-- End Portfolio -->
+                    <!-- End contact -->
                 </ul>
             </div><!--/end container-->
         </div><!--/navbar-collapse-->
