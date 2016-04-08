@@ -23,9 +23,17 @@
                     <li class="topbar-devider"></li>
                     <li><a href="page_faq.html">Help</a></li>
                     <li class="topbar-devider"></li>
-                    <li><a href='loginController.php'>MustFix</a></li>
+                    <li><a href='loginController.php?logout=true'>{$text}</a></li>
+                    {if $loginoptions}
                       <li class="topbar-devider"></li>
+                      
                       <li><a href="../Controller/RegisterController.php">Registreer</a></li>
+                      {/if}
+                      {if $loginoptions == false}
+                      <li class="topbar-devider"></li>
+                      
+                      <li><a href="#">Extra optie</a></li>
+                      {/if}
                 </ul>
             </div>
             <!-- End Topbar -->
