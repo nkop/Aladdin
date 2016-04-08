@@ -24,7 +24,7 @@
     </div><!--/breadcrumbs-->
     <!--=== End Breadcrumbs ===-->
     <a href="https://www.google.nl/maps/place/Avans+Hogeschool/@51.6851577,5.2912576,14.5z/data=!4m2!3m1!1s0x47c6ee88559eae79:0x5d7ba4e903f8f190">
-      <img src="../view/Images/map.JPG" />
+      <img class="full_width" src="../view/Images/map.JPG" />
 	</a>
     <!--=== Content Part ===-->
     <div class="container content">
