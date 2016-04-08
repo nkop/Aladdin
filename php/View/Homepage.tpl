@@ -74,7 +74,7 @@
         	<div class="col-md-12">
         	<h2 class="heading-sm">
                  <a class="link-bg-icon" href="#">
-                     <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-thumbs-o-up"></i>
+                     <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-heart"></i>
                      <span>Alladin</span>
                  </a>
             </h2>
@@ -106,7 +106,7 @@
         	<div class="col-md-6 col-sm-12">
         	<h2 class="heading-sm">
                  <a class="link-bg-icon" href="#">
-                     <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-heart"></i>
+                     <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-thumbs-up"></i>
                      <span>Wat kan?</span>
                  </a>
             </h2>
