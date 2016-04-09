@@ -1,10 +1,10 @@
 <?php
-include_once '../../Model/DB/UpdatePassword.php';
+require '../../Model/DB/UpdatePassword.php';
 
 require '../PHPMailer/PHPMailerAutoload.php';
 
 $password = randomPassword();
-
+subPassword($password);
 $mail = new PHPMailer(); // create a new object
 $mail->IsSMTP(); // enable SMTP
 // $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
@@ -23,15 +23,8 @@ $mail->AddAddress($_POST["mail"]);
  if(!$mail->Send()) {
     echo "Mailer Error: " . $mail->ErrorInfo;
  } else {
-    echo "Message has been sent";
+     echo "<script>alert('Check uw inbox!');</script>";
  }
-
-##$password = randomPassword();
-##$to      = $_POST['email'];
-##$subject = "Aladdin wachtwoord";
-##$message = "Beste gebruiker, \r\n Uw nieuwe wachtwoord om mee in te loggen is: ".$password;
-##$from = "From: webmaster@example.com";
-##mail("$to", "$subject", "$message", "$from");
 
 function randomPassword() {
     $alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
@@ -45,9 +38,9 @@ function randomPassword() {
 }
 
 
-function subPassword(){
+function subPassword($pass){
 
-  UpdatePassword($_POST["email"], $password);
+  UpdatePassword($_POST["mail"], $pass);
 
 }
  ?>
