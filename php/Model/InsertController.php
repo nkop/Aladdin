@@ -57,6 +57,7 @@ if($canPass){
 
 function insertUser($sql, $gebruikersnaam, $voornaam, $achternaam, $tussenvoegsel, $date, $email, $straatnaam, $huisnummer, $postcode, $woonplaats, $geslacht, $rechten, $wachtwoord){
   include ('../Controller/Smarty/header.php');
+  include_once 'password.php';
   $gebruikersnaam = mysqli_real_escape_string($sql, $gebruikersnaam);
   $voornaam = mysqli_real_escape_string($sql, $voornaam);
   $achternaam = mysqli_real_escape_string($sql, $achternaam);

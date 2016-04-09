@@ -1,3 +1,26 @@
+<?php
+/* Smarty version 3.1.29, created on 2016-04-05 16:03:04
+  from "C:\xampp\htdocs\Aladdin\php\View\Assets\php\footer.tpl" */
+
+if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
+  'has_nocache_code' => false,
+  'version' => '3.1.29',
+  'unifunc' => 'content_5703c598882104_11520928',
+  'file_dependency' => 
+  array (
+    '10ff7c575fbd3e2f41cf614bfd63b0755ea0f454' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\Aladdin\\php\\View\\Assets\\php\\footer.tpl',
+      1 => 1459863875,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5703c598882104_11520928 ($_smarty_tpl) {
+?>
 <!--=== Footer Version 1 ===-->
     <div class="footer-v1">
         <div class="footer">
@@ -66,4 +89,5 @@
                     <!-- End Address -->
                 </div>
             </div> 
-        </div><!--/footer-->
+        </div><!--/footer--><?php }
+}

@@ -5,24 +5,24 @@
 <head>
     <title>Alladin | Home</title>
 
-   <?php include'Assets/php/Head.tpl.php'?>
+   {include file='Assets/php/Head.tpl'}
 </head>
 
 <body>
 
 <div class="wrapper">
-<?php include 'assets/php/NavTop.php';?>
+{include file='Assets/php/NavTop.tpl'}
 
 <div class="container content">
-<form class="text-center col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+<form class="text-center col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2" action="../Controller/Handlers/Passwordrecovery.php">
   <input type="text" class="form-control" placeholder="E-mail" />
-  <button type="submit" class="btn btn-success">Verstuur</button>
+  <button type="submit" class="btn btn-success" name="email">Verstuur</button>
 </form>
 </div>
 
-<?php include 'Assets/php/Footer.php';?>
+{include file='Assets/php/Footer.tpl'}
 </div><!--/wrapper-->
-<?php include 'Assets/php/jsCall.php';?>
+{include file='Assets/php/jsCall.tpl'}
 
 </body>
 </html>

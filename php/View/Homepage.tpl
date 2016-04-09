@@ -4,25 +4,24 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
     <title>Aladdin | Home</title>
-	<?php include 'Assets/php/Head.tpl.php';?>
+    {include '../view/Assets/php/Head.tpl'}
+
 
 </head>
 
 <body>
 
 <div class="wrapper">
-   <?php
-   include 'Assets/php/NavTop.php';
-   ?>
+{include '../view/Assets/php/NavTop.tpl'}
 
 
     <!--=== Slider ===-->
     <div id="layerslider" style="width: 100%; height: 500px; margin: 0px auto;">
         <!-- First slide -->
         <div class="ls-slide" data-ls="slidedelay:4500;transition2d:25;">
-            <img src="assets/img/sliders/layer/bg1.jpg" class="ls-bg" alt="Slide background"/>
+            <img src="../view/assets/img/sliders/layer/bg1.jpg" class="ls-bg" alt="Slide background"/>
 
-            <img src="images/jasmine.png" alt="Slider image" class="ls-s-1" style=" top:62px; left: 29%;"
+            <img src="../view/images/jasmine.png" alt="Slider image" class="ls-s-1" style=" top:62px; left: 29%;"
             data-ls="offsetxin:left; durationin:1500; delayin:1500; fadein:false; offsetxout:left; durationout:1000; fadeout:false;">
 
             <span class="ls-s-1" style=" text-transform: uppercase; line-height: 45px; font-size:35px; color:#fff; top:200px; left: 590px; slidedirection : top; slideoutdirection : bottom; durationin : 3500; durationout : 3500; delayin : 1000;">
@@ -32,7 +31,7 @@
 
         <!--Second Slide-->
         <div class="ls-slide" data-ls="transition2d:93;">
-            <img src="assets/img/bg/18.jpg" class="ls-bg" alt="Slide background">
+            <img src="../view/assets/img/bg/18.jpg" class="ls-bg" alt="Slide background">
 
             <i class="fa fa-chevron-circle-right ls-s-1" style=" color: #fff; font-size: 24px; top:70px; left: 40px; slidedirection : left; slideoutdirection : top; durationin : 1500; durationout : 500; "></i>
 
@@ -56,12 +55,12 @@
                 gebaseerd op Bootstrap 3
             </a>
 
-            <img src="images/jasmine.png" alt="Slider Image" class="ls-s-1" style=" top:30px; left: 650px; slidedirection : right; slideoutdirection : bottom; durationin : 1500; durationout : 1500; ">
+            <img src="../view/images/jasmine.png" alt="Slider Image" class="ls-s-1" style=" top:30px; left: 650px; slidedirection : right; slideoutdirection : bottom; durationin : 1500; durationout : 1500; ">
         </div>
 
         <!--Third Slide-->
         <div class="ls-slide" style="slidedirection: right; transition2d: 92,93,105; ">
-            <img src="assets/img/sliders/layer/bg2.jpg" class="ls-bg" alt="Slide background">
+            <img src="../view/assets/img/sliders/layer/bg2.jpg" class="ls-bg" alt="Slide background">
         </div>
         <!--End Third Slide-->
     </div><!--/layer_slider-->
@@ -75,7 +74,7 @@
         	<div class="col-md-12">
         	<h2 class="heading-sm">
                  <a class="link-bg-icon" href="#">
-                     <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-thumbs-o-up"></i>
+                     <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-heart"></i>
                      <span>Alladin</span>
                  </a>
             </h2>
@@ -107,7 +106,7 @@
         	<div class="col-md-6 col-sm-12">
         	<h2 class="heading-sm">
                  <a class="link-bg-icon" href="#">
-                     <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-heart"></i>
+                     <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-thumbs-up"></i>
                      <span>Wat kan?</span>
                  </a>
             </h2>
@@ -137,7 +136,7 @@
     			<div class="headline"><h2>Hallo, dit is Alladin</h2></div>
                 <div class="row">
                     <div class="col-sm-4">
-                        <img class="img-responsive margin-bottom-20" src="assets/img/stock/make_a_wish.jpg" alt="">
+                        <img class="img-responsive margin-bottom-20" src="../view/assets/img/stock/make_a_wish.jpg" alt="">
                     </div>
                     <div class="col-sm-8">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nunc dolor</p>
@@ -175,7 +174,7 @@
                 <div class="item">
                     <a href="#">
                         <em class="overflow-hidden">
-                            <img class="img-responsive" src="assets/img/main/img1.jpg" alt="">
+                            <img class="img-responsive" src="../view/assets/img/main/img1.jpg" alt="">
                         </em>
                         <span>
                             <strong>Gelukkig nieuwjaar!</strong>
@@ -186,7 +185,7 @@
                 <div class="item">
                     <a href="#">
                         <em class="overflow-hidden">
-                            <img class="img-responsive" src="assets/img/main/img2.jpg" alt="">
+                            <img class="img-responsive" src="../view/assets/img/main/img2.jpg" alt="">
                         </em>
                         <span>
                             <strong>Nieuwe website!</strong>
@@ -197,7 +196,7 @@
                 <div class="item">
                     <a href="#">
                         <em class="overflow-hidden">
-                            <img class="img-responsive" src="assets/img/main/img3.jpg" alt="">
+                            <img class="img-responsive" src="../view/assets/img/main/img3.jpg" alt="">
                         </em>
                         <span>
                             <strong>Lorem ipsum</strong>
@@ -208,7 +207,7 @@
                 <div class="item">
                     <a href="#">
                         <em class="overflow-hidden">
-                            <img class="img-responsive" src="assets/img/main/img4.jpg" alt="">
+                            <img class="img-responsive" src="../view/assets/img/main/img4.jpg" alt="">
                         </em>
                         <span>
                             <strong>Lorem ipsum</strong>
@@ -219,7 +218,7 @@
                 <div class="item">
                     <a href="#">
                         <em class="overflow-hidden">
-                            <img class="img-responsive" src="assets/img/main/img5.jpg" alt="">
+                            <img class="img-responsive" src="../view/assets/img/main/img5.jpg" alt="">
                         </em>
                         <span>
                             <strong>Lorem ipsum</strong>
@@ -230,7 +229,7 @@
                 <div class="item">
                     <a href="#">
                         <em class="overflow-hidden">
-                            <img class="img-responsive" src="assets/img/main/img1.jpg" alt="">
+                            <img class="img-responsive" src="../view/assets/img/main/img1.jpg" alt="">
                         </em>
                         <span>
                             <strong>Lorem ipsum</strong>
@@ -241,7 +240,7 @@
                 <div class="item">
                     <a href="#">
                         <em class="overflow-hidden">
-                            <img class="img-responsive" src="assets/img/main/img2.jpg" alt="">
+                            <img class="img-responsive" src="../view/assets/img/main/img2.jpg" alt="">
                         </em>
                         <span>
                             <strong>Lorem ipsum</strong>
@@ -252,7 +251,7 @@
                 <div class="item">
                     <a href="#">
                         <em class="overflow-hidden">
-                            <img class="img-responsive" src="assets/img/main/img3.jpg" alt="">
+                            <img class="img-responsive" src="../view/assets/img/main/img3.jpg" alt="">
                         </em>
                         <span>
                             <strong>Lorem ipsum</strong>
@@ -263,7 +262,7 @@
                 <div class="item">
                     <a href="#">
                         <em class="overflow-hidden">
-                            <img class="img-responsive" src="assets/img/main/img4.jpg" alt="">
+                            <img class="img-responsive" src="../view/assets/img/main/img4.jpg" alt="">
                         </em>
                         <span>
                             <strong>Lorem ipsum</strong>
@@ -274,7 +273,7 @@
                 <div class="item">
                     <a href="#">
                         <em class="overflow-hidden">
-                            <img class="img-responsive" src="assets/img/main/img5.jpg" alt="">
+                            <img class="img-responsive" src="../view/assets/img/main/img5.jpg" alt="">
                         </em>
                         <span>
                             <strong>Lorem ipsum</strong>
@@ -290,41 +289,39 @@
         <div class="headline"><h2>Medemogelijk gemaakt door:</h2></div>
         <div class="owl-clients-v1">
             <div class="item">
-                <img src="assets/img/clients4/1.png" alt="">
+                <img src="../view/assets/img/clients4/1.png" alt="">
             </div>
             <div class="item">
-                <img src="assets/img/clients4/2.png" alt="">
+                <img src="../view/assets/img/clients4/2.png" alt="">
             </div>
             <div class="item">
-                <img src="assets/img/clients4/3.png" alt="">
+                <img src="../view/assets/img/clients4/3.png" alt="">
             </div>
             <div class="item">
-                <img src="assets/img/clients4/4.png" alt="">
+                <img src="../view/assets/img/clients4/4.png" alt="">
             </div>
             <div class="item">
-                <img src="assets/img/clients4/5.png" alt="">
+                <img src="../view/assets/img/clients4/5.png" alt="">
             </div>
             <div class="item">
-                <img src="assets/img/clients4/6.png" alt="">
+                <img src="../view/assets/img/clients4/6.png" alt="">
             </div>
             <div class="item">
-                <img src="assets/img/clients4/7.png" alt="">
+                <img src="../view/assets/img/clients4/7.png" alt="">
             </div>
             <div class="item">
-                <img src="assets/img/clients4/8.png" alt="">
+                <img src="../view/assets/img/clients4/8.png" alt="">
             </div>
             <div class="item">
-                <img src="assets/img/clients4/9.png" alt="">
+                <img src="../view/assets/img/clients4/9.png" alt="">
             </div>
         </div>
         <!-- End Owl Clients v1 -->
     </div><!--/container-->
     <!-- End Content Part -->
-	<?php include 'Assets/php/Footer.php';?>
+    {include '../view/Assets/php/Footer.tpl'}
 
 </div><!--/wrapper-->
-
-<?php include 'Assets/php/jsCall.php';?>
-
+{include '../view/Assets/php/jsCall.tpl'}
 </body>
 </html>

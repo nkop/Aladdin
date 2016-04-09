@@ -52,9 +52,9 @@
         </div><!--/row-->
     </div><!--/container-->
     <!--=== End Content Part ===-->
-<?php include 'Assets/php/Footer.php';?>
+<?php include 'Assets/php/Footer.tpl.php';?>
 </div><!--/wrapper-->
-<?php include 'Assets/php/jsCall.php';?>
+<?php include 'Assets/php/jsCall.tpl.php';?>
 
 </body>
 </html>

@@ -1,3 +1,30 @@
+<?php
+/* Smarty version 3.1.29, created on 2016-04-08 14:57:03
+  from "C:\xampp\htdocs\Aladdin\php\View\page_registration.tpl" */
+
+if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
+  'has_nocache_code' => false,
+  'version' => '3.1.29',
+  'unifunc' => 'content_5707aa9fad2af8_80288710',
+  'file_dependency' => 
+  array (
+    '8ac4d591a6792ea4d892181bd462f0e74a7afc0c' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\Aladdin\\php\\View\\page_registration.tpl',
+      1 => 1460118100,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:Assets/php/Head.tpl' => 1,
+    'file:../view/Assets/php/NavTop.tpl' => 1,
+    'file:../view/Assets/php/Footer.tpl' => 1,
+    'file:../view/Assets/php/jsCall.tpl' => 1,
+  ),
+),false)) {
+function content_5707aa9fad2af8_80288710 ($_smarty_tpl) {
+?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
@@ -5,14 +32,18 @@
 <head>
     <title>Alladin | Home</title>
 
-{include 'Assets/php/Head.tpl'}
+<?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:Assets/php/Head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
 
 </head>
 
 <body>
 
 <div class="wrapper">
-{include '../view/Assets/php/NavTop.tpl'}
+<?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:../view/Assets/php/NavTop.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
 
     <!--=== Breadcrumbs ===-->
     <div class="breadcrumbs">
@@ -109,7 +140,9 @@
                                 I read <a href="page_terms.html" class="color-green">Terms and Conditions</a>
                             </label>
                         </div>
-                        <script src="../View/Assets/js/passwordCheck.js"></script>
+                        <?php echo '<script'; ?>
+ src="../View/Assets/js/passwordCheck.js"><?php echo '</script'; ?>
+>
                         <div class="col-lg-6 text-right">
                             <button class="btn-u" type="submit" name="register">Register</button>
                         </div>
@@ -120,10 +153,16 @@
     </div><!--/container-->
     <!--=== End Content Part ===-->
 
-{include '../view/Assets/php/Footer.tpl'}
+<?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:../view/Assets/php/Footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
 </div>
 
-{include '../view/Assets/php/jsCall.tpl'}
+<?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:../view/Assets/php/jsCall.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
 
 </body>
 </html>
+<?php }
+}
