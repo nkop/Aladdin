@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-08 14:56:56
+/* Smarty version 3.1.29, created on 2016-04-09 14:27:13
   from "C:\xampp\htdocs\Aladdin\php\view\Assets\php\NavTop.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5707aa98dfe0d4_07285115',
+  'unifunc' => 'content_5708f5210f09c3_71984780',
   'file_dependency' => 
   array (
     '2a3973ab041e895e09015ecf1f7e6c937873c12b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Aladdin\\php\\view\\Assets\\php\\NavTop.tpl',
-      1 => 1460118100,
+      1 => 1460122329,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5707aa98dfe0d4_07285115 ($_smarty_tpl) {
+function content_5708f5210f09c3_71984780 ($_smarty_tpl) {
 ?>
   <!--=== Header ===-->
     <div class="header">
@@ -44,19 +44,19 @@ function content_5707aa98dfe0d4_07285115 ($_smarty_tpl) {
                         </ul>
                     </li>
                     <li class="topbar-devider"></li>
-                    <li><a href="page_faq.html">Help</a></li>
+                    <li><a href="FaqController.php">Help</a></li>
                     <li class="topbar-devider"></li>
                     <li><a href='loginController.php?logout=true'><?php echo $_smarty_tpl->tpl_vars['text']->value;?>
 </a></li>
                     <?php if ($_smarty_tpl->tpl_vars['loginoptions']->value) {?>
                       <li class="topbar-devider"></li>
                       
-                      <li><a href="../Controller/RegisterController.php">Registreer</a></li>
+                      <li><a href="RegisterController.php">Registreer</a></li>
                       <?php }?>
                       <?php if ($_smarty_tpl->tpl_vars['loginoptions']->value == false) {?>
-                      <li class="topbar-devider"></li>
+                      <!--  <li class="topbar-devider"></li>
                       
-                      <li><a href="#">Extra optie</a></li>
+                      <li><a href="#">Extra optie</a></li>-->
                       <?php }?>
                 </ul>
             </div>
@@ -82,31 +82,31 @@ function content_5707aa98dfe0d4_07285115 ($_smarty_tpl) {
                     </li>
                     <!-- End Home -->
 
-                    <!-- Blog -->
+                    <!-- nieuws -->
                     <li class="dropdown">
                         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
                             Nieuws
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="blog_masonry_3col.html">Laatste nieuws</a></li>
-                            <li><a href="blog_timeline.html">Blogs</a></li>
+                            <li><a href="#">Laatste nieuws</a></li>
+                            <li><a href="#">Blogs</a></li>
                         </ul>
                     </li>
-                    <!-- End Blog -->
+                    <!-- End nieuws -->
 					
 
-                    <!-- Portfolio -->
+                    <!-- contact -->
                     <li class="dropdown">
                         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
                             Contact
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="blog_masonry_3col.html">Veelgestelde vragen</a></li>
-                            <li><a href="page_contact.php">Contact</a></li>
+                            <li><a href="FaqController.php">Veelgestelde vragen</a></li>
+                            <li><a href="ContactController.php">Contact</a></li>
                         </ul>
 
                     </li>
-                    <!-- End Portfolio -->
+                    <!-- End contact -->
                 </ul>
             </div><!--/end container-->
         </div><!--/navbar-collapse-->
