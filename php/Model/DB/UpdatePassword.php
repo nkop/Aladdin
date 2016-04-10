@@ -1,9 +1,8 @@
 <?php
 include ("Database.class.php");
-include ("../password.php");
 
 function UpdatePassword($email, $password){
-
+include_once '../password.php';
 
   $hashed = password_hash("$password", PASSWORD_DEFAULT);
   echo $email;
@@ -16,10 +15,10 @@ function UpdatePassword($email, $password){
   if($result = mysqli_query($sql, $query)){
 
     echo "Updated";
-    header('Location: ../../View/RecoverSucces.php');
+    header('Location: ../../Controller/RecoveryController.php?status=success');
   }else{
     echo "Failed";
-    header('Location: ../../View/RecoverFail.php');
+    header('Location: ../../Controller/RecoveryController.php?status=fail');
     echo $sql->error;
   }
 }
