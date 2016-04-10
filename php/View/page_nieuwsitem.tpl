@@ -69,7 +69,7 @@
     <!--=== End Content Part ===-->
 {include file='../View/Assets/php/footer.tpl'}
 </div><!--/wrapper-->
-<?php include 'Assets/php/jsCall.tpl.php';?>
+{include '../view/Assets/php/jsCall.tpl'}
 
 </body>
 </html>

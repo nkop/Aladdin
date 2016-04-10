@@ -79,7 +79,7 @@
         <div class="row margin-bottom-20">
             <div class="col-sm-5 sm-margin-bottom-20">
                 <div class="responsive-video">
-                    <iframe src="//player.vimeo.com/video/93094247?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    <iframe class="hideme" src="//player.vimeo.com/video/93094247?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 </div>
             </div>
             <div class="col-sm-7">
@@ -103,7 +103,7 @@
         <!-- News v3 -->
         <div class="row margin-bottom-20">
             <div class="col-sm-5 sm-margin-bottom-20">
-                <img class="img-responsive" src="http://placehold.it/458x258" alt="">
+                <img class="img-responsive hideme" src="http://placehold.it/458x258" alt="">
             </div>
             <div class="col-sm-7">
                 <div class="news-v3">
@@ -135,7 +135,7 @@
     <!--=== End Content Part ===-->
 {include file='../View/Assets/php/footer.tpl'}
 </div><!--/wrapper-->
-<?php include 'Assets/php/jsCall.tpl.php';?>
+{include '../view/Assets/php/jsCall.tpl'}
 
 </body>
 </html>

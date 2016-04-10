@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-10 15:11:17
+/* Smarty version 3.1.29, created on 2016-04-10 18:52:47
   from "C:\xampp\htdocs\Aladdin\php\View\page_nieuws.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_570a50f59434b4_69037852',
+  'unifunc' => 'content_570a84df733223_30494133',
   'file_dependency' => 
   array (
     'ffa1df56783a54e4d398e2487f79bc12ce6f3933' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Aladdin\\php\\View\\page_nieuws.tpl',
-      1 => 1460293875,
+      1 => 1460307166,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,10 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:../View/Assets/php/Head.tpl' => 1,
     'file:../View/Assets/php/NavTop.tpl' => 1,
     'file:../View/Assets/php/footer.tpl' => 1,
+    'file:../view/Assets/php/jsCall.tpl' => 1,
   ),
 ),false)) {
-function content_570a50f59434b4_69037852 ($_smarty_tpl) {
+function content_570a84df733223_30494133 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
@@ -109,7 +110,7 @@ function content_570a50f59434b4_69037852 ($_smarty_tpl) {
         <div class="row margin-bottom-20">
             <div class="col-sm-5 sm-margin-bottom-20">
                 <div class="responsive-video">
-                    <iframe src="//player.vimeo.com/video/93094247?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    <iframe class="hideme" src="//player.vimeo.com/video/93094247?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 </div>
             </div>
             <div class="col-sm-7">
@@ -133,7 +134,7 @@ function content_570a50f59434b4_69037852 ($_smarty_tpl) {
         <!-- News v3 -->
         <div class="row margin-bottom-20">
             <div class="col-sm-5 sm-margin-bottom-20">
-                <img class="img-responsive" src="http://placehold.it/458x258" alt="">
+                <img class="img-responsive hideme" src="http://placehold.it/458x258" alt="">
             </div>
             <div class="col-sm-7">
                 <div class="news-v3">
@@ -167,7 +168,9 @@ function content_570a50f59434b4_69037852 ($_smarty_tpl) {
 ?>
 
 </div><!--/wrapper-->
-<?php echo '<?php ';?>include 'Assets/php/jsCall.tpl.php';<?php echo '?>';?>
+<?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:../view/Assets/php/jsCall.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
 
 </body>
 </html>
