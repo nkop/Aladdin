@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-10 18:59:15
+/* Smarty version 3.1.29, created on 2016-04-10 21:43:23
   from "C:\xampp\htdocs\Aladdin\php\View\Homepage.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_570a8663114d73_68147362',
+  'unifunc' => 'content_570aacdbf1fb23_44163833',
   'file_dependency' => 
   array (
     '6fde05b10a3a5a1a9a72b253b8405f9da683a6d7' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Aladdin\\php\\View\\Homepage.tpl',
-      1 => 1460307554,
+      1 => 1460316966,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:../view/Assets/php/jsCall.tpl' => 1,
   ),
 ),false)) {
-function content_570a8663114d73_68147362 ($_smarty_tpl) {
+function content_570aacdbf1fb23_44163833 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
@@ -191,7 +191,7 @@ function content_570a8663114d73_68147362 ($_smarty_tpl) {
     	<!-- End Info Blokcs -->
 </div>
     	
-    	        <!--=== Parallax Counter v3 ===--> 
+   <!--=== Parallax Counter v3 ===--> 
     <div class="parallax-counter-v3 parallaxBg">
         <div class="container">
             <div class="row">
@@ -217,6 +217,7 @@ function content_570a8663114d73_68147362 ($_smarty_tpl) {
         </div><!--/end container-->
     </div>
     <!--=== End Parallax Counter v3 ===-->
+    
 <div class="container content">
         <!-- Nieuws -->
         <div class="owl-carousel-v1 owl-work-v1 margin-bottom-40">

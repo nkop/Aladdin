@@ -160,7 +160,7 @@
     	<!-- End Info Blokcs -->
 </div>
     	
-    	        <!--=== Parallax Counter v3 ===--> 
+   <!--=== Parallax Counter v3 ===--> 
     <div class="parallax-counter-v3 parallaxBg">
         <div class="container">
             <div class="row">
@@ -186,6 +186,7 @@
         </div><!--/end container-->
     </div>
     <!--=== End Parallax Counter v3 ===-->
+    
 <div class="container content">
         <!-- Nieuws -->
         <div class="owl-carousel-v1 owl-work-v1 margin-bottom-40">
