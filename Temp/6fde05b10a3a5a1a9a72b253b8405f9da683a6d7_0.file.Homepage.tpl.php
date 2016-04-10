@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-09 14:27:12
+/* Smarty version 3.1.29, created on 2016-04-10 18:59:15
   from "C:\xampp\htdocs\Aladdin\php\View\Homepage.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5708f520c97692_16722042',
+  'unifunc' => 'content_570a8663114d73_68147362',
   'file_dependency' => 
   array (
     '6fde05b10a3a5a1a9a72b253b8405f9da683a6d7' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Aladdin\\php\\View\\Homepage.tpl',
-      1 => 1460122329,
+      1 => 1460307554,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:../view/Assets/php/jsCall.tpl' => 1,
   ),
 ),false)) {
-function content_5708f520c97692_16722042 ($_smarty_tpl) {
+function content_570a8663114d73_68147362 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
@@ -189,7 +189,35 @@ function content_5708f520c97692_16722042 ($_smarty_tpl) {
             </div><!--/col-md-8-->
     	</div><!--/row-->
     	<!-- End Info Blokcs -->
-
+</div>
+    	
+    	        <!--=== Parallax Counter v3 ===--> 
+    <div class="parallax-counter-v3 parallaxBg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-xs-6 md-margin-bottom-50">
+                    <div class="features">
+                        <span class="counter">5867</span>
+                        <span class="features-info">Gebruikers</span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-6 md-margin-bottom-50">
+                    <div class="features">
+                        <span class="counter">7169</span>
+                        <span class="features-info">Wensen</span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-6">
+                    <div class="features">
+                        <span class="counter">19146</span>
+                        <span class="features-info">Talenten</span>
+                    </div>
+                </div>
+            </div>
+        </div><!--/end container-->
+    </div>
+    <!--=== End Parallax Counter v3 ===-->
+<div class="container content">
         <!-- Nieuws -->
         <div class="owl-carousel-v1 owl-work-v1 margin-bottom-40">
             <div class="headline"><h2 class="pull-left">Nieuws</h2>

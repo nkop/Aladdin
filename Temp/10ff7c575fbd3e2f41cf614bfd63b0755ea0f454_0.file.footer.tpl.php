@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-08 14:57:05
+/* Smarty version 3.1.29, created on 2016-04-09 13:56:56
   from "C:\xampp\htdocs\Aladdin\php\View\Assets\php\footer.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5707aaa1b739b7_56335497',
+  'unifunc' => 'content_5708ee08097a34_75046121',
   'file_dependency' => 
   array (
     '10ff7c575fbd3e2f41cf614bfd63b0755ea0f454' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Aladdin\\php\\View\\Assets\\php\\footer.tpl',
-      1 => 1460118100,
+      1 => 1460201758,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5707aaa1b739b7_56335497 ($_smarty_tpl) {
+function content_5708ee08097a34_75046121 ($_smarty_tpl) {
 ?>
 <!--=== Footer Version 1 ===-->
     <div class="footer-v1">
