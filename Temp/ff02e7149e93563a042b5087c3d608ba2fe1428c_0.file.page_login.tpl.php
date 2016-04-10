@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-09 13:56:55
+/* Smarty version 3.1.29, created on 2016-04-09 20:09:01
   from "C:\xampp\htdocs\Aladdin\php\View\page_login.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5708ee07f2b4d6_92610222',
+  'unifunc' => 'content_5709453d357fa4_39638005',
   'file_dependency' => 
   array (
     'ff02e7149e93563a042b5087c3d608ba2fe1428c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Aladdin\\php\\View\\page_login.tpl',
-      1 => 1460201758,
+      1 => 1460219869,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:../View/Assets/php/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5708ee07f2b4d6_92610222 ($_smarty_tpl) {
+function content_5709453d357fa4_39638005 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
