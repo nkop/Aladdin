@@ -1,4 +1,5 @@
 <?php
+include '../../Model/password.php';
 require '../../Model/DB/UpdatePassword.php';
 
 require '../PHPMailer/PHPMailerAutoload.php';
