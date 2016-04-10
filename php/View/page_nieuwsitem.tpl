@@ -49,7 +49,7 @@
                     <ul class="post-shares post-shares-lg">
                         <li>
                             <a href="#">
-                                <i class="rounded-x icon-share"></i>
+                                <i class="rounded-x fa fa-facebook float"></i>
                                 <span>12</span>
                             </a>
                         </li>

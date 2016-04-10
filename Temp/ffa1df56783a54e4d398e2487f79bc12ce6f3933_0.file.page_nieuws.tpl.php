@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-10 18:52:47
+/* Smarty version 3.1.29, created on 2016-04-10 23:47:39
   from "C:\xampp\htdocs\Aladdin\php\View\page_nieuws.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_570a84df733223_30494133',
+  'unifunc' => 'content_570ac9fb0c41a9_70537739',
   'file_dependency' => 
   array (
     'ffa1df56783a54e4d398e2487f79bc12ce6f3933' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Aladdin\\php\\View\\page_nieuws.tpl',
-      1 => 1460307166,
+      1 => 1460324851,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:../view/Assets/php/jsCall.tpl' => 1,
   ),
 ),false)) {
-function content_570a84df733223_30494133 ($_smarty_tpl) {
+function content_570ac9fb0c41a9_70537739 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
@@ -63,7 +63,7 @@ function content_570a84df733223_30494133 ($_smarty_tpl) {
         <!-- News v3 -->
         <div class="row margin-bottom-20">
             <div class="col-sm-5 sm-margin-bottom-20">
-                <img class="img-responsive" src="http://placehold.it/458x258" alt="">
+                <img class="img-responsive" src="http://placehold.it/458x258/ff0000/ffffff" alt="">
             </div>
             <div class="col-sm-7">
                 <div class="news-v3">
@@ -74,7 +74,7 @@ function content_570a84df733223_30494133 ($_smarty_tpl) {
                     <h2><a href="NieuwsItemController.php">Nieuwe website!</a></h2>
                     <p>Nullam elementum tincidunt massa, a pulvinar leo ultricies ut. Ut fringilla lectus tellus, imperdiet molestie est volutpat at. Sed viverra cursus nibh, sed consectetur ipsum sollicitudin sed. Cras erat est, euismod id congue sed, sollicitudin sed odio. Nullam non metus in mi rhoncus efficitur...</p>
                     <ul class="post-shares">
-                        <li><a href="#"><i class="rounded-x icon-share"></i></a></li>
+                        <li><a href="#"><i class="rounded-x fa fa-facebook float"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -86,7 +86,7 @@ function content_570a84df733223_30494133 ($_smarty_tpl) {
         <!-- News v3 -->
         <div class="row margin-bottom-20">
             <div class="col-sm-5 sm-margin-bottom-20">
-                <img class="img-responsive" src="http://placehold.it/458x258" alt="">
+                <img class="img-responsive" src="http://placehold.it/458x258/ff0000/ffffff" alt="">
             </div>
             <div class="col-sm-7">
                 <div class="news-v3">
@@ -97,7 +97,7 @@ function content_570a84df733223_30494133 ($_smarty_tpl) {
                     <h2><a href="NieuwsItemController.php">Gelukkig nieuwjaar!</a></h2>
                     <p>Nullam elementum tincidunt massa, a pulvinar leo ultricies ut. Ut fringilla lectus tellus, imperdiet molestie est volutpat at. Sed viverra cursus nibh, sed consectetur ipsum sollicitudin sed. Cras erat est, euismod id congue sed, sollicitudin sed odio. Nullam non metus in mi rhoncus efficitur...</p>
                     <ul class="post-shares">
-                        <li><a href="#"><i class="rounded-x icon-share"></i></a></li>
+                        <li><a href="#"><i class="rounded-x fa fa-facebook float"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -122,7 +122,7 @@ function content_570a84df733223_30494133 ($_smarty_tpl) {
                     <h2><a href="NieuwsItemController.php">Video van Aladdin</a></h2>
                     <p>Nullam elementum tincidunt massa, a pulvinar leo ultricies ut. Ut fringilla lectus tellus, imperdiet molestie est volutpat at. Sed viverra cursus nibh, sed consectetur ipsum sollicitudin sed. Cras erat est, euismod id congue sed, sollicitudin sed odio. Nullam non metus in mi rhoncus efficitur...</p>
                     <ul class="post-shares">
-                        <li><a href="#"><i class="rounded-x icon-share"></i></a></li>
+                        <li><a href="#"><i class="rounded-x fa fa-facebook float"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -134,7 +134,7 @@ function content_570a84df733223_30494133 ($_smarty_tpl) {
         <!-- News v3 -->
         <div class="row margin-bottom-20">
             <div class="col-sm-5 sm-margin-bottom-20">
-                <img class="img-responsive hideme" src="http://placehold.it/458x258" alt="">
+                <img class="img-responsive hideme" src="http://placehold.it/458x258/ff0000/ffffff" alt="">
             </div>
             <div class="col-sm-7">
                 <div class="news-v3">
@@ -145,7 +145,7 @@ function content_570a84df733223_30494133 ($_smarty_tpl) {
                     <h2><a href="NieuwsItemController.php">Lorem ipsum</a></h2>
                     <p>Nullam elementum tincidunt massa, a pulvinar leo ultricies ut. Ut fringilla lectus tellus, imperdiet molestie est volutpat at. Sed viverra cursus nibh, sed consectetur ipsum sollicitudin sed. Cras erat est, euismod id congue sed, sollicitudin sed odio. Nullam non metus in mi rhoncus efficitur...</p>
                     <ul class="post-shares">
-                        <li><a href="#"><i class="rounded-x icon-share"></i></a></li>
+                        <li><a href="#"><i class="rounded-x fa fa-facebook float"></i></a></li>
                     </ul>
                 </div>
             </div>
