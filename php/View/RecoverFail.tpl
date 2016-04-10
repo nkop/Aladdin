@@ -3,7 +3,7 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
 <title>Alladin | Home</title>
-{include 'Assets/php/Head.tpl'}
+{include '../view/Assets/php/Head.tpl'}
 <!-- Meta -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +21,7 @@
     <body>
 
     <div class="wrapper">
-{include 'Assets/php/NavTop.tpl'}
+{include '../view/Assets/php/NavTop.tpl'}
 
 
 
@@ -37,7 +37,7 @@
         </div><!--/row-->
     </div><!--/container-->
     <!--=== End Content Part ===-->
-{include 'Assets/php/Footer.tpl'}
+{include '../view/Assets/php/Footer.tpl'}
 </div><!--/wrapper-->
 <?php include 'Assets/php/jsCall.tpl';?>
 

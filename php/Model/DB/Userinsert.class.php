@@ -30,17 +30,17 @@ function insert_user($sql, $gebruikersnaam, $voornaam, $achternaam, $tussenvoegs
 	$result = mysqli_query($sql, "SELECT 1 FROM account WHERE email = '$email'");
 	if ($result && mysqli_num_rows($result) > 0)
 	{
-		header('location: ../../Controller/RegisterController.php/?status=fail');
+		header('location: ../../Controller/RegisterController.php?status=fail');
 	}
 	else
 	{
 
 		$query = "INSERT INTO account (gebruikersnaam, voornaam, achternaam, tussenvoegsel, geboortedatum, email, straatnaam, huisnummer, postcode, woonplaats, geslacht, rechten, wachtwoord) VALUES ('$gebruikersnaam', '$voornaam', '$achternaam', '$tussenvoegsel' , '$date', '$email' , '$straatnaam', '$huisnummer', '$postcode', '$woonplaats', '$geslacht', '$rechten', '$wachtwoord')";
 		if (mysqli_query($sql, $query)) {
-			header('location: ../../Controller/RegisterController.php/?status=success');
+			header('location: ../../Controller/RegisterController.php?status=success');
 		} else {
 		echo mysqli_error($sql);
-		header('location: ../../Controller/RegisterController.php/?status=fail');
+		header('location: ../../Controller/RegisterController.php?status=fail');
 			}
 	}
 
