@@ -20,9 +20,10 @@ function validateData($accountid, $firstname, $middlename, $lastname, $zipcode, 
 		$mysqli->query($sql_query);
 		return true;
 	} catch (Exception $e) {
+		$stored_exc = $e;
 		return false;
 	}
-	finally {
+	if($stored_exc) {
 		$mysqli->close();
 	}
 
