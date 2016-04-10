@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-09 15:13:29
+/* Smarty version 3.1.29, created on 2016-04-10 13:15:40
   from "C:\xampp\htdocs\Aladdin\php\View\page_passwordrecover.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5708fff9bf5fb9_55836330',
+  'unifunc' => 'content_570a35dce0a5d3_62839149',
   'file_dependency' => 
   array (
     '81b7475fb1295662e1eb0a837cef17b0de2f58ee' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Aladdin\\php\\View\\page_passwordrecover.tpl',
-      1 => 1460207593,
+      1 => 1460284888,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:Assets/php/jsCall.tpl' => 1,
   ),
 ),false)) {
-function content_5708fff9bf5fb9_55836330 ($_smarty_tpl) {
+function content_570a35dce0a5d3_62839149 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
@@ -46,7 +46,7 @@ function content_5708fff9bf5fb9_55836330 ($_smarty_tpl) {
 
 <div class="container content">
 <form class="text-center col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2" action="../Controller/Handlers/Passwordrecovery.php" method="post">
-  <input type="text" class="form-control" name="mail" placeholder="E-mail" />
+  <input type="email" class="form-control" name="mail" placeholder="E-mail" />
   <button type="submit" class="btn btn-success" name="email">Verstuur</button>
 </form>
 </div>

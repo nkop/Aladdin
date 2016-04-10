@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-09 14:27:17
+/* Smarty version 3.1.29, created on 2016-04-10 15:27:49
   from "C:\xampp\htdocs\Aladdin\php\View\Assets\php\NavTop.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5708f5254ca3f0_12318875',
+  'unifunc' => 'content_570a54d5274fa8_28557133',
   'file_dependency' => 
   array (
     '390b2618c7babed697150da4cdfb807461972a28' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Aladdin\\php\\View\\Assets\\php\\NavTop.tpl',
-      1 => 1460122329,
+      1 => 1460294212,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5708f5254ca3f0_12318875 ($_smarty_tpl) {
+function content_570a54d5274fa8_28557133 ($_smarty_tpl) {
 ?>
   <!--=== Header ===-->
     <div class="header">
@@ -88,8 +88,7 @@ function content_5708f5254ca3f0_12318875 ($_smarty_tpl) {
                             Nieuws
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Laatste nieuws</a></li>
-                            <li><a href="#">Blogs</a></li>
+                            <li><a href="NieuwsController.php">Laatste nieuws</a></li>
                         </ul>
                     </li>
                     <!-- End nieuws -->

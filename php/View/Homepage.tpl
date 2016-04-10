@@ -158,7 +158,35 @@
             </div><!--/col-md-8-->
     	</div><!--/row-->
     	<!-- End Info Blokcs -->
-
+</div>
+    	
+    	        <!--=== Parallax Counter v3 ===--> 
+    <div class="parallax-counter-v3 parallaxBg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-xs-6 md-margin-bottom-50">
+                    <div class="features">
+                        <span class="counter">5867</span>
+                        <span class="features-info">Gebruikers</span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-6 md-margin-bottom-50">
+                    <div class="features">
+                        <span class="counter">7169</span>
+                        <span class="features-info">Wensen</span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-6">
+                    <div class="features">
+                        <span class="counter">19146</span>
+                        <span class="features-info">Talenten</span>
+                    </div>
+                </div>
+            </div>
+        </div><!--/end container-->
+    </div>
+    <!--=== End Parallax Counter v3 ===-->
+<div class="container content">
         <!-- Nieuws -->
         <div class="owl-carousel-v1 owl-work-v1 margin-bottom-40">
             <div class="headline"><h2 class="pull-left">Nieuws</h2>

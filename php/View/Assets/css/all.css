@@ -26,3 +26,8 @@
 .full_width{
 	width: 100%;
 }
+
+.hideme
+{
+    opacity:0;
+}
