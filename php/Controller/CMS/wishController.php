@@ -24,6 +24,17 @@ if(isset($_POST['submit']) && isset($_POST['wishID']))
 	
 	header ( "Location: " . $actual_link );
 }
+else if (isset($_POST['decline']) && isset($_POST['wishID']))
+{
+	$db = Database::getInstance();
+	$mysqli = $db->getConnection();
+	if ($_POST['wishID'] > 0) {
+		$sql_query = "UPDATE `wens` SET `status` = '5' WHERE `wensenid` = ".$_POST['wishID'].";";
+	}
+	$mysqli->query($sql_query);
+	
+	header ( "Location: " . $actual_link );
+}
 
 
 $smarty->assign('wishes', $wisharray);

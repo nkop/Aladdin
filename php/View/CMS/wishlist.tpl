@@ -70,7 +70,7 @@
 						<h2><i class="halflings-icon user"></i><span class="break"></span>Wensen</h2>
 					</div>
 					<div class="box-content">
-					<form action="wishController.php" method="POST">
+					
 						<table class="table table-striped table-bordered bootstrap-datatable datatable">
 						  <thead>
 							  <tr>
@@ -87,19 +87,22 @@
 						  <td>{$wish->wensenid}</td>
 						  <td>{$wish->tekst}</td>
 						  <td>{$wish->creatie_datum}</td>
+						  <form action="wishController.php" method="POST">
+						   <input type="hidden" name="wishID" id="wishID" value="{$wish->wensenid}">
 						  <td class="center">
-						  <input type="hidden" name="wishID" id="wishID" value="{$wish->wensenid}">
+						 
 								<button type="submit" name="submit" class="btn btn-success">
                  				<i class="halflings-icon white ok"></i></button>
 						  
 						  		<button type="submit" name="decline" class="btn btn-danger">
                  				<i class="halflings-icon white remove"></i></button></td>
+                 				</form> 
 						  </tr>
 						  {/foreach}
 						  </tbody>
 
 					  </table> 
-					  </form>           
+					            
 					</div>
 				</div><!--/span-->
 			
