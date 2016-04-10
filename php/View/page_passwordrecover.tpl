@@ -15,7 +15,7 @@
 
 <div class="container content">
 <form class="text-center col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2" action="../Controller/Handlers/Passwordrecovery.php" method="post">
-  <input type="text" class="form-control" name="mail" placeholder="E-mail" />
+  <input type="email" class="form-control" name="mail" placeholder="E-mail" />
   <button type="submit" class="btn btn-success" name="email">Verstuur</button>
 </form>
 </div>
