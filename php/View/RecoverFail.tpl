@@ -30,9 +30,7 @@
     <div class="container content">
     	<div class="row">
             <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
-                <h4 class="color-red">Er is iets fout gegaan!<br/></h4>
-                <a href="page_login.php" class="color-green">Login</a><br/>
-                <a href="#" class="color-green">Wachtwoord vergeten?</a>
+                <h4 class="color-red">Er is iets fout gegaan! U hebt mogelijk een verkeerd e-mail adres ingevoerd.<br/></h4>
             </div>
         </div><!--/row-->
     </div><!--/container-->
