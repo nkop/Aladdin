@@ -146,7 +146,7 @@
                             <li><i class="fa fa-check color-green"></i> consectetur adipiscing elit.</li>
                             <li><i class="fa fa-check color-green"></i> consectetur adipiscing elit.</li>
                         </ul>
-                        <button type="button" class="btn btn-danger ">Meld je nu aan!</button>
+                        <button type="button" class="btn btn-danger grow">Meld je nu aan!</button>
                     </div>
 
                 </div>
