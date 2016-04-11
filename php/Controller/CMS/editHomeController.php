@@ -15,6 +15,13 @@ if(isset($_POST["submit"]) && isset($_POST["header"]) && isset($_POST["tekstvakt
 	if(!saveTekstvak($tekstvak)){
 		echo "mislukt";
 	}
+	$teksten = getTekstvakken("homepage");
+	echo "'<html>
+				<div class='alert alert-info'>
+				  Tekst succesvol aangepast!
+				</div>
+				</html>'
+				";
 }
 
 $smarty->assign('teksten', $teksten);
