@@ -17,7 +17,7 @@
     <!--  <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>  -->
     </head>
 
-    <body>
+    <body class="header-fixed">
 
 <div class="wrapper">
 {include 'Assets/php/NavTop.tpl'}

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-10 23:40:35
+/* Smarty version 3.1.29, created on 2016-04-11 15:29:39
   from "C:\xampp\htdocs\Aladdin\php\View\Homepage.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_570ac853da4a54_77706710',
+  'unifunc' => 'content_570ba6c3a56b36_66603632',
   'file_dependency' => 
   array (
     '6fde05b10a3a5a1a9a72b253b8405f9da683a6d7' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Aladdin\\php\\View\\Homepage.tpl',
-      1 => 1460324434,
+      1 => 1460381209,
       2 => 'file',
     ),
   ),
@@ -23,14 +23,14 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:../view/Assets/php/jsCall.tpl' => 1,
   ),
 ),false)) {
-function content_570ac853da4a54_77706710 ($_smarty_tpl) {
+function content_570ba6c3a56b36_66603632 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-    <title>Aladdin | Home</title>
+    <title>Home | Aladdin</title>
     <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:../view/Assets/php/Head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -38,7 +38,7 @@ function content_570ac853da4a54_77706710 ($_smarty_tpl) {
 
 </head>
 
-<body>
+<body class="header-fixed">
 
 <div class="wrapper">
 <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:../view/Assets/php/NavTop.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -56,7 +56,7 @@ function content_570ac853da4a54_77706710 ($_smarty_tpl) {
             data-ls="offsetxin:left; durationin:1500; delayin:1500; fadein:false; offsetxout:left; durationout:1000; fadeout:false;">
 
             <span class="ls-s-1" style=" text-transform: uppercase; line-height: 45px; font-size:35px; color:#fff; top:200px; left: 590px; slidedirection : top; slideoutdirection : bottom; durationin : 3500; durationout : 3500; delayin : 1000;">
-                Voorbeel text
+                Voorbeeld text
             </span>
         </div>
 
@@ -102,16 +102,35 @@ function content_570ac853da4a54_77706710 ($_smarty_tpl) {
         <div class="margin-bottom-10"></div>
         <!-- Service Blocks -->
         <div class="row">
+        	<?php
+$_from = $_smarty_tpl->tpl_vars['result']->value;
+if (!is_array($_from) && !is_object($_from)) {
+settype($_from, 'array');
+}
+$__foreach_tekst_0_saved_item = isset($_smarty_tpl->tpl_vars['tekst']) ? $_smarty_tpl->tpl_vars['tekst'] : false;
+$_smarty_tpl->tpl_vars['tekst'] = new Smarty_Variable();
+$_smarty_tpl->tpl_vars['tekst']->_loop = false;
+foreach ($_from as $_smarty_tpl->tpl_vars['tekst']->value) {
+$_smarty_tpl->tpl_vars['tekst']->_loop = true;
+$__foreach_tekst_0_saved_local_item = $_smarty_tpl->tpl_vars['tekst'];
+?>
         	<div class="col-md-12">
         	<h2 class="heading-sm">
                  <a class="link-bg-icon" href="#">
                      <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-heart"></i>
-                     <span>Alladin</span>
+                     <span><?php echo $_smarty_tpl->tpl_vars['tekst']->value['header'];?>
+</span>
                  </a>
             </h2>
-            <p>
-           Stichting Aladdin wil dat iedereen op de wereld een beetje gelukkiger wordt. Daarom mag je via deze website drie hartenwensen indienen, die je altijd al hebt willen doen of meemaken. Daarnaast weet Aladdin dat iedereen talenten heeft. Ja, ook jij! Met jouw talenten kun je hartenwensen van anderen vervullen. Een leuke bijkomstigheid is dat je van geven zelf ook gelukkiger wordt. Je zet je eigen geluk in beweging. Dat is de kracht van Aladdin en zo werkt iedereen mee aan een wereldsprookje.Wil je meedoen, klik dan op een van de symbolen. (kinderen, volwassenen, ouderen, beperkten, bedrijven) Dan kun je jezelf inschrijven en een vragenlijst invullen. Je wensen en talenten worden verzameld in een database en je kunt meteen al zien of er een match is.  Soms heb je wat meer geduld nodig voordat een wens vervuld is, maar wel kun je alvast wensen van anderen vervullen. Heb je een wens van een ander vervuld, dan mag je een extra wens indienen. Weet je niet zo goed wat je hartenwensen of talenten zijn, zoek dan bij de trefwoorden bij het hart of de ster.
-            </p>
+            <p><?php echo $_smarty_tpl->tpl_vars['tekst']->value['tekstvaktekst'];?>
+</p>
+            <?php
+$_smarty_tpl->tpl_vars['tekst'] = $__foreach_tekst_0_saved_local_item;
+}
+if ($__foreach_tekst_0_saved_item) {
+$_smarty_tpl->tpl_vars['tekst'] = $__foreach_tekst_0_saved_item;
+}
+?>
 
         	</div>
         	<div class="col-md-6 col-sm-12">
