@@ -6,12 +6,12 @@
 <!--<![endif]-->
 <head>
 <title>Alladin | Home</title>
-{include 'Assets/php/Head.tpl'}
+{include '../view/Assets/php/Head.tpl'}
 </head>
 <body>
 
 	<div class="wrapper">    
- 	{include 'assets/php/NavTop.php'}
+ 	{include '../view/assets/php/NavTop.tpl'}
     <!--=== Breadcrumbs ===-->
 		<div class="breadcrumbs">
 			<div class="container">
@@ -95,10 +95,10 @@
 		<!--/container-->
 		<!--=== End Content Part ===-->
 
-{include 'Assets/php/Footer.php'}
+{include '../view/Assets/php/Footer.tpl'}
 </div>
 
-{include 'assets/php/jsCall.php'}
+{include '../view/assets/php/jsCall.tpl'}
 
 </body>
 </html>

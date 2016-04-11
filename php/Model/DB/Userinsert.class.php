@@ -11,6 +11,7 @@ class Userinsert{
 
 function insert_user($sql, $gebruikersnaam, $voornaam, $achternaam, $tussenvoegsel, $date, $email, $straatnaam, $huisnummer, $postcode, $woonplaats, $geslacht, $rechten, $wachtwoord){
 
+
 	$gebruikersnaam = mysqli_real_escape_string($sql, $gebruikersnaam);
 	$voornaam = mysqli_real_escape_string($sql, $voornaam);
 	$achternaam = mysqli_real_escape_string($sql, $achternaam);
@@ -29,16 +30,17 @@ function insert_user($sql, $gebruikersnaam, $voornaam, $achternaam, $tussenvoegs
 	$result = mysqli_query($sql, "SELECT 1 FROM account WHERE email = '$email'");
 	if ($result && mysqli_num_rows($result) > 0)
 	{
-		header('location: ../View/ErrorPage.php');
+		header('location: ../../Controller/RegisterController.php?status=fail');
 	}
 	else
 	{
-		echo "NIET geregitreerd";
+
 		$query = "INSERT INTO account (gebruikersnaam, voornaam, achternaam, tussenvoegsel, geboortedatum, email, straatnaam, huisnummer, postcode, woonplaats, geslacht, rechten, wachtwoord) VALUES ('$gebruikersnaam', '$voornaam', '$achternaam', '$tussenvoegsel' , '$date', '$email' , '$straatnaam', '$huisnummer', '$postcode', '$woonplaats', '$geslacht', '$rechten', '$wachtwoord')";
 		if (mysqli_query($sql, $query)) {
-			header('location: ../View/SuccesPage.php');
+			header('location: ../../Controller/RegisterController.php?status=success');
 		} else {
 		echo mysqli_error($sql);
+		header('location: ../../Controller/RegisterController.php?status=fail');
 			}
 	}
 

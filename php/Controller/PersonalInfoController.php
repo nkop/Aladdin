@@ -1,5 +1,7 @@
 <?php
-include ('./Smarty/header.php');
+include ('Smarty/header.php');
+include 'Navbar.php';
+include 'Footer.php';
 include ('../Model/DB/Database.class.php');
 
 include ('./Handlers/PersonalInfo.php');
@@ -8,10 +10,10 @@ include ('../Model/user.php');
 
 $user = new user ();
 
-// $username = $_SESSION ['email'];
+$username = $_SESSION ['email'];
 $db = Database::getInstance ();
 $mysqli = $db->getConnection ();
-$sql_query = "select * from account where email = 'admin@admin.nl' ";
+$sql_query = "select * from account where email = '$username'";
 $result = $mysqli->query ( $sql_query );
 while ( $row = $result->fetch_object () ) {
 	$user->accountid = $row->accountid;

@@ -2,6 +2,7 @@
 echo "inside registration";
 include ("../../Model/DB/Database.class.php");
 include ("../../Model/DB/Userinsert.class.php");
+include ("../../Model/password.php");
 $canPass = false;
 
 if (isset($_POST["register"])) {

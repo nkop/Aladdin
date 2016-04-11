@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="../view/assets/plugins/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="../view/assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="../view/assets/plugins/layer-slider/layerslider/css/layerslider.css">
+    <link rel="stylesheet" href="../view/assets/css/custom-hover-effects.css">
 
     <!-- CSS Customization -->
     <link rel="stylesheet" href="../view/assets/css/all.css">

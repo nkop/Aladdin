@@ -3,7 +3,7 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
 <title>Alladin | Home</title>
-
+{include 'Assets/php/Head.tpl'}
 <!-- Meta -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,29 +16,12 @@
 		<!-- Web Fonts -->
 		<!--  <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>  -->
 
-		<!-- CSS Global Compulsory -->
-		<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    		<!-- CSS Header and Footer -->
-    		<link rel="stylesheet" href="assets/css/headers/header-default.css">
-    				<link rel="stylesheet" href="assets/css/footers/footer-v1.css">
-
-    						<!-- CSS Implementing Plugins -->
-    						<link rel="stylesheet" href="assets/plugins/animate.css">
-    								<link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
-    								<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-    								<link rel="stylesheet" href="assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
-    								<link rel="stylesheet" href="assets/plugins/layer-slider/layerslider/css/layerslider.css">
-
-    								<!-- CSS Customization -->
-    <link rel="stylesheet" href="assets/css/all.css">
     </head>
 
     <body>
 
     <div class="wrapper">
-<?php include 'assets/php/NavTop.php';?>
+{include 'Assets/php/NavTop.tpl'}
 
 
 
@@ -54,9 +37,9 @@
         </div><!--/row-->
     </div><!--/container-->
     <!--=== End Content Part ===-->
-<?php include 'Assets/php/Footer.php';?>
+{include 'Assets/php/Footer.tpl'}
 </div><!--/wrapper-->
-<?php include 'Assets/php/jsCall.php';?>
+<?php include 'Assets/php/jsCall.tpl.php';?>
 
 </body>
 </html>

@@ -285,6 +285,7 @@ function lsShowNotice(lsobj,issue,ver){
 					$(el).addClass('ls-'+ls.o.skin);
 
 					var skinStyle = ls.o.skinsPath+ls.o.skin+'/skin.css';
+					//var skinStyle = '../view/Assets/plugins/layer-slider/layerslider/skins/fullwith/skin.css';
 
 					cssContainer = $('head');
 
@@ -5078,7 +5079,7 @@ function lsShowNotice(lsobj,issue,ver){
 		// Appearance
 
 		skin				: 'v5',
-		skinsPath			: '/layerslider/skins/',
+		skinsPath			: '../views/layerslider/skins/',
 		globalBGColor		: 'transparent',
 		globalBGImage		: false,
 

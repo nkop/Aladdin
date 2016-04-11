@@ -18,3 +18,24 @@
     border-bottom: 2px solid #b30000;
 }
 
+.faqHeader {
+    font-size: 27px;
+    margin: 20px;
+}
+
+.full_width{
+	width: 100%;
+}
+
+.hideme
+{
+    opacity:0;
+}
+
+.wishestableright{
+	text-align: right;
+}
+
+.minimalheight{
+	min-height: 400px;
+}
