@@ -64,8 +64,7 @@
                             Nieuws
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Laatste nieuws</a></li>
-                            <li><a href="#">Blogs</a></li>
+                            <li><a href="NieuwsController.php">Laatste nieuws</a></li>
                         </ul>
                     </li>
                     <!-- End nieuws -->
