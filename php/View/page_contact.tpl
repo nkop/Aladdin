@@ -7,7 +7,7 @@
 	{include '../view/assets/php/Head.tpl'}
 </head> 
 
-<body>     
+<body class="header-fixed">     
 
 <div class="wrapper">
   {include '../view/assets/php/NavTop.tpl'}

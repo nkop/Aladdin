@@ -26,6 +26,9 @@
     <link rel="stylesheet" href="../view/assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="../view/assets/plugins/layer-slider/layerslider/css/layerslider.css">
     <link rel="stylesheet" href="../view/assets/css/custom-hover-effects.css">
+    
+    <!-- theme -->
+    <link rel="stylesheet" href="../view/assets/css/theme-colors/red.css" id="style_color">
 
     <!-- CSS Customization -->
     <link rel="stylesheet" href="../view/assets/css/all.css">

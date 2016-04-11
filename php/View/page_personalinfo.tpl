@@ -5,10 +5,10 @@
 <html lang="en">
 <!--<![endif]-->
 <head>
-<title>Alladin | Home</title>
+<title>Profiel | Aladdin</title>
 {include '../view/Assets/php/Head.tpl'}
 </head>
-<body>
+<body class="header-fixed">
 
 	<div class="wrapper">    
  	{include '../view/assets/php/NavTop.tpl'}
