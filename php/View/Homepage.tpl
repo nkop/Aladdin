@@ -25,7 +25,7 @@
             data-ls="offsetxin:left; durationin:1500; delayin:1500; fadein:false; offsetxout:left; durationout:1000; fadeout:false;">
 
             <span class="ls-s-1" style=" text-transform: uppercase; line-height: 45px; font-size:35px; color:#fff; top:200px; left: 590px; slidedirection : top; slideoutdirection : bottom; durationin : 3500; durationout : 3500; delayin : 1000;">
-                Voorbeel text
+                Voorbeeld text
             </span>
         </div>
 
@@ -71,16 +71,16 @@
         <div class="margin-bottom-10"></div>
         <!-- Service Blocks -->
         <div class="row">
+        	{foreach from=$result item=tekst}
         	<div class="col-md-12">
         	<h2 class="heading-sm">
                  <a class="link-bg-icon" href="#">
                      <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-heart"></i>
-                     <span>Alladin</span>
+                     <span>{$tekst.header}</span>
                  </a>
             </h2>
-            <p>
-           Stichting Aladdin wil dat iedereen op de wereld een beetje gelukkiger wordt. Daarom mag je via deze website drie hartenwensen indienen, die je altijd al hebt willen doen of meemaken. Daarnaast weet Aladdin dat iedereen talenten heeft. Ja, ook jij! Met jouw talenten kun je hartenwensen van anderen vervullen. Een leuke bijkomstigheid is dat je van geven zelf ook gelukkiger wordt. Je zet je eigen geluk in beweging. Dat is de kracht van Aladdin en zo werkt iedereen mee aan een wereldsprookje.Wil je meedoen, klik dan op een van de symbolen. (kinderen, volwassenen, ouderen, beperkten, bedrijven) Dan kun je jezelf inschrijven en een vragenlijst invullen. Je wensen en talenten worden verzameld in een database en je kunt meteen al zien of er een match is.  Soms heb je wat meer geduld nodig voordat een wens vervuld is, maar wel kun je alvast wensen van anderen vervullen. Heb je een wens van een ander vervuld, dan mag je een extra wens indienen. Weet je niet zo goed wat je hartenwensen of talenten zijn, zoek dan bij de trefwoorden bij het hart of de ster.
-            </p>
+            <p>{$tekst.tekstvaktekst}</p>
+            {/foreach}
 
         	</div>
         	<div class="col-md-6 col-sm-12">

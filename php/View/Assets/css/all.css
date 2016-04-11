@@ -31,3 +31,11 @@
 {
     opacity:0;
 }
+
+.wishestableright{
+	text-align: right;
+}
+
+.minimalheight{
+	min-height: 400px;
+}

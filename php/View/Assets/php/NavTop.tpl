@@ -58,6 +58,20 @@
                     </li>
                     <!-- End Home -->
 
+                   <!-- wensen & talenten -->
+                   {if ($text =='Logout')}
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                            Wensen & Talenten
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="WishesController.php">Wensen</a></li>
+                            <li><a href="TalentsController.php">Talenten</a></li>
+                        </ul>
+                    </li>
+                    {/if}
+                    <!-- End wensen & talenten -->
+
                     <!-- nieuws -->
                     <li class="dropdown">
                         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
