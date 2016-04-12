@@ -31,8 +31,8 @@
     	<div class="row">
             <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
                 <h4 class="color-red">Dit e-mail adres is al geregistreerd!<br/></h4>
-                <a href="page_login.php" class="color-green">Login</a><br/>
-                <a href="#" class="color-green">Wachtwoord vergeten?</a>
+                <a href="loginController.php" class="color-green">Login</a><br/>
+                <a href="RecoveryController.php" class="color-green">Wachtwoord vergeten?</a>
             </div>
         </div><!--/row-->
     </div><!--/container-->
