@@ -12,9 +12,11 @@
 
 <div class="wrapper">
 {include file='Assets/php/NavTop.tpl'}
-
+<div class="alert alert-danger">
+  <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+</div>
 <div class="container content">
-<form class="text-center col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2" action="../Controller/Handlers/Passwordrecovery.php" method="post">
+<form class="text-center col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 minimalheight" action="../Controller/Handlers/Passwordrecovery.php" method="post">
   <input type="email" class="form-control" name="mail" placeholder="E-mail" />
   <button type="submit" class="btn btn-success" name="email">Verstuur</button>
 </form>
