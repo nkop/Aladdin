@@ -1,5 +1,8 @@
 # Aladdin
 
+# Als het goed is leest Stijn dit; zoja, de stabiele versie zit in de release branch.
+Have fun:)
+
 
 Hoe smarty gebruiken:
 
