@@ -1,4 +1,4 @@
-# Allahddin
+# Aladdin
 
 
 Hoe smarty gebruiken:
