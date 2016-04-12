@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-11 15:09:13
+/* Smarty version 3.1.29, created on 2016-04-12 23:06:01
   from "C:\xampp\htdocs\Aladdin\php\View\Assets\php\NavTop.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_570ba1f94f4510_17266940',
+  'unifunc' => 'content_570d63393d84c6_42401521',
   'file_dependency' => 
   array (
     '390b2618c7babed697150da4cdfb807461972a28' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Aladdin\\php\\View\\Assets\\php\\NavTop.tpl',
-      1 => 1460380148,
+      1 => 1460495157,
       2 => 'file',
     ),
   ),
@@ -19,10 +19,10 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_570ba1f94f4510_17266940 ($_smarty_tpl) {
+function content_570d63393d84c6_42401521 ($_smarty_tpl) {
 ?>
   <!--=== Header ===-->
-    <div class="header header-sticky header-fixed-shrink">
+    <div class="header header-sticky">
         <div class="container">
             <!-- Logo -->
             <a class="logo" href="HomepageController.php">

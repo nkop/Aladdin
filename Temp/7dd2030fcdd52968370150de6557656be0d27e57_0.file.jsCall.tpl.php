@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-10 19:04:03
+/* Smarty version 3.1.29, created on 2016-04-12 23:05:02
   from "C:\xampp\htdocs\Aladdin\php\view\Assets\php\jsCall.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_570a878381fcd5_43286283',
+  'unifunc' => 'content_570d62fea0ba84_26775062',
   'file_dependency' => 
   array (
     '7dd2030fcdd52968370150de6557656be0d27e57' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Aladdin\\php\\view\\Assets\\php\\jsCall.tpl',
-      1 => 1460307713,
+      1 => 1460495046,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_570a878381fcd5_43286283 ($_smarty_tpl) {
+function content_570d62fea0ba84_26775062 ($_smarty_tpl) {
 ?>
 <!-- JS Global Compulsory -->			
 <?php echo '<script'; ?>
