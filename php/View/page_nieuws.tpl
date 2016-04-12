@@ -3,12 +3,12 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-    <title>Alladin | Home</title>
+    <title>Nieuws | Aladdin</title>
 
    {include file='../View/Assets/php/Head.tpl'}
 </head>
 
-<body>
+<body class="header-fixed">
 
 <div class="wrapper">
 {include file='../View/Assets/php/NavTop.tpl'}
@@ -32,7 +32,7 @@
         <!-- News v3 -->
         <div class="row margin-bottom-20">
             <div class="col-sm-5 sm-margin-bottom-20">
-                <img class="img-responsive" src="http://placehold.it/458x258" alt="">
+                <img class="img-responsive" src="http://placehold.it/458x258/ff0000/ffffff" alt="">
             </div>
             <div class="col-sm-7">
                 <div class="news-v3">
@@ -43,7 +43,7 @@
                     <h2><a href="NieuwsItemController.php">Nieuwe website!</a></h2>
                     <p>Nullam elementum tincidunt massa, a pulvinar leo ultricies ut. Ut fringilla lectus tellus, imperdiet molestie est volutpat at. Sed viverra cursus nibh, sed consectetur ipsum sollicitudin sed. Cras erat est, euismod id congue sed, sollicitudin sed odio. Nullam non metus in mi rhoncus efficitur...</p>
                     <ul class="post-shares">
-                        <li><a href="#"><i class="rounded-x icon-share"></i></a></li>
+                        <li><a href="#"><i class="rounded-x fa fa-facebook float"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -55,7 +55,7 @@
         <!-- News v3 -->
         <div class="row margin-bottom-20">
             <div class="col-sm-5 sm-margin-bottom-20">
-                <img class="img-responsive" src="http://placehold.it/458x258" alt="">
+                <img class="img-responsive" src="http://placehold.it/458x258/ff0000/ffffff" alt="">
             </div>
             <div class="col-sm-7">
                 <div class="news-v3">
@@ -66,7 +66,7 @@
                     <h2><a href="NieuwsItemController.php">Gelukkig nieuwjaar!</a></h2>
                     <p>Nullam elementum tincidunt massa, a pulvinar leo ultricies ut. Ut fringilla lectus tellus, imperdiet molestie est volutpat at. Sed viverra cursus nibh, sed consectetur ipsum sollicitudin sed. Cras erat est, euismod id congue sed, sollicitudin sed odio. Nullam non metus in mi rhoncus efficitur...</p>
                     <ul class="post-shares">
-                        <li><a href="#"><i class="rounded-x icon-share"></i></a></li>
+                        <li><a href="#"><i class="rounded-x fa fa-facebook float"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -91,7 +91,7 @@
                     <h2><a href="NieuwsItemController.php">Video van Aladdin</a></h2>
                     <p>Nullam elementum tincidunt massa, a pulvinar leo ultricies ut. Ut fringilla lectus tellus, imperdiet molestie est volutpat at. Sed viverra cursus nibh, sed consectetur ipsum sollicitudin sed. Cras erat est, euismod id congue sed, sollicitudin sed odio. Nullam non metus in mi rhoncus efficitur...</p>
                     <ul class="post-shares">
-                        <li><a href="#"><i class="rounded-x icon-share"></i></a></li>
+                        <li><a href="#"><i class="rounded-x fa fa-facebook float"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -103,7 +103,7 @@
         <!-- News v3 -->
         <div class="row margin-bottom-20">
             <div class="col-sm-5 sm-margin-bottom-20">
-                <img class="img-responsive hideme" src="http://placehold.it/458x258" alt="">
+                <img class="img-responsive hideme" src="http://placehold.it/458x258/ff0000/ffffff" alt="">
             </div>
             <div class="col-sm-7">
                 <div class="news-v3">
@@ -114,7 +114,7 @@
                     <h2><a href="NieuwsItemController.php">Lorem ipsum</a></h2>
                     <p>Nullam elementum tincidunt massa, a pulvinar leo ultricies ut. Ut fringilla lectus tellus, imperdiet molestie est volutpat at. Sed viverra cursus nibh, sed consectetur ipsum sollicitudin sed. Cras erat est, euismod id congue sed, sollicitudin sed odio. Nullam non metus in mi rhoncus efficitur...</p>
                     <ul class="post-shares">
-                        <li><a href="#"><i class="rounded-x icon-share"></i></a></li>
+                        <li><a href="#"><i class="rounded-x fa fa-facebook float"></i></a></li>
                     </ul>
                 </div>
             </div>

@@ -3,12 +3,12 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-    <title>Alladin | Home</title>
+    <title>Wachtwoord vergeten | Alladdin</title>
 
    {include file='Assets/php/Head.tpl'}
 </head>
 
-<body>
+<body class="header-fixed">
 
 <div class="wrapper">
 {include file='Assets/php/NavTop.tpl'}

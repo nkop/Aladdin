@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-10 15:10:13
+/* Smarty version 3.1.29, created on 2016-04-11 15:29:26
   from "C:\xampp\htdocs\Aladdin\php\View\page_nieuwsitem.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_570a50b576aad9_21549956',
+  'unifunc' => 'content_570ba6b64b45e8_72462292',
   'file_dependency' => 
   array (
     'c273ce0724806794c6cc1e01a691d98d045c741e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Aladdin\\php\\View\\page_nieuwsitem.tpl',
-      1 => 1460293811,
+      1 => 1460381266,
       2 => 'file',
     ),
   ),
@@ -20,23 +20,24 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:../View/Assets/php/Head.tpl' => 1,
     'file:../View/Assets/php/NavTop.tpl' => 1,
     'file:../View/Assets/php/footer.tpl' => 1,
+    'file:../view/Assets/php/jsCall.tpl' => 1,
   ),
 ),false)) {
-function content_570a50b576aad9_21549956 ($_smarty_tpl) {
+function content_570ba6b64b45e8_72462292 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-    <title>Alladin | Home</title>
+    <title>Nieuws | Aladdin</title>
 
    <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:../View/Assets/php/Head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 </head>
 
-<body>
+<body class="header-fixed">
 
 <div class="wrapper">
 <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:../View/Assets/php/NavTop.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -79,7 +80,7 @@ function content_570a50b576aad9_21549956 ($_smarty_tpl) {
                     <ul class="post-shares post-shares-lg">
                         <li>
                             <a href="#">
-                                <i class="rounded-x icon-share"></i>
+                                <i class="rounded-x fa fa-facebook float"></i>
                                 <span>12</span>
                             </a>
                         </li>
@@ -101,7 +102,9 @@ function content_570a50b576aad9_21549956 ($_smarty_tpl) {
 ?>
 
 </div><!--/wrapper-->
-<?php echo '<?php ';?>include 'Assets/php/jsCall.tpl.php';<?php echo '?>';?>
+<?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:../view/Assets/php/jsCall.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
 
 </body>
 </html>

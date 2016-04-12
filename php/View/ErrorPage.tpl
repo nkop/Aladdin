@@ -2,7 +2,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-<title>Alladin | Home</title>
+<title>Error | Aladdin</title>
 {include 'Assets/php/Head.tpl'}
 <!-- Meta -->
 <meta charset="utf-8">
@@ -18,7 +18,7 @@
 
     </head>
 
-    <body>
+    <body class="header-fixed">
 
     <div class="wrapper">
 {include 'Assets/php/NavTop.tpl'}
