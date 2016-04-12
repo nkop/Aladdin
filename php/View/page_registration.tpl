@@ -29,6 +29,17 @@
 
     <!--=== Content Part ===-->
     <div class="container content">
+      {if $RegistrationFail}
+          <div class='alert alert-danger text-center'>
+            <strong>Error!</strong> Dit e-mail adres staat al geregistreerd!
+          </div>
+      {/if}
+
+      {if $RegistrationSuccess}
+      <div class='alert alert-success text-center'>
+        <strong>Succes!</strong> U ontvangt een bevestiging in uw inbox!
+      </div>
+      {/if}
         <div class="row">
             <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
                 <form class="reg-page" action="../Controller/Handlers/Userregistration.php" method="post">
