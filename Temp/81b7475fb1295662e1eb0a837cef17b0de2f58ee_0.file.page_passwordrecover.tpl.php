@@ -6,16 +6,16 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   'has_nocache_code' => false,
   'version' => '3.1.29',
   'unifunc' => 'content_570d6304ea10f6_34827880',
-  'file_dependency' => 
+  'file_dependency' =>
   array (
-    '81b7475fb1295662e1eb0a837cef17b0de2f58ee' => 
+    '81b7475fb1295662e1eb0a837cef17b0de2f58ee' =>
     array (
       0 => 'C:\\xampp\\htdocs\\Aladdin\\php\\View\\page_passwordrecover.tpl',
       1 => 1460495062,
       2 => 'file',
     ),
   ),
-  'includes' => 
+  'includes' =>
   array (
     'file:Assets/php/Head.tpl' => 1,
     'file:Assets/php/NavTop.tpl' => 1,
@@ -43,9 +43,18 @@ function content_570d6304ea10f6_34827880 ($_smarty_tpl) {
 <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:Assets/php/NavTop.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
-<div class="alert alert-danger">
-  <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+<?php if ($_smarty_tpl->tpl_vars['RecoverError']->value) {?>
+    <div class='alert alert-danger text-center'>
+<strong>Error!</strong> Dit e-mail adres is niet geregistreerd!
 </div>
+<?php }?>
+
+<?php if ($_smarty_tpl->tpl_vars['RecoverSuccess']->value) {?>
+    <div class='alert alert-success text-center'>
+<strong>Succes!</strong> U heeft een nieuw wachtwoord in uw inbox!
+</div>
+<?php }?>
+
 <div class="container content">
 <form class="text-center col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 minimalheight" action="../Controller/Handlers/Passwordrecovery.php" method="post">
   <input type="email" class="form-control" name="mail" placeholder="E-mail" />
