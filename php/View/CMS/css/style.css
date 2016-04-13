@@ -819,7 +819,7 @@ ul.messages li .message {
 }
 
 .box-header {
-	height: 16px;
+	height: 20px;
 	font-size: 16px;
 	line-height: 16px;
   	padding: 10px;
@@ -831,9 +831,9 @@ ul.messages li .message {
 }
 
 .box-header h2{
-	float:left;
-	margin-top: 0px;
-	font-weight: 300;
+	float:inherit;
+	margin-top: -6px;
+	font-weight: 500;
 }
 
 .box-header h2 i {
