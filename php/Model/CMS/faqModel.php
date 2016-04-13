@@ -1,6 +1,8 @@
 <?php
 include_once '/../DB/Database.class.php';
+
 function getCategories() {
+	//haalt alle faqcategorieen op
 	$db = Database::getInstance ();
 	$sql = $db->getConnection ();
 	
@@ -8,6 +10,7 @@ function getCategories() {
 	return $sql->query ( $query );
 }
 function getFaqs() {
+	//haalt alle faqs op
 	$db = Database::getInstance ();
 	$sql = $db->getConnection ();
 	
@@ -15,6 +18,9 @@ function getFaqs() {
 	return $sql->query ( $query );
 }
 function saveFaq($faq, $exists) {
+	//update een bestaande faq of slaat een nieuwe op
+	//$faq = een Faq object
+	//$exists: true = reeds bestaande faq, false = nieuwe faq
 	$db = Database::getInstance ();
 	$sql = $db->getConnection ();
 	
@@ -31,6 +37,8 @@ function saveFaq($faq, $exists) {
 	return $sql->query($query);	
 }
 function deleteFaq($faqid){
+	//verwijderd een faq uit de database
+	//$faqid = id van de te verwijderen faq
 	$db = Database::getInstance ();
 	$sql = $db->getConnection ();
 	
@@ -38,4 +46,30 @@ function deleteFaq($faqid){
 	
 	$query = "DELETE FROM `faq` WHERE `id` = '$faqid'";
 	return $sql->query($query);
+}
+function nieuweCategorie($header){
+	//voegt een nieuwe categorie toe
+	//$header = hoe de categorie moet heten
+	$db = Database::getInstance ();
+	$sql = $db->getConnection ();
+	
+	$header = $sql->real_escape_string($header);
+	
+	$query = "INSERT INTO `faqcategorie` (header) VALUES ('$header')";
+	return $sql->query($query);
+}
+function deleteCategorie($categorie_id){
+	//verwijderd een categorie inclusief alle faqs daaraan verbonden
+	//$categorie_id = de id van de te verwijderen faqcategorie
+	$db = Database::getInstance ();
+	$sql = $db->getConnection ();
+	
+	$categorie_id = $sql->real_escape_string($categorie_id);
+	
+	$query1 = "DELETE FROM `faq` WHERE `categorie` = '$categorie_id'";
+	if($sql->query($query1)){
+		$query2 = "DELETE FROM `faqcategorie` WHERE `id` = '$categorie_id'";
+		return $sql->query($query2);
+	}
+	return false;		
 }

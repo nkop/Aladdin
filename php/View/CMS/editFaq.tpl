@@ -76,9 +76,10 @@
 				{include './breadcrumb.php'}
 
 				<div class="row-fluid sortable">
-					{foreach from=$categorieen item=categorie}
+					
 					<form class="form-horizontal"
-						action="../../Controller/CMS/editFaqController.php" method="post">
+						action="../../Controller/CMS/editFaqController.php" method="post" id="faqform">
+						{foreach from=$categorieen item=categorie}
 						<div id="faqq" class="box span12">
 							<div class="box-header" data-original-title>
 								<h2>
@@ -110,16 +111,18 @@
 									</div>
 								</fieldset>
 							</div>
-							<br> {/if} {/foreach} 
-							<input name="newfaq"  value="Nieuwe FAQ" id="kappa" class="btn btn-primary" type="button"></input>
-							<input name="deletecategorie" type="submit"
-								class="btn btn-danger" value="Verwijder Categorie"
+							<br> {/if} {/foreach} <input name="newfaq" value="Nieuwe FAQ"
+								id="kappa" class="btn btn-primary" type="button"></input> <input
+								name="deletecategorie" type="submit" class="btn btn-danger"
+								value="Verwijder Categorie"
 								onclick="return confirm('Weet je zeker dat je de hele categorie inclusief inhoud wilt verwijderen?')"></input>
-							
+
 						</div>
 						<!--/span-->
-					</form>
-					{/foreach}
+						{/foreach}
+						<input name="nieuwecategorie" type="text" placeholder="Voer hier een nieuwe categorie toe" style="width: 300px"/>
+						<input name="nieuwcat" type="submit" class="btn btn-primary" value="Toevoegen"/>
+					</form>					
 				</div>
 
 				<!--/row-->
@@ -131,24 +134,33 @@
 		<!--/#content.span10-->
 	</div>
 	<!--/fluid-row-->
-<!--Contact Form -->
-							<div id="contactdiv" data-role="popup" class="ui-content">
-								<form class="form" action="#" id="contact">
-									<h3>Contact Form</h3>
-									<hr />
-									<br /> <label>Name: <span>*</span></label> <br /> <input
-										type="text" id="name" placeholder="Name" /><br /> <br /> <label>Email:
-										<span>*</span>
-									</label> <br /> <input type="text" id="email"
-										placeholder="Email" /><br /> <br /> <label>Contact No: <span>*</span></label>
-									<br /> <input type="text" id="contactno"
-										placeholder="10 digit Mobile no." /><br /> <br /> <label>Message:</label>
-									<br />
-									<textarea id="message" placeholder="Message......."></textarea>
-									<br /> <br /> <input type="button" id="send" value="Send" /> <input
-										type="button" id="cancel" value="Cancel" /> <br />
-								</form>
-							</div>
+	<!--Contact Form -->
+	<div id="contactdiv" data-role="popup" class="ui-content">
+		<form class="form" action="../../Controller/CMS/editFaqController.php" id="contact" method="post">
+			<h3>FAQ toevoegen</h3>
+			<br>
+			Vraag:
+			<br>
+			<input type="text" name="nieuwvraag" id="vraag" placeholder="Bijv: Wat is Aladdin?"/>
+			<br>
+			Antwoord:
+			<br>
+			<textarea name="nieuwantwoord" placeholder="Antwoord" id="antwoord" rows="4" style="width: 660px; height: 100px"></textarea>
+			<br>
+			Categorie:
+			<br>
+			<select name="nieuwcategorie" id="categorie">
+			{foreach from=$categorieen item=categorie}
+			<option value="{$categorie.id}">{$categorie.header}</option>
+			{/foreach}
+			</select>
+			<br>
+			<br> 
+			<input type="button" id="send" name="nieuwfaq" value="Toevoegen" class="btn btn-primary"/> 
+			<input type="button" id="cancel" value="Cancel" class="btn"/>
+			<br>
+		</form>
+	</div>
 
 
 	<footer>
@@ -162,7 +174,7 @@
 	</footer>
 
 	<!-- start: JavaScript-->
-	
+
 
 	<script src="../../View/CMS/js/jquery-1.9.1.min.js"></script>
 	<script src="../../View/CMS/js/jquery-migrate-1.0.0.min.js"></script>
@@ -218,7 +230,7 @@
 	<script src="../../View/CMS/js/retina.js"></script>
 
 	<script src="../../View/CMS/js/custom.js"></script>
-	
+
 	<script src="../../View/CMS/js/newfaq_popup.js"></script>
 	<script src="http://js.nicedit.com/nicEdit-latest.js"
 		type="text/javascript"></script>
