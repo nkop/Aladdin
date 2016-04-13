@@ -28,6 +28,16 @@
 	href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext'
 	rel='stylesheet' type='text/css'>
 <link href="../../View/CMS/css/newfaq_popup.css" rel="stylesheet">
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+
+<link href="../../View/CMS/css/fontawesome-iconpicker.min.css"
+	rel="stylesheet">
+
+<link
+	href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+	rel="stylesheet">
 <!-- end: CSS -->
 
 
@@ -75,31 +85,38 @@
 
 				{include './breadcrumb.php'}
 
-				<div class="row-fluid sortable">
-					
-					<form class="form-horizontal"
-						action="../../Controller/CMS/editFaqController.php" method="post" id="faqform">
+				<div class="row-fluid sortable" id="naampje">
+
+					<!-- 					<form class="form-horizontal" -->
+					<!-- 						action="../../Controller/CMS/editFaqController.php" method="post" id="faqform"> -->
+
+					<div id="faqq" class="box span12">
 						{foreach from=$categorieen item=categorie}
-						<div id="faqq" class="box span12">
-							<div class="box-header" data-original-title>
-								<h2>
-									<i class="halflings-icon edit"></i><span class="break"></span>
-									<input type="hidden" name="categorie_id"
-										value="{$categorie.id}"></input> Categorie: <input type="text"
-										name="categorie" value="{$categorie.header}"></input>
-								</h2>
-							</div>
-							{foreach from=$faqs item=faq} {if $faq.categorie_id ==
-							$categorie.id}
-							<div class="box-content">
+						<div class="box-header" data-original-title>
+							<h2>
+								<i class="halflings-icon edit"></i><span class="break"></span>
+								Categorie: <input type="text" name="categorie"
+									value="{$categorie.header}"></input>
+							</h2>
+						</div>
+						{foreach from=$faqs item=faq} {if $faq.categorie_id ==
+						$categorie.id}
+						<div class="box-content">
+							<form class="form-horizontal"
+								action="../../Controller/CMS/editFaqController.php"
+								method="post">
 								<fieldset>
 									<div class="control-group hidden-phone">
 										<br> <label class="control-label" for="textarea2">Vraag: </label>
-										<div class="controls">
+
+										<div class="controls" style="width: 683px">
 											<input type="hidden" name="id" value="{$faq.id}"></input> <input
-												type="text" name="vraag" value="{$faq.vraag}"></input><br>
-											<textarea name="antwoord" id="textarea2" rows="2"
-												style="width: 70%">{$faq.antwoord}</textarea>
+												type="text" name="vraag" value="{$faq.vraag}"
+												style="width: 95.7%"></input><br>
+											<textarea name="antwoord" id="textarea2" rows="4"
+												style="width: 100% !important">{$faq.antwoord}</textarea>
+											<input type="hidden" name="categorie_id"
+												value="{$categorie.id}">
 										</div>
 									</div>
 									<div class="form-actions">
@@ -110,19 +127,33 @@
 											onclick="return confirm('Weet je zeker dat je de FAQ wilt verwijderen?')"></input>
 									</div>
 								</fieldset>
-							</div>
-							<br> {/if} {/foreach} <input name="newfaq" value="Nieuwe FAQ"
-								id="kappa" class="btn btn-primary" type="button"></input> <input
+							</form>
+						</div>
+						<br> {/if} {/foreach}
+						<form class="form-horizontal"
+							action="../../Controller/CMS/editFaqController.php" method="post">
+							<input name="newfaq" value="Nieuwe FAQ" id="kappa"
+								class="btn btn-primary" type="button"></input> <input
 								name="deletecategorie" type="submit" class="btn btn-danger"
 								value="Verwijder Categorie"
 								onclick="return confirm('Weet je zeker dat je de hele categorie inclusief inhoud wilt verwijderen?')"></input>
-
-						</div>
-						<!--/span-->
+						</form>
 						{/foreach}
-						<input name="nieuwecategorie" type="text" placeholder="Voer hier een nieuwe categorie toe" style="width: 300px"/>
-						<input name="nieuwcat" type="submit" class="btn btn-primary" value="Toevoegen"/>
-					</form>					
+					</div>
+					<!--/span-->
+
+					<!-- 					</form>		 -->
+
+					<form class="form-horizontal"
+						action="../../Controller/CMS/editFaqController.php" method="post"
+						id="nieuwecategorieform">
+						<input name="nieuwecategorie" type="text"
+							placeholder="Voer hier een nieuwe categorie toe"
+							style="width: 300px" /><br> <input class="btn" name="icon"
+							id="leggo" data-toggle="dropdown" Value="Zoek hier een icon"> <input
+							name="nieuwcat" type="submit" class="btn btn-primary"
+							value="Toevoegen" />
+					</form>
 				</div>
 
 				<!--/row-->
@@ -136,29 +167,20 @@
 	<!--/fluid-row-->
 	<!--Contact Form -->
 	<div id="contactdiv" data-role="popup" class="ui-content">
-		<form class="form" action="../../Controller/CMS/editFaqController.php" id="contact" method="post">
+		<form class="form" action="../../Controller/CMS/editFaqController.php"
+			id="contact" method="post">
 			<h3>FAQ toevoegen</h3>
-			<br>
-			Vraag:
-			<br>
-			<input type="text" name="nieuwvraag" id="vraag" placeholder="Bijv: Wat is Aladdin?"/>
-			<br>
-			Antwoord:
-			<br>
-			<textarea name="nieuwantwoord" placeholder="Antwoord" id="antwoord" rows="4" style="width: 660px; height: 100px"></textarea>
-			<br>
-			Categorie:
-			<br>
-			<select name="nieuwcategorie" id="categorie">
-			{foreach from=$categorieen item=categorie}
-			<option value="{$categorie.id}">{$categorie.header}</option>
-			{/foreach}
-			</select>
-			<br>
-			<br> 
-			<input type="button" id="send" name="nieuwfaq" value="Toevoegen" class="btn btn-primary"/> 
-			<input type="button" id="cancel" value="Cancel" class="btn"/>
-			<br>
+			<br> Vraag: <br> <input type="text" name="nieuwvraag" id="vraag"
+				placeholder="Bijv: Wat is Aladdin?" /> <br> Antwoord: <br>
+			<textarea name="nieuwantwoord" placeholder="Antwoord" id="antwoord"
+				rows="4" style="width: 660px; height: 100px"></textarea>
+			<br> Categorie: <br> <select name="nieuwcategorie" id="categorie">
+				{foreach from=$categorieen item=categorie}
+				<option value="{$categorie.id}">{$categorie.header}</option>
+				{/foreach}
+			</select> <br> <br> <input type="submit" id="send" name="nieuwfaq"
+				value="Toevoegen" class="btn btn-primary" /> <input type="button"
+				id="cancel" value="Cancel" class="btn" /> <br>
 		</form>
 	</div>
 
@@ -231,10 +253,19 @@
 
 	<script src="../../View/CMS/js/custom.js"></script>
 
-	<script src="../../View/CMS/js/newfaq_popup.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+
 	<script src="http://js.nicedit.com/nicEdit-latest.js"
 		type="text/javascript"></script>
 	<script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
+
+	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script
+		src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="../../View/CMS/js/fontawesome-iconpicker.js"></script>
+	<script src="../../View/CMS/js/faqInit.js"></script>
+
 	<!-- end: JavaScript-->
 
 </body>

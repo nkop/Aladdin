@@ -26,15 +26,15 @@ function saveFaq($faq, $exists) {
 	
 	$vraag = $sql->real_escape_string ( $faq->vraag );
 	$antwoord = $sql->real_escape_string ( $faq->antwoord );
-	$categorie = $sql->real_escape_string ( $faq->categorie );
+	$categorie = $sql->real_escape_string ( $faq->header );
 	if ($exists) {
 		$id = $sql->real_escape_string ( $faq->id );
-		$query = "UPDATE `faq` SET `id`='$id', `categorie`='$categorie',`vraag`='$vraag',`antwoord`='$antwoord' WHERE `id`='$id'";
+		$query = "UPDATE `faq` SET `id`='$id', `categorie_id`='$categorie',`vraag`='$vraag',`antwoord`='$antwoord' WHERE `id`='$id'";
 		return $sql->query ( $query );
-	}
-	
-	$query = "INSERT INTO `faq` (vraag, antwoord, categorie) VALUES ('$vraag', '$antwoord', '$categorie')";
+	} else {	
+	$query = "INSERT INTO `faq` (vraag, antwoord, categorie_id) VALUES ('$vraag', '$antwoord', '$categorie')";
 	return $sql->query($query);	
+	}
 }
 function deleteFaq($faqid){
 	//verwijderd een faq uit de database
@@ -47,15 +47,16 @@ function deleteFaq($faqid){
 	$query = "DELETE FROM `faq` WHERE `id` = '$faqid'";
 	return $sql->query($query);
 }
-function nieuweCategorie($header){
+function insertCategorie($faq){
 	//voegt een nieuwe categorie toe
 	//$header = hoe de categorie moet heten
 	$db = Database::getInstance ();
 	$sql = $db->getConnection ();
 	
-	$header = $sql->real_escape_string($header);
+	$header = $sql->real_escape_string($faq->header);
+	$icon = $sql->real_escape_string($faq->icon);
 	
-	$query = "INSERT INTO `faqcategorie` (header) VALUES ('$header')";
+	$query = "INSERT INTO `faqcategorie` (header, icon) VALUES ('$header', '$icon')";
 	return $sql->query($query);
 }
 function deleteCategorie($categorie_id){
@@ -65,8 +66,7 @@ function deleteCategorie($categorie_id){
 	$sql = $db->getConnection ();
 	
 	$categorie_id = $sql->real_escape_string($categorie_id);
-	
-	$query1 = "DELETE FROM `faq` WHERE `categorie` = '$categorie_id'";
+	$query1 = "DELETE FROM `faq` WHERE `categorie_id` = '$categorie_id'";
 	if($sql->query($query1)){
 		$query2 = "DELETE FROM `faqcategorie` WHERE `id` = '$categorie_id'";
 		return $sql->query($query2);
