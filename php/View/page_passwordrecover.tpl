@@ -3,18 +3,29 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-    <title>Alladin | Home</title>
+    <title>Wachtwoord vergeten | Alladdin</title>
 
    {include file='Assets/php/Head.tpl'}
 </head>
 
-<body>
+<body class="header-fixed">
 
 <div class="wrapper">
 {include file='Assets/php/NavTop.tpl'}
 
 <div class="container content">
-<form class="text-center col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2" action="../Controller/Handlers/Passwordrecovery.php" method="post">
+  {if $RecoverError}
+      <div class='alert alert-danger text-center'>
+        <strong>Error!</strong> Dit e-mail adres staat niet geregistreerd!
+      </div>
+  {/if}
+
+  {if $RecoverSuccess}
+  <div class='alert alert-success text-center'>
+    <strong>Succes!</strong> U heeft een nieuw wachtwoord in uw inbox!
+  </div>
+  {/if}
+<form class="text-center col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 minimalheight" action="../Controller/Handlers/Passwordrecovery.php" method="post">
   <input type="email" class="form-control" name="mail" placeholder="E-mail" />
   <button type="submit" class="btn btn-success" name="email">Verstuur</button>
 </form>

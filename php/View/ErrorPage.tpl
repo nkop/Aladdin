@@ -2,7 +2,7 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-<title>Alladin | Home</title>
+<title>Error | Aladdin</title>
 {include 'Assets/php/Head.tpl'}
 <!-- Meta -->
 <meta charset="utf-8">
@@ -18,7 +18,7 @@
 
     </head>
 
-    <body>
+    <body class="header-fixed">
 
     <div class="wrapper">
 {include 'Assets/php/NavTop.tpl'}
@@ -31,8 +31,8 @@
     	<div class="row">
             <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
                 <h4 class="color-red">Dit e-mail adres is al geregistreerd!<br/></h4>
-                <a href="page_login.php" class="color-green">Login</a><br/>
-                <a href="#" class="color-green">Wachtwoord vergeten?</a>
+                <a href="loginController.php" class="color-green">Login</a><br/>
+                <a href="RecoveryController.php" class="color-green">Wachtwoord vergeten?</a>
             </div>
         </div><!--/row-->
     </div><!--/container-->

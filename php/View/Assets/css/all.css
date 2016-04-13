@@ -37,5 +37,11 @@
 }
 
 .minimalheight{
-	min-height: 400px;
+	min-height: 500px;
+}
+
+
+.header-fixed .header.header-fixed-shrink {
+    height: 115px;
+    background: rgba(255,255,255);
 }

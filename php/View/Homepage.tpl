@@ -5,12 +5,13 @@
 <html lang="en">
 <!--<![endif]-->
 <head>
-<title>Aladdin | Home</title> {include '../view/Assets/php/Head.tpl'}
+    <title>Home | Aladdin</title>
+    {include '../view/Assets/php/Head.tpl'}
 
 
 </head>
 
-<body>
+<body class="header-fixed">
 
 	<div class="wrapper">
 		{include '../view/Assets/php/NavTop.tpl'}

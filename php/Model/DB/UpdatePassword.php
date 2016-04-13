@@ -2,7 +2,7 @@
 include ("Database.class.php");
 
 function UpdatePassword($email, $password){
-include_once '../password.php';
+  include_once '../password.php';
 
   $hashed = password_hash("$password", PASSWORD_DEFAULT);
   echo $email;
@@ -30,6 +30,18 @@ include_once '../password.php';
     echo $sql->error;
   }
 
+
+}
+
+function CheckUser($email){
+  $db = Database::getInstance();
+  $sql = $db->getConnection();
+
+  $result = mysqli_query($sql, "SELECT 1 FROM account WHERE email = '$email'");
+  if ($result && mysqli_num_rows($result) > 0)
+  {
+    return true;
+  }
 
 }
 

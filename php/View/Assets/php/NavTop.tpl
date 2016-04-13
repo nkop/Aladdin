@@ -1,5 +1,5 @@
   <!--=== Header ===-->
-    <div class="header">
+    <div class="header header-sticky">
         <div class="container">
             <!-- Logo -->
             <a class="logo" href="HomepageController.php">

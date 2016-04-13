@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-10 23:36:59
+/* Smarty version 3.1.29, created on 2016-04-12 23:04:55
   from "C:\xampp\htdocs\Aladdin\php\View\Assets\php\Head.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_570ac77b20bee1_03530916',
+  'unifunc' => 'content_570d62f7ce4db7_81133675',
   'file_dependency' => 
   array (
     '1cc2ba053fb7a0ecb45ba5c016608ac0195c7b41' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Aladdin\\php\\View\\Assets\\php\\Head.tpl',
-      1 => 1460324216,
+      1 => 1460495046,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_570ac77b20bee1_03530916 ($_smarty_tpl) {
+function content_570d62f7ce4db7_81133675 ($_smarty_tpl) {
 echo '<?php ';?>ob_start();<?php echo '?>';?>
     <!-- Meta -->
     <meta charset="utf-8">
@@ -48,6 +48,9 @@ echo '<?php ';?>ob_start();<?php echo '?>';?>
     <link rel="stylesheet" href="../view/assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="../view/assets/plugins/layer-slider/layerslider/css/layerslider.css">
     <link rel="stylesheet" href="../view/assets/css/custom-hover-effects.css">
+    
+    <!-- theme -->
+    <link rel="stylesheet" href="../view/assets/css/theme-colors/red.css" id="style_color">
 
     <!-- CSS Customization -->
     <link rel="stylesheet" href="../view/assets/css/all.css"><?php }
