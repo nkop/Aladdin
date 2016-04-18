@@ -42,7 +42,7 @@
       {/if}
         <div class="row">
             <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-                <form class="reg-page" action="../Controller/Handlers/Userregistration.php" method="post">
+                <form class="reg-page" action="../Controller/Handlers/UserRegistration.php" method="post">
                     <div class="reg-header">
                         <h2>Registreer</h2>
                         <p>Heb je al een account? <a href="page_login.html" class="color-green">Login</a></p>
@@ -63,11 +63,11 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <label>Password <span class="color-red">*</span></label>
-                            <input id="password" type="password" name="wachtwoord" class="form-control margin-bottom-20" required="required">
+                            <input id="password" type="password" name="wachtwoord" minlength="6" class="form-control margin-bottom-20" required="required">
                         </div>
                         <div class="col-sm-6">
                             <label>Confirm Password <span class="color-red">*</span></label>
-                            <input type="password" name="confirmwachtwoord" class="form-control margin-bottom-20" required="required" oninput="check(this)" >
+                            <input type="password" name="confirmwachtwoord" minlength="6" class="form-control margin-bottom-20" required="required" oninput="check(this)" >
                         </div>
                     </div>
 

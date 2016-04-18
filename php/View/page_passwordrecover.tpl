@@ -13,7 +13,7 @@
 <div class="wrapper">
 {include file='Assets/php/NavTop.tpl'}
 
-<div class="container content">
+<div class="container content minimalheight">
   {if $RecoverError}
       <div class='alert alert-danger text-center'>
         <strong>Error!</strong> Dit e-mail adres staat niet geregistreerd!
@@ -25,9 +25,9 @@
     <strong>Succes!</strong> U heeft een nieuw wachtwoord in uw inbox!
   </div>
   {/if}
-<form class="text-center col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 minimalheight" action="../Controller/Handlers/Passwordrecovery.php" method="post">
+<form class="text-center col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2" action="../Controller/Handlers/Passwordrecovery.php" method="post">
   <input type="email" class="form-control" name="mail" placeholder="E-mail" />
-  <button type="submit" class="btn btn-success" name="email">Verstuur</button>
+  <button type="submit" class="btn btn-danger" name="email">Verstuur</button>
 </form>
 </div>
 
