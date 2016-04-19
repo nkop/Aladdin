@@ -1,32 +1,10 @@
 <?php
-
+include '../../Controller/PHPMailer/Mailer.php';
 class Userinsert{
-
-	function calculateAge($datetime){
-		$birthday = new DateTime($datetime);
-		$now = new DateTime();
-		$interval = $birthday->diff($now);
-		return $interval->y;
-	}
 
 function insert_user($sql, $gebruikersnaam, $voornaam, $achternaam, $tussenvoegsel, $date, $email, $straatnaam, $huisnummer, $postcode, $woonplaats, $geslacht, $rechten, $wachtwoord){
 
-
-	$gebruikersnaam = mysqli_real_escape_string($sql, $gebruikersnaam);
-	$voornaam = mysqli_real_escape_string($sql, $voornaam);
-	$achternaam = mysqli_real_escape_string($sql, $achternaam);
-	$tussenvoegsel = mysqli_real_escape_string($sql, $tussenvoegsel);
-	$email = mysqli_real_escape_string($sql, $email);
-	$straatnaam = mysqli_real_escape_string($sql, $straatnaam);
-	$huisnummer = mysqli_real_escape_string($sql, $huisnummer);
-	$postcode = mysqli_real_escape_string($sql, $postcode);
-	$woonplaats = mysqli_real_escape_string($sql, $woonplaats);
-	$geslacht = mysqli_real_escape_string($sql, $geslacht);
-	$rechten = mysqli_real_escape_string($sql, $rechten);
-	$wachtwoord = mysqli_real_escape_string($sql, $wachtwoord);
-	$date = mysqli_real_escape_string($sql, $date);
-	$wachtwoord = password_hash("$wachtwoord", PASSWORD_DEFAULT);
-
+	#check if e-mail exists in database, if yes: abort and show error message.
 	$result = mysqli_query($sql, "SELECT 1 FROM account WHERE email = '$email'");
 	if ($result && mysqli_num_rows($result) > 0)
 	{
@@ -34,18 +12,18 @@ function insert_user($sql, $gebruikersnaam, $voornaam, $achternaam, $tussenvoegs
 	}
 	else
 	{
-
+		#generate query and execute it, handle results
 		$query = "INSERT INTO account (gebruikersnaam, voornaam, achternaam, tussenvoegsel, geboortedatum, email, straatnaam, huisnummer, postcode, woonplaats, geslacht, rechten, wachtwoord) VALUES ('$gebruikersnaam', '$voornaam', '$achternaam', '$tussenvoegsel' , '$date', '$email' , '$straatnaam', '$huisnummer', '$postcode', '$woonplaats', '$geslacht', '$rechten', '$wachtwoord')";
 		if (mysqli_query($sql, $query)) {
+			$message = "Beste $voornaam, <br /><br /> U heeft een nieuw account bij Aladdin geregistreerd met de volgende gegevens:<br /><br /><b>Voornaam:</b> $voornaam<br /><b>Tussenvoegsel:</b> $tussenvoegsel<br /><b>Achternaam:</b> $achternaam<br /><b>Geboortedatum:</b> $date<br /><b>E-mail:</b> $email<br /><b>Adres:</b> $straatnaam $huisnummer<br /><b>Postcode en woonplaats:</b> $postcode $woonplaats<br /><br />Als u dit account niet zelf heeft geregistreerd adivseren wij u om contact op te nemen met ons via onze contact pagina op <a>http://bit.ly/AladdinD</a><br /><br />Met vriendelijke groeten,<br /><br />Het Aladdin team";
+			$subject = "Aladdin registratie";
+			SendMail($email, $message, $subject);
 			header('location: ../../Controller/RegisterController.php?status=success');
 		} else {
-		echo mysqli_error($sql);
-		header('location: ../../Controller/RegisterController.php?status=fail');
-			}
+			echo mysqli_error($sql);
+			header('location: ../../Controller/RegisterController.php?status=fail');
+		}
 	}
-
-
-
 	}
 }
 ?>
