@@ -1,8 +1,8 @@
 <?php
 include ('Smarty/header.php');
 include_once '../Model/DB/Database.class.php';
-include 'Navbar.php';
-include 'Footer.php';
+include 'navbar.php';
+include 'footer.php';
 
 
 $db = Database::getInstance ();
