@@ -1,10 +1,10 @@
 <?php
 include ('Smarty/header.php');
-include 'Navbar.php';
-include 'Footer.php';
+include 'navbar.php';
+include 'footer.php';
 include ('../Model/DB/Database.class.php');
 
-include ('./Handlers/PersonalInfo.php');
+include ('./Handlers/personalInfo.php');
 
 include ('../Model/user.php');
 

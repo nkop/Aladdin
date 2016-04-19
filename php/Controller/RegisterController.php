@@ -1,8 +1,8 @@
 <?php
 
 include ('Smarty/header.php');
-include 'Navbar.php';
-include 'Footer.php';
+include 'navbar.php';
+include 'footer.php';
 
 $RegistrationFail = false;
 $RegistrationSuccess = false;
