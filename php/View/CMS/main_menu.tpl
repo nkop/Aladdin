@@ -12,7 +12,7 @@
 							<ul>
 								<li><a class="submenu" href="../../Controller/CMS/editHomeController.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Startpagina</span></a></li>
 								<li><a class="submenu" href="../../Controller/CMS/editWenspaginaController.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Wensenpagina</span></a></li>
-								<li><a class="submenu" href="../../Controller/CMS/editNieuwsController.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Nieuwspagina</span></a></li>
+								<li><a class="submenu" href="../../Controller/CMS/editNieuwsitemsController.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Nieuwspagina</span></a></li>
 								<li><a class="submenu" href="../../Controller/CMS/editFaqController.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> F.A.Q.</span></a></li>
 							</ul>	
 						</li>
