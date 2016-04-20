@@ -92,6 +92,8 @@
                         <ul class="dropdown-menu">
                             <li><a href="FaqController.php">Veelgestelde vragen</a></li>
                             <li><a href="ContactController.php">Contact</a></li>
+                             <li><a href="RegelationsController.php">Regels</a></li>
+                              <li><a href="AboutController.php">Over Ons</a></li>
                         </ul>
 
                     </li>
