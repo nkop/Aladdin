@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-10 15:27:58
+/* Smarty version 3.1.29, created on 2016-04-13 00:21:39
   from "C:\xampp\htdocs\Aladdin\php\view\assets\php\NavTop.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_570a54deea66b1_47479469',
+  'unifunc' => 'content_570d74f3f250f8_24904237',
   'file_dependency' => 
   array (
     '95d6155c024698961048dae24fcac3b79d11b696' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Aladdin\\php\\view\\assets\\php\\NavTop.tpl',
-      1 => 1460294212,
+      1 => 1460499188,
       2 => 'file',
     ),
   ),
@@ -19,10 +19,10 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_570a54deea66b1_47479469 ($_smarty_tpl) {
+function content_570d74f3f250f8_24904237 ($_smarty_tpl) {
 ?>
   <!--=== Header ===-->
-    <div class="header">
+    <div class="header header-sticky">
         <div class="container">
             <!-- Logo -->
             <a class="logo" href="HomepageController.php">
@@ -81,6 +81,20 @@ function content_570a54deea66b1_47479469 ($_smarty_tpl) {
                         </a>
                     </li>
                     <!-- End Home -->
+
+                   <!-- wensen & talenten -->
+                   <?php if (($_smarty_tpl->tpl_vars['text']->value == 'Logout')) {?>
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                            Wensen & Talenten
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="WishesController.php">Wensen</a></li>
+                            <li><a href="TalentsController.php">Talenten</a></li>
+                        </ul>
+                    </li>
+                    <?php }?>
+                    <!-- End wensen & talenten -->
 
                     <!-- nieuws -->
                     <li class="dropdown">

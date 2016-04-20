@@ -1,7 +1,7 @@
 <?php
 include ('Smarty/header.php');
-include 'Navbar.php';
-include 'Footer.php';
+include 'navbar.php';
+include 'footer.php';
 
 // Create a random string, leaving out 'o' to avoid confusion with '0'
 $char = strtoupper(substr(str_shuffle('abcdefghjkmnpqrstuvwxyz'), 0, 4));

@@ -91,7 +91,7 @@
 										<div class="control-group hidden-phone">
 											<label class="control-label" for="textarea2">Pas de content	aan</label>
 											<div class="controls">
-												<textarea name="tekstvaktekst" class="cleditor" id="textarea2" rows="5">{$tekst.tekstvaktekst}</textarea>
+												<textarea name="tekstvaktekst" id="textarea2" rows="5" style="width: 80%">{$tekst.tekstvaktekst}</textarea>
 											</div>
 										</div>
 										<div class="form-actions">
@@ -128,6 +128,10 @@
 	</footer>
 
 	<!-- start: JavaScript-->
+	
+	<script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
+<script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
+						
 
 	<script src="../../View/CMS/js/jquery-1.9.1.min.js"></script>
 	<script src="../../View/CMS/js/jquery-migrate-1.0.0.min.js"></script>

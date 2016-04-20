@@ -3,13 +3,13 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-    <title>Alladin | Home</title>
+    <title>Registreren | Aladdin</title>
 
 {include 'Assets/php/Head.tpl'}
 
 </head>
 
-<body>
+<body class="header-fixed">
 
 <div class="wrapper">
 {include '../view/Assets/php/NavTop.tpl'}
@@ -29,9 +29,20 @@
 
     <!--=== Content Part ===-->
     <div class="container content">
+      {if $RegistrationFail}
+          <div class='alert alert-danger text-center'>
+            <strong>Error!</strong> Dit e-mail adres staat al geregistreerd!
+          </div>
+      {/if}
+
+      {if $RegistrationSuccess}
+      <div class='alert alert-success text-center'>
+        <strong>Succes!</strong> U ontvangt een bevestiging in uw inbox!
+      </div>
+      {/if}
         <div class="row">
             <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-                <form class="reg-page" action="../Controller/Handlers/Userregistration.php" method="post">
+                <form class="reg-page" action="../Controller/Handlers/UserRegistration.php" method="post">
                     <div class="reg-header">
                         <h2>Registreer</h2>
                         <p>Heb je al een account? <a href="page_login.html" class="color-green">Login</a></p>
@@ -52,11 +63,11 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <label>Password <span class="color-red">*</span></label>
-                            <input id="password" type="password" name="wachtwoord" class="form-control margin-bottom-20" required="required">
+                            <input id="password" type="password" name="wachtwoord" minlength="6" class="form-control margin-bottom-20" required="required">
                         </div>
                         <div class="col-sm-6">
                             <label>Confirm Password <span class="color-red">*</span></label>
-                            <input type="password" name="confirmwachtwoord" class="form-control margin-bottom-20" required="required" oninput="check(this)" >
+                            <input type="password" name="confirmwachtwoord" minlength="6" class="form-control margin-bottom-20" required="required" oninput="check(this)" >
                         </div>
                     </div>
 

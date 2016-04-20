@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-10 23:47:39
+/* Smarty version 3.1.29, created on 2016-04-11 15:29:21
   from "C:\xampp\htdocs\Aladdin\php\View\page_nieuws.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_570ac9fb0c41a9_70537739',
+  'unifunc' => 'content_570ba6b1d1a4f4_72773699',
   'file_dependency' => 
   array (
     'ffa1df56783a54e4d398e2487f79bc12ce6f3933' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Aladdin\\php\\View\\page_nieuws.tpl',
-      1 => 1460324851,
+      1 => 1460381254,
       2 => 'file',
     ),
   ),
@@ -23,21 +23,21 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:../view/Assets/php/jsCall.tpl' => 1,
   ),
 ),false)) {
-function content_570ac9fb0c41a9_70537739 ($_smarty_tpl) {
+function content_570ba6b1d1a4f4_72773699 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-    <title>Alladin | Home</title>
+    <title>Nieuws | Aladdin</title>
 
    <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:../View/Assets/php/Head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 </head>
 
-<body>
+<body class="header-fixed">
 
 <div class="wrapper">
 <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:../View/Assets/php/NavTop.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);

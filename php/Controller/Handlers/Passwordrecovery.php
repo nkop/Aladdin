@@ -1,32 +1,32 @@
 <?php
 include '../../Model/password.php';
+include '../PHPMailer/Mailer.php';
 require '../../Model/DB/UpdatePassword.php';
 
-require '../PHPMailer/PHPMailerAutoload.php';
+#get email from post
+$email = $_POST["mail"];
 
-$password = randomPassword();
-subPassword($password);
-$mail = new PHPMailer(); // create a new object
-$mail->IsSMTP(); // enable SMTP
-// $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
-$mail->SMTPAuth = true; // authentication enabled
-$mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
-$mail->Host = "smtp.gmail.com";
-$mail->Port = 465; // or 587
-$mail->IsHTML(true);
-$mail->Username = "aladdingroepd@gmail.com";
-$mail->Password = "AladdinD";
-$mail->SetFrom("AladdinD@gmail.com");
-$mail->Subject = "Aladdin wachtwoord herstellen";
-$mail->Body = "Beste gebruiker,<br/><br /> Uw nieuwe wachtwoord om in te loggen is: <b>".$password."</b><br /><br /> Met vriendelijke groeten,<br /><br />Het Aladdin team";
-$mail->AddAddress($_POST["mail"]);
+#check if email exists
+if(Check($email)){
 
- if(!$mail->Send()) {
-    echo "Mailer Error: " . $mail->ErrorInfo;
- } else {
-     echo "<script>alert('Check uw inbox!');</script>";
+  #create new password, immediately call substitute method.
+  $password = randomPassword();
+  subPassword($email, $password);
+
+  #construct mail body, recipient, subject
+  $subject = "Aladdin wachtwoord herstellen";
+  $message = "Beste gebruiker,<br/><br /> Uw nieuwe wachtwoord om in te loggen is: <b>".$password."</b><br /><br /> Met vriendelijke groeten,<br /><br />Het Aladdin team";
+  $recipient = ($_POST["mail"]);
+
+  #Call SendMail (coming from /PHPMailer/Mailer.php)
+  SendMail($recipient, $message, $subject);
+
+ }else{
+   #redirect to error page
+   header('Location: ../../Controller/RecoveryController.php?status=fail');
  }
 
+  #generate new random password for user
 function randomPassword() {
     $alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
     $pass = array(); //remember to declare $pass as an array
@@ -38,10 +38,18 @@ function randomPassword() {
     return implode($pass); //turn the array into a string
 }
 
+#substitute password in database
+function subPassword($email, $pass){
 
-function subPassword($pass){
+  UpdatePassword($email, $pass);
 
-  UpdatePassword($_POST["mail"], $pass);
+}
 
+#check if email exists in database
+function Check($email){
+
+  if(CheckUser($email)){
+    return true;
+  }
 }
  ?>

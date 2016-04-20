@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-10 22:38:47
+/* Smarty version 3.1.29, created on 2016-04-18 14:46:04
   from "C:\xampp\htdocs\Aladdin\php\View\page_registration.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_570ab9d7ab2f20_17113301',
+  'unifunc' => 'content_5714d70c38b0f0_29734132',
   'file_dependency' => 
   array (
     '8ac4d591a6792ea4d892181bd462f0e74a7afc0c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Aladdin\\php\\View\\page_registration.tpl',
-      1 => 1460219869,
+      1 => 1460983191,
       2 => 'file',
     ),
   ),
@@ -23,14 +23,14 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:../view/Assets/php/jsCall.tpl' => 1,
   ),
 ),false)) {
-function content_570ab9d7ab2f20_17113301 ($_smarty_tpl) {
+function content_5714d70c38b0f0_29734132 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-    <title>Alladin | Home</title>
+    <title>Registreren | Aladdin</title>
 
 <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:Assets/php/Head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -38,7 +38,7 @@ function content_570ab9d7ab2f20_17113301 ($_smarty_tpl) {
 
 </head>
 
-<body>
+<body class="header-fixed">
 
 <div class="wrapper">
 <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:../view/Assets/php/NavTop.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -60,9 +60,20 @@ function content_570ab9d7ab2f20_17113301 ($_smarty_tpl) {
 
     <!--=== Content Part ===-->
     <div class="container content">
+      <?php if ($_smarty_tpl->tpl_vars['RegistrationFail']->value) {?>
+          <div class='alert alert-danger text-center'>
+            <strong>Error!</strong> Dit e-mail adres staat al geregistreerd!
+          </div>
+      <?php }?>
+
+      <?php if ($_smarty_tpl->tpl_vars['RegistrationSuccess']->value) {?>
+      <div class='alert alert-success text-center'>
+        <strong>Succes!</strong> U ontvangt een bevestiging in uw inbox!
+      </div>
+      <?php }?>
         <div class="row">
             <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-                <form class="reg-page" action="../Controller/Handlers/Userregistration.php" method="post">
+                <form class="reg-page" action="../Controller/Handlers/UserRegistration.php" method="post">
                     <div class="reg-header">
                         <h2>Registreer</h2>
                         <p>Heb je al een account? <a href="page_login.html" class="color-green">Login</a></p>
@@ -83,11 +94,11 @@ function content_570ab9d7ab2f20_17113301 ($_smarty_tpl) {
                     <div class="row">
                         <div class="col-sm-6">
                             <label>Password <span class="color-red">*</span></label>
-                            <input id="password" type="password" name="wachtwoord" class="form-control margin-bottom-20" required="required">
+                            <input id="password" type="password" name="wachtwoord" minlength="6" class="form-control margin-bottom-20" required="required">
                         </div>
                         <div class="col-sm-6">
                             <label>Confirm Password <span class="color-red">*</span></label>
-                            <input type="password" name="confirmwachtwoord" class="form-control margin-bottom-20" required="required" oninput="check(this)" >
+                            <input type="password" name="confirmwachtwoord" minlength="6" class="form-control margin-bottom-20" required="required" oninput="check(this)" >
                         </div>
                     </div>
 

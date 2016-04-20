@@ -1,21 +1,25 @@
 <?php
 include ('Smarty/header.php');
-include 'Navbar.php';
-include 'Footer.php';
+include 'navbar.php';
+include 'footer.php';
 
+$RecoverError = false;
+$RecoverSuccess = false;
 if(isset($_GET['status'])){
 $status = strtolower(htmlspecialchars($_GET['status']));
 switch ($status) {
     case "fail":
-        $smarty->display('RecoverFail.tpl');
+        $RecoverError = true;
         break;
     case "success":
-        $smarty->display('RecoverSuccess.tpl');
+        $RecoverSuccess = true;
         break;
       }
     }
-if(!isset($_GET['status'])){
+$smarty->assign('RecoverError', $RecoverError);
+$smarty->assign('RecoverSuccess', $RecoverSuccess);
 $smarty->display('page_passwordrecover.tpl');
-}
+
+
 
 ?>
