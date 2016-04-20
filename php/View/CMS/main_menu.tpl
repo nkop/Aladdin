@@ -5,6 +5,7 @@
 						<li><a href="../../Controller/CMS/dashboardController.php"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard </span></a></li>	
 						<li><a href="#"><i class="icon-envelope"></i><span class="hidden-tablet"> Tags </span></a></li>
 						<li><a href="../../Controller/CMS/wishController.php"><i class="icon-tasks"></i><span class="hidden-tablet"> Wensen </span></a></li>
+						<li><a href="../../Controller/CMS/talentController.php"><i class="icon-tasks"></i><span class="hidden-tablet"> Talenten </span></a></li>
 						<li><a href="#"><i class="icon-align-justify"></i><span class="hidden-tablet"> Gebruikers </span></a></li>
 						<li><a href="#"><i class="icon-list-alt"></i><span class="hidden-tablet"> Grafieken </span></a></li>						
 						<li>
