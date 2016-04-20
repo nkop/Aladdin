@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-09 15:09:19
+/* Smarty version 3.1.29, created on 2016-04-20 10:01:01
   from "C:\xampp\htdocs\Aladdin\php\View\page_personalinfo.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5708feff735c13_95971731',
+  'unifunc' => 'content_5717373d97e615_78682664',
   'file_dependency' => 
   array (
     '9253aba640312ba88359be75e44fccce8c7b138a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Aladdin\\php\\View\\page_personalinfo.tpl',
-      1 => 1460122329,
+      1 => 1461138015,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:../view/assets/php/jsCall.tpl' => 1,
   ),
 ),false)) {
-function content_5708feff735c13_95971731 ($_smarty_tpl) {
+function content_5717373d97e615_78682664 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
@@ -32,12 +32,12 @@ function content_5708feff735c13_95971731 ($_smarty_tpl) {
 <html lang="en">
 <!--<![endif]-->
 <head>
-<title>Alladin | Home</title>
+<title>Profiel | Aladdin</title>
 <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:../view/Assets/php/Head.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 </head>
-<body>
+<body class="header-fixed">
 
 	<div class="wrapper">    
  	<?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:../view/assets/php/NavTop.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
