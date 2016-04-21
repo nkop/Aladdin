@@ -1,12 +1,20 @@
 <footer>
 		<p>
 			<span style="text-align: left; float: left">&copy; 2016 <a
-				href="aladdin.nl" alt="Bootstrap_Metro_Dashboard">Hoi</a></span>
+				href="aladdin.nl" alt="Bootstrap_Metro_Dashboard">Aladdin CMS</a></span>
 
 		</p>
 		</footer>
 		<!-- start: JavaScript-->
 
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+
+	<script src="http://js.nicedit.com/nicEdit-latest.js"
+		type="text/javascript"></script>
+	<script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
+
+	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 
 	<script src="../../View/CMS/js/jquery-1.9.1.min.js"></script>
 	<script src="../../View/CMS/js/jquery-migrate-1.0.0.min.js"></script>
@@ -63,14 +71,7 @@
 
 	<script src="../../View/CMS/js/custom.js"></script>
 
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
 
-	<script src="http://js.nicedit.com/nicEdit-latest.js"
-		type="text/javascript"></script>
-	<script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
-
-	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script
 		src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	<script src="../../View/CMS/js/fontawesome-iconpicker.js"></script>
