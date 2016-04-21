@@ -1,7 +1,7 @@
 <?php
 include ('Smarty/header.php');
-include 'Navbar.php';
-include 'Footer.php';
+include 'navbarController.php';
+include 'footerController.php';
 
 $loginError = false;
 $username = "";
@@ -24,6 +24,6 @@ if(isset($_GET['username']))
 
 $smarty->assign('username', $username);
 $smarty->assign('loginError', $loginError);
-$smarty->display('page_login.tpl');
+$smarty->display('login.tpl');
 
 ?>

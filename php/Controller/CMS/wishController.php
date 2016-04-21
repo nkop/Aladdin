@@ -1,10 +1,10 @@
 <?php
 include ('../Smarty/header.php');
-include ('../../Model/CMS/wishes.php');
+include ('../../Model/CMS/wishesModel.php');
 
 
 $wisharray = array();
-// get all wishes that have not been accepted or declined
+// get all wishesModel that have not been accepted or declined
 $wisharray = getOpenWishes();
 
 $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
@@ -21,6 +21,6 @@ else if (isset($_POST['decline']) && isset($_POST['wishID']))
 	header ( "Location: " . $actual_link );
 }
 
-$smarty->assign('wishes', $wisharray);
+$smarty->assign('wishesModel', $wisharray);
 $smarty->display ( '../../View/CMS/wishlist.tpl' );
 
