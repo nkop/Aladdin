@@ -48,12 +48,13 @@ if($canPass){
 	$wachtwoord = $_POST["wachtwoord"];
 	$gebruikersnaam = substr($voornaam, 0, 1).substr($achternaam, 0, 1).calculateAge($date);
 	$gebruikersnaam = strtolower($gebruikersnaam);
+	
+	getGebruikersnaam($gebruikersnaam);
 
 
 	insertUser($sql, $gebruikersnaam, $voornaam, $achternaam, $tussenvoegsel, $date, $email, $straatnaam, $huisnummer, $postcode, $woonplaats, $geslacht, $rechten, $wachtwoord);
 
 }
-
 
 function insertUser($sql, $gebruikersnaam, $voornaam, $achternaam, $tussenvoegsel, $date, $email, $straatnaam, $huisnummer, $postcode, $woonplaats, $geslacht, $rechten, $wachtwoord){
   include ('../Controller/Smarty/header.php');
