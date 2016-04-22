@@ -21,13 +21,13 @@
                         </ul>
                     </li>
                     <li class="topbar-devider"></li>
-                    <li><a href="FaqController.php">Help</a></li>
+                    <li><a href="faqController.php">Help</a></li>
                     <li class="topbar-devider"></li>
                     <li><a href='loginController.php?logout=true'>{$text}</a></li>
                     {if $loginoptions}
                       <li class="topbar-devider"></li>
                       
-                      <li><a href="RegisterController.php">Registreer</a></li>
+                      <li><a href="registerController.php">Registreer</a></li>
                       {/if}
                       {if $loginoptions == false}
                       <!--  <li class="topbar-devider"></li>
@@ -65,8 +65,8 @@
                             Wensen & Talenten
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="WishesController.php">Wensen</a></li>
-                            <li><a href="TalentsController.php">Talenten</a></li>
+                            <li><a href="wishesController.php">Wensen</a></li>
+                            <li><a href="talentsController.php">Talenten</a></li>
                         </ul>
                     </li>
                     {/if}
@@ -78,7 +78,7 @@
                             Nieuws
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="NieuwsController.php">Laatste nieuws</a></li>
+                            <li><a href="newsController.php">Laatste nieuws</a></li>
                         </ul>
                     </li>
                     <!-- End nieuws -->
@@ -90,10 +90,10 @@
                             Contact
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="FaqController.php">Veelgestelde vragen</a></li>
-                            <li><a href="ContactController.php">Contact</a></li>
-                             <li><a href="RegelationsController.php">Regels</a></li>
-                              <li><a href="AboutController.php">Over Ons</a></li>
+                            <li><a href="faqController.php">Veelgestelde vragen</a></li>
+                            <li><a href="contactController.php">Contact</a></li>
+                             <li><a href="regulationsController.php">Regels</a></li>
+                              <li><a href="aboutController.php">Over Ons</a></li>
                         </ul>
 
                     </li>

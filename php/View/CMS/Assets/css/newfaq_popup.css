@@ -1,0 +1,37 @@
+#popup{
+padding-top:80px;
+}
+.form{
+border-radius:2px;
+padding:20px 30px;
+box-shadow:0 0 15px;
+font-size:14px;
+font-weight:bold;
+width:350px;
+margin:20px 250px 0 35px;
+float:left;
+}
+#contactdiv{
+opacity:0.92;
+position: absolute;
+top: 0px;
+left: 0px;
+height: 100%;
+width: 100%;
+background: #000;
+display: none;
+}
+#contact{
+width:700px;
+margin:0px;
+background-color:white;
+position: relative;
+border: 5px solid rgb(90, 158, 181);
+left: 50%;
+top: 50%;
+margin-left:-370px;
+margin-top:-370px;
+}
+#kappa{
+	width:auto;
+}
