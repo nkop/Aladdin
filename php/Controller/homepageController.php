@@ -1,17 +1,25 @@
 <?php
-include ('Smarty/header.php');
-include_once '../Model/DB/Database.class.php';
-include 'navbarController.php';
-include 'footerController.php';
+/*
+ * @author Ferry Zijlmans
+ */
+class HomepageController{
+	private $result = "";
+	/*
+	 * @author Niels Kop 
+	$db = Database::getInstance ();
+	$sql = $db->getConnection ();
+	
+	$result = $sql->query("SELECT * FROM tekstvak WHERE tekstvakid = 1");*/
+
+	//show
+	function Index($smarty){
+		if ($smarty == null) {
+			global $smarty;
+		}
+		$smarty->assign('result', $this->result);
+		$smarty->display('index.tpl');
+	}
 
 
-$db = Database::getInstance ();
-$sql = $db->getConnection ();
-
-$result = $sql->query("SELECT * FROM tekstvak WHERE tekstvakid = 1");
-
-
-$smarty->assign('result', $result);
-$smarty->display("index.tpl")
-
+}
 ?>

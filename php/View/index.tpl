@@ -6,7 +6,7 @@
 <!--<![endif]-->
 <head>
     <title>Home | Aladdin</title>
-    {include '../view/Assets/php/Head.tpl'}
+    {include 'view/Assets/php/Head.tpl'}
 
 
 </head>
@@ -14,7 +14,7 @@
 <body class="header-fixed">
 
 	<div class="wrapper">
-		{include '../view/Assets/php/NavTop.tpl'}
+		{include 'view/Assets/php/NavTop.tpl'}
 
 
 		<!--=== Slider ===-->
@@ -22,8 +22,8 @@
 			style="width: 100%; height: 500px; margin: 0px auto;">
 			<!-- First slide -->
 			<div class="ls-slide" data-ls="slidedelay:4500;transition2d:25;">
-				<img src="../view/assets/img/sliders/layer/bg1.jpg" class="ls-bg"
-					alt="Slide background" /> <img src="../view/images/jasmine.png"
+				<img src="view/assets/img/sliders/layer/bg1.jpg" class="ls-bg"
+					alt="Slide background" /> <img src="view/images/jasmine.png"
 					alt="Slider image" class="ls-s-1" style="top: 62px; left: 29%;"
 					data-ls="offsetxin:left; durationin:1500; delayin:1500; fadein:false; offsetxout:left; durationout:1000; fadeout:false;">
 
@@ -34,7 +34,7 @@
 
 			<!--Second Slide-->
 			<div class="ls-slide" data-ls="transition2d:93;">
-				<img src="../view/assets/img/bg/18.jpg" class="ls-bg"
+				<img src="view/assets/img/bg/18.jpg" class="ls-bg"
 					alt="Slide background"> <i
 					class="fa fa-chevron-circle-right ls-s-1"
 					style="color: #fff; font-size: 24px; top: 70px; left: 40px; slidedirection: left; slideoutdirection: top; durationin: 1500; durationout: 500;"></i>
@@ -56,7 +56,7 @@
 					gebruik van icons </span> <a class="btn-u btn-u-blue ls-s1"
 					href="#"
 					style="padding: 9px 20px; font-size: 25px; top: 340px; left: 40px; slidedirection: bottom; slideoutdirection: bottom; durationin: 6500; durationout: 3500;">
-					gebaseerd op Bootstrap 3 </a> <img src="../view/images/jasmine.png"
+					gebaseerd op Bootstrap 3 </a> <img src="view/images/jasmine.png"
 					alt="Slider Image" class="ls-s-1"
 					style="top: 30px; left: 650px; slidedirection: right; slideoutdirection: bottom; durationin: 1500; durationout: 1500;">
 			</div>
@@ -64,7 +64,7 @@
 			<!--Third Slide-->
 			<div class="ls-slide"
 				style="slidedirection: right; transition2d: 92, 93, 105;">
-				<img src="../view/assets/img/sliders/layer/bg2.jpg" class="ls-bg"
+				<img src="view/assets/img/sliders/layer/bg2.jpg" class="ls-bg"
 					alt="Slide background">
 			</div>
 			<!--End Third Slide-->
@@ -77,7 +77,7 @@
 			<div class="margin-bottom-10"></div>
 			<!-- Service Blocks -->
 			<div class="row">
-				{foreach from=$result item=tekst}
+				<!-- {foreach from=$result item=tekst}
 				<div class="col-md-12">
 					<h2 class="heading-sm">
 						<a class="link-bg-icon" href="#"> <i
@@ -87,8 +87,8 @@
 					</h2>
 					<p>{$tekst.tekstvaktekst}</p>
 					{/foreach}
-
-				</div>
+				 
+				</div>-->
 				<div class="col-md-6 col-sm-12">
 					<h2 class="heading-sm">
 						<a class="link-bg-icon" href="#"> <i
@@ -143,7 +143,7 @@
 					<div class="row">
 						<div class="col-sm-4">
 							<img class="img-responsive margin-bottom-20"
-								src="../view/assets/img/stock/make_a_wish.jpg" alt="">
+								src="view/assets/img/stock/make_a_wish.jpg" alt="">
 						</div>
 						<div class="col-sm-8">
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -229,7 +229,7 @@
 				<div class="owl-recent-works-v1">
 					<div class="item">
 						<a href="#"> <em class="overflow-hidden"> <img
-								class="img-responsive" src="../view/assets/img/main/img1.jpg"
+								class="img-responsive" src="view/assets/img/main/img1.jpg"
 								alt="">
 						</em> <span> <strong>Gelukkig nieuwjaar!</strong> <i>Anim pariatur
 									cliche reprehenderit</i>
@@ -238,7 +238,7 @@
 					</div>
 					<div class="item">
 						<a href="#"> <em class="overflow-hidden"> <img
-								class="img-responsive" src="../view/assets/img/main/img2.jpg"
+								class="img-responsive" src="view/assets/img/main/img2.jpg"
 								alt="">
 						</em> <span> <strong>Nieuwe website!</strong> <i>Responsive
 									Bootstrap website</i>
@@ -247,7 +247,7 @@
 					</div>
 					<div class="item">
 						<a href="#"> <em class="overflow-hidden"> <img
-								class="img-responsive" src="../view/assets/img/main/img3.jpg"
+								class="img-responsive" src="view/assets/img/main/img3.jpg"
 								alt="">
 						</em> <span> <strong>Lorem ipsum</strong> <i>Pariatur prehe cliche
 									reprehrit</i>
@@ -256,7 +256,7 @@
 					</div>
 					<div class="item">
 						<a href="#"> <em class="overflow-hidden"> <img
-								class="img-responsive" src="../view/assets/img/main/img4.jpg"
+								class="img-responsive" src="view/assets/img/main/img4.jpg"
 								alt="">
 						</em> <span> <strong>Lorem ipsum</strong> <i>Craft labore wes
 									anderson cred</i>
@@ -265,7 +265,7 @@
 					</div>
 					<div class="item">
 						<a href="#"> <em class="overflow-hidden"> <img
-								class="img-responsive" src="../view/assets/img/main/img5.jpg"
+								class="img-responsive" src="view/assets/img/main/img5.jpg"
 								alt="">
 						</em> <span> <strong>Lorem ipsum</strong> <i>Anim pariatur cliche
 									reprehenderit</i>
@@ -274,7 +274,7 @@
 					</div>
 					<div class="item">
 						<a href="#"> <em class="overflow-hidden"> <img
-								class="img-responsive" src="../view/assets/img/main/img1.jpg"
+								class="img-responsive" src="view/assets/img/main/img1.jpg"
 								alt="">
 						</em> <span> <strong>Lorem ipsum</strong> <i>Anim pariatur cliche
 									reprehenderit</i>
@@ -283,7 +283,7 @@
 					</div>
 					<div class="item">
 						<a href="#"> <em class="overflow-hidden"> <img
-								class="img-responsive" src="../view/assets/img/main/img2.jpg"
+								class="img-responsive" src="view/assets/img/main/img2.jpg"
 								alt="">
 						</em> <span> <strong>Lorem ipsum</strong> <i>Responsive Bootstrap
 									Template</i>
@@ -292,7 +292,7 @@
 					</div>
 					<div class="item">
 						<a href="#"> <em class="overflow-hidden"> <img
-								class="img-responsive" src="../view/assets/img/main/img3.jpg"
+								class="img-responsive" src="view/assets/img/main/img3.jpg"
 								alt="">
 						</em> <span> <strong>Lorem ipsum</strong> <i>Pariatur prehe cliche
 									reprehrit</i>
@@ -301,7 +301,7 @@
 					</div>
 					<div class="item">
 						<a href="#"> <em class="overflow-hidden"> <img
-								class="img-responsive" src="../view/assets/img/main/img4.jpg"
+								class="img-responsive" src="view/assets/img/main/img4.jpg"
 								alt="">
 						</em> <span> <strong>Lorem ipsum</strong> <i>Craft labore wes
 									anderson cred</i>
@@ -310,7 +310,7 @@
 					</div>
 					<div class="item">
 						<a href="#"> <em class="overflow-hidden"> <img
-								class="img-responsive" src="../view/assets/img/main/img5.jpg"
+								class="img-responsive" src="view/assets/img/main/img5.jpg"
 								alt="">
 						</em> <span> <strong>Lorem ipsum</strong> <i>Anim pariatur cliche
 									reprehenderit</i>
@@ -327,41 +327,41 @@
 			</div>
 			<div class="owl-clients-v1">
 				<div class="item">
-					<img src="../view/assets/img/clients4/1.png" alt="">
+					<img src="view/assets/img/clients4/1.png" alt="">
 				</div>
 				<div class="item">
-					<img src="../view/assets/img/clients4/2.png" alt="">
+					<img src="view/assets/img/clients4/2.png" alt="">
 				</div>
 				<div class="item">
-					<img src="../view/assets/img/clients4/3.png" alt="">
+					<img src="view/assets/img/clients4/3.png" alt="">
 				</div>
 				<div class="item">
-					<img src="../view/assets/img/clients4/4.png" alt="">
+					<img src="view/assets/img/clients4/4.png" alt="">
 				</div>
 				<div class="item">
-					<img src="../view/assets/img/clients4/5.png" alt="">
+					<img src="view/assets/img/clients4/5.png" alt="">
 				</div>
 				<div class="item">
-					<img src="../view/assets/img/clients4/6.png" alt="">
+					<img src="view/assets/img/clients4/6.png" alt="">
 				</div>
 				<div class="item">
-					<img src="../view/assets/img/clients4/7.png" alt="">
+					<img src="view/assets/img/clients4/7.png" alt="">
 				</div>
 				<div class="item">
-					<img src="../view/assets/img/clients4/8.png" alt="">
+					<img src="view/assets/img/clients4/8.png" alt="">
 				</div>
 				<div class="item">
-					<img src="../view/assets/img/clients4/9.png" alt="">
+					<img src="view/assets/img/clients4/9.png" alt="">
 				</div>
 			</div>
 			<!-- End Owl Clients v1 -->
 		</div>
 		<!--/container-->
 		<!-- End Content Part -->
-		{include '../view/Assets/php/Footer.tpl'}
+		{include 'view/Assets/php/Footer.tpl'}
 
 	</div>
 	<!--/wrapper-->
-	{include '../view/Assets/php/jsCall.tpl'}
+	{include 'view/Assets/php/jsCall.tpl'}
 </body>
 </html>
