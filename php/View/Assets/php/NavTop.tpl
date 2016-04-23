@@ -2,7 +2,7 @@
     <div class="header header-sticky">
         <div class="container">
             <!-- Logo -->
-            <a class="logo" href="HomepageController.php">
+            <a class="logo" href="index.php">
                 <img src="view/images/logo.png" alt="Logo" height="60">
             </a>
             <!-- End Logo -->
@@ -53,7 +53,7 @@
                 <ul class="nav navbar-nav">
                     <!-- Home -->
                     <li >
-                        <a href="homepageController.php">
+                        <a href="index.php">
                             Home
                         </a>
                     </li>
