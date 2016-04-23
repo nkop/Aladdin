@@ -3,14 +3,14 @@
         <div class="container">
             <!-- Logo -->
             <a class="logo" href="HomepageController.php">
-                <img src="../view/images/logo.png" alt="Logo" height="60">
+                <img src="view/images/logo.png" alt="Logo" height="60">
             </a>
             <!-- End Logo -->
 
             <!-- Topbar -->
             <div class="topbar">
                 <ul class="loginbar pull-right">
-                    <li class="hoverSelector">
+                    <!--<li class="hoverSelector">
                         <i class="fa fa-globe"></i>
                         <a>Languages</a>
                         <ul class="languages hoverSelectorBlock">
@@ -20,15 +20,16 @@
                             <li><a href="#">English</a></li>
                         </ul>
                     </li>
-                    <li class="topbar-devider"></li>
+                    <li class="topbar-devider"></li>-->
                     <li><a href="faqController.php">Help</a></li>
                     <li class="topbar-devider"></li>
-                    <li><a href='loginController.php?logout=true'>{$text}</a></li>
-                    {if $loginoptions}
-                      <li class="topbar-devider"></li>
-                      
-                      <li><a href="registerController.php">Registreer</a></li>
-                      {/if}
+                    {if ($text =='Logout')}
+ 					<li><a href='index.php?controller=login&action=logout'>Logout</a></li>
+ 					{else}
+ 					<li><a href='index.php?controller=login&action=Index'>Login</a></li>
+ 					<li class="topbar-devider"></li>
+                    <li><a href="registerController.php">Registreer</a></li>
+                    {/if}
                       {if $loginoptions == false}
                       <!--  <li class="topbar-devider"></li>
                       
