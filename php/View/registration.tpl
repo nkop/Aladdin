@@ -40,9 +40,15 @@
         <strong>Succes!</strong> U ontvangt een bevestiging in uw inbox!
       </div>
       {/if}
+
+      {if $PasswordError}
+      <div class='alert alert-danger text-center'>
+        <strong>Error!</strong> Uw wachtwoorden moeten gelijk aan elkaar zijn!
+      </div>
+      {/if}
         <div class="row">
             <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-                <form class="reg-page" action="../Controller/Handlers/UserRegistration.php" method="post">
+                <form class="reg-page" action="../php/Controller/Handlers/userRegistrationHandler.php" method="post">
                     <div class="reg-header">
                         <h2>Registreer</h2>
                         <p>Heb je al een account? <a href="login.html" class="color-green">Login</a></p>
@@ -67,8 +73,9 @@
                         </div>
                         <div class="col-sm-6">
                             <label>Confirm Password <span class="color-red">*</span></label>
-                            <input type="password" name="confirmwachtwoord" minlength="6" class="form-control margin-bottom-20" required="required" oninput="check(this)" >
+                            <input type="password" name="confirmwachtwoord" minlength="6" class="form-control margin-bottom-20" required="required" >
                         </div>
+
                     </div>
 
                     <hr>

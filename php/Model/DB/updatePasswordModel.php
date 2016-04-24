@@ -1,6 +1,8 @@
 <?php
 include ("Database.class.php");
 
+class updatePasswordModel{
+
 function UpdatePassword($email, $password){
   #include password.php for password_hash to work
   include_once '../password.php';
@@ -17,17 +19,17 @@ function UpdatePassword($email, $password){
   $query = "UPDATE account SET wachtwoord = '$hashed' WHERE email = '$email'";
 
   #check if user exists in database
-  if (CheckUser($email))
+  if ($this->CheckUser($email))
   {
     #execute query, and handle any errors
     if(mysqli_query($sql, $query)){
-      header('Location: ../../Controller/RecoveryController.php?status=success');
+      return true;
     }else{
-      header('Location: ../../Controller/RecoveryController.php?status=fail');
+      return false;
       echo $sql->error;
     }
   }else{
-    header('Location: ../../Controller/RecoveryController.php?status=fail');
+    return false;
     echo $sql->error;
   }
 }
@@ -42,6 +44,8 @@ function CheckUser($email){
   {
     return true;
   }
+
+}
 
 }
 
