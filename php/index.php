@@ -1,11 +1,13 @@
-<?php 
+<?php
 /**
  * @author Ferry Zijlmans
  */
 //include the classes
 include 'Controller/Smarty/header.php';
 require('Controller/loginController.php');
+require('Controller/registerController.php');
 require('Controller/homepageController.php');
+require('Controller/recoveryController.php');
 require('Controller/navbarController.php');
 require('Controller/footerController.php');
 $controller;

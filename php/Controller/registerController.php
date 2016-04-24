@@ -1,27 +1,37 @@
 <?php
 
-include ('Smarty/header.php');
-include 'navbarController.php';
-include 'footerController.php';
+class RegisterController{
 
-$RegistrationFail = false;
-$RegistrationSuccess = false;
+private $RegistrationFail = false;
+private $RegistrationSuccess = false;
+private $PasswordError = false;
 
-if(isset($_GET['status'])){
-$status = strtolower(htmlspecialchars($_GET['status']));
-switch ($status) {
-    case "fail":
-        $RegistrationFail = true;
-        break;
-    case "success":
-        $RegistrationSuccess = true;
-        break;
+  function SetError(){
+    if(isset($_GET['status'])){
+    $status = strtolower(htmlspecialchars($_GET['status']));
+    switch ($status) {
+        case "fail":
+            $this->RegistrationFail = true;
+            break;
+        case "success":
+            $this->RegistrationSuccess = true;
+            break;
+        case "password":
+            $this->PasswordError = true;
+            break;
+          }
       }
-    }
+  }
 
-$smarty->assign('RegistrationFail', $RegistrationFail);
-$smarty->assign('RegistrationSuccess', $RegistrationSuccess);
-$smarty->display('registration.tpl');
+  function Index(){
+		global $smarty;
+    $this->SetError();
+    $smarty->assign('RegistrationFail', $this->RegistrationFail);
+    $smarty->assign('RegistrationSuccess', $this->RegistrationSuccess);
+    $smarty->assign('PasswordError', $this->PasswordError);
+    $smarty->display('registration.tpl');
+  }
 
+}
 
 ?>
