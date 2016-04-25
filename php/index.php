@@ -10,6 +10,7 @@ require('Controller/homepageController.php');
 require('Controller/recoveryController.php');
 require('Controller/navbarController.php');
 require('Controller/footerController.php');
+require('Controller/faqController.php');
 $controller;
 $actionName;
 $id;
