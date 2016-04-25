@@ -1,5 +1,13 @@
 <?php
-include ('../Smarty/header.php');
-include ('../../Model/DB/Database.class.php');
+include ('Model/DB/Database.class.php');
 
-$smarty->display('../../View/CMS/dashboard.tpl');
+class DashboardController{
+
+	function Index($smarty){
+		if ($smarty == null) {
+			global $smarty;
+		}
+		$smarty->display('../View/CMS/dashboard.tpl');
+	}
+}
+

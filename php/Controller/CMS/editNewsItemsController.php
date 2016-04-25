@@ -1,5 +1,13 @@
 <?php
-include ('../Smarty/header.php');
-include ('../../Model/CMS/editPagesModel.php');
+//include ('../../Model/CMS/editPagesModel.php');
 
-$smarty->display('../../View/CMS/nieuwsItemsEditPagina.tpl');
+class EditNewsItemsController{
+	
+	function Index($smarty){
+		if ($smarty == null) {
+			global $smarty;
+		}
+		$smarty->display('../View/CMS/newsItemsEdit.tpl');
+	}
+}
+
