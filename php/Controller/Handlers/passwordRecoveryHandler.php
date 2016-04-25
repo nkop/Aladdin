@@ -3,28 +3,37 @@ include '../../Model/password.php';
 include '../PHPMailer/Mailer.php';
 require '../../Model/DB/updatePasswordModel.php';
 
+$controller = new PasswordRecoveryHandler();
+
+class PasswordRecoveryHandler{
+private $updatePasswordModel = "";
 #get email from post
-$email = $_POST["mail"];
+private $email = "";
 
-#check if email exists
-if(Check($email)){
+public function __construct(){
+  #check if email exists
+  $this->email = $_POST["mail"];
+  $this->updatePasswordModel = new UpdatePasswordModel();
+  if($this->Check($this->email)){
 
-  #create new password, immediately call substitute method.
-  $password = randomPassword();
-  subPassword($email, $password);
+    #create new password, immediately call substitute method.
+    $password = $this->randomPassword();
+    $this->subPassword($this->email, $password);
 
-  #construct mail body, recipient, subject
-  $subject = "Aladdin wachtwoord herstellen";
-  $message = "Beste gebruiker,<br/><br /> Uw nieuwe wachtwoord om in te loggen is: <b>".$password."</b><br /><br /> Met vriendelijke groeten,<br /><br />Het Aladdin team";
-  $recipient = ($_POST["mail"]);
+    #construct mail body, recipient, subject
+    $subject = "Aladdin wachtwoord herstellen";
+    $message = "Beste gebruiker,<br/><br /> Uw nieuwe wachtwoord om in te loggen is: <b>".$password."</b><br /><br /> Met vriendelijke groeten,<br /><br />Het Aladdin team";
+    $recipient = ($_POST["mail"]);
 
-  #Call SendMail (coming from /PHPMailer/Mailer.php)
-  SendMail($recipient, $message, $subject);
+    #Call SendMail (coming from /PHPMailer/Mailer.php)
+    SendMail($recipient, $message, $subject);
 
- }else{
-   #redirect to error page
-   header('Location: ../../Controller/RecoveryController.php?status=fail');
- }
+   }else{
+     #redirect to error page
+     header('Location: ../../index.php?controller=recovery&action=Index&status=fail');
+   }
+}
+
 
   #generate new random password for user
 function randomPassword() {
@@ -40,16 +49,19 @@ function randomPassword() {
 
 #substitute password in database
 function subPassword($email, $pass){
-
-  UpdatePassword($email, $pass);
+  if($this->updatePasswordModel->UpdatePassword($email, $pass)){
+    header('Location: ../../index.php?controller=recovery&action=Index&status=success');
+  }else{
+    header('Location: ../../index.php?controller=recovery&action=Index&status=fail');
+  }
 
 }
 
 #check if email exists in database
 function Check($email){
-
-  if(CheckUser($email)){
+  if($this->updatePasswordModel->CheckUser($email)){
     return true;
   }
+}
 }
  ?>

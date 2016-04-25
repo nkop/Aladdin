@@ -28,11 +28,11 @@
  					{else}
  					<li><a href='index.php?controller=login&action=Index'>Login</a></li>
  					<li class="topbar-devider"></li>
-                    <li><a href="registerController.php">Registreer</a></li>
+                    <li><a href='index.php?controller=register&action=Index'>Registreer</a></li>
                     {/if}
                       {if $loginoptions == false}
                       <!--  <li class="topbar-devider"></li>
-                      
+
                       <li><a href="#">Extra optie</a></li>-->
                       {/if}
                 </ul>
@@ -83,7 +83,7 @@
                         </ul>
                     </li>
                     <!-- End nieuws -->
-					
+
 
                     <!-- contact -->
                     <li class="dropdown">
@@ -91,7 +91,7 @@
                             Contact
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="faqController.php">Veelgestelde vragen</a></li>
+                            <li><a href="index.php?controller=faq&action=index">Veelgestelde vragen</a></li>
                             <li><a href="contactController.php">Contact</a></li>
                              <li><a href="regulationsController.php">Regels</a></li>
                               <li><a href="aboutController.php">Over Ons</a></li>

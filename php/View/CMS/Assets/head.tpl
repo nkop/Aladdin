@@ -12,23 +12,23 @@
 <!-- end: Mobile Specific -->
 
 <!-- start: CSS -->
-<link id="bootstrap-style" href="../../View/CMS/css/bootstrap.min.css"
+<link id="bootstrap-style" href="../../View/CMS/Assets/css/bootstrap.min.css"
 	rel="stylesheet">
-<link href="../../View/CMS/css/bootstrap-responsive.min.css"
+<link href="../../View/CMS/Assets/css/bootstrap-responsive.min.css"
 	rel="stylesheet">
-<link id="base-style" href="../../View/CMS/css/style.css"
+<link id="base-style" href="../../View/CMS/Assets/css/style.css"
 	rel="stylesheet">
 <link id="base-style-responsive"
-	href="../../View/CMS/css/style-responsive.css" rel="stylesheet">
+	href="../../View/CMS/Assets/css/style-responsive.css" rel="stylesheet">
 <link
 	href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext'
 	rel='stylesheet' type='text/css'>
-<link href="../../View/CMS/css/newfaq_popup.css" rel="stylesheet">
+<link href="../../View/CMS/Assets/css/newfaq_popup.css" rel="stylesheet">
 
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
 
-<link href="../../View/CMS/css/fontawesome-iconpicker.min.css"
+<link href="../../View/CMS/Assets/css/fontawesome-iconpicker.min.css"
 	rel="stylesheet">
 
 <link

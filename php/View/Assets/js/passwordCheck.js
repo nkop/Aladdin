@@ -11,7 +11,3 @@
             input.setCustomValidity('');
         }
     }
-
-    function checkLength(input){
-
-    }
