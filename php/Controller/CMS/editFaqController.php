@@ -1,5 +1,5 @@
 <?php
-include ('../Smarty/header.php');
+include_once ('../Smarty/header.php');
 include ('../../Model/CMS/faq.class.php');
 include ('../../Model/CMS/faqcategorie.class.php');
 include ('../../Model/CMS/faqModel.php');
