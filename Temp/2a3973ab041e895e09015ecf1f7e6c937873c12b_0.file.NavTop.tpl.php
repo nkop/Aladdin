@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-12 23:06:07
+/* Smarty version 3.1.29, created on 2016-04-21 11:52:55
   from "C:\xampp\htdocs\Aladdin\php\view\Assets\php\NavTop.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_570d633f233552_21508045',
+  'unifunc' => 'content_5718a2f7a29b74_36519800',
   'file_dependency' => 
   array (
     '2a3973ab041e895e09015ecf1f7e6c937873c12b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Aladdin\\php\\view\\Assets\\php\\NavTop.tpl',
-      1 => 1460495157,
+      1 => 1461232372,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_570d633f233552_21508045 ($_smarty_tpl) {
+function content_5718a2f7a29b74_36519800 ($_smarty_tpl) {
 ?>
   <!--=== Header ===-->
     <div class="header header-sticky">
@@ -44,14 +44,14 @@ function content_570d633f233552_21508045 ($_smarty_tpl) {
                         </ul>
                     </li>
                     <li class="topbar-devider"></li>
-                    <li><a href="FaqController.php">Help</a></li>
+                    <li><a href="faqController.php">Help</a></li>
                     <li class="topbar-devider"></li>
                     <li><a href='loginController.php?logout=true'><?php echo $_smarty_tpl->tpl_vars['text']->value;?>
 </a></li>
                     <?php if ($_smarty_tpl->tpl_vars['loginoptions']->value) {?>
                       <li class="topbar-devider"></li>
                       
-                      <li><a href="RegisterController.php">Registreer</a></li>
+                      <li><a href="registerController.php">Registreer</a></li>
                       <?php }?>
                       <?php if ($_smarty_tpl->tpl_vars['loginoptions']->value == false) {?>
                       <!--  <li class="topbar-devider"></li>
@@ -89,8 +89,8 @@ function content_570d633f233552_21508045 ($_smarty_tpl) {
                             Wensen & Talenten
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="WishesController.php">Wensen</a></li>
-                            <li><a href="TalentsController.php">Talenten</a></li>
+                            <li><a href="wishesController.php">Wensen</a></li>
+                            <li><a href="talentsController.php">Talenten</a></li>
                         </ul>
                     </li>
                     <?php }?>
@@ -102,7 +102,7 @@ function content_570d633f233552_21508045 ($_smarty_tpl) {
                             Nieuws
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="NieuwsController.php">Laatste nieuws</a></li>
+                            <li><a href="newsController.php">Laatste nieuws</a></li>
                         </ul>
                     </li>
                     <!-- End nieuws -->
@@ -114,8 +114,10 @@ function content_570d633f233552_21508045 ($_smarty_tpl) {
                             Contact
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="FaqController.php">Veelgestelde vragen</a></li>
-                            <li><a href="ContactController.php">Contact</a></li>
+                            <li><a href="faqController.php">Veelgestelde vragen</a></li>
+                            <li><a href="contactController.php">Contact</a></li>
+                             <li><a href="regulationsController.php">Regels</a></li>
+                              <li><a href="aboutController.php">Over Ons</a></li>
                         </ul>
 
                     </li>
