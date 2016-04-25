@@ -6,6 +6,8 @@
 include 'Controller/Smarty/header.php';
 require('Controller/CMS/editNewsItemsController.php');
 require('Controller/CMS/dashboardController.php');
+require('Controller/CMS/wishController.php');
+require('Controller/CMS/talentController.php');
 
 $controller;
 $actionName;
