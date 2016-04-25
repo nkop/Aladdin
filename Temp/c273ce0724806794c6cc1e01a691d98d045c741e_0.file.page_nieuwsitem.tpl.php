@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-04-11 15:29:26
+/* Smarty version 3.1.29, created on 2016-04-13 15:32:05
   from "C:\xampp\htdocs\Aladdin\php\View\page_nieuwsitem.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_570ba6b64b45e8_72462292',
+  'unifunc' => 'content_570e4a558bb281_82823269',
   'file_dependency' => 
   array (
     'c273ce0724806794c6cc1e01a691d98d045c741e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\Aladdin\\php\\View\\page_nieuwsitem.tpl',
-      1 => 1460381266,
+      1 => 1460495046,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:../view/Assets/php/jsCall.tpl' => 1,
   ),
 ),false)) {
-function content_570ba6b64b45e8_72462292 ($_smarty_tpl) {
+function content_570e4a558bb281_82823269 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->

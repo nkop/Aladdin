@@ -1,7 +1,7 @@
 <?php
 include ('../Smarty/header.php');
-include ('../../Model/CMS/editpages.php');
-include ('../../Model/CMS/tekstvak.class.php');
+include ('../../Model/CMS/editPagesModel.php');
+include ('../../Model/CMS/textarea.class.php');
 
 $teksten = getTekstvakken("homepage");
 
