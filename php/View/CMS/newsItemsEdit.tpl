@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	{include './head.tpl'}
+	{include 'view/cms/Assets/head.tpl'}
 </head>
 <body>
-	{include './navbar.tpl'}
+	{include 'view/cms/Assets/navbar.tpl'}
 	<!-- start: Header -->
 
 	<div class="container-fluid-full">
 		<div class="row-fluid">
-			{include './main_menu.tpl'}
+			{include 'view/cms/Assets/mainmenu.tpl'}
 			<noscript>
 				<div class="alert alert-block span10">
 					<h4 class="alert-heading">Warning!</h4>
@@ -77,6 +77,6 @@
 		<!--/#content.span10-->
 	</div>
 	<!--/fluid-row-->
-	{include './footer.tpl'}
+	{include 'view/cms/Assets/footer.tpl'}
 </body>
 </html>
