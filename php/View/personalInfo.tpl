@@ -32,7 +32,7 @@
 		<div class="container content">
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-					<form name="selectionform" action="PersonalInfoController.php" method="POST" class="reg-page" onchange="selectionform.submit()" >
+					<form name="selectionform" action="Controller/Handlers/PersonalInfoHandler.php" method="POST" class="reg-page" onchange="selectionform.submit()" >
 						<div class="reg-header">
 							<h2>Persoonlijke informatie</h2>
 						</div>
