@@ -1,8 +1,10 @@
 <?php
-include ('Smarty/header.php');
-include 'navbarController.php';
-include 'footerController.php';
+class aboutController{
 
-$smarty->display("about.tpl")
+function Index(){
+	global $smarty;
+	$smarty->display('about.tpl');
+}
 
+}
 ?>

@@ -1,8 +1,10 @@
 <?php
-include ('Smarty/header.php');
-include 'navbarController.php';
-include 'footerController.php';
+class regulationsController{
 
-$smarty->display("regulations.tpl")
+function Index(){
+	global $smarty;
+	$smarty->display('regulations.tpl');
+}
 
+}
 ?>
