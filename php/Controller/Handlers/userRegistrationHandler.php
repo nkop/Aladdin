@@ -34,6 +34,23 @@ function CalculateAge($datetime){
 	return $interval->y;
 }
 
+function getUsername($gebruikersnaam){
+	$db = Database::getInstance();
+	$sql = $db->getConnection();
+	$result = mysqli_query($sql, "SELECT 1 FROM account WHERE gebruikersnaam = '$gebruikersnaam'");
+	$result2 = mysqli_query($sql, "SELECT 1 FROM account");
+	if ($result && mysqli_num_rows($result) > 0)
+	{
+		$rows = mysqli_num_rows($result2);
+		$gebruikersnaam = $gebruikersnaam . $rows;
+		return $gebruikersnaam;
+	}
+	else{
+		$gebruikersnaam = $gebruikersnaam;
+		return $gebruikersnaam;
+	}
+}
+
 function PassCheck($canPass){
 	if($canPass){
 		#get database connection
@@ -63,8 +80,10 @@ function PassCheck($canPass){
 		$wachtwoord = $_POST["wachtwoord"];
 
 		#generate username
-		$gebruikersnaam = substr($voornaam, 0, 1).substr($achternaam, 0, 1).CalculateAge($date);
-		$gebruikersnaam = strtolower($gebruikersnaam);
+		$gebruikersnaamnf = substr($voornaam, 0, 1).substr($achternaam, 0, 1).CalculateAge($date);
+		$gebruikersnaamnf = strtolower($gebruikersnaamnf);
+	
+		$gebruikersnaam = getUsername($gebruikersnaamnf);
 
 		#escape all strings to avoid injection
 		$gebruikersnaam = mysqli_real_escape_string($sql, $gebruikersnaam);

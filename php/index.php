@@ -12,6 +12,8 @@ require('Controller/navbarController.php');
 require('Controller/footerController.php');
 require('Controller/faqController.php');
 require('Controller/personalInfoController.php');
+require('Controller/aboutController.php');
+require('Controller/regulationsController.php');
 $controller;
 $actionName;
 $id;

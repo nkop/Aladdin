@@ -10,11 +10,11 @@
 {include '../view/Assets/php/NavTop.tpl'}
 
 <div class="container content">
-<h1 align="center">De gouden aladdin regels:</h1>
+<h1 align="left">Wat wel:</h1>
 <h2 class="heading-sm">
 <a class="link-bg-icon" href="#"> 
 <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-star"></i>
-							<span>Geen seksueelgetinte of geweldadige accountinformatie</span>
+							<span>Genieten</span>
 						</a>
 						
 </h2>
@@ -22,7 +22,7 @@
 <h2 class="heading-sm">
 <a class="link-bg-icon" href="#"> 
 <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-star"></i>
-							<span>Lorem Ipsum</span>
+							<span>Gelukkig maken</span>
 						</a>
 						
 </h2>
@@ -31,7 +31,28 @@
 					<a class="link-bg-icon" href="#"> 
 					
 					<i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-star"></i>
-							<span>Lorem Ipsum</span>
+							<span>Doen</span>
+						</a>
+</h2>
+<h2 class="heading-sm">
+					<a class="link-bg-icon" href="#"> 
+					
+					<i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-star"></i>
+							<span>Ervaren</span>
+						</a>
+</h2>
+<h2 class="heading-sm">
+					<a class="link-bg-icon" href="#"> 
+					
+					<i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-star"></i>
+							<span>Leren</span>
+						</a>
+</h2>
+<h2 class="heading-sm">
+					<a class="link-bg-icon" href="#"> 
+					
+					<i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-star"></i>
+							<span>Moet mogelijk zijn</span>
 						</a>
 </h2>
 </div>					
