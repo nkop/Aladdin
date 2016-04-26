@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
     <title>Contact | Aladdin</title>
 	{include '../view/assets/php/Head.tpl'}
-</head> 
+</head>
 
-<body class="header-fixed">     
+<body class="header-fixed">
 
 <div class="wrapper">
   {include '../view/assets/php/NavTop.tpl'}
@@ -24,7 +24,7 @@
     </div><!--/breadcrumbs-->
     <!--=== End Breadcrumbs ===-->
     <a href="https://www.google.nl/maps/place/Avans+Hogeschool/@51.6851577,5.2912576,14.5z/data=!4m2!3m1!1s0x47c6ee88559eae79:0x5d7ba4e903f8f190">
-      <img class="full_width" src="../view/Images/map.JPG" />
+      <img class="full_width" src="/Images/map.JPG" />
 	</a>
     <!--=== Content Part ===-->
     <div class="container content">
@@ -33,29 +33,40 @@
                 <div class="headline"><h2>Contact formulier</h2></div>
                 <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas feugiat. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit landitiis.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas feugiat.</p><br>
-				<form class="form-horizontal" role="form" method="post" action="#">
+                {if $ContactError}
+                    <div class='alert alert-danger text-center'>
+                      <strong>Error!</strong> Er is iets fout gegaan! Controleer uw internet verbinding!
+                    </div>
+                {/if}
+
+                {if $ContactSuccess}
+                <div class='alert alert-success text-center'>
+                  <strong>Succes!</strong> Uw bericht is succesvol verstuurd!
+                </div>
+                {/if}
+				<form class="form-horizontal" role="form" method="post" action="../php/Controller/Handlers/contactHandler.php">
 					<div class="form-group">
 						<label for="name" class="col-sm-2 control-label">Naam</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="name" name="name" placeholder="Voor en achternaam" value="">
+							<input type="text" class="form-control" id="name" name="name" placeholder="Voor en achternaam" value="" required="required">
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="email" class="col-sm-2 control-label">Email</label>
 						<div class="col-sm-10">
-							<input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="">
+							<input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="" required="required">
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="message" class="col-sm-2 control-label">Bericht</label>
 						<div class="col-sm-10">
-							<textarea class="form-control" rows="4" name="message"></textarea>
+							<textarea class="form-control" rows="4" name="message" required="required"></textarea>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="human" name="human" placeholder="Antwoord">
+							<input type="text" class="form-control" id="human" name="human" placeholder="Antwoord" required="required">
 						</div>
 					</div>
 					<div class="form-group">
@@ -70,7 +81,7 @@
 					</div>
 				</form>
             </div><!--/col-md-9-->
-            
+
     		<div class="col-md-3">
             	<!-- Contacts -->
                 <div class="headline"><h2>Contact</h2></div>
@@ -91,9 +102,9 @@
                 </ul>
             </div><!--/col-md-3-->
         </div><!--/row-->
-    </div><!--/container-->     
+    </div><!--/container-->
     <!--=== End Content Part ===-->
-    
+
 	{include '../view/assets/php/Footer.tpl'}
 
 </div><!--/wrapepr-->
@@ -107,4 +118,4 @@
 <![endif]-->
 
 </body>
-</html> 
+</html>

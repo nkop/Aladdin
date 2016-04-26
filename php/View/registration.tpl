@@ -73,7 +73,7 @@
                         </div>
                         <div class="col-sm-6">
                             <label>Confirm Password <span class="color-red">*</span></label>
-                            <input type="password" name="confirmwachtwoord" minlength="6" class="form-control margin-bottom-20" required="required" >
+                            <input id="passwordconfirm" type="password" name="confirmwachtwoord" minlength="6" class="form-control margin-bottom-20" required="required" >
                         </div>
 
                     </div>

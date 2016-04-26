@@ -12,6 +12,7 @@ require('Controller/navbarController.php');
 require('Controller/footerController.php');
 require('Controller/faqController.php');
 require('Controller/personalInfoController.php');
+require('Controller/contactController.php');
 $controller;
 $actionName;
 $id;
