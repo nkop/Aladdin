@@ -7,13 +7,13 @@
 </head>
 
 <body>
-	{include '../../View/CMS/Assets/navbar.tpl'}
+	{include 'View/CMS/Assets/navbar.tpl'}
 	<!-- start: Header -->
 
 	<div class="container-fluid-full">
 		<div class="row-fluid">
 
-			{include '../../View/CMS/Assets/mainMenu.tpl'}
+			{include 'View/CMS/Assets/mainMenu.tpl'}
 
 			<noscript>
 				<div class="alert alert-block span10">
@@ -29,12 +29,9 @@
 			<div id="content" class="span10">
 
 
-				{include '../../View/CMS/Assets/breadcrumb.tpl'}
+				{include 'View/CMS/Assets/breadcrumb.tpl'}
 
 				<div class="row-fluid sortable" id="naampje">
-
-					<!-- 					<form class="form-horizontal" -->
-					<!-- 						action="../../Controller/CMS/editFaqController.php" method="post" id="faqform"> -->
 
 					<div id="faqq" class="box span12">
 						{foreach from=$categorieen item=categorie}
@@ -49,7 +46,7 @@
 						$categorie.id}
 						<div class="box-content">
 							<form class="form-horizontal"
-								action="../../Controller/CMS/editFaqController.php"
+								action="Controller/CMS/Handlers/editFaqHandler.php"
 								method="post">
 								<fieldset>
 									<div class="control-group hidden-phone">
@@ -77,7 +74,7 @@
 						</div>
 						<br> {/if} {/foreach}
 						<form class="form-horizontal"
-							action="../../Controller/CMS/editFaqController.php" method="post">
+							action="../../Controller/CMS/Handlers/editFaqHandler.php" method="post">
 							<input name="newfaq" value="Nieuwe FAQ" id="kappa"
 								class="btn btn-primary" type="button"></input> <input
 								name="deletecategorie" type="submit" class="btn btn-danger"
@@ -91,7 +88,7 @@
 					<!-- 					</form>		 -->
 
 					<form class="form-horizontal"
-						action="../../Controller/CMS/editFaqController.php" method="post"
+						action="../../Controller/CMS/Handlers/editFaqHandler.php" method="post"
 						id="nieuwecategorieform">
 						<input name="nieuwecategorie" type="text"
 							placeholder="Voer hier een nieuwe categorie toe"
@@ -113,7 +110,7 @@
 	<!--/fluid-row-->
 	<!--Contact Form -->
 	<div id="contactdiv" data-role="popup" class="ui-content">
-		<form class="form" action="../../Controller/CMS/editFaqController.php"
+		<form class="form" action="../../Controller/CMS/Handlers/editFaqHandler.php"
 			id="contact" method="post">
 			<h3>FAQ toevoegen</h3>
 			<br> Vraag: <br> <input type="text" name="nieuwvraag" id="vraag"
