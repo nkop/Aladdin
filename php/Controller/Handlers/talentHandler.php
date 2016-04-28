@@ -1,16 +1,18 @@
 <?php
 include ('../../Model/wishesAndTalentsModel.php');
 
+	$talentModel = new WishesAndTalentsModel();
+	
 	if(isset($_POST["save"])) {
 		if(isset($_POST["save"])) {
-			insertTalent($_POST["talent"]);
+			$talentModel->insertTalent($_POST["talent"]);
 		}
 		else{
-			header("Location: ../TalentsController.php?pass=false");
+			header("Location: ../../index.php?controller=talents&action=index&pass=false");
 			exit();
 		}
 	}
 
-	header("Location: ../TalentsController.php?pass=true"); 
+	header("Location: ../../index.php?controller=talents&action=index&pass=true"); 
 	exit();
 ?>

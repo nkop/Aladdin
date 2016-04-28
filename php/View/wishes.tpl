@@ -19,7 +19,7 @@
         <div class="container">
             <h1 class="pull-left">Wensen</h1>
             <ul class="pull-right breadcrumb">
-                <li><a href="HomepageController.php">Homepagina</a></li>
+                <li><a href="index.php?controller=homepageController&action=index">Homepagina</a></li>
                 <li class="active">Wensen</li>
             </ul>
         </div><!--/container-->
@@ -45,7 +45,7 @@
 		    {if $wishesArray|@count lt 3}
 		        <div class="faqHeader"><i class="fa fa-star"></i> Vul uw wens(en) in</div>
 		        <div class="">
-					 <form class="reg-page" action="../Controller/Handlers/WishesHandler.php" method="post">
+					 <form class="reg-page" action="Controller/Handlers/WishesHandler.php" method="post">
 						{for $wishCounter=1 to (3-$wishesArray|@count)}
 							<label>wens {$wishCounter}:<span class="color-red">*</span></label>
 		                	<input type="text" name="wens{$wishCounter}" class="form-control margin-bottom-20" required="required">
