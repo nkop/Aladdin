@@ -15,6 +15,7 @@ require('Controller/personalInfoController.php');
 require('Controller/aboutController.php');
 require('Controller/regulationsController.php');
 require('Controller/contactController.php');
+
 $controller;
 $actionName;
 $id;
