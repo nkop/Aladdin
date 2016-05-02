@@ -2,6 +2,8 @@
 /*
  * @author Wouter van de Ven
  * */
+include_once 'Model/DB/Database.class.php';
+
 class PersonalInfoModel {
 	
 	function getPersonalInfo($username) {
