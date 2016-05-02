@@ -66,8 +66,8 @@
                             Wensen & Talenten
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="wishesController.php">Wensen</a></li>
-                            <li><a href="talentsController.php">Talenten</a></li>
+                            <li><a href="index.php?controller=wishes&action=index">Wensen</a></li>
+                            <li><a href="index.php?controller=talents&action=index">Talenten</a></li>
                         </ul>
                     </li>
                     {/if}
@@ -92,9 +92,10 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="index.php?controller=faq&action=index">Veelgestelde vragen</a></li>
-                            <li><a href="contactController.php">Contact</a></li>
-                             <li><a href="regulationsController.php">Regels</a></li>
-                              <li><a href="aboutController.php">Over Ons</a></li>
+
+                            <li><a href="index.php?controller=contact&action=index">Contact</a></li>
+                             <li><a href="index.php?controller=regulations&action=index">Regels</a></li>
+                              <li><a href="index.php?controller=about&action=index">Over Ons</a></li>
                         </ul>
 
                     </li>
