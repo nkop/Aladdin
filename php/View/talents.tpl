@@ -19,7 +19,7 @@
         <div class="container">
             <h1 class="pull-left">Talenten</h1>
             <ul class="pull-right breadcrumb">
-                <li><a href="HomepageController.php">Homepagina</a></li>
+                <li><a href="index.php?controller=homepageController&action=index">Homepagina</a></li>
                 <li class="active">Talenten</li>
             </ul>
         </div><!--/container-->
@@ -45,7 +45,7 @@
 		    	{/if}
 		        <div class="faqHeader"><i class="fa fa-lightbulb-o"></i> Vul uw talent in</div>
 		        <div class="">
-					 <form class="reg-page" action="../Controller/Handlers/TalentHandler.php" method="post">
+					 <form class="reg-page" action="Controller/Handlers/talentHandler.php" method="post">
 							<label>Talent:<span class="color-red">*</span></label>
 		                	<input type="text" name="talent" class="form-control margin-bottom-20" required="required">
 	

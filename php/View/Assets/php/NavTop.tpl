@@ -66,8 +66,8 @@
                             Wensen & Talenten
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="wishesController.php">Wensen</a></li>
-                            <li><a href="talentsController.php">Talenten</a></li>
+                            <li><a href="index.php?controller=wishes&action=index">Wensen</a></li>
+                            <li><a href="index.php?controller=talents&action=index">Talenten</a></li>
                         </ul>
                     </li>
                     {/if}
