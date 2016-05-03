@@ -16,6 +16,7 @@
 <script type="text/javascript" src="view/assets/js/plugins/owl-carousel.js"></script>
 <script type="text/javascript" src="view/assets/js/plugins/owl-recent-works.js"></script>
 <script type="text/javascript" src="view/assets/js/noSpaces.js"></script>
+<script type="text/javascript" src="view/assets/js/passwordChange.js"></script>
 
 
 <script type="text/javascript">

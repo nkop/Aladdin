@@ -13,6 +13,7 @@ require('Controller/footerController.php');
 require('Controller/faqController.php');
 require('Controller/personalInfoController.php');
 require('Controller/wishesController.php');
+require('Controller/contactController.php');
 //require('Controller/talentsController.php');
 $controller;
 $actionName;

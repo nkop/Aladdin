@@ -7,13 +7,15 @@ function UpdatePassword($email, $password){
   #include password.php for password_hash to work
   include_once '../password.php';
 
+
   #hash password to insert into database
-  $hashed = password_hash("$password", PASSWORD_DEFAULT);
 
   #get database connection to work with
   $db = Database::getInstance();
   $sql = $db->getConnection();
 
+  $password = mysqli_real_escape_string($sql, $password);
+  $hashed = password_hash("$password", PASSWORD_DEFAULT);
   #create query to execute and update the password in the datbase
   $email = mysqli_real_escape_string($sql, $email);
   $query = "UPDATE account SET wachtwoord = '$hashed' WHERE email = '$email'";
@@ -45,6 +47,19 @@ function CheckUser($email){
     return true;
   }
 
+}
+
+function CheckPassword($email, $password){
+  $db = Database::getInstance();
+
+  $sql = $db->getConnection();
+  $hashed = password_hash("$password", PASSWORD_DEFAULT);
+  $result = mysqli_query($sql, "SELECT wachtwoord FROM account WHERE email = '$email' ");
+
+  if (password_verify($password, mysqli_fetch_object($result)->wachtwoord))
+  {
+    return true;
+  }
 }
 
 }
