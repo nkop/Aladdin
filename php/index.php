@@ -11,6 +11,8 @@ require('Controller/recoveryController.php');
 require('Controller/navbarController.php');
 require('Controller/footerController.php');
 require('Controller/faqController.php');
+require('Controller/newsController.php');
+require('Controller/newsitemController.php');
 require('Controller/personalInfoController.php');
 require('Controller/wishesController.php');
 require('Controller/contactController.php');
