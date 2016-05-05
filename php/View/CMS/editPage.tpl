@@ -33,7 +33,7 @@
 
 				<div class="row-fluid sortable">
 					{foreach from=$teksten item=tekst}
-					<form class="form-horizontal" action="../../Controller/CMS/Handler/editHomeHandler.php"
+					<form class="form-horizontal" action="Controller/CMS/Handlers/editHomeHandler.php"
 						method="post">
 						<div class="box span12">
 							<div class="box-header" data-original-title>

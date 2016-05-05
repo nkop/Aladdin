@@ -114,10 +114,10 @@
 			id="contact" method="post">
 			<h3>FAQ toevoegen</h3>
 			<br> Vraag: <br> <input type="text" name="nieuwvraag" id="vraag"
-				placeholder="Bijv: Wat is Aladdin?" /> <br> Antwoord: <br>
+				placeholder="Bijv: Wat is Aladdin?" required="required"/> <br> Antwoord: <br>
 			<textarea name="nieuwantwoord" placeholder="Antwoord" id="antwoord"
-				rows="4" style="width: 660px; height: 100px"></textarea>
-			<br> Categorie: <br> <select name="nieuwcategorie" id="categorie">
+				rows="4" style="width: 660px; height: 100px" ></textarea>
+			<br> Categorie: <br> <select required="required" name="nieuwcategorie" id="categorie">
 				{foreach from=$categorieen item=categorie}
 				<option value="{$categorie.id}">{$categorie.header}</option>
 				{/foreach}
