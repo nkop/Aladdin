@@ -1,0 +1,10 @@
+.newstextbox > *{
+	width: 100% !important;
+}
+#nieuws > div.control-group.hidden-phone > div > div:nth-child(2){
+		height: 350px;
+}
+
+#nieuws .nicEdit-main{
+	width: 100% !important;
+}
