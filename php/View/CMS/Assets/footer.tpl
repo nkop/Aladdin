@@ -27,5 +27,6 @@
 			<script src="view/CMS/Assets/js/fontawesome-iconpicker.js"></script>
 			<script src="view/CMS/Assets/js/faqInit.js"></script>
 			<script src="view/CMS/Assets/js/jquery-ui-1.10.0.custom.min.js"></script>	
+			<script src="view/CMS/Assets/js/Ownjs.js"></script>
 	    <!-- end: JavaScript-->
 		

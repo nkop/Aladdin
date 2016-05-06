@@ -79,7 +79,7 @@
                             Nieuws
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="newsController.php">Laatste nieuws</a></li>
+                            <li><a href="index.php?controller=News">Laatste nieuws</a></li>
                         </ul>
                     </li>
                     <!-- End nieuws -->

@@ -1,10 +1,9 @@
 <?php
-include_once ('Model/CMS/tagsModel.php');
-
 class TagController{
 	
 	function Index($smarty)
 	{
+		include_once ('Model/CMS/tagsModel.php');
 		if ($smarty == null) {
 			global $smarty;
 		}

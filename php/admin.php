@@ -5,9 +5,12 @@
 //include the classes
 include 'Controller/Smarty/header.php';
 require('Controller/CMS/editNewsItemsController.php');
+require('Controller/CMS/editNewsController.php');
 require('Controller/CMS/dashboardController.php');
 require('Controller/CMS/wishController.php');
 require('Controller/CMS/talentController.php');
+require('Controller/CMS/editFaqController.php');
+require('Controller/CMS/editHomeController.php');
 require('Controller/CMS/tagController.php');
 
 $controller;
