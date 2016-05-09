@@ -3,7 +3,7 @@ include ('../../../Model/CMS/faq.class.php');
 include ('../../../Model/CMS/faqcategorie.class.php');
 include ('../../../Model/CMS/faqModel.php');
 
-// mogelijke submits: submitfaq, deletefaq, deletecategorie, nieuwcat, nieuwfaq
+// possible submits: submitfaq, deletefaq, deletecategorie, nieuwcat, nieuwfaq
 
 if (isset ( $_POST ["submitfaq"] ) && isset ( $_POST ["categorie_id"] ) && isset ( $_POST ["vraag"] ) && isset ( $_POST ["antwoord"] )) {
 	$faq = new Faq ();
