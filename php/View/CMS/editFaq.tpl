@@ -76,7 +76,9 @@
 						<form class="form-horizontal"
 							action="Controller/CMS/Handlers/editFaqHandler.php" method="post">
 							<input name="newfaq" value="Nieuwe FAQ" id="kappa"
-								class="btn btn-primary" type="button"></input> <input
+								class="btn btn-primary" type="button"></input> 
+								<input type="hidden" value="{$categorie.id}" name="categorie_id"/>
+								<input
 								name="deletecategorie" type="submit" class="btn btn-danger"
 								value="Verwijder Categorie"
 								onclick="return confirm('Weet je zeker dat je de hele categorie inclusief inhoud wilt verwijderen?')"></input>
