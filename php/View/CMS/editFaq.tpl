@@ -74,7 +74,7 @@
 						</div>
 						<br> {/if} {/foreach}
 						<form class="form-horizontal"
-							action="../../Controller/CMS/Handlers/editFaqHandler.php" method="post">
+							action="Controller/CMS/Handlers/editFaqHandler.php" method="post">
 							<input name="newfaq" value="Nieuwe FAQ" id="kappa"
 								class="btn btn-primary" type="button"></input> <input
 								name="deletecategorie" type="submit" class="btn btn-danger"
@@ -88,7 +88,7 @@
 					<!-- 					</form>		 -->
 
 					<form class="form-horizontal"
-						action="../../Controller/CMS/Handlers/editFaqHandler.php" method="post"
+						action="Controller/CMS/Handlers/editFaqHandler.php" method="post"
 						id="nieuwecategorieform">
 						<input name="nieuwecategorie" type="text"
 							placeholder="Voer hier een nieuwe categorie toe"
@@ -110,7 +110,7 @@
 	<!--/fluid-row-->
 	<!--Contact Form -->
 	<div id="contactdiv" data-role="popup" class="ui-content">
-		<form class="form" action="../../Controller/CMS/Handlers/editFaqHandler.php"
+		<form class="form" action="Controller/CMS/Handlers/editFaqHandler.php"
 			id="contact" method="post">
 			<h3>FAQ toevoegen</h3>
 			<br> Vraag: <br> <input type="text" name="nieuwvraag" id="vraag"
