@@ -27,66 +27,90 @@
     <!--=== End Breadcrumbs ===-->
 
     <!--=== Content Part ===-->
-    {if ($text =='Logout')}
-    	{if !empty($wishesArray)}
-		    <div class="container content minimalheight">
-		    <div class="panel-group">
-		    	{if (isset($pass))}
-		    		{if $pass == 'true'}
-		    			<div class="alert alert-success">
-							<strong>Gelukt!</strong>
-						</div>
-					{/if}
-					{if $pass == 'false'}
-		    			<div class="alert alert-danger">
-							<strong>Error!</strong> er ging iets niet goed
-						</div>
-		    		{/if}
-		    	{/if}
-		        <div class="faqHeader"><i class="fa fa-lightbulb-o"></i> Vul uw talent in</div>
-		        <div class="">
-					 <form class="reg-page" action="Controller/Handlers/talentHandler.php" method="post">
-							<label>Talent:<span class="color-red">*</span></label>
-		                	<input type="text" name="talent" class="form-control margin-bottom-20" required="required">
-	
-	                    <div class="col-lg-12 text-right">
-	                    	<button class="btn-u" type="submit" name="save">Opslaan</button>
-	                    </div>
-		        	</form>
-		        	{if !empty($talentArray)}
-		        		<div class="col-lg-12 text-right">
-							<hr>
-		                </div>
-	                {/if}
-		        </div>
-		        {if !empty($talentArray)}
-		        	<div class="faqHeader"><i class="fa fa-lightbulb-o"></i> Dit zijn uw Talenten</div>
-		  	    	<div>
-		  	    		<table class="col-md-12">
-		  	    			<tr>
-		  	    				<th class="col-md-10">Talent</th>
-		  	    			</tr>
-						{foreach from=$talentArray item=talent}
-							<tr>
-								<td class="col-md-10"><p>{$talent}</p></td>
-							</tr>
-						{/foreach}
-						</table>
-			    	</div>
-		    	{/if} 
-		    </div>
+    <div class="minimalheight">
+	    {if ($text =='Logout')}
+	    	{if $wishesCount eq 3}
+			    <div class="container content">
+			    <div class="panel-group">
+			    	{if (isset($pass))}
+			    		{if $pass == 'true'}
+			    			<div class="alert alert-success">
+								<strong>Gelukt!</strong>
+							</div>
+						{/if}
+						{if $pass == 'false'}
+			    			<div class="alert alert-danger">
+								<strong>Error!</strong> er ging iets niet goed
+							</div>
+			    		{/if}
+			    	{/if}
+			        <div class="faqHeader"><i class="fa fa-lightbulb-o"></i> Vul uw talent in</div>
+			        <div class="">
+						 <form class="reg-page" action="Controller/Handlers/talentHandler.php" method="post">
+						 	<div class="panel panel-default">
+								<div class="panel-heading accordion-toggle">
+									<h4 class="panel-title">
+	                					Talent:<span class="color-red">*</span>
+	           						</h4>						
+								</div>
+								<div class="panel-collapse">
+									<div  class="panel-body">
+										<label> Talent: </label>
+										<input type="text" name="talent" class="form-control margin-bottom-20" required="required">
+										<label> Bijbehorende categori&euml;n: </label>
+										<fieldset>
+											{foreach from=$tagsArray item=tag}
+												<div class="col col-lg-2">
+				        							<label class="checkbox-inline"><input type="checkbox" name="tags[]" value={$tag->tagId} class=""/>{$tag->tagName}</label>
+				        						</div>
+				        					{/foreach}
+										</fieldset>		
+									</div>		
+								</div>
+						 	</div>
+		                    <div class="col-lg-12 text-right panel-heading">
+		                    	<button class="btn-u" type="submit" name="save">Opslaan</button>
+		                    </div>
+			        	</form>
+			        	{if !empty($talentArray)}
+			        		<div class="col-lg-12 text-right">
+								<hr>
+			                </div>
+		                {/if}
+			        </div>
+			        {if !empty($talentArray)}
+			        	<div class="faqHeader"><i class="fa fa-lightbulb-o"></i> Dit zijn uw Talenten</div>
+			  	    	<div>
+			  	    		<table class="table table-striped">
+			  	    			<tr>
+			  	    				<th class="col col-md-7">Talent</th>
+			  	    				<th class="col col-md-4">Categori&euml;n</th>
+			  	    				<th class=" class="col col-md-1" wishestableright">Status</th>
+			  	    			</tr>
+							{foreach from=$talentArray item=talent}
+								<tr>
+									<td class="col-md-7"><p>{$talent->talentText}</p></td>
+									<td class="col col-md-4">{$talent->talentTags}</td>
+									<td class=" class="col col-md-1" wishestableright">{$talent->talentStatus}</td>
+								</tr>
+							{/foreach}
+							</table>
+				    	</div>	
+			    	{/if} 
+			    </div>
+			{else}
+				<div class="container content">
+			    <div class="panel-group">
+			        <div class="faqHeader"><i class="fa fa-exclamation"></i> Vul eerst 3 wensen in</div>
+			    </div>
+		    {/if}
 		{else}
 			<div class="container content">
 		    <div class="panel-group">
-		        <div class="faqHeader"><i class="fa fa-exclamation"></i> Vul eerst 3 wensen in</div>
+		        <div class="faqHeader"><i class="fa fa-exclamation"></i> Log in om deze pagina te gebruiken	</div>
 		    </div>
-	    {/if}
-	{else}
-		<div class="container content">
-	    <div class="panel-group">
-	        <div class="faqHeader"><i class="fa fa-exclamation"></i> Log in om deze pagina te gebruiken	</div>
-	    </div>
-	{/if}
+		{/if}
+	</div>
    <!--=== End Content Part ===-->
 </div>
  

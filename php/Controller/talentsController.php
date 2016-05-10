@@ -1,6 +1,6 @@
 <?php
 
-include 'Model/wishesandtalentsModel.php';
+require_once 'Model/wishesandtalentsModel.php';
 
 class TalentsController {
 	function index() {
@@ -8,10 +8,10 @@ class TalentsController {
 		global $smarty;
 		$wishesModel = new WishesAndTalentsModel();
 		
-		if(isset($_SESSION['email'])){
-		
-			$smarty->assign('wishesArray', $wishesModel->getUserWishes($_SESSION['email']));
-			$smarty->assign('talentArray', $wishesModel->getUserTalents($_SESSION['email']));
+		if(isset($_SESSION['userName'])){
+			$smarty->assign('wishesCount', $wishesModel->getWishAmount($_SESSION['userName']));
+			$smarty->assign('talentArray', $wishesModel->getUserTalents($_SESSION['userName']));
+			$smarty->assign('tagsArray', $wishesModel->getTags());
 		}
 		if(isset($_GET["pass"])){
 			$smarty->assign('pass', $_GET["pass"]);

@@ -1,21 +1,36 @@
 <?php
 include ('../../Model/wishesAndTalentsModel.php');
 
-	$wishModel = new WishesAndTalentsModel();
-	
-	$count = $wishModel->getWishAmount();
-	if(isset($_POST["save"])) {
-		for($i = 1; $i <=(3-$count);$i++ ){
-			if(isset ($_POST["wens$i"])){
-				$wishModel->insertWish($_POST["wens$i"]);
-			}
-			else{
-				header("Location: ../../index.php?controller=wishes&action=index&pass=false");
-				exit();
-			}
-		}		
-	}
+$handler = new WishesHandler();
 
-	header("Location: ../../index.php?controller=wishes&action=index&pass=true");
-	exit();
+class WishesHandler{
+	
+	public function __construct() {
+		session_start();
+		$wishModel = new WishesAndTalentsModel();
+	
+		$count = $wishModel->getWishAmount($_SESSION['userName']);
+		if(isset($_POST["save"])) {
+			for($i = 1; $i <=(3-$count);$i++ ){
+				if(isset ($_POST["wens$i"]) && isset($_SESSION["userName"])){
+					$wishModel->insertWish($_POST["wens$i"],$_SESSION['userName']);
+					
+					if(isset ($_POST["tags$i"])){
+						foreach($_POST["tags$i"] as $tag) {
+							$wishModel->insertTagToWish($tag);
+							echo $tag;
+						}
+					}
+				}
+				else{
+					header("Location: ../../index.php?controller=wishes&action=index&pass=false");
+					exit();
+				}
+			}		
+		}
+	
+		header("Location: ../../index.php?controller=wishes&action=index&pass=true");
+		exit();
+	}
+}
 ?>
