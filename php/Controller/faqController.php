@@ -2,9 +2,10 @@
 /*
  * @author: Niels Kop
  */
-include_once 'Model/CMS/faqModel.php';
+
 class FaqController {
 	function Index($smarty) {
+		include_once 'Model/CMS/faqModel.php';
 		if ($smarty == null) {
 			global $smarty;
 		}

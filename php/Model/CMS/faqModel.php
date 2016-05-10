@@ -1,8 +1,8 @@
-<?php
+<?php 
 include_once '/../DB/Database.class.php';
 
 function getCategories() {
-	//haalt alle faqcategorieen op
+	//gets all the faq categories
 	$db = Database::getInstance ();
 	$sql = $db->getConnection ();
 	
@@ -10,7 +10,7 @@ function getCategories() {
 	return $sql->query ( $query );
 }
 function getFaqs() {
-	//haalt alle faqs op
+	//gets all the faqs
 	$db = Database::getInstance ();
 	$sql = $db->getConnection ();
 	
@@ -18,9 +18,9 @@ function getFaqs() {
 	return $sql->query ( $query );
 }
 function saveFaq($faq, $exists) {
-	//update een bestaande faq of slaat een nieuwe op
-	//$faq = een Faq object
-	//$exists: true = reeds bestaande faq, false = nieuwe faq
+	//updates an existing faq or saves it as a new faq
+	//$faq = a Faq object
+	//$exists: true = already existing faq, false = new faq
 	$db = Database::getInstance ();
 	$sql = $db->getConnection ();
 	
@@ -37,8 +37,8 @@ function saveFaq($faq, $exists) {
 	}
 }
 function deleteFaq($faqid){
-	//verwijderd een faq uit de database
-	//$faqid = id van de te verwijderen faq
+	//deletes a faq in the database
+	//$faqid = id of the to be deleted faq
 	$db = Database::getInstance ();
 	$sql = $db->getConnection ();
 	
@@ -47,9 +47,9 @@ function deleteFaq($faqid){
 	$query = "DELETE FROM `faq` WHERE `id` = '$faqid'";
 	return $sql->query($query);
 }
-function insertRuleCategorie($faq){
-	//voegt een nieuwe categorie toe
-	//$header = hoe de categorie moet heten
+function insertCategorie($faq){
+	//adds a new faqcategory
+	//$header = the name of the new category
 	$db = Database::getInstance ();
 	$sql = $db->getConnection ();
 	
@@ -59,9 +59,9 @@ function insertRuleCategorie($faq){
 	$query = "INSERT INTO `faqcategorie` (header, icon) VALUES ('$header', '$icon')";
 	return $sql->query($query);
 }
-function deleteRuleCategorie($categorie_id){
-	//verwijderd een categorie inclusief alle faqs daaraan verbonden
-	//$categorie_id = de id van de te verwijderen faqcategorie
+function deleteCategorie($categorie_id){
+	//deletes a faqcategory include all its content
+	//$categorie_id = id of the to be deleted faq
 	$db = Database::getInstance ();
 	$sql = $db->getConnection ();
 	

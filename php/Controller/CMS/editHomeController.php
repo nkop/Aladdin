@@ -1,28 +1,37 @@
 <?php
-include ('../Smarty/header.php');
-include ('../../Model/CMS/editPagesModel.php');
-include ('../../Model/CMS/textarea.class.php');
-
-$teksten = getTekstvakken("homepage");
-
-if(isset($_POST["submit"]) && isset($_POST["header"]) && isset($_POST["tekstvaktekst"])){
-	$tekstvak = new Tekstvak();
-	$tekstvak->tekstvakid = $_POST["tekstvakid"];
-	$tekstvak->header = $_POST["header"];
-	$tekstvak->tekstvaktekst = $_POST["tekstvaktekst"];
-	$tekstvak->pagina_paginanaam = "homepage";
-	
-	if(!saveTekstvak($tekstvak)){
-		echo "mislukt";
+class EditHomeController {
+	private $_teksten;
+	private $_smarty;
+	function getAll() {
+		include ('Model/CMS/editPagesModel.php');
+		include ('Model/CMS/textarea.class.php');
+		$this->_teksten = getTekstvakken ( "homepage" );
 	}
-	$teksten = getTekstvakken("homepage");
-	echo "'<html>
+	function Index($smarty) {
+		if ($smarty == null) {
+			global $smarty;
+			$this->_smarty = $smarty;
+		}
+		$this->getAll ();
+		$smarty->assign ( 'teksten', $this->_teksten );
+		$smarty->display ( '../View/CMS/editPage.tpl' );
+	}
+	function success() {
+		echo "<html>
 				<div class='alert alert-info'>
-				  Tekst succesvol aangepast!
+				  Website tekst succesvol aangepast!
 				</div>
-				</html>'
+				</html>
 				";
+		$this->Index ( $this->_smarty );
+	}
+	function noSuccess(){
+		echo "<html>
+				<div class='alert alert-danger'>
+				  Er ging iets fout. Controleer de velden en probeer het opnieuw.
+				</div>
+				</html>
+				";
+		$this->Index($this->_smarty);
+	}
 }
-
-$smarty->assign('teksten', $teksten);
-$smarty->display('../../View/CMS/editPagina.tpl');

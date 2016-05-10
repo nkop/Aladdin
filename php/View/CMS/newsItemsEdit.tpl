@@ -33,6 +33,18 @@
 		                </div>
 		                <!-- /.row -->
 		                
+		                {if $Succesfull == 1}
+		                <div class="alert alert-success">
+						  <strong>Succes!</strong> De gegevens zijn succesvol opgeslagen.
+						</div>
+		                {elseif $Succesfull == 2}
+		                <div class="alert alert-danger">
+						  <strong>Error!</strong> De gegevens zijn niet succesvol opgeslagen, probeer het later opnieuw.
+						</div>
+		                {/if}
+		                
+		                <a href="admin.php?controller=editnews&action=NewsItem" class="btn btn_succes">Nieuw item</a>
+		                
 						<div class="box-content">
 						
 							<table class="table table-striped table-bordered bootstrap-datatable datatable">
@@ -45,24 +57,19 @@
 									<th>&nbsp;</th>
 									</tr>
 								</thead>   
-							<tbody>						  
+							<tbody>	
+							 {foreach from=$newsItems item=newsItem}					  
 							<tr>
-								<td>1</td>
-								<td>Lorem ipsum dolor sit amet</td>
-								<td>Ferry Zijlmans</td>
-								<td>Januari 24, 2015</td>
-								<form action="wishController.php" method="POST">
-									<input type="hidden" name="wishID" id="wishID" value="3">
-								<td class="center">		  
-									<button type="submit" name="decline" class="btn btn-danger">
-										<i class="halflings-icon white remove"></i>
-									</button>
-									<button type="submit" name="Edit" class="btn btn-warning">
-										<i class="halflings-icon white edit"></i>
-									</button>
+								<td>{$newsItem->nieuwsitemid}</td>
+								<td>{$newsItem->titel}</td>
+								<td>{$newsItem->volledignaam}</td>
+								<td>{$newsItem->datum}</td>
+								<td class="center">	
+								<a href="admin.php?controller=editnews&action=Delete&id={$newsItem->nieuwsitemid}" class="btn btn-danger confirm"><i class="halflings-icon white remove"></i></a>
+								<a href="admin.php?controller=editnews&action=NewsItem&id={$newsItem->nieuwsitemid}" class="btn btn-warning"><i class="halflings-icon white edit"></i></a>	  
 								</td>
-								</form> 
 							</tr>
+							{/foreach}
 							</tbody>
 							</table> 			            
 						</div>
