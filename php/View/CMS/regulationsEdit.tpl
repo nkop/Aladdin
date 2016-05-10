@@ -77,6 +77,7 @@
 					<br>
 					</div>
 					</div>
+					<!-- End Content Part -->
 
 {include '../../View/CMS/Assets/footer.tpl'}
 
