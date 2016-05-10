@@ -21,7 +21,7 @@
                         </ul>
                     </li>
                     <li class="topbar-devider"></li>-->
-                    <li><a href="faqController.php">Help</a></li>
+                    <li><a href="index.php?controller=faq&action=index">Help</a></li>
                     <li class="topbar-devider"></li>
                     {if ($text =='Logout')}
  					<li><a href='index.php?controller=login&action=logout'>Logout</a></li>
