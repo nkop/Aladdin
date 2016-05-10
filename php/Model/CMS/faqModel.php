@@ -1,4 +1,4 @@
-<?php
+<?php 
 include_once '/../DB/Database.class.php';
 
 function getCategories() {

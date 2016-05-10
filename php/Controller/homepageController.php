@@ -1,9 +1,9 @@
 <?php
 /*
  * @author Ferry Zijlmans
+ * @author Niels Kop
  */
 class HomepageController{
-	private $result = "";
 	/*
 	 * @author Niels Kop 
 	$db = Database::getInstance ();
@@ -13,10 +13,11 @@ class HomepageController{
 
 	//show
 	function Index($smarty){
+		include_once 'Model/homepageModel.php';
 		if ($smarty == null) {
 			global $smarty;
 		}
-		$smarty->assign('result', $this->result);
+		$smarty->assign('result', getTexts());
 		$smarty->display('index.tpl');
 	}
 

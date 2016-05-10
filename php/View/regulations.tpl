@@ -9,52 +9,81 @@
 <body>
 {include '../view/Assets/php/NavTop.tpl'}
 
+
+
 <div class="container content">
-<h1 align="left">Wat wel:</h1>
+
+<div class="col-md-4 col-sm-6">
 <h2 class="heading-sm">
-<a class="link-bg-icon" href="#"> 
 <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-star"></i>
-							<span>Genieten</span>
-						</a>
-						
+<span>Wat wel:</span>
 </h2>
-						<p>
+{foreach from=$regels item=regel}
+{if $regel.categorie_id == 1}
 <h2 class="heading-sm">
-<a class="link-bg-icon" href="#"> 
+							<span>- {$regel.tekst}</span>						
+</h2>
+
+						<p>
+						{/if}
+{/foreach}
+<hr>
+{foreach from=$regels item=regel}
+{if $regel.id == 23}
+<h5>
+
+<span>
+{$regel.tekst}
+</span>
+</h5>
+{/if}
+{/foreach}
+
+</div>
+
+<div class="col-md-4 col-sm-6">
+<h2 class="heading-sm">
 <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-star"></i>
-							<span>Gelukkig maken</span>
-						</a>
-						
+<span>Wat niet:</span>
 </h2>
+{foreach from=$regels item=regel}
+{if $regel.categorie_id == 2}
+<h2 class="heading-sm">
+							<span>{$regel.tekst}</span>						
+</h2>
+
 						<p>
+						{/if}
+{/foreach}
+<hr>
+{foreach from=$regels item=regel}
+{if $regel.id == 24}
+<h5>
+
+<span>
+{$regel.tekst}
+</span>
+</h5>
+{/if}
+{/foreach}
+
+</div>
+
+<div class="col-md-4 col-sm-6">
 <h2 class="heading-sm">
-					<a class="link-bg-icon" href="#"> 
-					
-					<i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-star"></i>
-							<span>Doen</span>
-						</a>
+<i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-star"></i>
+<span>Toelichting</span>
 </h2>
-<h2 class="heading-sm">
-					<a class="link-bg-icon" href="#"> 
-					
-					<i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-star"></i>
-							<span>Ervaren</span>
-						</a>
-</h2>
-<h2 class="heading-sm">
-					<a class="link-bg-icon" href="#"> 
-					
-					<i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-star"></i>
-							<span>Leren</span>
-						</a>
-</h2>
-<h2 class="heading-sm">
-					<a class="link-bg-icon" href="#"> 
-					
-					<i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-star"></i>
-							<span>Moet mogelijk zijn</span>
-						</a>
-</h2>
+{foreach from=$regels item=regel}
+{if $regel.categorie_id == 3}
+<h5>
+							<span>{$regel.tekst}</span>						
+</h5>
+
+						<p>
+						{/if}
+{/foreach}
+</div>
 </div>					
 {include '../view/Assets/php/Footer.tpl'}
 </body>
