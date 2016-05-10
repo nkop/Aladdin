@@ -14,17 +14,23 @@ class UserLoginModel{
 		$safe_password = mysqli_real_escape_string($sql, $password);
 		
 		//$query = "select * from account where email='$safe_email' AND wachtwoord='$hashed_password'";
-		$query = "select wachtwoord from account where email='$safe_email'";
+		$query = "select gebruikersnaam, wachtwoord from account where email='$safe_email'";
 		$result = mysqli_query($sql, $query);
-		$hashed_password = mysqli_fetch_object($result)->wachtwoord;
 		
-		
+		while ( $row = $result->fetch_object () ) {
+			$hashed_password=$row->wachtwoord;
+			$gebruikersnaam=$row->gebruikersnaam;
+			
+		}
+		echo $accountid;
 		//$run_user = mysqli_query($sql, $query);
 		//$check_user = mysqli_num_rows($run_user);
 		if(password_verify($safe_password, $hashed_password)){
 			session_start();
 			$_SESSION['email']=$email;
+			$_SESSION['userName']=$gebruikersnaam;
 			return true;
+			
 		}
 		else{
 			return false;

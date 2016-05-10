@@ -29,7 +29,7 @@
 
 				<span class="ls-s-1"
 					style="text-transform: uppercase; line-height: 45px; font-size: 35px; color: #fff; top: 200px; left: 590px; slidedirection: top; slideoutdirection: bottom; durationin: 3500; durationout: 3500; delayin: 1000;">
-					Voorbeeld text </span>
+					 Aladdin wil dat iedereen op de wereld een beetje gelukkiger wordt.</span>
 			</div>
 
 			<!--Second Slide-->
@@ -77,7 +77,8 @@
 			<div class="margin-bottom-10"></div>
 			<!-- Service Blocks -->
 			<div class="row">
-				<!-- {foreach from=$result item=tekst}
+				{foreach from=$result item=tekst}
+				{if $tekst.tekstvakid == 1}
 				<div class="col-md-12">
 					<h2 class="heading-sm">
 						<a class="link-bg-icon" href="#"> <i
@@ -85,48 +86,48 @@
 							<span>{$tekst.header}</span>
 						</a>
 					</h2>
-					<p>{$tekst.tekstvaktekst}</p>
-					{/foreach}
-				 
-				</div>-->
+					<p>{$tekst.tekstvaktekst}</p>				 
+				</div>
+				{/if}
+				{/foreach}
+				{foreach from=$result item=tekst}
+				{if $tekst.tekstvakid == 2}
 				<div class="col-md-6 col-sm-12">
 					<h2 class="heading-sm">
 						<a class="link-bg-icon" href="#"> <i
 							class="icon-custom icon-sm rounded-x icon-bg-red fa fa-star"></i>
-							<span>Wat maakt Aladdin zo bijzonder?</span>
+							<span>{$tekst.header}</span>
 						</a>
 					</h2>
 					<p>
-						Geluk komt in beweging<br /> Vreemden worden vrienden <br /> Er
-						komt geen geld aan te pas <br /> Eigenwaarde groeit <br /> Kennis
-						en wijsheid worden gedeeld <br /> Eenzaamheid vermindert <br />
-						Oordeel vermindert <br /> Liefdevolle aarde<br /> Meer plezier in
-						het leven<br /> <strong><h5>Facebook zonder face, maar met een
-								hart</h5></strong>
+						{$tekst.tekstvaktekst}
 					</p>
 				</div>
+				{/if}
+				{/foreach}
 				<div class="col-md-6 col-sm-12">
+				{foreach from=$result item=tekst}
+				{if $tekst.tekstvakid == 3}
 					<h2 class="heading-sm">
 						<a class="link-bg-icon" href="#"> <i
 							class="icon-custom icon-sm rounded-x icon-bg-red fa fa-thumbs-up"></i>
-							<span>Wat kan?</span>
+							<span>{$tekst.header}</span>
 						</a>
 					</h2>
-					<p>De mogelijkheden zijn ongekend; gitaar leren spelen, als ridder
-						rondlopen in de Efteling, een tractor besturen, in een diertuin of
-						weeshuis werken, in een circus optreden, bij een kledingontwerper
-						in de leer, een nieuw ijsje ontwikkelen, met een grote groep
-						mensen een kunstwerk maken of een flashmob organiseren en nog
-						v&eacute;&eacute;l meer.</p>
-
+					<p>{$tekst.tekstvaktekst}</p>
+				{/if}
+				{/foreach}
+				{foreach from=$result item=tekst}
+				{if $tekst.tekstvakid == 4}
 					<h2 class="heading-sm">
 						<a class="link-bg-icon" href="#"> <i
 							class="icon-custom icon-sm rounded-x icon-bg-red fa fa-thumbs-down"></i>
-							<span>Wat kan niet?</span>
+							<span>{$tekst.header}</span>
 						</a>
 					</h2>
-					<p>Geen materi&euml;le wensen (geen bezit), geen seks, geen geweld,
-						geen drugs, geen klussen.</p>
+					<p>{$tekst.tekstvaktekst}</p>
+				{/if}
+				{/foreach}				
 				</div>
 
 
@@ -136,9 +137,9 @@
 			<!-- Info Blokcs -->
 			<div class="row margin-bottom-20">
 				<!-- Welcome Block -->
-				<div class="col-md-12 md-margin-bottom-40">
+				<div class="col-md-7 md-margin-bottom-40">
 					<div class="headline">
-						<h2>Hallo, dit is Alladin</h2>
+						<h2>Hallo, dit is Aladdin</h2>
 					</div>
 					<div class="row">
 						<div class="col-sm-4">
@@ -159,27 +160,30 @@
 									adipiscing elit.</li>
 							</ul>
 							<button type="button" class="btn btn-danger grow">Meld je nu aan!</button><br>
-							<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_donations">
-<input type="hidden" name="business" value="AladdingroepD@gmail.com">
-<input type="hidden" name="lc" value="NL">
-<input type="hidden" name="item_name" value="Stichting Aladdin Groep D">
-<input type="hidden" name="no_note" value="0">
-<input type="hidden" name="currency_code" value="EUR">
-<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
-<input type="image" src="https://www.paypalobjects.com/nl_NL/NL/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal, de veilige en complete manier van online betalen.">
-<img alt="" border="0" src="https://www.paypalobjects.com/nl_NL/i/scr/pixel.gif" width="1" height="1">
-</form>
-
-
-						</div>
-
+							</div>
 					</div>
 					<br />
 					<blockquote class="hero-unify">
 						<p>Alladin is een leuk initiatief en heeft veel potentie.</p>
 						<small>Karel</small>
 					</blockquote>
+				</div>
+				<div class="col-md-5 col-sm-12">
+					<div class="headline">
+						<h2>Help Aladdin!</h2>
+					</div>
+					<p>U kunt Aladdin helpen door te doneren. Ook kunt u sponsor worden.</p>
+					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+						<input type="hidden" name="cmd" value="_donations">
+						<input type="hidden" name="business" value="AladdingroepD@gmail.com">
+						<input type="hidden" name="lc" value="NL">
+						<input type="hidden" name="item_name" value="Stichting Aladdin Groep D">
+						<input type="hidden" name="no_note" value="0">
+						<input type="hidden" name="currency_code" value="EUR">
+						<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
+						<input type="image" src="https://www.paypalobjects.com/nl_NL/NL/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal, de veilige en complete manier van online betalen.">
+						<img alt="" border="0" src="https://www.paypalobjects.com/nl_NL/i/scr/pixel.gif" width="1" height="1">
+					</form>
 				</div>
 				<!--/col-md-8-->
 			</div>
@@ -214,111 +218,111 @@
 
 		<div class="container content">
 			<!-- Nieuws -->
-			<div class="owl-carousel-v1 owl-work-v1 margin-bottom-40">
-				<div class="headline">
-					<h2 class="pull-left">Nieuws</h2>
-					<div class="owl-navigation">
-						<div class="customNavigation">
-							<a class="owl-btn prev-v2"><i class="fa fa-angle-left"></i></a> <a
-								class="owl-btn next-v2"><i class="fa fa-angle-right"></i></a>
-						</div>
-					</div>
+<!-- 			<div class="owl-carousel-v1 owl-work-v1 margin-bottom-40"> -->
+<!-- 				<div class="headline"> -->
+<!-- 					<h2 class="pull-left">Nieuws</h2> -->
+<!-- 					<div class="owl-navigation"> -->
+<!-- 						<div class="customNavigation"> -->
+<!-- 							<a class="owl-btn prev-v2"><i class="fa fa-angle-left"></i></a> <a -->
+<!-- 								class="owl-btn next-v2"><i class="fa fa-angle-right"></i></a> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
 					<!--/navigation-->
-				</div>
+<!-- 				</div> -->
 
-				<div class="owl-recent-works-v1">
-					<div class="item">
-						<a href="#"> <em class="overflow-hidden"> <img
-								class="img-responsive" src="view/assets/img/main/img1.jpg"
-								alt="">
-						</em> <span> <strong>Gelukkig nieuwjaar!</strong> <i>Anim pariatur
-									cliche reprehenderit</i>
-						</span>
-						</a>
-					</div>
-					<div class="item">
-						<a href="#"> <em class="overflow-hidden"> <img
-								class="img-responsive" src="view/assets/img/main/img2.jpg"
-								alt="">
-						</em> <span> <strong>Nieuwe website!</strong> <i>Responsive
-									Bootstrap website</i>
-						</span>
-						</a>
-					</div>
-					<div class="item">
-						<a href="#"> <em class="overflow-hidden"> <img
-								class="img-responsive" src="view/assets/img/main/img3.jpg"
-								alt="">
-						</em> <span> <strong>Lorem ipsum</strong> <i>Pariatur prehe cliche
-									reprehrit</i>
-						</span>
-						</a>
-					</div>
-					<div class="item">
-						<a href="#"> <em class="overflow-hidden"> <img
-								class="img-responsive" src="view/assets/img/main/img4.jpg"
-								alt="">
-						</em> <span> <strong>Lorem ipsum</strong> <i>Craft labore wes
-									anderson cred</i>
-						</span>
-						</a>
-					</div>
-					<div class="item">
-						<a href="#"> <em class="overflow-hidden"> <img
-								class="img-responsive" src="view/assets/img/main/img5.jpg"
-								alt="">
-						</em> <span> <strong>Lorem ipsum</strong> <i>Anim pariatur cliche
-									reprehenderit</i>
-						</span>
-						</a>
-					</div>
-					<div class="item">
-						<a href="#"> <em class="overflow-hidden"> <img
-								class="img-responsive" src="view/assets/img/main/img1.jpg"
-								alt="">
-						</em> <span> <strong>Lorem ipsum</strong> <i>Anim pariatur cliche
-									reprehenderit</i>
-						</span>
-						</a>
-					</div>
-					<div class="item">
-						<a href="#"> <em class="overflow-hidden"> <img
-								class="img-responsive" src="view/assets/img/main/img2.jpg"
-								alt="">
-						</em> <span> <strong>Lorem ipsum</strong> <i>Responsive Bootstrap
-									Template</i>
-						</span>
-						</a>
-					</div>
-					<div class="item">
-						<a href="#"> <em class="overflow-hidden"> <img
-								class="img-responsive" src="view/assets/img/main/img3.jpg"
-								alt="">
-						</em> <span> <strong>Lorem ipsum</strong> <i>Pariatur prehe cliche
-									reprehrit</i>
-						</span>
-						</a>
-					</div>
-					<div class="item">
-						<a href="#"> <em class="overflow-hidden"> <img
-								class="img-responsive" src="view/assets/img/main/img4.jpg"
-								alt="">
-						</em> <span> <strong>Lorem ipsum</strong> <i>Craft labore wes
-									anderson cred</i>
-						</span>
-						</a>
-					</div>
-					<div class="item">
-						<a href="#"> <em class="overflow-hidden"> <img
-								class="img-responsive" src="view/assets/img/main/img5.jpg"
-								alt="">
-						</em> <span> <strong>Lorem ipsum</strong> <i>Anim pariatur cliche
-									reprehenderit</i>
-						</span>
-						</a>
-					</div>
-				</div>
-			</div>
+<!-- 				<div class="owl-recent-works-v1"> -->
+<!-- 					<div class="item"> -->
+<!-- 						<a href="#"> <em class="overflow-hidden"> <img -->
+<!-- 								class="img-responsive" src="view/assets/img/main/img1.jpg" -->
+<!-- 								alt=""> -->
+<!-- 						</em> <span> <strong>Gelukkig nieuwjaar!</strong> <i>Anim pariatur -->
+<!-- 									cliche reprehenderit</i> -->
+<!-- 						</span> -->
+<!-- 						</a> -->
+<!-- 					</div> -->
+<!-- 					<div class="item"> -->
+<!-- 						<a href="#"> <em class="overflow-hidden"> <img -->
+<!-- 								class="img-responsive" src="view/assets/img/main/img2.jpg" -->
+<!-- 								alt=""> -->
+<!-- 						</em> <span> <strong>Nieuwe website!</strong> <i>Responsive -->
+<!-- 									Bootstrap website</i> -->
+<!-- 						</span> -->
+<!-- 						</a> -->
+<!-- 					</div> -->
+<!-- 					<div class="item"> -->
+<!-- 						<a href="#"> <em class="overflow-hidden"> <img -->
+<!-- 								class="img-responsive" src="view/assets/img/main/img3.jpg" -->
+<!-- 								alt=""> -->
+<!-- 						</em> <span> <strong>Lorem ipsum</strong> <i>Pariatur prehe cliche -->
+<!-- 									reprehrit</i> -->
+<!-- 						</span> -->
+<!-- 						</a> -->
+<!-- 					</div> -->
+<!-- 					<div class="item"> -->
+<!-- 						<a href="#"> <em class="overflow-hidden"> <img -->
+<!-- 								class="img-responsive" src="view/assets/img/main/img4.jpg" -->
+<!-- 								alt=""> -->
+<!-- 						</em> <span> <strong>Lorem ipsum</strong> <i>Craft labore wes -->
+<!-- 									anderson cred</i> -->
+<!-- 						</span> -->
+<!-- 						</a> -->
+<!-- 					</div> -->
+<!-- 					<div class="item"> -->
+<!-- 						<a href="#"> <em class="overflow-hidden"> <img -->
+<!-- 								class="img-responsive" src="view/assets/img/main/img5.jpg" -->
+<!-- 								alt=""> -->
+<!-- 						</em> <span> <strong>Lorem ipsum</strong> <i>Anim pariatur cliche -->
+<!-- 									reprehenderit</i> -->
+<!-- 						</span> -->
+<!-- 						</a> -->
+<!-- 					</div> -->
+<!-- 					<div class="item"> -->
+<!-- 						<a href="#"> <em class="overflow-hidden"> <img -->
+<!-- 								class="img-responsive" src="view/assets/img/main/img1.jpg" -->
+<!-- 								alt=""> -->
+<!-- 						</em> <span> <strong>Lorem ipsum</strong> <i>Anim pariatur cliche -->
+<!-- 									reprehenderit</i> -->
+<!-- 						</span> -->
+<!-- 						</a> -->
+<!-- 					</div> -->
+<!-- 					<div class="item"> -->
+<!-- 						<a href="#"> <em class="overflow-hidden"> <img -->
+<!-- 								class="img-responsive" src="view/assets/img/main/img2.jpg" -->
+<!-- 								alt=""> -->
+<!-- 						</em> <span> <strong>Lorem ipsum</strong> <i>Responsive Bootstrap -->
+<!-- 									Template</i> -->
+<!-- 						</span> -->
+<!-- 						</a> -->
+<!-- 					</div> -->
+<!-- 					<div class="item"> -->
+<!-- 						<a href="#"> <em class="overflow-hidden"> <img -->
+<!-- 								class="img-responsive" src="view/assets/img/main/img3.jpg" -->
+<!-- 								alt=""> -->
+<!-- 						</em> <span> <strong>Lorem ipsum</strong> <i>Pariatur prehe cliche -->
+<!-- 									reprehrit</i> -->
+<!-- 						</span> -->
+<!-- 						</a> -->
+<!-- 					</div> -->
+<!-- 					<div class="item"> -->
+<!-- 						<a href="#"> <em class="overflow-hidden"> <img -->
+<!-- 								class="img-responsive" src="view/assets/img/main/img4.jpg" -->
+<!-- 								alt=""> -->
+<!-- 						</em> <span> <strong>Lorem ipsum</strong> <i>Craft labore wes -->
+<!-- 									anderson cred</i> -->
+<!-- 						</span> -->
+<!-- 						</a> -->
+<!-- 					</div> -->
+<!-- 					<div class="item"> -->
+<!-- 						<a href="#"> <em class="overflow-hidden"> <img -->
+<!-- 								class="img-responsive" src="view/assets/img/main/img5.jpg" -->
+<!-- 								alt=""> -->
+<!-- 						</em> <span> <strong>Lorem ipsum</strong> <i>Anim pariatur cliche -->
+<!-- 									reprehenderit</i> -->
+<!-- 						</span> -->
+<!-- 						</a> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
 			<!-- End Recent Works -->
 
 			<!-- Owl Clients v1 -->

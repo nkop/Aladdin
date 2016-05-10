@@ -18,7 +18,7 @@ require('Controller/aboutController.php');
 require('Controller/regulationsController.php');
 require('Controller/contactController.php');
 require('Controller/wishesController.php');
-//require('Controller/talentsController.php');
+require('Controller/talentsController.php');
 $controller;
 $actionName;
 $id;
