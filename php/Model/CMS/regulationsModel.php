@@ -20,9 +20,9 @@ function getRules() {
 }
 
 function saveRule($rule, $exists) {
-	//updates an existing faq or saves it as a new faq
+	//updates an existing rule or saves it as a new rule
 	//$rule = a Rule object
-	//$exists: true = already existing faq, false = new faq
+	//$exists: true = already existing rule, false = new rule
 	$db = Database::getInstance ();
 	$sql = $db->getConnection ();
 
@@ -38,8 +38,8 @@ function saveRule($rule, $exists) {
 	}
 }
 function deleteRule($ruleid){
-	//deletes a faq in the database
-	//$ruleid = id of the to be deleted faq
+	//deletes a rule in the database
+	//$ruleid = id of the to be deleted rule
 	$db = Database::getInstance ();
 	$sql = $db->getConnection ();
 
@@ -49,8 +49,8 @@ function deleteRule($ruleid){
 	return $sql->query($query);
 }
 function insertRuleCategorie($rule){
-	//adds a new faqcategory
-	//$header = the name of the new category
+	//adds a new rulecategory
+	//$header = the name of the new rule
 	$db = Database::getInstance ();
 	$sql = $db->getConnection ();
 
@@ -60,8 +60,8 @@ function insertRuleCategorie($rule){
 	return $sql->query($query);
 }
 function deleteRuleCategorie($categorie_id){
-	//deletes a faqcategory include all its content
-	//$categorie_id = id of the to be deleted faq
+	//deletes a rulecategory include all its content
+	//$categorie_id = id of the to be deleted rule
 	$db = Database::getInstance ();
 	$sql = $db->getConnection ();
 
