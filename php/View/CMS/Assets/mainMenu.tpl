@@ -15,6 +15,7 @@
 								<li><a class="submenu" href="Controller/CMS/editWenspaginaController.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Wensenpagina</span></a></li>
 								<li><a class="submenu" href="admin.php?controller=editnewsitems"><i class="icon-file-alt"></i><span class="hidden-tablet"> Nieuwspagina</span></a></li>
 								<li><a class="submenu" href="Controller/CMS/editFaqController.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> F.A.Q.</span></a></li>
+								<li><a class="submenu" href="admin.php?controller=editregulations"><i class="icon-file-alt"></i><span class="hidden-tablet"> Regels</span></a></li>
 							</ul>	
 						</li>
 					</ul>
