@@ -48,7 +48,7 @@ function deleteRule($ruleid){
 	$query = "DELETE FROM `regel` WHERE `id` = '$ruleid'";
 	return $sql->query($query);
 }
-function insertCategorie($rule){
+function insertRuleCategorie($rule){
 	//adds a new faqcategory
 	//$header = the name of the new category
 	$db = Database::getInstance ();
@@ -59,7 +59,7 @@ function insertCategorie($rule){
 	$query = "INSERT INTO `regelcategorie` (naam) VALUES ('$naam')";
 	return $sql->query($query);
 }
-function deleteCategorie($categorie_id){
+function deleteRuleCategorie($categorie_id){
 	//deletes a faqcategory include all its content
 	//$categorie_id = id of the to be deleted faq
 	$db = Database::getInstance ();
