@@ -21,7 +21,8 @@
 {foreach from=$regels item=regel}
 {if $regel.categorie_id == 1}
 <h2 class="heading-sm">
-							<span>- {$regel.tekst}</span>						
+<p>
+							{$regel.tekst}		
 </h2>
 
 						<p>
@@ -31,7 +32,6 @@
 {foreach from=$regels item=regel}
 {if $regel.id == 23}
 <h5>
-
 <span>
 {$regel.tekst}
 </span>
@@ -49,6 +49,7 @@
 {foreach from=$regels item=regel}
 {if $regel.categorie_id == 2}
 <h2 class="heading-sm">
+<p>
 							<span>{$regel.tekst}</span>						
 </h2>
 
@@ -77,6 +78,7 @@
 {foreach from=$regels item=regel}
 {if $regel.categorie_id == 3}
 <h5>
+<p>
 							<span>{$regel.tekst}</span>						
 </h5>
 
