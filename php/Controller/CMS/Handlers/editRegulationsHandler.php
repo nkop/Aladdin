@@ -17,6 +17,12 @@ if (isset ( $_POST ["submitregel"] ) && isset ( $_POST ["categorie_id"] ) && iss
 	}
 	$rules = getRules();
 }
+
+if (isset ( $_POST ["resetpage"] )) {
+		header ( 'location: ../../../admin.php?controller=editregulations');
+	$rules = getRules();
+}
+
 if (isset ( $_POST ["deleteregel"] )) {
 	$id = $_POST ["id"];
 	if (deleteRule ( $id )) {
