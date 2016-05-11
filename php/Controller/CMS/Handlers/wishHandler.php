@@ -30,7 +30,7 @@ class WishHandler{
 			#construct mail body, recipient, subject
 			$subject = "Aladdin - Wens afgewezen";
 			$message = "Beste $naam,<br/><br /> Uw recent aangemaakte wens:<br/><br/><b>$tekst</b><br/><br/> is afgewezen door onze administrator. Neem contact met ons op via onze website, of raadpleeg ons regelement.<br /><br /> Met vriendelijke groeten,<br /><br />Het Aladdin team";
-			$recipient = ($email);
+			$recipient = $email;
 
 			#Call SendMail (coming from /PHPMailer/Mailer.php)
 			SendMail($recipient, $message, $subject);
