@@ -24,12 +24,22 @@
 					</p>
 				</div>
 			</noscript>
-
+				{if $Succesfull == 1}
+		                <div class="alert alert-success">
+						  <strong>Succes!</strong> Het tekstvak is succesvol aangepast!
+						</div>
+		                {elseif $Succesfull == 2}
+		                <div class="alert alert-danger">
+						  <strong>Error!</strong> Er is iets misgegaan, controleer de velden en probeer het later opnieuw.
+						</div>
+		                {/if}
 			<!-- start: Content -->
 			<div id="content" class="span10">
 
 
 				{include 'view/cms/Assets/breadcrumb.tpl'}
+				
+				
 
 				<div class="row-fluid sortable">
 					{foreach from=$teksten item=tekst}
