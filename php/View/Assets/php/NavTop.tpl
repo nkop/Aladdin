@@ -1,16 +1,16 @@
   <!--=== Header ===-->
-    <div class="header header-sticky header-fixed-shrink">
+    <div class="header header-sticky">
         <div class="container">
             <!-- Logo -->
-            <a class="logo" href="HomepageController.php">
-                <img src="../view/images/logo.png" alt="Logo" height="60">
+            <a class="logo" href="index.php">
+                <img src="view/images/logo.png" alt="Logo" height="60">
             </a>
             <!-- End Logo -->
 
             <!-- Topbar -->
             <div class="topbar">
                 <ul class="loginbar pull-right">
-                    <li class="hoverSelector">
+                    <!--<li class="hoverSelector">
                         <i class="fa fa-globe"></i>
                         <a>Languages</a>
                         <ul class="languages hoverSelectorBlock">
@@ -20,18 +20,19 @@
                             <li><a href="#">English</a></li>
                         </ul>
                     </li>
+                    <li class="topbar-devider"></li>-->
+                    <li><a href="index.php?controller=faq&action=index">Help</a></li>
                     <li class="topbar-devider"></li>
-                    <li><a href="FaqController.php">Help</a></li>
-                    <li class="topbar-devider"></li>
-                    <li><a href='loginController.php?logout=true'>{$text}</a></li>
-                    {if $loginoptions}
-                      <li class="topbar-devider"></li>
-                      
-                      <li><a href="RegisterController.php">Registreer</a></li>
-                      {/if}
+                    {if ($text =='Logout')}
+ 					<li><a href='index.php?controller=login&action=logout'>Logout</a></li>
+ 					{else}
+ 					<li><a href='index.php?controller=login&action=Index'>Login</a></li>
+ 					<li class="topbar-devider"></li>
+                    <li><a href='index.php?controller=register&action=Index'>Registreer</a></li>
+                    {/if}
                       {if $loginoptions == false}
                       <!--  <li class="topbar-devider"></li>
-                      
+
                       <li><a href="#">Extra optie</a></li>-->
                       {/if}
                 </ul>
@@ -52,7 +53,7 @@
                 <ul class="nav navbar-nav">
                     <!-- Home -->
                     <li >
-                        <a href="homepageController.php">
+                        <a href="index.php">
                             Home
                         </a>
                     </li>
@@ -65,8 +66,8 @@
                             Wensen & Talenten
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="WishesController.php">Wensen</a></li>
-                            <li><a href="TalentsController.php">Talenten</a></li>
+                            <li><a href="index.php?controller=wishes&action=index">Wensen</a></li>
+                            <li><a href="index.php?controller=talents&action=index">Talenten</a></li>
                         </ul>
                     </li>
                     {/if}
@@ -78,11 +79,11 @@
                             Nieuws
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="NieuwsController.php">Laatste nieuws</a></li>
+                            <li><a href="index.php?controller=News">Laatste nieuws</a></li>
                         </ul>
                     </li>
                     <!-- End nieuws -->
-					
+
 
                     <!-- contact -->
                     <li class="dropdown">
@@ -90,8 +91,11 @@
                             Contact
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="FaqController.php">Veelgestelde vragen</a></li>
-                            <li><a href="ContactController.php">Contact</a></li>
+                            <li><a href="index.php?controller=faq&action=index">Veelgestelde vragen</a></li>
+
+                            <li><a href="index.php?controller=contact&action=index">Contact</a></li>
+                             <li><a href="index.php?controller=regulations&action=index">Regels</a></li>
+                              <li><a href="index.php?controller=about&action=index">Over Ons</a></li>
                         </ul>
 
                     </li>
