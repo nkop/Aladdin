@@ -40,7 +40,87 @@ class Database
 	
 	function doSQL($query)
 	{
-		$this->_connection->query ( $sql );
+		mysqli_query( $sql );
+		return $result;
+	}
+	
+	function getEmailByWensId($wensid){
+		$query = "SELECT plaatser FROM wens WHERE wensenid= '$wensid' ";
+		
+		$result2 = mysqli_query($this->_connection, $query);
+		$userid = mysqli_fetch_object($result2)->plaatser;
+		
+		$query2 = "SELECT email FROM account WHERE accountid = '$userid' ";
+		$result = mysqli_query($this->_connection, $query2);
+		
+		return mysqli_fetch_object($result)->email;
+	}
+	
+	function getEmailByTalentId($talentid){
+		$query = "SELECT Account FROM talent WHERE talentid = '$talentid' ";
+		
+		$result2 = mysqli_query($this->_connection, $query);
+		$userid = mysqli_fetch_object($result2)->Account;
+		
+		$query2 = "SELECT email FROM account WHERE accountid = '$userid' ";
+		$result = mysqli_query($this->_connection, $query2);
+		
+		return mysqli_fetch_object($result)->email;
+	}
+	
+	function getNameByWensId($wensid){
+		$query = "SELECT plaatser FROM wens WHERE wensenid= '$wensid' ";
+		
+		$result2 = mysqli_query($this->_connection, $query);
+		
+		$userid = mysqli_fetch_object($result2)->plaatser;
+		
+		$query2 = "SELECT voornaam FROM account WHERE accountid = '$userid' ";
+		$result = mysqli_query($this->_connection, $query2);
+		
+		return mysqli_fetch_object($result)->voornaam;
+	}
+	
+		function getNameByTalentId($talentid){
+		$query = "SELECT Account FROM talent WHERE talentid= '$talentid' ";
+		
+		$result2 = mysqli_query($this->_connection, $query);
+		
+		$userid = mysqli_fetch_object($result2)->Account;
+		
+		$query2 = "SELECT voornaam FROM account WHERE accountid = '$userid' ";
+		$result = mysqli_query($this->_connection, $query2);
+		
+		return mysqli_fetch_object($result)->voornaam;
+	}
+	
+	function getWensTekstById($wensid){
+		$query = "SELECT tekst FROM wens WHERE wensenid= '$wensid' ";
+		
+		$result = mysqli_query($this->_connection, $query);
+		return mysqli_fetch_object($result)->tekst;
+	}
+	
+	function getTalentTekstById($talentid){
+		$query = "SELECT talenttekst FROM talent WHERE talentid = '$talentid' ";
+		
+		$result = mysqli_query($this->_connection, $query);
+		return mysqli_fetch_object($result)->talenttekst;
+	}
+	
+	function getUserById($userid){
+		$query = "SELECT * FROM account WHERE accountid = '$userid' ";
+		
+		$result = mysqli_query($this->_connection, $query);
+		
+		return $result;
+	}
+	
+	function getUserByEmail($usermail){
+		$query = "SELECT * FROM account WHERE email = '$usermail' ";
+		
+		$result = mysqli_query($this->_connection, $query);
+		
 		return $result;
 	}
 	

@@ -20,8 +20,6 @@ function SendMail($recipient, $message, $subject){
 
   if(!$mail->Send()) {
      echo "Mailer Error: " . $mail->ErrorInfo;
-  } else {
-      echo "<script>alert('Check uw inbox!');</script>";
   }
 
 }
