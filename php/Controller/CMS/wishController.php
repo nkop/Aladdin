@@ -2,6 +2,18 @@
 include_once ('Model/CMS/wishesModel.php');
 
 class WishController{
+	private $succesfull = 0;
+	
+	function Accept(){
+		$this->succesfull = 1;
+		$this->Index(null);
+	}
+	
+	function Decline(){
+		$this->succesfull = 2;
+		$this->Index(null);
+	}
+	
 	
 	function Index($smarty)
 	{
@@ -14,6 +26,7 @@ class WishController{
 		// get all wishesModel that have not been accepted or declined
 		$wisharray = $wishModel->getOpenWishes();
 		
+		$smarty->assign('Succesfull', $this->succesfull);
 		$smarty->assign('wishes', $wisharray);
 		$smarty->display ( '../View/CMS/wishlist.tpl' );
 	}
