@@ -1,10 +1,15 @@
 <?php
 class aboutController{
 
-function Index(){
-	global $smarty;
-	$smarty->display('about.tpl');
-}
+	
+	function Index($smarty){
+		include_once 'Model/homepageModel.php';
+		if ($smarty == null) {
+			global $smarty;
+		}
+		$smarty->assign('result', getTexts());
+		$smarty->display('about.tpl');
+	}
 
 }
 ?>

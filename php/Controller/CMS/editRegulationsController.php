@@ -3,12 +3,23 @@ class EditRegulationsController {
 	private $_categorieen;
 	private $_rules;
 	private $_smarty;
+	private $succesfull = 0;
+	
+	function Success(){
+		$this->succesfull = 1;
+		$this->Index(null);
+	}
+	
+	function Error(){
+		$this->succesfull = 2;
+		$this->Index(null);
+	}
 	
 	function getAll() {
 		include ('Model/CMS/rule.class.php');
 		include ('Model/CMS/ruleCategorie.class.php');
 		include ('Model/CMS/regulationsModel.php');
-		
+	
 		$this->_categorieen = getRuleCategories ();
 		$this->_rules = getRules();
 	}
@@ -18,28 +29,10 @@ class EditRegulationsController {
 			$this->_smarty = $smarty;
 		}
 		$this->getAll ();
+		$smarty->assign ('succesfull', $this->succesfull);
 		$smarty->assign ( 'categorieen', $this->_categorieen );
 		$smarty->assign ( 'rules', $this->_rules );
 		$smarty->display ( '../View/CMS/regulationsEdit.tpl' );
-	}
-	
-	function success(){
-		echo "<html>
-				<div class='alert alert-info'>
-				  Actie succesvol!
-				</div>
-				</html>
-				";
-		$this->Index($this->_smarty);
-	}
-	function noSuccess(){
-		echo "<html>
-				<div class='alert alert-danger'>
-				  Er ging iets fout. Controleer de velden en probeer het opnieuw.
-				</div>
-				</html>
-				";
-		$this->Index($this->_smarty);
 	}
 	
 }

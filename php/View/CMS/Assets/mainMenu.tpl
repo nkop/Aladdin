@@ -12,7 +12,7 @@
 							<a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> Content</span><span class="label label-important"></span></a>
 							<ul>
 								<li><a class="submenu" href="admin.php?controller=edithome&action=index"><i class="icon-file-alt"></i><span class="hidden-tablet"> Startpagina</span></a></li>
-								<li><a class="submenu" href="Controller/CMS/editWenspaginaController.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Wensenpagina</span></a></li>
+								<li><a class="submenu" href="admin.php?controller=editWishPage&action=index"><i class="icon-file-alt"></i><span class="hidden-tablet"> Wensenpagina</span></a></li>
 								<li><a class="submenu" href="admin.php?controller=editnewsitems"><i class="icon-file-alt"></i><span class="hidden-tablet"> Nieuwspagina</span></a></li>
 								<li><a class="submenu" href="admin.php?controller=editfaq"><i class="icon-file-alt"></i><span class="hidden-tablet"> F.A.Q.</span></a></li>
 								<li><a class="submenu" href="admin.php?controller=editregulations"><i class="icon-file-alt"></i><span class="hidden-tablet"> Regels</span></a></li>
