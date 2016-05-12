@@ -1,6 +1,6 @@
 <?php
 
-require 'Model/wishesAndTalentsModel.php';
+require_once 'Model/wishesAndTalentsModel.php';
 
 class WishesController {
 	
@@ -13,8 +13,14 @@ class WishesController {
 
 		global $smarty;
 		$wishesModel = new WishesAndTalentsModel();
-		if(isset($_SESSION['email'])){
-			$smarty->assign('wishesArray', $wishesModel->getUserWishes($_SESSION['email']));
+
+		if(isset($_SESSION['userName'])){
+			
+			$userWishes = $wishesModel->getUserWishes($_SESSION['userName']);
+			$smarty->assign('wishesArray', $userWishes);
+			if($userWishes==null || count($userWishes) < 3) {
+				$smarty->assign('tagsArray', $wishesModel->getTags());
+			}
 		}
 		
 		if(isset($_GET["pass"])){

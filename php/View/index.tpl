@@ -29,7 +29,7 @@
 
 				<span class="ls-s-1"
 					style="text-transform: uppercase; line-height: 45px; font-size: 35px; color: #fff; top: 200px; left: 590px; slidedirection: top; slideoutdirection: bottom; durationin: 3500; durationout: 3500; delayin: 1000;">
-					Voorbeeld text </span>
+					 Aladdin wil dat iedereen op de wereld een beetje gelukkiger wordt.</span>
 			</div>
 
 			<!--Second Slide-->
@@ -137,9 +137,9 @@
 			<!-- Info Blokcs -->
 			<div class="row margin-bottom-20">
 				<!-- Welcome Block -->
-				<div class="col-md-12 md-margin-bottom-40">
+				<div class="col-md-7 md-margin-bottom-40">
 					<div class="headline">
-						<h2>Hallo, dit is Alladin</h2>
+						<h2>Hallo, dit is Aladdin</h2>
 					</div>
 					<div class="row">
 						<div class="col-sm-4">
@@ -160,27 +160,30 @@
 									adipiscing elit.</li>
 							</ul>
 							<button type="button" class="btn btn-danger grow">Meld je nu aan!</button><br>
-							<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_donations">
-<input type="hidden" name="business" value="AladdingroepD@gmail.com">
-<input type="hidden" name="lc" value="NL">
-<input type="hidden" name="item_name" value="Stichting Aladdin Groep D">
-<input type="hidden" name="no_note" value="0">
-<input type="hidden" name="currency_code" value="EUR">
-<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
-<input type="image" src="https://www.paypalobjects.com/nl_NL/NL/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal, de veilige en complete manier van online betalen.">
-<img alt="" border="0" src="https://www.paypalobjects.com/nl_NL/i/scr/pixel.gif" width="1" height="1">
-</form>
-
-
-						</div>
-
+							</div>
 					</div>
 					<br />
 					<blockquote class="hero-unify">
 						<p>Alladin is een leuk initiatief en heeft veel potentie.</p>
 						<small>Karel</small>
 					</blockquote>
+				</div>
+				<div class="col-md-5 col-sm-12">
+					<div class="headline">
+						<h2>Help Aladdin!</h2>
+					</div>
+					<p>U kunt Aladdin helpen door te doneren. Ook kunt u sponsor worden.</p>
+					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+						<input type="hidden" name="cmd" value="_donations">
+						<input type="hidden" name="business" value="AladdingroepD@gmail.com">
+						<input type="hidden" name="lc" value="NL">
+						<input type="hidden" name="item_name" value="Stichting Aladdin Groep D">
+						<input type="hidden" name="no_note" value="0">
+						<input type="hidden" name="currency_code" value="EUR">
+						<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
+						<input type="image" src="https://www.paypalobjects.com/nl_NL/NL/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal, de veilige en complete manier van online betalen.">
+						<img alt="" border="0" src="https://www.paypalobjects.com/nl_NL/i/scr/pixel.gif" width="1" height="1">
+					</form>
 				</div>
 				<!--/col-md-8-->
 			</div>

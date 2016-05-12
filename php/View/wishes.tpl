@@ -30,6 +30,8 @@
     {if ($text =='Logout')}
 	    <div class="container content minimalheight">
 	    <div class="panel-group">
+
+	    
 	    	{if (isset($pass))}
 	    		{if $pass == 'true'}
 	    			<div class="alert alert-success">
@@ -44,14 +46,45 @@
 	    	{/if}
 		    {if $wishesArray|@count lt 3}
 		        <div class="faqHeader"><i class="fa fa-star"></i> Vul uw wens(en) in</div>
+	    		 <div> 
+		        	<div>Extra inspiratie tags</div>
+		        	<div>
+			        	<select size="10" class="form-control">
+			        		{foreach from=$tagsArray item=tag}
+			        			<option disabled> {$tag->tagName} </option>
+			        		{/foreach}
+			        	</select>
+		        	</div>
+		        </div>
+		        <hr>
 		        <div class="">
 					 <form class="reg-page" action="Controller/Handlers/WishesHandler.php" method="post">
-						{for $wishCounter=1 to (3-$wishesArray|@count)}
-							<label>wens {$wishCounter}:<span class="color-red">*</span></label>
-		                	<input type="text" name="wens{$wishCounter}" class="form-control margin-bottom-20" required="required">
-						{/for}
-	
-	                    <div class="col-lg-12 text-right">
+					 	<div>
+							{for $wishCounter=1 to (3-$wishesArray|@count)}
+								<div class="panel panel-default">
+									<div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse{$wishCounter}">
+										<h4 class="panel-title">
+	                    					Wens {$wishCounter}:<span class="color-red">*</span>
+                   						</h4>						
+									</div>
+									<div id="collapse{$wishCounter}" class="panel-collapse collapse">
+										<div  class="panel-body">
+											<label> Wens: </label>
+											<input type="text" name="wens{$wishCounter}" class="form-control margin-bottom-20" required="required">
+											<label> Bijbehorende categori&euml;n: </label>
+											<fieldset>
+												{foreach from=$tagsArray item=tag}
+													<div class="col col-lg-2">
+					        							<label class="checkbox-inline"><input type="checkbox" name="tags{$wishCounter}[]" value={$tag->tagId} class=""/>{$tag->tagName}</label>
+					        						</div>
+					        					{/foreach}
+											</fieldset>		
+										</div>		
+									</div>
+								</div>
+							{/for}	 	
+					 	</div>
+	                    <div class="col-lg-12 text-right panel-heading">
 	                            <button class="btn-u" type="submit" name="save">Opslaan</button>
 	                    </div>
 		        	</form>
@@ -63,15 +96,19 @@
 		        </div>
 			{/if}
 	        {if !empty($wishesArray)}
-	        	<div class="faqHeader"><i class="fa fa-star"></i> Dit zijn uw wensen</div>
-	  	    	<div>
-	  	    		<table class="col-md-12">
+	        	<div class="faqHeader "><i class="fa fa-star"></i> Dit zijn uw wensen</div>
+	        	<div class="">
+	  	    		<table class="table table-striped">
 	  	    			<tr>
-	  	    				<th class="col-md-10">Wens</th><th class=" class="col-md-2" wishestableright">Status</th>
+	  	    				<th class="col col-md-7">Wens</th>
+	  	    				<th class="col col-md-4">Categori&euml;n</th>
+	  	    				<th class=" class="col col-md-1" wishestableright">Status</th>
 	  	    			</tr>
 					{foreach from=$wishesArray item=wish}
 						<tr>
-							<td class="col-md-10"><p>{$wish->wishtext}</p></td><td class=" class="col-md-2" wishestableright"><p>{$wish->wishstatus}</p></td>
+							<td class="col col-md-7">{$wish->wishtext}</td>
+							<td class="col col-md-4">{$wish->tags}</td>
+							<td class=" class="col col-md-1" wishestableright">{$wish->wishstatus}</td>
 						</tr>
 					{/foreach}
 					</table>
