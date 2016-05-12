@@ -15,7 +15,7 @@ class TalentHandler{
 		if (isset($_POST['submit']) && isset($_POST['talentID'])){
 			// ** ACCEPT **
 			$talentModel->acceptTalent($_POST['talentID']);
-			header('Location: ../../../admin.php?controller=talent&action=Index');
+			header('Location: ../../../admin.php?controller=talent&action=Accept');
 		}
 		else if (isset($_POST['decline']) && isset($_POST['talentID']))
 		{
@@ -36,7 +36,7 @@ class TalentHandler{
 			
 			// ** DECLINE **
 			$talentModel->declineTalent($_POST['talentID']);
-			header('Location: ../../../admin.php?controller=talent&action=Index');
+			header('Location: ../../../admin.php?controller=talent&action=Decline');
 		}
 	}
 }
