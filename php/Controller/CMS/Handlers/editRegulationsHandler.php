@@ -5,18 +5,30 @@ include ('../../../Model/CMS/regulationsModel.php');
 
 // mogelijke submits: submitfaq, deletefaq, deletecategorie, nieuwcat, nieuwfaq'
 
-if (isset ( $_POST ["submitregel"] ) && isset ( $_POST ["categorie_id"] ) && isset ( $_POST ["tekst"] )) {
+if (isset ( $_POST ["submitregel"] ) && isset ($_POST["categorienaam"]) && isset ( $_POST ["categorie_id"] ) && isset ( $_POST ["tekst"] )) {
+	$rulecategorie = new RuleCategorie();
 	$rule = new Rule();
+	
 	$rule->tekst = $_POST ["tekst"];
 	$rule->categorie_id = $_POST ["categorie_id"];
 	$rule->id = $_POST ["id"];
-	if (! saveRule ( $rule, true )) {
+	
+	$rulecategorie->id = ($_POST["categorieID"]);
+	$rulecategorie->naam = ($_POST["categorienaam"]);
+	
+	if (! saveRule ( $rule, true ) && ! saveRuleCategorie($rulecategorie, true)) {
 		header ( 'location: ../../../admin.php?controller=editregulations&action=noSuccess' );
 	} else {
 		header ( 'location: ../../../admin.php?controller=editregulations&action=Success' );
 	}
 	$rules = getRules();
 }
+
+if (isset ( $_POST ["resetpage"] )) {
+		header ( 'location: ../../../admin.php?controller=editregulations');
+	$rules = getRules();
+}
+
 if (isset ( $_POST ["deleteregel"] )) {
 	$id = $_POST ["id"];
 	if (deleteRule ( $id )) {

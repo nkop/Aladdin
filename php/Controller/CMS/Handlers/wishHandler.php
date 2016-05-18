@@ -16,7 +16,7 @@ class WishHandler{
 		if (isset($_POST['submit']) && isset($_POST['wishID'])){
 			// ** ACCEPT **
 			$wishModel->acceptWish($_POST['wishID']);
-			header('Location: ../../../admin.php?controller=wish&action=Index');
+			header('Location: ../../../admin.php?controller=wish&action=Accept');
 		}
 		else if (isset($_POST['decline']) && isset($_POST['wishID']))
 		{
@@ -35,7 +35,7 @@ class WishHandler{
 			#Call SendMail (coming from /PHPMailer/Mailer.php)
 			SendMail($recipient, $message, $subject);
 			$wishModel->declineWish($_POST['wishID']);
-			header('Location: ../../../admin.php?controller=wish&action=Index');
+			header('Location: ../../../admin.php?controller=wish&action=Decline');
 		}
 	}
 }

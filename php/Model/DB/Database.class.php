@@ -124,6 +124,24 @@ class Database
 		return $result;
 	}
 	
+	function getNameByID($accountid)
+	{
+		$query = "SELECT voornaam FROM account WHERE accountid = '$accountid' ";
+		
+		$result = mysqli_query($this->_connection, $query);
+		
+		return mysqli_fetch_object($result)->voornaam;
+	}
+	
+	function getEmailByID($accountid)
+	{
+		$query = "SELECT email FROM account WHERE accountid = '$accountid' ";
+		
+		$result = mysqli_query($this->_connection, $query);
+		
+		return mysqli_fetch_object($result)->email;
+	}
+	
 }
 
 ?>

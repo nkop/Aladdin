@@ -37,6 +37,25 @@ function saveRule($rule, $exists) {
 		return $sql->query($query);
 	}
 }
+
+function saveRuleCategorie($categorie, $exists){
+	//updates an existing categoryrule or saves it as a new rule
+	//$categorie = a Rule object
+	//$exists: true = already existing rule, false = new rule
+	$db = Database::getInstance ();
+	$sql = $db->getConnection ();
+	
+	$naam = $sql->real_escape_string ( $categorie->naam );
+	if ($exists) {
+		$id = $sql->real_escape_string ( $categorie->id );
+		$query = "UPDATE `regelcategorie` SET `id`='$id', `naam`='$naam' WHERE `id`='$id'";
+		return $sql->query ( $query );
+	} else {
+		$query = "INSERT INTO `regelcategorie` (naam) VALUES ('$naam')";
+		return $sql->query($query);
+	}
+}
+
 function deleteRule($ruleid){
 	//deletes a rule in the database
 	//$ruleid = id of the to be deleted rule

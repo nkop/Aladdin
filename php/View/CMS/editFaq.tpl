@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-{include '../../View/CMS/Assets/head.tpl'}
+{include 'View/CMS/Assets/head.tpl'}
 
 </head>
 
@@ -24,7 +24,15 @@
 					</p>
 				</div>
 			</noscript>
-
+						{if $Succesfull == 1}
+		                <div class="alert alert-success">
+						  <strong>Succes!</strong> Het tekstvak is succesvol aangepast!
+						</div>
+		                {elseif $Succesfull == 2}
+		                <div class="alert alert-danger">
+						  <strong>Error!</strong> Er is iets misgegaan, controleer de velden en probeer het later opnieuw.
+						</div>
+		                {/if}
 			<!-- start: Content -->
 			<div id="content" class="span10">
 
