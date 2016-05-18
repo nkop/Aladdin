@@ -29,10 +29,10 @@ if(isset($_GET["controller"]))
 		$controller = new $controllerName();  //controller = new TodoController();
 		else
 			//TODO: open 404 page
-			$controller = new DashboardController();
+			$controller = new CmsLoginController();
 }
 else{
-	$controller = new DashboardController();
+	$controller = new CmsLoginController();
 }
 if(isset($_GET["action"]))
 {
