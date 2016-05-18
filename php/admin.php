@@ -13,7 +13,6 @@ require('Controller/CMS/editFaqController.php');
 require('Controller/CMS/editHomeController.php');
 require('Controller/CMS/tagController.php');
 require('Controller/CMS/editRegulationsController.php');
-require('Controller/CMS/cmsLoginController.php');
 
 
 $controller;
@@ -29,10 +28,10 @@ if(isset($_GET["controller"]))
 		$controller = new $controllerName();  //controller = new TodoController();
 		else
 			//TODO: open 404 page
-			$controller = new CmsLoginController();
+			$controller = new DashboardController();
 }
 else{
-	$controller = new CmsLoginController();
+	$controller = new DashboardController();
 }
 if(isset($_GET["action"]))
 {
