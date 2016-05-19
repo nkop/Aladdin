@@ -73,7 +73,7 @@
 								<button type="submit" name="submit" class="btn btn-success">
                  				<i class="halflings-icon white ok"></i></button>
 						  
-						  		<button type="submit" name="decline" class="btn btn-danger">
+						  		<button type="submit" id="decline" name="decline" class="btn btn-danger">
                  				<i class="halflings-icon white remove"></i></button></td>
                  				</form> 
 						  </tr>
