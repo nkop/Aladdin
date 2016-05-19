@@ -21,20 +21,14 @@
                     <!-- Latest -->
                     <div class="col-md-3 md-margin-bottom-40">
                         <div class="posts">
-                            <div class="headline"><h2>Laatste berichten</h2></div>
+                            <div class="headline"><h2>Laatste nieuws</h2></div>
                             <ul class="list-unstyled latest-list">
+                            {foreach from=$newsItems item=newsItem}
                                 <li>
-                                    <a href="#">Nieuwe website</a>
-                                    <small>May 8, 2015</small>
-                                </li>
-                                <li>
-                                    <a href="#">Gelukkig nieuwjaar!</a>
-                                    <small>June 23, 2015</small>
-                                </li>
-                                <li>
-                                    <a href="#">lorem Ipsum</a>
-                                    <small>September 15, 2015</small>
-                                </li>
+                                    <a href="index.php?controller=newsItem&action=News&id={$newsItem->nieuwsitemid}">{$newsItem->titel}</a>
+                                    <small>{$newsItem->datum}</small>
+                                </li>		  
+							{/foreach}
                             </ul>
                         </div>
                     </div><!--/col-md-3-->  
