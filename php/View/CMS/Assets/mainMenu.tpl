@@ -14,7 +14,6 @@
 <!-- 							<li><a class="submenu" href="admin.php?controller=lifetimeWish&action=index"><i class="icon-bar-chart"></i><span class="hidden-tablet">Doorlooptijd wensen</span></a></li> -->
 <!-- 							</ul> -->
 <!-- 							</li>						 -->
->>>>>>> refs/remotes/origin/master
 						<li>
 							<a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> Content</span><span class="label label-important"></span></a>
 							<ul>
