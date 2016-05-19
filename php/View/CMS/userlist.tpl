@@ -43,7 +43,8 @@
 								  <th>Gebruikersnaam</th>
 								  <th>Geboortedatum</th>
 								  <th>Email</th>
-								  <th>&nbsp;</th>
+								  <th>Blokkeer/Deblokkeer</th>
+								  <th>Status</th>
 							  </tr>
 						  </thead>   
 						  <tbody>
@@ -55,14 +56,19 @@
 						  <td>{$user->email}</td>
 						  <form action="Controller/CMS/Handlers/userHandler.php" method="POST">
 						   <input type="hidden" name="userID" id="userID" value="{$user->accountid}">
+						   <input type="hidden" name="banStatus" id="banStatus" value="{$user->ban}">
 						  <td class="center">
 						 
-								<button type="submit" name="submit" class="btn btn-success">
-                 				<i class="halflings-icon white ok"></i></button>
-						  
-						  		<button type="submit" name="decline" class="btn btn-danger">
-                 				<i class="halflings-icon white remove"></i></button></td>
-                 				</form> 
+								<label><input type="submit" class="btn btn-danger"  name="ban" value="Wijzig status" onclick="return confirm('Weet je zeker dat je deze gebruiker wil blokkeren?')"></label>
+                 				</form>
+                 			<td>
+                 			{if $user->ban == 0}
+                 			Open
+                 			{/if}
+                 			{if $user->ban == 1}
+                 			Geblokkeerd
+                 			{/if}
+                 			</td>
 						  </tr>
 						  {/foreach}
 						  </tbody>

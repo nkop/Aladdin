@@ -16,5 +16,20 @@ class UsersModel{
 		return $userarray;
 	
 	}
+	function banUser($userID, $banStatus){
+		$db = Database::getInstance();
+		$mysqli = $db->getConnection();
+		if ($userID > 0) {
+			//status 0 = open, status 1 = blokkeerd
+			if ($banStatus == 0){
+				$sql_query = "UPDATE `account` SET `ban` = '1' WHERE `accountid` = ".$userID.";";
+			}
+			else if ($banStatus == 1){
+				$sql_query = "UPDATE `account` SET `ban` = '0' WHERE `accountid` = ".$userID.";";
+			}		
+		}
+		$mysqli->query($sql_query);	
+	}
+	
 	
 }
