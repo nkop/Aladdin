@@ -147,13 +147,10 @@
 								src="view/assets/img/stock/make_a_wish.jpg" alt="">
 						</div>
 						<div class="col-sm-8">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-								Aenean nunc dolor</p>
+							<p>Aladdin wil dat iedereen op de wereld een beetje gelukkiger word.</p>
 							<ul class="list-unstyled margin-bottom-20">
-								<li><i class="fa fa-check color-green"></i> consectetur
-									adipiscing elit.</li>
-								<li><i class="fa fa-check color-green"></i> consectetur
-									adipiscing elit.</li>
+								<li><i class="fa fa-check color-green"></i> Facebook zonder face maar met een hart.</li>
+								<li><i class="fa fa-check color-green"></i> .</li>
 								<li><i class="fa fa-check color-green"></i> consectetur
 									adipiscing elit.</li>
 								<li><i class="fa fa-check color-green"></i> consectetur
@@ -217,114 +214,6 @@
 		<!--=== End Parallax Counter v3 ===-->
 
 		<div class="container content">
-			<!-- Nieuws -->
-<!-- 			<div class="owl-carousel-v1 owl-work-v1 margin-bottom-40"> -->
-<!-- 				<div class="headline"> -->
-<!-- 					<h2 class="pull-left">Nieuws</h2> -->
-<!-- 					<div class="owl-navigation"> -->
-<!-- 						<div class="customNavigation"> -->
-<!-- 							<a class="owl-btn prev-v2"><i class="fa fa-angle-left"></i></a> <a -->
-<!-- 								class="owl-btn next-v2"><i class="fa fa-angle-right"></i></a> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
-					<!--/navigation-->
-<!-- 				</div> -->
-
-<!-- 				<div class="owl-recent-works-v1"> -->
-<!-- 					<div class="item"> -->
-<!-- 						<a href="#"> <em class="overflow-hidden"> <img -->
-<!-- 								class="img-responsive" src="view/assets/img/main/img1.jpg" -->
-<!-- 								alt=""> -->
-<!-- 						</em> <span> <strong>Gelukkig nieuwjaar!</strong> <i>Anim pariatur -->
-<!-- 									cliche reprehenderit</i> -->
-<!-- 						</span> -->
-<!-- 						</a> -->
-<!-- 					</div> -->
-<!-- 					<div class="item"> -->
-<!-- 						<a href="#"> <em class="overflow-hidden"> <img -->
-<!-- 								class="img-responsive" src="view/assets/img/main/img2.jpg" -->
-<!-- 								alt=""> -->
-<!-- 						</em> <span> <strong>Nieuwe website!</strong> <i>Responsive -->
-<!-- 									Bootstrap website</i> -->
-<!-- 						</span> -->
-<!-- 						</a> -->
-<!-- 					</div> -->
-<!-- 					<div class="item"> -->
-<!-- 						<a href="#"> <em class="overflow-hidden"> <img -->
-<!-- 								class="img-responsive" src="view/assets/img/main/img3.jpg" -->
-<!-- 								alt=""> -->
-<!-- 						</em> <span> <strong>Lorem ipsum</strong> <i>Pariatur prehe cliche -->
-<!-- 									reprehrit</i> -->
-<!-- 						</span> -->
-<!-- 						</a> -->
-<!-- 					</div> -->
-<!-- 					<div class="item"> -->
-<!-- 						<a href="#"> <em class="overflow-hidden"> <img -->
-<!-- 								class="img-responsive" src="view/assets/img/main/img4.jpg" -->
-<!-- 								alt=""> -->
-<!-- 						</em> <span> <strong>Lorem ipsum</strong> <i>Craft labore wes -->
-<!-- 									anderson cred</i> -->
-<!-- 						</span> -->
-<!-- 						</a> -->
-<!-- 					</div> -->
-<!-- 					<div class="item"> -->
-<!-- 						<a href="#"> <em class="overflow-hidden"> <img -->
-<!-- 								class="img-responsive" src="view/assets/img/main/img5.jpg" -->
-<!-- 								alt=""> -->
-<!-- 						</em> <span> <strong>Lorem ipsum</strong> <i>Anim pariatur cliche -->
-<!-- 									reprehenderit</i> -->
-<!-- 						</span> -->
-<!-- 						</a> -->
-<!-- 					</div> -->
-<!-- 					<div class="item"> -->
-<!-- 						<a href="#"> <em class="overflow-hidden"> <img -->
-<!-- 								class="img-responsive" src="view/assets/img/main/img1.jpg" -->
-<!-- 								alt=""> -->
-<!-- 						</em> <span> <strong>Lorem ipsum</strong> <i>Anim pariatur cliche -->
-<!-- 									reprehenderit</i> -->
-<!-- 						</span> -->
-<!-- 						</a> -->
-<!-- 					</div> -->
-<!-- 					<div class="item"> -->
-<!-- 						<a href="#"> <em class="overflow-hidden"> <img -->
-<!-- 								class="img-responsive" src="view/assets/img/main/img2.jpg" -->
-<!-- 								alt=""> -->
-<!-- 						</em> <span> <strong>Lorem ipsum</strong> <i>Responsive Bootstrap -->
-<!-- 									Template</i> -->
-<!-- 						</span> -->
-<!-- 						</a> -->
-<!-- 					</div> -->
-<!-- 					<div class="item"> -->
-<!-- 						<a href="#"> <em class="overflow-hidden"> <img -->
-<!-- 								class="img-responsive" src="view/assets/img/main/img3.jpg" -->
-<!-- 								alt=""> -->
-<!-- 						</em> <span> <strong>Lorem ipsum</strong> <i>Pariatur prehe cliche -->
-<!-- 									reprehrit</i> -->
-<!-- 						</span> -->
-<!-- 						</a> -->
-<!-- 					</div> -->
-<!-- 					<div class="item"> -->
-<!-- 						<a href="#"> <em class="overflow-hidden"> <img -->
-<!-- 								class="img-responsive" src="view/assets/img/main/img4.jpg" -->
-<!-- 								alt=""> -->
-<!-- 						</em> <span> <strong>Lorem ipsum</strong> <i>Craft labore wes -->
-<!-- 									anderson cred</i> -->
-<!-- 						</span> -->
-<!-- 						</a> -->
-<!-- 					</div> -->
-<!-- 					<div class="item"> -->
-<!-- 						<a href="#"> <em class="overflow-hidden"> <img -->
-<!-- 								class="img-responsive" src="view/assets/img/main/img5.jpg" -->
-<!-- 								alt=""> -->
-<!-- 						</em> <span> <strong>Lorem ipsum</strong> <i>Anim pariatur cliche -->
-<!-- 									reprehenderit</i> -->
-<!-- 						</span> -->
-<!-- 						</a> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-<!-- 			</div> -->
-			<!-- End Recent Works -->
-
 			<!-- Owl Clients v1 -->
 			<div class="headline">
 				<h2>Medemogelijk gemaakt door:</h2>
