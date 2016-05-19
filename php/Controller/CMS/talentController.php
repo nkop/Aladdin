@@ -25,6 +25,7 @@ class TalentController{
 		$talentModel = new TalentsModel();
 		// get all talentsModel that have not been accepted or declined
 		$talentarray = $talentModel->getOpenTalents();
+
 		
 		$smarty->assign('Succesfull', $this->succesfull);
 		$smarty->assign('talents', $talentarray);

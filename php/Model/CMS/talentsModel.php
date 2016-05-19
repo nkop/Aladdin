@@ -36,5 +36,10 @@ class TalentsModel{
 		}
 		$mysqli->query($sql_query);
 	}
+	
+	function getTags($talent)
+	{
+				
+	}
 }
 
