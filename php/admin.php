@@ -15,6 +15,7 @@ require('Controller/CMS/tagController.php');
 require('Controller/CMS/editRegulationsController.php');
 require('Controller/CMS/registrationController.php');
 require('Controller/CMS/cmsLoginController.php');
+// require('Controller/CMS/lifetimeWishController.php');
 
 $controller;
 $actionName;
@@ -29,10 +30,10 @@ if(isset($_GET["controller"]))
 		$controller = new $controllerName();  //controller = new TodoController();
 		else
 			//TODO: open 404 page
-			$controller = new CmsLoginController();
+			$controller = new DashboardController();
 }
 else{
-	$controller = new CmsLoginController();
+	$controller = new DashboardController();
 }
 if(isset($_GET["action"]))
 {
