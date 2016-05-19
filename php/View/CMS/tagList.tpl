@@ -30,7 +30,12 @@
 			
 			<!-- start: Content -->
 			<div id="content" class="span10">
-			<div class="row-fluid sortable">		
+			<h2>Tag toevoegen:</h2>	
+			<form action="Controller/CMS/Handlers/tagHandler.php" method="post" class="form-inline">
+			<input id="addBox" name="addBox" type="text">
+			<input class="btn btn-primary" name="add" type="submit" value="Voeg toe">		
+			</form>
+			<div class="row-fluid sortable">
 				<div class="box span12">
 					<div class="box-header" data-original-title>
 						<h2><i class="halflings-icon user"></i><span class="break"></span>Tags</h2>
@@ -52,7 +57,6 @@
 						<table class="table table-striped table-bordered bootstrap-datatable datatable">
 						  <thead>
 							  <tr>
-								  <th>Tagnummer</th>
 								  <th>Tag</th>
 								  <th>&nbsp;</th>
 							  </tr>
@@ -61,7 +65,6 @@
 						  
 						  {foreach from=$tags item=tag}
 						  <tr>
-						  <td>{$tag->tagid}</td>
 						  <td>{$tag->tagnaam}</td>
 						  <form action="Controller/CMS/Handlers/tagHandler.php" method="POST">
 						   <input type="hidden" name="tagID" id="tagID" value="{$tag->tagid}">
