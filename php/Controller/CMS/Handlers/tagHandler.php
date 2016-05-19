@@ -14,13 +14,13 @@ class TagHandler{
 		if (isset($_POST['submit']) && isset($_POST['tagID'])){
 			// ** ACCEPT **
 			$tagModel->acceptTag($_POST['tagID']);
-			header('Location: ../../../admin.php?controller=tag&action=Index');
+			header('Location: ../../../admin.php?controller=tag&action=&action=Accept');
 		}
 		else if (isset($_POST['decline']) && isset($_POST['tagID']))
 		{
 			// ** DECLINE **
 			$tagModel->declineTag($_POST['tagID']);
-			header('Location: ../../../admin.php?controller=tag&action=Index');
+			header('Location: ../../../admin.php?controller=tag&action=Decline');
 		}
 	}
 }

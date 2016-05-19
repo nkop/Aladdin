@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Talentenlijst</title>
-{include 'view/cms/Assets/head.tpl'}	
+	<title>Registraties</title>
+		{include 'view/cms/Assets/head.tpl'}
 </head>
 
 <body>
@@ -33,38 +33,43 @@
 			<div class="row-fluid sortable">		
 				<div class="box span12">
 					<div class="box-header" data-original-title>
-						<h2><i class="halflings-icon user"></i><span class="break"></span>Talenten</h2>
+						<h2><i class="halflings-icon user"></i><span class="break"></span>Registraties</h2>
 					</div>
 					
 					{if $Succesfull == 1}
 		                <div class="alert alert-success">
-						  <strong>Het talent is geaccepteerd!</strong> 
+						  <strong>De registratie is geaccepteerd!</strong> 
 						</div>
 		                {elseif $Succesfull == 2}
 		                <div class="alert alert-danger">
-						  <strong>Het talent is geweigerd!</strong>
+						  <strong>De registratie is geweigerd!</strong>
 						</div>
 		                {/if}
-		                
 		                
 					<div class="box-content">
 					
 						<table class="table table-striped table-bordered bootstrap-datatable datatable">
 						  <thead>
 							  <tr>
-								  <th>Talentnummer</th>
-								  <th>Talent</th>
+							  	  <th>Gebruikersnaam</th>
+								  <th>Naam</th>
+								  <th>Geboortedatum</th>
+								  <th>Email</th>
+								  <th>Postcode</th>
 								  <th>&nbsp;</th>
 							  </tr>
 						  </thead>   
 						  <tbody>
 						  
-						  {foreach from=$talents item=talent}
+						  {foreach from=$registrations item=registration}
 						  <tr>
-						  <td>{$talent->talentid}</td>
-						  <td>{$talent->talenttekst}</td>
-						  <form action="Controller/CMS/Handlers/talentHandler.php" method="POST">
-						   <input type="hidden" name="talentID" id="talentID" value="{$talent->talentid}">
+						  <td>{$registration->gebruikersnaam}</td>
+						  <td>{$registration->voornaam} {$registration->tussenvoegsel} {$registration->achternaam}</td>
+						  <td>{$registration->geboortedatum}</td>
+						  <td>{$registration->email}</td>
+						  <td>{$registration->postcode}</td>
+						  <form action="Controller/CMS/Handlers/registrationHandler.php" method="POST">
+						   <input type="hidden" name="accountID" id="accountID" value="{$registration->accountid}">
 						  <td class="center">
 						 
 								<button type="submit" name="submit" class="btn btn-success">
@@ -89,6 +94,6 @@
 			<!-- end: Content -->
 		</div><!--/#content.span10-->
 		</div><!--/fluid-row-->
-{include 'view/cms/Assets/footer.tpl'}
+		{include 'view/cms/Assets/footer.tpl'}
 </body>
 </html>

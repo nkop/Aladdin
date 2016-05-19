@@ -25,6 +25,8 @@
                     <li class="topbar-devider"></li>
                     {if ($text =='Logout')}
  					<li><a href='index.php?controller=login&action=logout'>Logout</a></li>
+ 					<li class="topbar-devider"></li>
+ 					<li><a href="index.php?controller=personalInfo&action=index">Mijn profiel</a></li>
  					{else}
  					<li><a href='index.php?controller=login&action=Index'>Login</a></li>
  					<li class="topbar-devider"></li>
