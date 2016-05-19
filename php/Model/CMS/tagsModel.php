@@ -34,6 +34,7 @@ class TagsModel{
 			// status 5 = declined
 			$sql_query = "UPDATE `tag` SET `status` = '5' WHERE `tagid` = ".$tagID.";";
 		}
+		$mysqli->query($sql_query);
 		
 	}
 	
