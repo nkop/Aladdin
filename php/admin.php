@@ -13,7 +13,8 @@ require('Controller/CMS/editFaqController.php');
 require('Controller/CMS/editHomeController.php');
 require('Controller/CMS/tagController.php');
 require('Controller/CMS/editRegulationsController.php');
-
+require('Controller/CMS/registrationController.php');
+require('Controller/CMS/cmsLoginController.php');
 
 $controller;
 $actionName;
