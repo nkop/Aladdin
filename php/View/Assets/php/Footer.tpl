@@ -21,20 +21,14 @@
                     <!-- Latest -->
                     <div class="col-md-3 md-margin-bottom-40">
                         <div class="posts">
-                            <div class="headline"><h2>Laatste berichten</h2></div>
+                            <div class="headline"><h2>Laatste nieuws</h2></div>
                             <ul class="list-unstyled latest-list">
+                            {foreach from=$newsItems item=newsItem}
                                 <li>
-                                    <a href="#">Nieuwe website</a>
-                                    <small>May 8, 2015</small>
-                                </li>
-                                <li>
-                                    <a href="#">Gelukkig nieuwjaar!</a>
-                                    <small>June 23, 2015</small>
-                                </li>
-                                <li>
-                                    <a href="#">lorem Ipsum</a>
-                                    <small>September 15, 2015</small>
-                                </li>
+                                    <a href="index.php?controller=newsItem&action=News&id={$newsItem->nieuwsitemid}">{$newsItem->titel}</a>
+                                    <small>{$newsItem->datum}</small>
+                                </li>		  
+							{/foreach}
                             </ul>
                         </div>
                     </div><!--/col-md-3-->  
@@ -44,10 +38,10 @@
                     <div class="col-md-3 md-margin-bottom-40">
                         <div class="headline"><h2>Handige links</h2></div>
                         <ul class="list-unstyled link-list">
-                            <li><a href="#">Over ons</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="#">Nieuws</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="#">Wensen en talenten</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="#">Contact</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="index.php?controller=about&action=index">Over ons</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="index.php?controller=news&action=index">Nieuws</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="index.php?controller=regulations&action=index">Regels</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="index.php?controller=faq&action=index">veelgestelde vragen</a><i class="fa fa-angle-right"></i></li>
                         </ul>
                     </div><!--/col-md-3-->
                     <!-- End Link List -->                    

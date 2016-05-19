@@ -1,6 +1,18 @@
 <?php
-include_once ('Smarty/header.php');
+class footerController{
 
+	function Index($smarty){
+		if ($smarty==null)
+			global $smarty;
 
-//$smarty->display('../View/php/footerController.tpl');
+			include_once 'Model/CMS/newsItemModel.php';
+			$model = new NewsItemModel();
+
+			$newsItems = $model->getTop5News();
+
+			$smarty->assign('newsItems', $newsItems);
+	}
+}
+$footer = new footerController();
+$footer->Index(null)
 ?>
