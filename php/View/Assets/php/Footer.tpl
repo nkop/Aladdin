@@ -38,10 +38,10 @@
                     <div class="col-md-3 md-margin-bottom-40">
                         <div class="headline"><h2>Handige links</h2></div>
                         <ul class="list-unstyled link-list">
-                            <li><a href="#">Over ons</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="#">Nieuws</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="#">Wensen en talenten</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="#">Contact</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="index.php?controller=about&action=index">Over ons</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="index.php?controller=news&action=index">Nieuws</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="index.php?controller=regulations&action=index">Regels</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="index.php?controller=faq&action=index">veelgestelde vragen</a><i class="fa fa-angle-right"></i></li>
                         </ul>
                     </div><!--/col-md-3-->
                     <!-- End Link List -->                    
