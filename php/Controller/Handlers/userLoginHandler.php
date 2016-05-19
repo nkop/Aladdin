@@ -2,14 +2,15 @@
 /*
  * @author Ferry Zijlmans
  * */
-include_once '../../Model/DB/Database.class.php';
-include_once '../../Model/userLoginModel.php';
+
 
 class UserLoginHandler{
 	//declare
 	private $login="", $username="",$password="";
 	
 	public function __construct() {
+		include_once '../../Model/DB/Database.class.php';
+		include_once '../../Model/userLoginModel.php';
 		if (isset($_POST['login'])){
 			$this->login = $_POST['login'];
 			if (isset($_POST['username']) && isset($_POST['password'])){

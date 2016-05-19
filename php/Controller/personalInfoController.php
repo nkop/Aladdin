@@ -2,7 +2,6 @@
 /*
  * @author Wouter van de Ven
  */
-include_once ('Model/personalInfoModel.php');
 class PersonalInfoController {
 	private $ChangeError = false;
 	private $ChangeSuccess = false;
@@ -20,6 +19,7 @@ class PersonalInfoController {
 		}
 	}
 	function Index($smarty) {
+		include_once ('Model/personalInfoModel.php');
 		include_once 'view/assets/php/loginredirect.php';
 		include_once ('Model/user.class.php');
 		$personalInfoModel = new PersonalInfoModel ();
