@@ -21,6 +21,20 @@ class NewsItemModel{
 		return $newsItems;
 	}
 	
+	function getTop5News(){
+		//get all nieuwsitems
+		$db = Database::getInstance ();
+		$sql = $db->getConnection ();
+		$newsItems = array();
+		$query = "select n.nieuwsitemid,n.titel,n.tekst,n.thumbnail,n.isvideo,n.bannerfoto,n.datum,n.auteur, CONCAT(a.voornaam , ' ' , a.tussenvoegsel , ' ' , a.achternaam) as volledignaam from nieuwsitems n
+				  left join account a on n.auteur = a.accountid order by datum ASC limit 5;";
+		$result = $sql->query ( $query );
+		while ( $row = $result->fetch_object ( 'nieuwsItem' ) ) {
+			array_push ( $newsItems, $row );
+		}
+		return $newsItems;
+	}
+	
 	function GetByID($id){
 		//get newsitem from id
 		$db = Database::getInstance ();
