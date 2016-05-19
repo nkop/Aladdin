@@ -16,22 +16,26 @@
 <div class="col-md-4 col-sm-6">
 <h2 class="heading-sm">
 <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-star"></i>
-<span>Wat wel:</span>
+{foreach from=$regelcategorieen item=categorie}
+{if $categorie.id == 1}
+<span>{$categorie.naam}</span>
 </h2>
 {foreach from=$regels item=regel}
 {if $regel.categorie_id == 1}
 <h2 class="heading-sm">
-							<span>- {$regel.tekst}</span>						
+<p>
+							{$regel.tekst}		
 </h2>
 
 						<p>
 						{/if}
 {/foreach}
+{/if}
+{/foreach}
 <hr>
 {foreach from=$regels item=regel}
 {if $regel.id == 23}
 <h5>
-
 <span>
 {$regel.tekst}
 </span>
@@ -44,16 +48,21 @@
 <div class="col-md-4 col-sm-6">
 <h2 class="heading-sm">
 <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-star"></i>
-<span>Wat niet:</span>
+{foreach from=$regelcategorieen item=categorie}
+{if $categorie.id == 2}
+<span>{$categorie.naam}</span>
 </h2>
 {foreach from=$regels item=regel}
 {if $regel.categorie_id == 2}
 <h2 class="heading-sm">
+<p>
 							<span>{$regel.tekst}</span>						
 </h2>
 
 						<p>
 						{/if}
+{/foreach}
+{/if}
 {/foreach}
 <hr>
 {foreach from=$regels item=regel}
@@ -72,16 +81,21 @@
 <div class="col-md-4 col-sm-6">
 <h2 class="heading-sm">
 <i class="icon-custom icon-sm rounded-x icon-bg-red fa fa-star"></i>
-<span>Toelichting</span>
+{foreach from=$regelcategorieen item=categorie}
+{if $categorie.id == 3}
+<span>{$categorie.naam}</span>
 </h2>
 {foreach from=$regels item=regel}
 {if $regel.categorie_id == 3}
 <h5>
+<p>
 							<span>{$regel.tekst}</span>						
 </h5>
 
 						<p>
 						{/if}
+{/foreach}
+{/if}
 {/foreach}
 </div>
 </div>					

@@ -3,6 +3,7 @@ class EditFaqController {
 	private $_categorieen;
 	private $_faqs;
 	private $_smarty;
+	private $_succesfull;
 	function getAll() {
 		include ('Model/CMS/faq.class.php');
 		include ('Model/CMS/faqcategorie.class.php');
@@ -17,26 +18,20 @@ class EditFaqController {
 			$this->_smarty = $smarty;
 		}
 		$this->getAll ();
+		if ($this->_succesfull != 1 && $this->_succesfull != 2) {
+			$this->_succesfull = 0;
+		}
+		$this->_smarty->assign ( 'Succesfull', $this->_succesfull );
 		$smarty->assign ( 'categorieen', $this->_categorieen );
 		$smarty->assign ( 'faqs', $this->_faqs );
 		$smarty->display ( '../View/CMS/editFaq.tpl' );
 	}
 	function success(){
-		echo "<html>
-				<div class='alert alert-info'>
-				  Actie succesvol!
-				</div>
-				</html>
-				";
+		$this->_succesfull = 1;
 		$this->Index($this->_smarty);
 	}
 	function noSuccess(){
-		echo "<html>
-				<div class='alert alert-danger'>
-				  Er ging iets fout. Controleer de velden en probeer het opnieuw.
-				</div>
-				</html>
-				";
+		$this->_succesfull = 2;
 		$this->Index($this->_smarty);
 	}
 }

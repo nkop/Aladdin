@@ -1,9 +1,9 @@
 <?php
 include ('../../Model/wishesAndTalentsModel.php');
 
-$handler = new WishesHandler();
+$handler = new wishesHandler();
 
-class WishesHandler{
+class wishesHandler{
 	
 	public function __construct() {
 		session_start();

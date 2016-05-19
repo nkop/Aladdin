@@ -35,6 +35,18 @@
 					<div class="box-header" data-original-title>
 						<h2><i class="halflings-icon user"></i><span class="break"></span>Tags</h2>
 					</div>
+					
+					{if $Succesfull == 1}
+		                <div class="alert alert-success">
+						  <strong>De tag is geaccepteerd!</strong> 
+						</div>
+		                {elseif $Succesfull == 2}
+		                <div class="alert alert-danger">
+						  <strong>De tag is geweigerd!</strong>
+						</div>
+		                {/if}
+		                
+		                
 					<div class="box-content">
 					
 						<table class="table table-striped table-bordered bootstrap-datatable datatable">
