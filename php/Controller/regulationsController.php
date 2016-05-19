@@ -1,8 +1,7 @@
 <?php
-include_once 'Model/CMS/regulationsModel.php';
-
 class regulationsController{	
 function Index($smarty) {
+		include_once 'Model/CMS/regulationsModel.php';
 		if ($smarty == null) {
 			global $smarty;
 		}

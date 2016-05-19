@@ -1,8 +1,6 @@
 <?php
 echo "inside registration";
-include ("../../Model/DB/Database.class.php");
-include ("../../Model/DB/userInsertModel.php");
-include ("../../Model/password.php");
+
 
 
 $controller = new userRegistrationHandler();
@@ -11,6 +9,9 @@ class userRegistrationHandler{
 private $canPass = false;
 #variable to check if values are valid
 public function __construct() {
+	include ("../../Model/DB/Database.class.php");
+	include ("../../Model/DB/userInsertModel.php");
+	include ("../../Model/password.php");
 	#validate data
 		if (isset($_POST["register"])) {
 			if(isset($_POST["voornaam"]) && isset($_POST["achternaam"]) && isset($_POST["email"]) && isset($_POST["straatnaam"]) && isset($_POST["huisnummer"]) && isset($_POST["postcode"]) && isset($_POST["woonplaats"]) && isset($_POST["geslacht"]) && isset($_POST["wachtwoord"]) && isset($_POST["confirmwachtwoord"])){

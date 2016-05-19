@@ -2,14 +2,13 @@
 /*
  * @author Wouter van de Ven
  * */
-include_once '../../Model/DB/Database.class.php';
-include_once '../../Model/personalInfoModel.php';
-
 class PersonalInfoHandler{
 	//declare
 	private $personalInfo="";
 	
 	public function __construct() {
+		include_once '../../Model/DB/Database.class.php';
+		include_once '../../Model/personalInfoModel.php';
 		if (isset ( $_POST ['submit'] ) && isset ( $_POST ['accountid'] ) && isset ( $_POST ['FirstNameInput'] ) && isset ( $_POST ['LastNameInput'] ) && isset ( $_POST ['ZipCodeInput'] ) && isset ( $_POST ['HouseNumberInput'] ) && isset ( $_POST ['StreetInput'] ) && isset ( $_POST ['CityInput'] ) && isset ( $_POST ['EmailInput'] )){
 				$this->pass();			
 		}
