@@ -7,7 +7,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-				<a class="brand" href="#"><span>Aladdin</span></a>
+				<a class="brand" href="admin.php?controller=dashboard&action=index"><span>Aladdin</span></a>
 								
 <!-- start: Header Menu -->
 				<div class="nav-no-collapse header-nav">
