@@ -22,6 +22,16 @@ class TagHandler{
 			$tagModel->declineTag($_POST['tagID']);
 			header('Location: ../../../admin.php?controller=tag&action=Decline');
 		}
+		else if (isset($_POST['add']) && isset($_POST['addBox']) && $_POST['addBox'] != "")
+		{
+			// ** ADD **
+			$tagModel->addTag($_POST['addBox']);
+			header('Location: ../../../admin.php?controller=tag&action=Index');
+		}
+		else 
+		{
+			header('Location: ../../../admin.php?controller=tag&action=Index');
+		}
 	}
 }
 //call own class(direct from the href/post)
