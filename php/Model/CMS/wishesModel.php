@@ -36,4 +36,23 @@ class WishesModel{
 		}
 		$mysqli->query($sql_query);
 	}
+	
+	function getTags($wishID)
+	{
+		$db = Database::getInstance ();
+		$mysqli = $db->getConnection ();
+		$tagArray = array();
+		$sql_query = "select * from wens_has_tag where wens_wensenid = ".$wishID;
+		$result = $mysqli->query ( $sql_query );
+		while ( $row = $result->fetch_object () ) {
+			$sql_query2 = "select * from tag where tagid = " . $row->tag_tagid;
+			$result2 = $mysqli->query ( $sql_query2 );
+				
+			while ( $row2 = $result2->fetch_object () ) {
+				array_push ( $tagArray, $row2->tagnaam);
+			}
+		}
+	
+		return $tagArray;
+	}
 }
