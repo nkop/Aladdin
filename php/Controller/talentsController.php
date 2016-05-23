@@ -1,10 +1,7 @@
 <?php
-
-require_once 'Model/wishesandtalentsModel.php';
-
 class TalentsController {
 	function index() {
-		
+		require_once 'Model/wishesandtalentsModel.php';
 		global $smarty;
 		$wishesModel = new WishesAndTalentsModel();
 		

@@ -1,6 +1,4 @@
 <?php
-include '../../Model/DB/updatePasswordModel.php';
-
 $controller = new PasswordChangeHandler();
 
 class PasswordChangeHandler{
@@ -12,6 +10,7 @@ private $newPasswordConfirm = "";
 private $updatePasswordModel = "";
 
   public function __construct(){
+  	include '../../Model/DB/updatePasswordModel.php';
     $this->updatePasswordModel = new UpdatePasswordModel();
 
     $this->email = $_POST["mail"];

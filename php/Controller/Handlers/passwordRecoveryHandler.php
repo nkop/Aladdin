@@ -1,7 +1,5 @@
 <?php
-include '../../Model/password.php';
-include '../PHPMailer/Mailer.php';
-require '../../Model/DB/updatePasswordModel.php';
+
 
 $controller = new PasswordRecoveryHandler();
 
@@ -11,6 +9,9 @@ private $updatePasswordModel = "";
 private $email = "";
 
 public function __construct(){
+	include '../../Model/password.php';
+	include '../PHPMailer/Mailer.php';
+	require '../../Model/DB/updatePasswordModel.php';
   #check if email exists
   $this->email = $_POST["mail"];
   $this->updatePasswordModel = new UpdatePasswordModel();

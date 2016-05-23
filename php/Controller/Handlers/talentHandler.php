@@ -1,11 +1,12 @@
 <?php
-include ('../../Model/wishesAndTalentsModel.php');
+
 
 $handler = new TalentHandler();
 
 class TalentHandler{
 
 	public function __construct() {
+		include ('../../Model/wishesAndTalentsModel.php');
 	session_start();
 	$talentModel = new WishesAndTalentsModel();
 	
