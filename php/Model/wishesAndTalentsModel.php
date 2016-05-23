@@ -7,6 +7,7 @@ include "talent.class.php";
 class WishesAndTalentsModel {
 	
 	function getConnection() {
+		require_once 'DB/Database.class.php';
 		$db = Database::getInstance();
 		$sql = $db->getConnection();
 		return $sql;
