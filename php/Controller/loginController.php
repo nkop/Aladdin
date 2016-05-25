@@ -4,6 +4,7 @@
 */
 class LoginController{	
 	private $loginError = false;
+	private $banned = false;
 	private $username = "";
 
 	//login
@@ -11,6 +12,15 @@ class LoginController{
 		//get the global var smarty from index.php
 		global $smarty;
 		$this->loginError = true;
+		$this->username = $username;
+		//call the index funtion
+		$this->Index($smarty);
+	}
+	
+	function Ban($username){
+		//get the global var smarty from index.php
+		global $smarty;
+		$this->banned = true;
 		$this->username = $username;
 		//call the index funtion
 		$this->Index($smarty);
@@ -31,6 +41,7 @@ class LoginController{
 		}
 		$smarty->assign('username', $this->username);
 		$smarty->assign('loginError', $this->loginError);
+		$smarty->assign('banned', $this->banned);
 		$smarty->display('login.tpl');
 	}
 	
