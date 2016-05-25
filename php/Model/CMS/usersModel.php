@@ -21,11 +21,11 @@ class UsersModel{
 		$mysqli = $db->getConnection();
 		if ($userID > 0) {
 			//status 0 = open, status 1 = blokkeerd
-			if ($banStatus == 0){
-				$sql_query = "UPDATE `account` SET `ban` = '1' WHERE `accountid` = ".$userID.";";
+			if ($banStatus != 4){
+				$sql_query = "UPDATE `account` SET `rechten` = '4' WHERE `accountid` = ".$userID.";";
 			}
-			else if ($banStatus == 1){
-				$sql_query = "UPDATE `account` SET `ban` = '0' WHERE `accountid` = ".$userID.";";
+			else if ($banStatus == 4){
+				$sql_query = "UPDATE `account` SET `rechten` = '2' WHERE `accountid` = ".$userID.";";
 			}		
 		}
 		$mysqli->query($sql_query);	
