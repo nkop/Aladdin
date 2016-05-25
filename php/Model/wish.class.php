@@ -3,7 +3,7 @@ Class Wish{
 	//define porperties
 	public $wishtext;
 	public $wishstatus;
-	public $tags;
+	public $tags = array();
 	public $wishid;
 }
 ?>

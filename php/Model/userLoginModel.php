@@ -2,7 +2,7 @@
 /*
  * @author Ferry Zijlmans
  * */
-class UserLoginModel{
+class UserLoginModel {
 	function Login ($email, $password){
 		include_once 'password.php';
 		//login and create session
@@ -35,6 +35,10 @@ class UserLoginModel{
 		else{
 			return false;
 		}
+	}
+	
+	function isAutenticated(){
+		
 	}
 }
 ?>
