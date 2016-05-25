@@ -23,10 +23,15 @@ class UserLoginHandler{
 	function pass(){
 		//create the model object and try to login
 		$loginModel = new UserLoginModel();
-		if($loginModel->login($this->username,$this->password)){
+		if($loginModel->login($this->username,$this->password) == 0){
 			header('Location: ../../index.php?controller=personalInfo&action=Index');
 		}
-		else{
+		
+		else if ($loginModel->login($this->username,$this->password) == 1){
+			header('Location: ../../index.php?controller=login&action=Ban&id='.$_POST['username']);
+		}
+		
+		else {
 			header('Location: ../../index.php?controller=login&action=Login&id='.$_POST['username']);
 		}
 	}
