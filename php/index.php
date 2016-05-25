@@ -3,6 +3,7 @@
  * @author Ferry Zijlmans
  */
 //include the classes
+//php auto loader
 include 'Controller/Smarty/header.php';
 require('Controller/loginController.php');
 require('Controller/registerController.php');
