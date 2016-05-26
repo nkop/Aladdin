@@ -15,7 +15,6 @@ if (isset($_SESSION['email'])){
 	if(strlen($_SESSION['email'])> 0){
 		$this -> text = "Logout";
 		$this->loginoptions = false;
-		$this->isAdmin = true;
 		$db = Database::getInstance ();
 		if($db->CheckAdminByMail($_SESSION['email'])){
 			$this->isAdmin = true;
