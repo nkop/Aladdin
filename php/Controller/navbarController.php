@@ -5,12 +5,11 @@ ini_set('session.use_trans_sid', '0');
 
 
 class NavBarController{
-	
 private $loginoptions = true; 
 private $isAdmin = false;
 private $text = "";
+
 function Index(){
-include ('Model/DB/Database.class.php');
 session_start();
 if (isset($_SESSION['email'])){
 	if(strlen($_SESSION['email'])> 0){
