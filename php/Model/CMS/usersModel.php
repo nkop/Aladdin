@@ -1,4 +1,5 @@
 <?php
+include_once '/../DB/Database.class.php';
 class UsersModel{
 	
 	function getUsers()

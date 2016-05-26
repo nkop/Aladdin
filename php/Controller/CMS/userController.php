@@ -1,10 +1,9 @@
 <?php
-include_once ('Model/CMS/usersModel.php');
-
 class UserController{
 	
 	function Index($smarty)
 	{
+		include_once ('Model/CMS/usersModel.php');
 		if ($smarty == null) {
 			global $smarty;
 		}
