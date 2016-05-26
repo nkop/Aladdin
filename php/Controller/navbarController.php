@@ -5,18 +5,16 @@ ini_set('session.use_trans_sid', '0');
 
 
 class NavBarController{
-	
 private $loginoptions = true; 
 private $isAdmin = false;
 private $text = "";
+
 function Index(){
-include ('Model/DB/Database.class.php');
 session_start();
 if (isset($_SESSION['email'])){
 	if(strlen($_SESSION['email'])> 0){
 		$this -> text = "Logout";
 		$this->loginoptions = false;
-		$this->isAdmin = true;
 		$db = Database::getInstance ();
 		if($db->CheckAdminByMail($_SESSION['email'])){
 			$this->isAdmin = true;
