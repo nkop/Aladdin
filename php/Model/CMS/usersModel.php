@@ -20,9 +20,15 @@ class UsersModel{
 		$db = Database::getInstance();
 		$mysqli = $db->getConnection();
 		if ($userID > 0) {
-			//status 0 = open, status 1 = blokkeerd
+			//rechten 1 = Admin, 2 = Normaal open account, 3 = Inactief, 4 = Geblokkeerd
+			//Checks if Account is Blocked, If blocked or inactief make "open", if account is open makes it banned
 			if ($banStatus != 4){
+				if ($banStatus == 3){
+					$sql_query = "UPDATE `account` SET `rechten` = '2' WHERE `accountid` = ".$userID.";";
+				}
+				else{
 				$sql_query = "UPDATE `account` SET `rechten` = '4' WHERE `accountid` = ".$userID.";";
+				}
 			}
 			else if ($banStatus == 4){
 				$sql_query = "UPDATE `account` SET `rechten` = '2' WHERE `accountid` = ".$userID.";";
