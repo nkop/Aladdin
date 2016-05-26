@@ -1077,14 +1077,16 @@ ul.messages li .message {
 	color: #fff;
 	text-shadow: 0 1px 1px rgba(0, 0, 0, .25);
 	filter: none;
-	padding: 30px 10px 0px 10px;
+	margin-left: 0px !important;
+	width: 33.3%;
+	height: 50% !important;
 	-webkit-border-radius: 0px;
        -moz-border-radius: 0px;
           	border-radius: 0px;
 }
 
 .quick-button.metro p {
-	text-align: left;
+	text-align: center;
 	margin-top: 20px;
 }
 
@@ -1094,7 +1096,7 @@ ul.messages li .message {
 }
 
 .quick-button.metro i {
-	font-size: 64px;
+	font-size: 128px;
 	text-align: center !important;
 }
 
