@@ -24,33 +24,39 @@
 			</noscript>
 			
 <!-- start: Content -->
-			<div id="content" class="span10">
+			<div id="divje" width="100%" height="100%">
+			<div id="content" class="span10" style="padding: 0 !important">
 			
 			{include 'view/cms/Assets/breadcrumb.tpl'}		
 		
 			<div class="row-fluid">	
-
-				<a class="quick-button metro yellow span2">
-					<i class="icon-group"></i>
-					<p>Users</p>
-					<span class="badge">237</span>
-				</a>
-				<a class="quick-button metro red span2">
-					<i class="icon-comments-alt"></i>
-					<p>Comments</p>
-					<span class="badge">46</span>
-				</a>
-				<a class="quick-button metro pink span2">
-					<i class="icon-envelope"></i>
-					<p>Messages</p>
-					<span class="badge">88</span>
-				</a>
-				<a class="quick-button metro black span2">
-					<i class="icon-calendar"></i>
-					<p>Calendar</p>
-				</a>
 				
-				<div class="clearfix"></div>
+				<a class="quick-button metro blue span2" href="admin.php?controller=tag">
+					<i class="fa fa-envelope"></i>
+					<p>Tags</p>					
+				</a>
+				<a class="quick-button metro pink span2" href="admin.php?controller=wish">
+					<i class="fa fa-heart"></i>
+					<p>Wensen</p>
+				</a>
+				<a class="quick-button metro green span2" href="admin.php?controller=talent">
+					<i class="fa fa-star"></i>
+					<p>Talenten</p>
+				</a>
+				<a class="quick-button metro orange span2" href="#">
+					<i class="fa fa-exchange"></i>
+					<p>Matches</p>
+				</a>
+				<a class="quick-button metro red span2" href="admin.php?controller=registration&action=index">
+					<i class="fa fa-user-plus"></i>
+					<p>Registraties</p>
+				</a>
+				<a class="quick-button metro yellow span2" href="admin.php?controller=user&action=index">
+					<i class="fa fa-group"></i>
+					<p>Gebruikers</p>
+				</a>
+			
+				
 								
 			</div><!--/row-->
 			
