@@ -1,6 +1,4 @@
 <?php
-include_once ('Model/CMS/registrationModel.php');
-
 class RegistrationController{
 	private $succesfull = 0;
 	
@@ -17,6 +15,8 @@ class RegistrationController{
 	
 	function Index($smarty)
 	{
+		include_once ('Model/CMS/registrationModel.php');
+		
 		if ($smarty == null) {
 			global $smarty;
 		}

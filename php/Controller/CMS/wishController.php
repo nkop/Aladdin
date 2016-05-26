@@ -1,5 +1,4 @@
 <?php
-include_once ('Model/CMS/wishesModel.php');
 include_once ('Model/wish.class.php');
 
 class WishController{
@@ -18,6 +17,8 @@ class WishController{
 	
 	function Index($smarty)
 	{
+		include_once ('Model/CMS/wishesModel.php');
+		
 		if ($smarty == null) {
 			global $smarty;
 		}

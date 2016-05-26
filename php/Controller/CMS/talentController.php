@@ -1,5 +1,4 @@
 <?php
-include_once ('Model/CMS/talentsModel.php');
 include_once ('Model/talent.class.php');
 
 class TalentController{
@@ -18,6 +17,8 @@ class TalentController{
 	
 	function Index($smarty)
 	{
+		include_once ('Model/CMS/talentsModel.php');
+		
 		if ($smarty == null) {
 			global $smarty;
 		}

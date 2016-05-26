@@ -1,5 +1,8 @@
 <?php
+include_once '/../DB/Database.class.php';
+
 class TagsModel{
+	
 	function getOpenTags()
 	{
 		$tagarray = array();

@@ -1,5 +1,6 @@
 <?php
-include "Model/talent.class.php";
+//include "Model/talent.class.php";
+include_once '/../DB/Database.class.php';
 
 class TalentsModel{
 	function getOpenTalents()
