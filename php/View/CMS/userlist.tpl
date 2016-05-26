@@ -56,17 +56,20 @@
 						  <td>{$user->email}</td>
 						  <form action="Controller/CMS/Handlers/userHandler.php" method="POST">
 						   <input type="hidden" name="userID" id="userID" value="{$user->accountid}">
-						   <input type="hidden" name="banStatus" id="banStatus" value="{$user->ban}">
+						   <input type="hidden" name="banStatus" id="banStatus" value="{$user->rechten}">
 						  <td class="center">
 						 
-								<label><input type="submit" class="btn btn-danger"  name="ban" value="Wijzig status" onclick="return confirm('Weet je zeker dat je deze gebruiker wil blokkeren?')"></label>
+								<label><input type="submit" class="btn btn-danger"  name="ban" value="Wijzig status" onclick="return confirm('Weet je zeker dat je de blokkeerstatus van deze gebruiker wil wijzigen?')"></label>
                  				</form>
                  			<td>
-                 			{if $user->ban == 0}
+                 			{if $user->rechten != 4 && $user->rechten != 3}
                  			Open
                  			{/if}
-                 			{if $user->ban == 1}
+                 			{if $user->rechten == 4}
                  			Geblokkeerd
+                 			{/if}
+                 			{if $user->rechten == 3}
+                 			Inactief
                  			{/if}
                  			</td>
 						  </tr>

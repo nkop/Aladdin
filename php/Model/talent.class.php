@@ -3,8 +3,8 @@ Class Talent{
 	//define porperties
 	public $talentText;
 	public $talentStatus;
-	public $talentTags;
+	public $talentTags = array();
 	public $talentId;
-
+	
 }
 ?>

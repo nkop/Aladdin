@@ -35,6 +35,12 @@
 					  <strong>Error!</strong> gebruikersnaam en wachtwoord komen niet overeen!
 					</div>
 			{/if}
+			{if $banned}
+	            	<div class='alert alert-danger'>
+					  <strong>Error!</strong> je account is geblokkeerd!
+					</div>
+			{/if}
+			
                 <form class="reg-page" action="Controller/Handlers/userloginHandler.php" method="post">
                     <div class="reg-header">
                         <h2>Login</h2>

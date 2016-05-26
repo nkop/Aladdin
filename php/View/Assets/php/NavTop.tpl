@@ -23,6 +23,10 @@
                     <li class="topbar-devider"></li>-->
                     <li><a href="index.php?controller=faq&action=index">Help</a></li>
                     <li class="topbar-devider"></li>
+                    {if $isAdmin}
+                    <li><a href="admin.php?controller=dashboard&action=index">CMS</a></li>
+                    <li class="topbar-devider"></li>
+                    {/if}
                     {if ($text =='Logout')}
  					<li><a href='index.php?controller=login&action=logout'>Logout</a></li>
  					<li class="topbar-devider"></li>
