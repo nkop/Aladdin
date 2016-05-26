@@ -19,5 +19,10 @@ class MatchesController{
 			global $smarty;
 		}
 		
+		$matchesmodel = new MatchesModel();
+		$matches = $matchesmodel->GatherData();
+		
+		$smarty->assign('matches', $matches);
+		$smarty->display('../view/cms/matches.tpl');
 	}
 }
