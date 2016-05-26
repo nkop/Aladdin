@@ -16,6 +16,7 @@ require('Controller/CMS/userController.php');
 require('Controller/CMS/editRegulationsController.php');
 require('Controller/CMS/registrationController.php');
 require('Controller/CMS/cmsLoginController.php');
+require ('Controller/CMS/sponsorController.php');
 // require('Controller/CMS/lifetimeWishController.php');
 
 $controller;
