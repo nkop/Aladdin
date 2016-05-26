@@ -7,7 +7,7 @@
 						<li><a href="admin.php?controller=wish"><i class="icon-heart"></i><span class="hidden-tablet"> Wensen </span></a></li>
 						<li><a href="admin.php?controller=talent"><i class="icon-star"></i><span class="hidden-tablet"> Talenten </span></a></li>
 						<li><a href="admin.php?controller=registration"><i class="icon-user"></i><span class="hidden-tablet"> Registraties </span></a></li>
-						<li><a href="#"><i class="icon-user"></i><span class="hidden-tablet"> Gebruikers </span></a></li>						
+						<li><a href="admin.php?controller=user"><i class="icon-user"></i><span class="hidden-tablet"> Gebruikers </span></a></li>						
 <!-- 						<li> -->
 <!-- 							<a class="dropmenu" href="#"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Grafieken </span></a> -->
 <!-- 							<ul> -->

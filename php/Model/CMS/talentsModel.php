@@ -1,4 +1,6 @@
 <?php
+include "Model/talent.class.php";
+
 class TalentsModel{
 	function getOpenTalents()
 	{
@@ -35,6 +37,25 @@ class TalentsModel{
 			$sql_query = "UPDATE `talent` SET `status` = '5' WHERE `talentid` = ".$talentID.";";
 		}
 		$mysqli->query($sql_query);
+	}
+	
+	function getTags($talentID)
+	{
+		$db = Database::getInstance ();
+		$mysqli = $db->getConnection ();
+		$tagArray = array();
+		$sql_query = "select * from talent_has_tag where talent_talentid = ".$talentID;
+		$result = $mysqli->query ( $sql_query );
+		while ( $row = $result->fetch_object () ) {
+			$sql_query2 = "select * from tag where tagid = " . $row->tag_tagid;
+			$result2 = $mysqli->query ( $sql_query2 );
+			
+			while ( $row2 = $result2->fetch_object () ) {
+			array_push ( $tagArray, $row2->tagnaam);
+			}			
+		}	
+		
+		return $tagArray;
 	}
 }
 

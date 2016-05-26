@@ -7,16 +7,14 @@ include "talent.class.php";
 class WishesAndTalentsModel {
 	
 	function getConnection() {
-		require_once 'db/database.class.php';
+		require_once 'DB/Database.class.php';
 		$db = Database::getInstance();
 		$sql = $db->getConnection();
 		return $sql;
 	}
-
 	
 	function getUserWishes($userName) {
-		$db = Database::getInstance();
-		$mysqli = $db->getConnection();
+		$mysqli = $this->getConnection();
 		$wishArray = array();
 		if(isset($userName)){
 			$sql_query = "select wens.tekst,status.status,wens.wensenid from wens left join status on wens.status = status.statusid left join account on wens.plaatser = account.accountid where account.gebruikersnaam= '$userName' and (status.statusid=1 or status.statusid=6)";

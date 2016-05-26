@@ -1,6 +1,6 @@
 <?php
 
-require_once 'Model/wishesAndTalentsModel.php';
+
 
 class WishesController {
 	
@@ -10,10 +10,12 @@ class WishesController {
 	//$myarray[2] = "ik wil graag maserati rijden";
 	
 	function index() {
-
+		require_once 'Model/wishesAndTalentsModel.php';
 		global $smarty;
 		$wishesModel = new WishesAndTalentsModel();
 
+		LoginModel.isAuthenticated('admin');
+		
 		if(isset($_SESSION['userName'])){
 			
 			$userWishes = $wishesModel->getUserWishes($_SESSION['userName']);

@@ -3,6 +3,7 @@
  * @author Ferry Zijlmans
  */
 //include the classes
+//php auto loader
 include 'Controller/Smarty/header.php';
 require('Controller/loginController.php');
 require('Controller/registerController.php');
@@ -19,6 +20,7 @@ require('Controller/regulationsController.php');
 require('Controller/contactController.php');
 require('Controller/wishesController.php');
 require('Controller/talentsController.php');
+
 $controller;
 $actionName;
 $id;

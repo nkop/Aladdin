@@ -35,5 +35,15 @@ class TagsModel{
 			$sql_query = "UPDATE `tag` SET `status` = '5' WHERE `tagid` = ".$tagID.";";
 		}
 		$mysqli->query($sql_query);
+		
+	}
+	
+	function addTag($tagName)
+	{
+		$db = Database::getInstance ();
+		$mysqli = $db->getConnection();		
+		$tagName = $mysqli->real_escape_string ( $tagName );	
+		$query = "INSERT INTO `tag`(`tagnaam`, `status`) VALUES ('$tagName', '1')";
+		$mysqli->query($query);
 	}
 }

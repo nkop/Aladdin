@@ -28,6 +28,7 @@ class Database
 		if(!self::$_instance) { // If no instance then make one
 			self::$_instance = new self();
 		}
+		
 		return self::$_instance;
 	}
 	
@@ -140,6 +141,22 @@ class Database
 		$result = mysqli_query($this->_connection, $query);
 		
 		return mysqli_fetch_object($result)->email;
+	}
+	
+	function CheckAdminByMail($email){
+		$safe_email = mysqli_real_escape_string($this->_connection, $email);
+		$query = "select rechten from account where email='$safe_email'";
+		$result = mysqli_query($this->_connection, $query);
+		while ( $row = $result->fetch_object () ) {
+            $rights = $row->rechten;
+		}
+		
+		if($rights == 1){
+			return true;
+		}else{
+			return false;
+		}
+		
 	}
 	
 }

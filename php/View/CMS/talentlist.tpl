@@ -52,8 +52,8 @@
 						<table class="table table-striped table-bordered bootstrap-datatable datatable">
 						  <thead>
 							  <tr>
-								  <th>Talentnummer</th>
 								  <th>Talent</th>
+								  <th>Tags</th>
 								  <th>&nbsp;</th>
 							  </tr>
 						  </thead>   
@@ -61,8 +61,12 @@
 						  
 						  {foreach from=$talents item=talent}
 						  <tr>
-						  <td>{$talent->talentid}</td>
 						  <td>{$talent->talenttekst}</td>
+						  <td>
+						  {foreach from=$talent->talentTags item=tag}
+						  {$tag},
+						  {/foreach}
+						  </td>
 						  <form action="Controller/CMS/Handlers/talentHandler.php" method="POST">
 						   <input type="hidden" name="talentID" id="talentID" value="{$talent->talentid}">
 						  <td class="center">

@@ -51,8 +51,8 @@
 						<table class="table table-striped table-bordered bootstrap-datatable datatable">
 						  <thead>
 							  <tr>
-								  <th>Wensnummer</th>
 								  <th>Wens</th>
+								  <th>Tags</th>
 								  <th>Creatiedatum</th>
 								  <th>&nbsp;</th>
 							  </tr>
@@ -61,8 +61,12 @@
 						  
 						  {foreach from=$wishes item=wish}
 						  <tr>
-						  <td>{$wish->wensenid}</td>
 						  <td>{$wish->tekst}</td>
+						  <td>
+						  {foreach from=$wish->tags item=tag}
+						  {$tag},
+						  {/foreach}
+						  </td>
 						  <td>{$wish->creatie_datum}</td>
 						  <form action="Controller/CMS/Handlers/wishHandler.php" method="POST">
 						   <input type="hidden" name="wishID" id="wishID" value="{$wish->wensenid}">
