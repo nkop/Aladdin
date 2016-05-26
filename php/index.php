@@ -53,6 +53,9 @@ else{
 	$id = null;
 }
 
+$navbar = new NavBarController();
+$navbar->Index();
 $controller->{$actionName}($id);
+
 
 ?>
