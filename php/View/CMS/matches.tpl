@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Talentenlijst</title>
+	<title>Match Overzicht</title>
 {include 'view/cms/Assets/head.tpl'}	
 </head>
 
@@ -38,11 +38,11 @@
 					
 					{if $Succesfull == 1}
 		                <div class="alert alert-success">
-						  <strong>Het talent is geaccepteerd!</strong> 
+						  <strong>De match is goedgekeurd!</strong> 
 						</div>
 		                {elseif $Succesfull == 2}
 		                <div class="alert alert-danger">
-						  <strong>Het talent is geweigerd!</strong>
+						  <strong>De match is afgekeurd!</strong>
 						</div>
 		                {/if}
 		                
