@@ -20,7 +20,7 @@
 		{foreach from=$regels item=regel}
 		{if $regel.categorie_id == 1}
 		<h2 class="heading-sm">
-			<span>- {$regel.tekst}</span>						
+			<span>{$regel.tekst}</span>						
 		</h2>
 		{/if}
 			{/foreach}
