@@ -6,6 +6,7 @@
 						<li><a href="admin.php?controller=tag"><i class="icon-envelope"></i><span class="hidden-tablet"> Tags </span></a></li>
 						<li><a href="admin.php?controller=wish"><i class="icon-heart"></i><span class="hidden-tablet"> Wensen </span></a></li>
 						<li><a href="admin.php?controller=talent"><i class="icon-star"></i><span class="hidden-tablet"> Talenten </span></a></li>
+						<li><a href="admin.php?controller=matches"><i class="fa fa-exchange"></i><span class="hidden-tablet">  Matches </span></a></li>
 						<li><a href="admin.php?controller=registration"><i class="icon-user"></i><span class="hidden-tablet"> Registraties </span></a></li>
 						<li><a href="admin.php?controller=user"><i class="icon-user"></i><span class="hidden-tablet"> Gebruikers </span></a></li>
 						<li><a href="admin.php?controller=sponsor"><i class="icon-user"></i><span class="hidden-tablet"> Sponsors </span></a></li>						

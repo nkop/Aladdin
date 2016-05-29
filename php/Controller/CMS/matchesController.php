@@ -1,4 +1,7 @@
 <?php
+/*
+ * @author Niels Kop
+ */
 class MatchesController{
 	private $__succesfull = 0;
 	
@@ -21,7 +24,6 @@ class MatchesController{
 		
 		$matchesmodel = new MatchesModel();
 		$matches = $matchesmodel->GatherData();
-		var_dump($matches);
 		
 		$smarty->assign('succesfull', $this->__succesfull);
 		$smarty->assign('matches', $matches);

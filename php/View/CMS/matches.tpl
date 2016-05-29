@@ -33,7 +33,7 @@
 			<div class="row-fluid sortable">		
 				<div class="box span12">
 					<div class="box-header" data-original-title>
-						<h2><i class="halflings-icon user"></i><span class="break"></span>Talenten</h2>
+						<h2><i class="halflings-icon user"></i><span class="break"></span>Matches</h2>
 					</div>
 					
 					{if $succesfull == 1}
@@ -42,7 +42,7 @@
 						</div>
 		                {elseif $succesfull == 2}
 		                <div class="alert alert-danger">
-						  <strong>De match is afgekeurd!</strong>
+						  <strong>Er is wat misgegaan, probeer het zometeen opnieuw...</strong>
 						</div>
 		                {/if}
 		                
@@ -52,6 +52,7 @@
 						<table class="table table-striped table-bordered bootstrap-datatable datatable">
 						  <thead>
 							  <tr>
+							  	  <th>Match ID</th>
 								  <th>Wens</th>
 								  <th>Talent</th>
 								  <th>&nbsp;</th>
@@ -61,17 +62,14 @@
 						  
 						  {foreach from=$matches item=match}
 						  <tr>
-						  <td>{$talent->talenttekst}</td>
-						  <td>
-						  {foreach from=$talent->talentTags item=tag}
-						  {$tag},
-						  {/foreach}
-						  </td>
-						  <form action="Controller/CMS/Handlers/talentHandler.php" method="POST">
-						   <input type="hidden" name="talentID" id="talentID" value="{$talent->talentid}">
+						  <td>{$match.matchID}</td>
+						  <td>{$match.wish}</td>
+						  <td>{$match.talent}</td>
+						  <form action="Controller/CMS/Handlers/matchesHandler.php" method="POST">
+						   <input type="hidden" name="matchID" id="matchID" value="{$match.matchid}" required="required">
 						  <td class="center">
 						 
-								<button type="submit" name="submit" class="btn btn-success">
+								<button type="submit" name="accept" class="btn btn-success">
                  				<i class="halflings-icon white ok"></i></button>
 						  
 						  		<button type="submit" name="decline" class="btn btn-danger">
