@@ -21,7 +21,9 @@ class MatchesController{
 		
 		$matchesmodel = new MatchesModel();
 		$matches = $matchesmodel->GatherData();
+		var_dump($matches);
 		
+		$smarty->assign('succesfull', $this->__succesfull);
 		$smarty->assign('matches', $matches);
 		$smarty->display('../view/cms/matches.tpl');
 	}

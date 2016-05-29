@@ -36,11 +36,11 @@
 						<h2><i class="halflings-icon user"></i><span class="break"></span>Talenten</h2>
 					</div>
 					
-					{if $Succesfull == 1}
+					{if $succesfull == 1}
 		                <div class="alert alert-success">
 						  <strong>De match is goedgekeurd!</strong> 
 						</div>
-		                {elseif $Succesfull == 2}
+		                {elseif $succesfull == 2}
 		                <div class="alert alert-danger">
 						  <strong>De match is afgekeurd!</strong>
 						</div>
