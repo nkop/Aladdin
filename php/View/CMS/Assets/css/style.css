@@ -1013,7 +1013,7 @@ ul.messages li .message {
 	border: 1px solid #ddd;
 	margin-bottom: -1px;
   	padding: 30px 0px 10px 0px;
-	font-size: 28px;
+	font-size: 22px;
   	background-color: #fafafa;
   	background-image: -moz-linear-gradient(top, #fafafa, #efefef);
   	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fafafa), to(#efefef));
@@ -1041,8 +1041,9 @@ ul.messages li .message {
 }
 
 .quick-button:hover {
-	text-decoration: none;
-	border-color: #a5a5a5;
+	text-decoration: underline;
+	background-color: aqua;
+	border-color: #ffffff;
 	color: #444444;
 	text-shadow: 0 1px 0px rgba(255, 255, 255, 1);
 	-webkit-transition: all 0.3s ease;
@@ -1067,7 +1068,7 @@ ul.messages li .message {
 
 .quick-button i {
 	font-size: 32px;
-	padding-top: 1em;
+	padding-top: 20%;
 }
 
 /* Quick Buttons Metro Style
@@ -1080,7 +1081,7 @@ ul.messages li .message {
 	filter: none;
 	margin-left: 0px !important;
 	width: 33.3334%;
-	height: 17.5em !important;
+	height: 50% !important;
 	-webkit-border-radius: 0px;
        -moz-border-radius: 0px;
           	border-radius: 0px;
@@ -1089,7 +1090,7 @@ ul.messages li .message {
 .quick-button.metro p {
 	text-align: center;
 	margin-top: 20px;
-	text-size: 1.5em !important	;
+	padding-bottom: 30%;
 }
 
 .quick-button.metro:hover {
