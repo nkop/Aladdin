@@ -5,7 +5,7 @@ ini_set('session.use_trans_sid', '0');
 
 
 class NavBarController{
-private $loginoptions = true; 
+private $loginoptions = true;
 private $isAdmin = false;
 private $text = "";
 
@@ -18,6 +18,7 @@ if (isset($_SESSION['email'])){
 		$db = Database::getInstance ();
 		if($db->CheckAdminByMail($_SESSION['email'])){
 			$this->isAdmin = true;
+			$_SESSION['rights'] = 1;
 		}
 
 	}

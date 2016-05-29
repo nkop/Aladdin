@@ -16,6 +16,8 @@ require('Controller/CMS/userController.php');
 require('Controller/CMS/editRegulationsController.php');
 require('Controller/CMS/registrationController.php');
 require('Controller/CMS/cmsLoginController.php');
+require ('Controller/CMS/sponsorController.php');
+require('Controller/CMS/Handlers/accessHandler.php');
 // require('Controller/CMS/lifetimeWishController.php');
 
 $controller;
@@ -31,10 +33,10 @@ if(isset($_GET["controller"]))
 		$controller = new $controllerName();  //controller = new TodoController();
 		else
 			//TODO: open 404 page
-			$controller = new CmsLoginController();
+			$controller = new DashboardController();
 }
 else{
-	$controller = new CmsLoginController();
+	$controller = new DashboardController();
 }
 if(isset($_GET["action"]))
 {
@@ -50,6 +52,12 @@ if(isset($_GET["id"])){
 else{
 	$id = null;
 }
+$accessHandler = new AccessHandler();
+if($accessHandler->CheckAccess()){
+	$controller->{$actionName}($id);
+}else{
+	header('location: index.php');
+}
 
-$controller->{$actionName}($id);
+
 ?>
