@@ -1,32 +1,39 @@
 <?php
 include_once ('Smarty/header.php');
-include ('Model/DB/Database.class.php');
+
 ini_set('session.use_trans_sid', '0');
 
-$loginoptions = true; 
-$isAdmin = false;
+
+class NavBarController{
+private $loginoptions = true; 
+private $isAdmin = false;
+private $text = "";
+
+function Index(){
 session_start();
 if (isset($_SESSION['email'])){
 	if(strlen($_SESSION['email'])> 0){
-		$text = "Logout";
-		$loginoptions = false;
-		$isAdmin = true;
+		$this -> text = "Logout";
+		$this->loginoptions = false;
 		$db = Database::getInstance ();
 		if($db->CheckAdminByMail($_SESSION['email'])){
-			$isAdmin = true;
+			$this->isAdmin = true;
 		}
 
 	}
 	else{
-		$text = "Login";
+		$this->text = "Login";
 	}
 }
 else{
-	$text = "Login";
+	$this->text = "Login";
 	$_SESSION['email'] = "";
 }
-$smarty->assign('text', $text);
-$smarty->assign('isAdmin', $isAdmin);
-$smarty->assign('loginoptions', $loginoptions);
+global $smarty;
+$smarty->assign('text', $this->text);
+$smarty->assign('isAdmin', $this->isAdmin);
+$smarty->assign('loginoptions', $this->loginoptions);
 //$smarty->display('../View/php/NavTop.tpl');
+}
+}
 ?>
