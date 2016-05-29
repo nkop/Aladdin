@@ -15,7 +15,7 @@ Class MatchesHandler{
 	public function __construct(){
 		$this->__matchModel = new MatchesModel();
 		
-		if(isset($_POST["succes"])){
+		if(isset($_POST["accept"])){			
 			if($this->__matchModel->AcceptMatch($_POST["matchID"])){
 				header($this->__succes);
 			} else { header($this->__failure); }			

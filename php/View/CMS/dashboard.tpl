@@ -31,8 +31,8 @@
 		
 			<div class="row-fluid">	
 				
-				<a class="quick-button metro blue span2" href="admin.php?controller=tag">
-					<i class="fa fa-envelope"></i>
+				<a class="quick-button metro orange span2" href="admin.php?controller=tag">
+					<i class="fa fa-filter"></i>
 					<p>Tags</p>					
 				</a>
 				<a class="quick-button metro pink span2" href="admin.php?controller=wish">
@@ -43,7 +43,7 @@
 					<i class="fa fa-star"></i>
 					<p>Talenten</p>
 				</a>
-				<a class="quick-button metro orange span2" href="admin.php?controller=matches&action=index">
+				<a class="quick-button metro blue span2" href="admin.php?controller=matches&action=index">
 					<i class="fa fa-exchange"></i>
 					<p>Matches</p>
 				</a>

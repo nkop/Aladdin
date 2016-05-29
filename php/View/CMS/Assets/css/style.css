@@ -1013,7 +1013,7 @@ ul.messages li .message {
 	border: 1px solid #ddd;
 	margin-bottom: -1px;
   	padding: 30px 0px 10px 0px;
-	font-size: 14px;
+	font-size: 28px;
   	background-color: #fafafa;
   	background-image: -moz-linear-gradient(top, #fafafa, #efefef);
   	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fafafa), to(#efefef));
@@ -1067,6 +1067,7 @@ ul.messages li .message {
 
 .quick-button i {
 	font-size: 32px;
+	padding-top: 1em;
 }
 
 /* Quick Buttons Metro Style
@@ -1078,8 +1079,8 @@ ul.messages li .message {
 	text-shadow: 0 1px 1px rgba(0, 0, 0, .25);
 	filter: none;
 	margin-left: 0px !important;
-	width: 33.3%;
-	height: 50% !important;
+	width: 33.3334%;
+	height: 17.5em !important;
 	-webkit-border-radius: 0px;
        -moz-border-radius: 0px;
           	border-radius: 0px;
@@ -1088,6 +1089,7 @@ ul.messages li .message {
 .quick-button.metro p {
 	text-align: center;
 	margin-top: 20px;
+	text-size: 1.5em !important	;
 }
 
 .quick-button.metro:hover {
