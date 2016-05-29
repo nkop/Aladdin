@@ -43,7 +43,7 @@
 					<i class="fa fa-star"></i>
 					<p>Talenten</p>
 				</a>
-				<a class="quick-button metro orange span2" href="#">
+				<a class="quick-button metro orange span2" href="admin.php?controller=matches&action=index">
 					<i class="fa fa-exchange"></i>
 					<p>Matches</p>
 				</a>
