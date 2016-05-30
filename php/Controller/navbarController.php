@@ -16,6 +16,7 @@ if (isset($_SESSION['email'])){
 		$this -> text = "Logout";
 		$this->loginoptions = false;
 		$db = Database::getInstance ();
+		//Check if logged in user is admin, if yes: set rights in session so acces is granted to CMS
 		if($db->CheckAdminByMail($_SESSION['email'])){
 			$this->isAdmin = true;
 			$_SESSION['rights'] = 1;
