@@ -9,7 +9,7 @@
 						<li><a href="admin.php?controller=matches"><i class="icon-exchange"></i><span class="hidden-tablet">  Matches </span></a></li>
 						<li><a href="admin.php?controller=registration"><i class="fa fa-user-plus"></i><span class="hidden-tablet"> Registraties </span></a></li>
 						<li><a href="admin.php?controller=user"><i class="icon-group"></i><span class="hidden-tablet"> Gebruikers </span></a></li>
-						<li><a href="admin.php?controller=sponsor"><i class="icon-money"></i><span class="hidden-tablet"> Sponsors </span></a></li>						
+						<li><a href="admin.php?controller=editSponsorItems"><i class="icon-money"></i><span class="hidden-tablet"> Sponsors </span></a></li>						
 <!-- 						<li> -->
 <!-- 							<a class="dropmenu" href="#"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Grafieken </span></a> -->
 <!-- 							<ul> -->
