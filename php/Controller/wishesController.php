@@ -14,7 +14,6 @@ class WishesController {
 		global $smarty;
 		$wishesModel = new WishesAndTalentsModel();
 
-		LoginModel.isAuthenticated('admin');
 		
 		if(isset($_SESSION['userName'])){
 			
