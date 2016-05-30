@@ -68,7 +68,7 @@
                     <h4>Wachtwoord vergeten ?</h4>
                     <p><a class="color-green" href="index.php?controller=recovery&action=Index">Klik hier</a> om uw wachtwoord te resetten.</p>
                     <h4>Nog geen account ?</h4>
-                    <p><a class="color-green" href="../Controller/RegisterController.php">Klik hier</a> om een account aan te maken.</p>
+                    <p><a class="color-green" href="index.php?controller=register&action=Index">Klik hier</a> om een account aan te maken.</p>
 
                 </form>
             </div>
