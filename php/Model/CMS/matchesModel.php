@@ -6,6 +6,7 @@
 include_once '/../DB/Database.class.php';
 
 class MatchesModel {
+	// gathers all the matchids, wishes and talents from matches that haven't been approved yet
 	function GatherData() {
 		$db = Database::getInstance ();
 		$sql = $db->getConnection ();
@@ -22,7 +23,7 @@ WHERE m.status = 1";
 		$db = Database::getInstance ();
 		$sql = $db->getConnection ();
 		
-		$query = "UPDATE `match` SET `status` = 2 WHERE matchid = " + $matchid;
+		$query = "UPDATE `match` SET `status` = 2 WHERE matchid = '$matchid'";
 		return $sql->query($query);
 	}
 	// declines a match by setting the status to 3: declined
@@ -30,7 +31,7 @@ WHERE m.status = 1";
 		$db = Database::getInstance ();
 		$sql = $db->getConnection ();
 		
-		$query = "UPDATE `match` SET `status` = 3 WHERE matchid = " + $matchid;;
+		$query = "UPDATE `match` SET `status` = 3 WHERE matchid = '$matchid'";
 		return $sql->query($query);
 	}
 }
