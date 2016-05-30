@@ -5,6 +5,7 @@ class RecoveryController{
   private $RecoverError = false;
   private $RecoverSuccess = false;
 
+//Set any eventual messages
   function SetMessage(){
     if(isset($_GET['status'])){
     $status = strtolower(htmlspecialchars($_GET['status']));
@@ -18,7 +19,7 @@ class RecoveryController{
           }
         }
   }
-
+//Show recovery page with eventual messages
   function Index(){
     global $smarty;
     $this->SetMessage();

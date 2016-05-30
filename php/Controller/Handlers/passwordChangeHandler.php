@@ -1,4 +1,5 @@
 <?php
+//Call self
 $controller = new PasswordChangeHandler();
 
 class PasswordChangeHandler{
@@ -8,7 +9,7 @@ private $currentPassword = "";
 private $newPassword = "";
 private $newPasswordConfirm = "";
 private $updatePasswordModel = "";
-
+//Call needed functions to change password, If success call subpassword
   public function __construct(){
   	include '../../Model/DB/updatePasswordModel.php';
     $this->updatePasswordModel = new UpdatePasswordModel();
@@ -23,7 +24,7 @@ private $updatePasswordModel = "";
     }
   }
 
-
+//Check if passwords are equal, check if current password is equal
   function CheckPassword(){
     if($this->newPassword !== $this->newPasswordConfirm){
       echo "niet gelijk";
@@ -36,7 +37,7 @@ private $updatePasswordModel = "";
     }
     return true;
   }
-
+//Substitute password
   function SubPassword(){
     if($this->updatePasswordModel->UpdatePassword($this->email, $this->newPasswordConfirm)){
       header('Location: ../../index.php?controller=personalInfo&action=Index&status=success');
