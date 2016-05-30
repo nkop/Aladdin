@@ -3,7 +3,7 @@
  * @author Ferry Zijlmans
  */
 include_once 'Model/CMS/newsItem.class.php';
-
+ 
 class EditNewsItemsController{
 	private $newsItems = array();
 	private $succesfull = 0;

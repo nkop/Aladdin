@@ -29,7 +29,7 @@
 		                        
 <!-- 		                        AANPASSEN CONTOLLER ENZO -->
 		                        
-		                            Sponsor {$newsItem->titel}
+		                            Sponsor {$sponsor->naam}
 		                            <small>Beheer</small>
 		                        </h1>
 		                    </div>
@@ -40,37 +40,32 @@
 						
 <!-- 						EDIT HANDLER -->
 
-									  <form action="Controller/CMS/Handlers/newsItemHandler.php" enctype="multipart/form-data" method="post">
+									  <form action="Controller/CMS/Handlers/sponsorHandler.php" enctype="multipart/form-data" method="post">
 									  <div class="tab-content">
 									    <div id="overzicht" class="tab-pane fade in active">
 									    			<p>Pas hier je sponsor aan</p>
-									    			<div class="form-group">
-									    			
-<!-- 									    			ONDERSTAANDE EVEN AANPASSEN MET ENTRIES -->
-									    			
-						                                <label>Naam</label>
-						                                <p><strong>{$sponsor->naam}</strong></p>
-						                            </div>
 									      			<!-- Foto / video -->
 													<div class="form-group">
 						                                <label>Foto</label>
-						                                <input name="thumbnailPicture" id="thumbnailPicture" type="file" accept="image/*">
-						                                <input type="hidden" name="thumbnailPictureHidden" value='{$newsItem->thumbnail}'>
+														<span>{$sponsor->afbeelding}</span>
+						                                <input name="afbeelding" id="afbeelding" type="file" accept="image/*">
+						                                <input type="hidden" name="afbeeldingHidden" value='{$sponsor->afbeelding}'>
 						                            </div>
 						                            <div class="form-group">
 						                                <label>Naam</label>
-						                                	<input name="sponsorNaam" id="sponsorNaam" class="form-control">
+						                                	<input name="naam" id="naam" class="form-control" value='{$sponsor->naam}'>
 						                            </div>
 						                             <div class="form-group">
 						                                <label>URL</label>
-						                                	<input name="sponsorURL" id="sponsorURL" class="form-control">
+						                                	<input name="url" id="url" class="form-control" value='{$sponsor->url}'>
 						                            </div>
 						                              <div class="form-group">
 						                                <label>Cijfer</label>
-						                                	<input type="number" name="sponsorURL" id="sponsorURL" class="form-control">
+						                                	<input type="number" name="cijfer" id="cijfer" class="form-control" value='{$sponsor->cijfer}'>
 						                            </div>
 									    </div>
 									  </div>
+									  <input type="hidden" name="sponsorID" value='{$sponsor->sponsor_id}'>
 									<button type="submit">Opslaan</button>		    
 									</form>
 								</div>

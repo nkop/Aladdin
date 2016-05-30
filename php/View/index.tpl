@@ -23,7 +23,8 @@
 			<!-- First slide -->
 			<div class="ls-slide" data-ls="slidedelay:4500;transition2d:25;">
 				<img src="view/assets/img/sliders/layer/bg1.jpg" class="ls-bg"
-					alt="Slide background" /> <img src="view/images/jasmine.png"
+					alt="Slide background" /> 
+					<img src="view/images/jasmine.png"
 					alt="Slider image" class="ls-s-1" style="top: 62px; left: 29%;"
 					data-ls="offsetxin:left; durationin:1500; delayin:1500; fadein:false; offsetxout:left; durationout:1000; fadeout:false;">
 
@@ -68,6 +69,8 @@
 					alt="Slide background">
 			</div>
 			<!--End Third Slide-->
+			
+			
 		</div>
 		<!--/layer_slider-->
 		<!--=== End Slider ===-->
@@ -219,33 +222,13 @@
 				<h2>Medemogelijk gemaakt door:</h2>
 			</div>
 			<div class="owl-clients-v1">
+			{foreach from=$sponsoren item=sponsor}	
 				<div class="item">
-					<img src="view/assets/img/clients4/1.png" alt="">
-				</div>
-				<div class="item">
-					<img src="view/assets/img/clients4/2.png" alt="">
-				</div>
-				<div class="item">
-					<img src="view/assets/img/clients4/3.png" alt="">
-				</div>
-				<div class="item">
-					<img src="view/assets/img/clients4/4.png" alt="">
-				</div>
-				<div class="item">
-					<img src="view/assets/img/clients4/5.png" alt="">
-				</div>
-				<div class="item">
-					<img src="view/assets/img/clients4/6.png" alt="">
-				</div>
-				<div class="item">
-					<img src="view/assets/img/clients4/7.png" alt="">
-				</div>
-				<div class="item">
-					<img src="view/assets/img/clients4/8.png" alt="">
-				</div>
-				<div class="item">
-					<img src="view/assets/img/clients4/9.png" alt="">
-				</div>
+					<a href="{$sponsor->url}" target="_BLANC">
+						<img src="{$sponsor->afbeelding|replace:'../../../':''}" alt="">
+					</a>
+				</div>				  
+			{/foreach}	
 			</div>
 			<!-- End Owl Clients v1 -->
 		</div>

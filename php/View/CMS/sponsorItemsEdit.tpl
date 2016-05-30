@@ -41,20 +41,20 @@
 		                <div class="alert alert-danger">
 						  <strong>Error!</strong> De gegevens zijn niet succesvol opgeslagen, probeer het later opnieuw.
 						</div>
-		                {/if}
+		                {/if}  
 		                
 <!-- 		           LINK HIERONDER AANPASSEN!!! -->
 
-		                <a href="admin.php?controller=editsponsors&action=NewsItem" class="btn btn_succes">Nieuwe Sponsor</a>
+		                <a href="admin.php?controller=editsponsor&action=sponsor" class="btn btn_succes">Nieuwe Sponsor</a>
 		                
 						<div class="box-content">
 						
 							<table class="table table-striped table-bordered bootstrap-datatable datatable">
 								<thead>
 									<tr>
-									<th>Sponsor:</th>
-									<th>Naam</th>
+									<th>Sponsor-naam:</th>
 									<th>URL</th>
+									<th>Cijfer</th>
 									<th>&nbsp;</th>
 									</tr>
 								</thead>   
@@ -62,14 +62,14 @@
 							
 <!-- 							HIERONDER OOK AANPASSEN! CONTROLLER SHIZZLEEE -->
 								
-							 {foreach from=$newsItems item=newsItem}					  
+							{foreach from=$sponsoren item=sponsor}					  
 							<tr>
-								<td>{$newsItem->nieuwsitemid}</td>
-								<td>{$newsItem->titel}</td>
-								<td>{$newsItem->volledignaam}</td>
+								<td>{$sponsor->naam}</td>
+								<td>{$sponsor->url}</td>
+								<td>{$sponsor->cijfer}</td>
 								<td class="center">	
-								<a href="admin.php?controller=editnews&action=Delete&id={$newsItem->nieuwsitemid}" class="btn btn-danger confirm"><i class="halflings-icon white remove"></i></a>
-								<a href="admin.php?controller=editnews&action=NewsItem&id={$newsItem->nieuwsitemid}" class="btn btn-warning"><i class="halflings-icon white edit"></i></a>	  
+								<a href="admin.php?controller=editSponsor&action=Delete&id={$sponsor->sponsor_id}" class="btn btn-danger confirm"><i class="halflings-icon white remove"></i></a>
+								<a href="admin.php?controller=editSponsor&action=sponsor&id={$sponsor->sponsor_id}" class="btn btn-warning"><i class="halflings-icon white edit"></i></a>	  
 								</td>
 							</tr>
 							{/foreach}

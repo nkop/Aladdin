@@ -2,10 +2,14 @@
 /*
  * @author Ferry Zijlmans
  */
-include_once '/../DB/Database.class.php';
-include_once 'newsItem.class.php';
+
 
 class NewsItemModel{
+	
+	function __construct(){
+		include_once '/../DB/Database.class.php';
+		include_once 'newsItem.class.php';
+	}
 	
 	function GetAll(){
 		//get all nieuwsitems
