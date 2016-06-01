@@ -218,6 +218,11 @@ class WishesAndTalentsModel {
 									$counter++;
 									break;
 								}
+								if($existingMatch->wish->wishid == $match->wish->wishid
+										&& $existingMatch->status == 1 ){
+											$counter++;
+											break;
+								}
 								if(($existingMatch->talent->talentId == $match->talent->talentId 
 										&& $existingMatch->wish->wishid == $match->wish->wishid)) {
 											$counter++;

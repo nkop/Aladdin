@@ -85,11 +85,10 @@
 					</div>
 
 				</div><!--/span-->
-								<form class="form-horizontal"
-							action="Controller/CMS/Handlers/matchesHandler.php" method="post">
-							<input name="matchesgenerator" value="Genereer matches" id="matcher"
-								class="btn btn-primary" type="button"></input> 
-			</div><!--/row-->
+				<form action="Controller/CMS/Handlers/matchesHandler.php" method="post">
+      				<button name="matchesgenerator" value="Genereer matches" id="matcher" class="btn btn-primary">Genereer matches</button>
+      			</form>
+				</div><!--/row-->
 
 	</div><!--/.fluid-container-->
 	

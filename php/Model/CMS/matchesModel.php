@@ -3,6 +3,11 @@
  * @author Niels Kop
  */
 include_once '/../DB/Database.class.php';
+include_once "/../wish.class.php";
+include_once "/../tag.class.php";
+include_once "/../talent.class.php";
+include_once "/../match.class.php";
+
 class MatchesModel {
 	// gathers all the matchids, wishes and talents from matches that haven't been approved yet
 	function GatherData() {
@@ -40,25 +45,17 @@ class MatchesModel {
 		$db = Database::getInstance ();
 		$sql = $db->getConnection ();
 		
-		$query = "UPDATE `match` SET `status` = 3 WHERE matchid = '$matchid'";
+		$query = "UPDATE `match` SET `status` = 5 WHERE matchid = '$matchid'";
 		return $sql->query ( $query );
 	}
 	
-	function generateMatches(){
-		$possibleMatches = $this->getPossibleMatches();
-		
-		
-	}
-	
-	function getPossibleMatches() {
-		$db = Database::getInstance ();
-		$sql = $db->getConnection ();
+	function generateMatches() {
 		$foundMatch = false;
 		$possibleMatches = Array();
 		$wishArray = $this->getAllWishes();
 		$talentArray = $this->getAcceptedUserTalents();
 		$existingMatchesArray = $this->getAllMatches();
-		
+
 		foreach ($talentArray as $talent) {
 			$tagCounter = 0;
 			foreach ($wishArray as $wish){
@@ -78,15 +75,20 @@ class MatchesModel {
 											$counter++;
 											break;
 								}
+								if($existingMatch->wish->wishid == $match->wish->wishid
+										&& $existingMatch->status == 1 ){
+											$counter++;
+											break;
+								}
 								if(($existingMatch->talent->talentId == $match->talent->talentId
 										&& $existingMatch->wish->wishid == $match->wish->wishid)) {
 											$counter++;
 											break;
-										}
+								}											
 							}
 						}
 						if($counter==0){
-							insertPossibleMatch($match->talent->talentId,$match->wish->wishid);
+							$this->insertPossibleMatch($match->talent->talentId,$match->wish->wishid);
 							$foundMatch = true;
 							break;
 						}
@@ -105,12 +107,13 @@ class MatchesModel {
 			}
 		}
 		if($foundMatch){
-			getPossibleMatches();
+			$this->generateMatches();
 		}
 	}
 	
 	function getAllWishes() {
-		$mysqli = $this->getConnection();
+		$db = Database::getInstance ();
+		$mysqli = $db->getConnection ();
 		$wishArray = array();
 
 		$sql_query = "select wens.tekst,status.status,wens.wensenid
@@ -146,15 +149,16 @@ class MatchesModel {
 		
 	}
 	
-	function getUserTalents() {
-		$mysqli = $this->getConnection();
+	function getAcceptedUserTalents() {
+		$db = Database::getInstance ();
+		$mysqli = $db->getConnection ();
 		$talentArray = array();
 	
 		$sql_query = "select talent.talenttekst,status.status,talent.talentid
 		from talent
 		left join account on account.accountid = talent.account
 		left join status on status.statusid = talent.status
-		where  status.statusid=1 or status.statusid=6";
+		where status.statusid=6";
 			
 		$result = $mysqli->query($sql_query);
 
@@ -185,7 +189,8 @@ class MatchesModel {
 	}
 	
 	function getAllMatches() {
-		$mysqli = $this->getConnection();
+		$db = Database::getInstance ();
+		$mysqli = $db->getConnection ();
 		$matchArray = array();
 			$sql_query = "SELECT m.wensenid,m.talentid,m.status
 			FROM `match` as m left join talent as t on m.talentid = t.talentid";
@@ -211,18 +216,11 @@ class MatchesModel {
 	}
 	
 	function insertPossibleMatch($talentId,$wishId){
-		$mysqli = $this->getConnection();
+		$db = Database::getInstance ();
+		$mysqli = $db->getConnection ();
 		$talentId = $mysqli->real_escape_string ( $talentId );
 		$wishId = $mysqli->real_escape_string ( $wishId );
 		$query = "insert into `match`(wensenid,talentid) values($wishId,$talentId)";
-		return $mysqli->query ( $query );
-	}
-	
-	function insertPossibleDeclinedMatch($talentId,$wishId){
-		$mysqli = $this->getConnection();
-		$talentId = $mysqli->real_escape_string ( $talentId );
-		$wishId = $mysqli->real_escape_string ( $wishId );
-		$query = "insert into `match`(wensenid,talentid,status) values($wishId,$talentId,5)";
 		return $mysqli->query ( $query );
 	}
 }
