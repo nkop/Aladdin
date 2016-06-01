@@ -201,7 +201,7 @@ class WishesAndTalentsModel {
 		$wishArray = $this->getAllWishes($userName);
 
 		$talentArray = $this->getAcceptedUserTalents($userName);
-		$existingMatchesArray = $this->getAllMatches($userName,$talentArray);
+		$existingMatchesArray = $this->getAllMatches($userName);
 		foreach ($talentArray as $talent) {
 
 			foreach ($wishArray as $wish){
