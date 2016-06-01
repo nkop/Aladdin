@@ -45,7 +45,7 @@
 	    		{/if}
 	    	{/if}
 		    {if $wishesArray|@count lt 3}
-		        <div class="faqHeader"><i class="fa fa-star"></i> Vul uw wens(en) in</div>
+		        <div class="faqHeader"><i class="fa fa-heart"></i> Vul uw wens(en) in</div>
 	    		 <div> 
 		        	<div>Extra inspiratie tags</div>
 		        	<div>
@@ -96,19 +96,23 @@
 		        </div>
 			{/if}
 	        {if !empty($wishesArray)}
-	        	<div class="faqHeader "><i class="fa fa-star"></i> Dit zijn uw wensen</div>
+	        	<div class="faqHeader "><i class="fa fa-heart"></i> Dit zijn uw wensen</div>
 	        	<div class="">
 	  	    		<table class="table table-striped">
 	  	    			<tr>
-	  	    				<th class="col col-md-7">Wens</th>
+	  	    				<th class="col col-md-6">Wens</th>
 	  	    				<th class="col col-md-4">Categori&euml;n</th>
-	  	    				<th class=" class="col col-md-1" wishestableright">Status</th>
+	  	    				<th class=" class="col col-md-2" wishestableright">Status</th>
 	  	    			</tr>
 					{foreach from=$wishesArray item=wish}
 						<tr>
-							<td class="col col-md-7">{$wish->wishtext}</td>
-							<td class="col col-md-4">{$wish->tags}</td>
-							<td class=" class="col col-md-1" wishestableright">{$wish->wishstatus}</td>
+							<td class="col col-md-6">{$wish->wishtext}</td>
+								<td class="col col-md-4">
+									{foreach from=$wish->tags item=tag}
+										{$tag->tagName},
+									{/foreach}
+								</td>
+							<td class=" class="col col-md-2" wishestableright">{$wish->wishstatus}</td>
 						</tr>
 					{/foreach}
 					</table>

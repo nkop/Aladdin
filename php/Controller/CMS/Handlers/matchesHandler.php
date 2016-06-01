@@ -13,6 +13,7 @@ Class MatchesHandler{
 	private $__failure = "location: ../../../admin.php?controller=matches&action=decline";
 	
 	public function __construct(){
+
 		$this->__matchModel = new MatchesModel();
 		
 		if(isset($_POST["accept"])){			
@@ -25,8 +26,8 @@ Class MatchesHandler{
 				header($this->__succes);
 			} else { header($this->__failure); }
 		}
-		if(isset($_POST["matcher"])){
-			$this->__matchModel->GenerateMatches();
+		if(isset($_POST["matchesgenerator"])){
+			$this->__matchModel->generateMatches();
 			header("location: ../../../admin.php?controller=matches&action=index");
 		}
 	}

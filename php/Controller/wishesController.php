@@ -1,19 +1,15 @@
 <?php
-
+/*
+ * @author: Jarric van Krieken
+ */
 
 
 class WishesController {
-	
-	//$myarray = array();
-	//$myarray[0] = "ik wil graag ferrari rijden";
-	//$myarray[1] = "ik wil graag lamborghini rijden";
-	//$myarray[2] = "ik wil graag maserati rijden";
 	
 	function index() {
 		require_once 'Model/wishesAndTalentsModel.php';
 		global $smarty;
 		$wishesModel = new WishesAndTalentsModel();
-
 		
 		if(isset($_SESSION['userName'])){
 			
@@ -29,10 +25,6 @@ class WishesController {
 		}
 		$smarty->display("wishes.tpl");
 	}
-	
-
-	
-	
 }
 
 ?>
