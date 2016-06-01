@@ -5,7 +5,6 @@ class updatePasswordModel{
 
 function UpdatePassword($email, $password){
   #include password.php for password_hash to work
-  include_once '../password.php';
 
 
   #hash password to insert into database
