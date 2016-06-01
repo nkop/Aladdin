@@ -6,6 +6,7 @@ private $RegistrationFail = false;
 private $RegistrationSuccess = false;
 private $PasswordError = false;
 
+//Set any messages that are retrieved from GET
   function SetError(){
     if(isset($_GET['status'])){
     $status = strtolower(htmlspecialchars($_GET['status']));
@@ -23,6 +24,7 @@ private $PasswordError = false;
       }
   }
 
+//Show registration page with eventual messages.
   function Index(){
 		global $smarty;
     $this->SetError();

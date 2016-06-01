@@ -13,7 +13,7 @@
 				<div class="nav-no-collapse header-nav">
 					<ul class="nav pull-right">
 <!-- start: User Dropdown -->
-						<li class="dropdown">
+						<!-- <li class="dropdown">
 							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
 								<i class="halflings-icon white user"></i> 
 								<span class="caret"></span>
@@ -25,7 +25,7 @@
 								<li><a href="#"><i class="halflings-icon user"></i> Profile</a></li>
 								<li><a href="#"><i class="halflings-icon off"></i> Logout</a></li>
 							</ul>
-						</li>
+						</li> -->
 <!-- end: User Dropdown -->
 					</ul>
 				</div>

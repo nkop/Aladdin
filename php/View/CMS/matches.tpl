@@ -38,10 +38,10 @@
 					
 					{if $succesfull == 1}
 		                <div class="alert alert-success">
-						  <strong>De match is goedgekeurd!</strong> 
+						  <strong>Actie voltooid!</strong> 
 						</div>
 		                {elseif $succesfull == 2}
-		                <div class="alert alert-danger">
+		                <div class="alert alert-error">
 						  <strong>Er is wat misgegaan, probeer het zometeen opnieuw...</strong>
 						</div>
 		                {/if}
@@ -66,7 +66,7 @@
 						  <td>{$match.wish}</td>
 						  <td>{$match.talent}</td>
 						  <form action="Controller/CMS/Handlers/matchesHandler.php" method="POST">
-						   <input type="hidden" name="matchID" id="matchID" value="{$match.matchid}" required="required">
+						   <input type="hidden" name="matchID" id="matchID" value="{$match.matchID}" required="required">
 						  <td class="center">
 						 
 								<button type="submit" name="accept" class="btn btn-success">

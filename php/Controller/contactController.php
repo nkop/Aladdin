@@ -5,6 +5,7 @@ class ContactController{
     private $ContactError = false;
     private $ContactSuccess = false;
 
+//Set any eventual messages
     function SetMessage(){
       if(isset($_GET['status'])){
       $status = strtolower(htmlspecialchars($_GET['status']));
@@ -19,6 +20,7 @@ class ContactController{
         }
     }
 
+//Show contact page
     function Index(){
       global $smarty;
       $this->SetMessage();

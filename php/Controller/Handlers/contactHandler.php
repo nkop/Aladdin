@@ -1,15 +1,18 @@
 <?php
 include '../PHPMailer/Mailer.php';
 
+//Call self
 $controller = new ContactController();
 
 class ContactController{
 
+//Variables needed
   private $naam = "";
   private $email = "";
   private $message = "";
   private $captcha = "";
 
+//Constructor that sends mail
   public function __construct(){
     $naam = $_POST["name"];
     $email = $_POST["email"];

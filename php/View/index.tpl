@@ -20,54 +20,23 @@
 		<!--=== Slider ===-->
 		<div id="layerslider"
 			style="width: 100%; height: 500px; margin: 0px auto;">
-			<!-- First slide -->
-			<div class="ls-slide" data-ls="slidedelay:4500;transition2d:25;">
-				<img src="view/assets/img/sliders/layer/bg1.jpg" class="ls-bg"
-					alt="Slide background" /> <img src="view/images/jasmine.png"
-					alt="Slider image" class="ls-s-1" style="top: 62px; left: 29%;"
-					data-ls="offsetxin:left; durationin:1500; delayin:1500; fadein:false; offsetxout:left; durationout:1000; fadeout:false;">
-
-				<span class="ls-s-1"
-					style="text-transform: uppercase; line-height: 45px; font-size: 35px; color: #fff; top: 200px; left: 590px; slidedirection: top; slideoutdirection: bottom; durationin: 3500; durationout: 3500; delayin: 1000;">
-					 Aladdin wil dat iedereen op de wereld een beetje gelukkiger wordt.</span>
-			</div>
-
-			<!--Second Slide-->
-			<div class="ls-slide" data-ls="transition2d:93;">
-				<img src="view/assets/img/bg/18.jpg" class="ls-bg"
-					alt="Slide background"> <i
-					class="fa fa-chevron-circle-right ls-s-1"
-					style="color: #fff; font-size: 24px; top: 70px; left: 40px; slidedirection: left; slideoutdirection: top; durationin: 1500; durationout: 500;"></i>
-
-				<span class="ls-s-2"
-					style="color: #fff; font-weight: 200; font-size: 22px; top: 70px; left: 70px; slidedirection: top; slideoutdirection: bottom; durationin: 1500; durationout: 500;">
-					reponsive en aanpasbaar </span> <i
-					class="fa fa-chevron-circle-right ls-s-1"
-					style="color: #fff; font-size: 24px; top: 120px; left: 40px; slidedirection: left; slideoutdirection: top; durationin: 2500; durationout: 1500;"></i>
-
-				<span class="ls-s-2"
-					style="color: #fff; font-weight: 200; font-size: 22px; top: 120px; left: 70px; slidedirection: top; slideoutdirection: bottom; durationin: 2500; durationout: 1500;">
-					verschillende sliders voor een dynamische weergaven </span> <i
-					class="fa fa-chevron-circle-right ls-s-1"
-					style="color: #fff; font-size: 24px; top: 170px; left: 40px; slidedirection: left; slideoutdirection: top; durationin: 3500; durationout: 3500;"></i>
-
-				<span class="ls-s-2"
-					style="color: #fff; font-weight: 200; font-size: 22px; top: 170px; left: 70px; slidedirection: top; slideoutdirection: bottom; durationin: 3500; durationout: 2500;">
-					gebruik van icons </span> <a class="btn-u btn-u-blue ls-s1"
-					href="#"
-					style="padding: 9px 20px; font-size: 25px; top: 340px; left: 40px; slidedirection: bottom; slideoutdirection: bottom; durationin: 6500; durationout: 3500;">
-					gebaseerd op Bootstrap 3 </a> <img src="view/images/jasmine.png"
-					alt="Slider Image" class="ls-s-1"
-					style="top: 30px; left: 650px; slidedirection: right; slideoutdirection: bottom; durationin: 1500; durationout: 1500;">
-			</div>
-
-			<!--Third Slide-->
-			<div class="ls-slide"
-				style="slidedirection: right; transition2d: 92, 93, 105;">
-				<img src="view/assets/img/sliders/layer/bg2.jpg" class="ls-bg"
-					alt="Slide background">
-			</div>
-			<!--End Third Slide-->
+			
+			{foreach from=$banners item=banner}	
+				<div class="ls-slide" data-ls="slidedelay:4500;transition2d:{$slideEffect};">
+				<img src="{$banner->afbeelding_groot|replace:'../../../':''}" class="ls-bg"
+					alt="Slide background" />
+					{if $banner->afbeelding_klein != ""} 
+						<img src="{$banner->afbeelding_klein|replace:'../../../':''}"
+						alt="Slider image" class="ls-s-1" style="top: 62px; left: 29%;"
+						data-ls="offsetxin:left; durationin:1500; delayin:1500; fadein:false; offsetxout:left; durationout:1000; fadeout:false;">
+					{/if}
+					{if $banner->tekst != ""} 
+						<span class="ls-s-1"
+						style="text-transform: uppercase; line-height: 45px; font-size: 35px; color: #fff; top: 200px; left: 590px; slidedirection: top; slideoutdirection: bottom; durationin: 3500; durationout: 3500; delayin: 1000;">
+						{$banner->tekst}</span>
+					{/if}					
+			</div>			  
+			{/foreach}	
 		</div>
 		<!--/layer_slider-->
 		<!--=== End Slider ===-->
@@ -219,33 +188,13 @@
 				<h2>Medemogelijk gemaakt door:</h2>
 			</div>
 			<div class="owl-clients-v1">
+			{foreach from=$sponsoren item=sponsor}	
 				<div class="item">
-					<img src="view/assets/img/clients4/1.png" alt="">
-				</div>
-				<div class="item">
-					<img src="view/assets/img/clients4/2.png" alt="">
-				</div>
-				<div class="item">
-					<img src="view/assets/img/clients4/3.png" alt="">
-				</div>
-				<div class="item">
-					<img src="view/assets/img/clients4/4.png" alt="">
-				</div>
-				<div class="item">
-					<img src="view/assets/img/clients4/5.png" alt="">
-				</div>
-				<div class="item">
-					<img src="view/assets/img/clients4/6.png" alt="">
-				</div>
-				<div class="item">
-					<img src="view/assets/img/clients4/7.png" alt="">
-				</div>
-				<div class="item">
-					<img src="view/assets/img/clients4/8.png" alt="">
-				</div>
-				<div class="item">
-					<img src="view/assets/img/clients4/9.png" alt="">
-				</div>
+					<a href="{$sponsor->url}" target="_BLANC">
+						<img src="{$sponsor->afbeelding|replace:'../../../':''}" alt="">
+					</a>
+				</div>				  
+			{/foreach}	
 			</div>
 			<!-- End Owl Clients v1 -->
 		</div>
