@@ -100,13 +100,12 @@
 							{/foreach}
 							</table>
 				    	</div>	
-			        	{if !empty($possibleMatchArray)}
-			        		<div class="col-lg-12 text-right">
-								<hr>
-			                </div>
-		                {/if}
+		        		<div class="col-lg-12 text-right">
+							<hr>
+		                </div>
+		                <div class="faqHeader"><i class="fa fa-check-circle"></i> Dit zijn uw mogelijke matches</div>
+
 				    	{if !empty($possibleMatchArray)}
-							<div class="faqHeader"><i class="fa fa-check-circle"></i> Dit zijn uw mogelijke matches</div>
 				  	    	<div>
 				  	    		<table class="table table-striped">
 				  	    			<tr>
@@ -131,10 +130,9 @@
 								{/foreach}
 								</table>
 					    	</div>			
-
-
-
-			    		{/if} 
+			    		{else} 
+			    			<div ><h3>Er zijn nog geen mogelijke matches</h3></div>
+			    		{/if}
 			    	{/if} 
 			    </div>
 			{else}
