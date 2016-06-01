@@ -30,7 +30,7 @@ WHERE m.status = 1";
 			$wensid = $item ["wensenid"];
 		}
 		$updatewens = $sql->query ( "UPDATE `wens` SET `status` = 2 WHERE wensenid = '$wensid'" );
-		$updatetalent = $sql->query ( "UPDATE `talent` SET `status` = 2 WHERE talent = '$talentid'" );
+		$updatetalent = $sql->query ( "UPDATE `talent` SET `status` = 2 WHERE talentid = '$talentid'" );
 		
 		$query = "UPDATE `match` SET `status` = 2 WHERE matchid = '$matchid'";
 		return $sql->query($query);
