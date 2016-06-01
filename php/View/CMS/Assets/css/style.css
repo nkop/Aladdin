@@ -320,6 +320,10 @@ h6 {
 	
 }
 
+.table-img{
+	max-height: 300px;
+}
+
 .navbar-inner a {
 	color: #7b7b7b;
 	text-shadow: 0 -1px 1px #0b090a;
@@ -414,7 +418,7 @@ a.brand span {
 }
 
 .nav-tabs.nav-stacked > li > a,
-.nav-tabs.nav-stacked > li > ul > li > a {
+.nav-tabs.nav-stacked > li > ul > li > a, .extraDropDown {
 	padding: 15px 10px 14px 10px;
 	color: #fff;
 	border-top: none;
@@ -425,6 +429,23 @@ a.brand span {
 	-webkit-border-radius: 0px;
 	-moz-border-radius: 0px;
 	border-radius: 0px;		
+}
+
+.dropdown-submenu>a:after {
+    display: none;
+
+}
+
+.secondlevel{
+	list-style:none;
+}
+
+.secondlevelText{
+	color:#fff;
+}
+
+.secondlevelText:hover{
+	    color: #666;
 }
 
 .nav-tabs.nav-stacked > li:last-child > a {
@@ -2976,5 +2997,11 @@ ul.messagesList li span.date {
 		background: url(../img/chat-right-metro@2x.png) no-repeat 0px 0px;
 		background-size: 100%;
 	}
+	
+	.buffer-top{
+		margin-top: 10px;
+	}
+	
+
     
 }

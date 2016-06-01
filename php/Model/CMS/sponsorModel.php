@@ -83,10 +83,10 @@ WHERE `sponsor_id` = $id";
 		$db = Database::getInstance ();
 		$sql = $db->getConnection ();
 		
-		$nieuwsitemid = $sql->real_escape_string ( $id );
+		$Sponsorid = $sql->real_escape_string ( $id );
 
 		$query = "DELETE FROM `sponsor`
-					WHERE `sponsor_id` = $id;";
+					WHERE `sponsor_id` = $Sponsorid;";
 		try {
 			$sql->query($query);
 			header('Location: admin.php?controller=editSponsorItems&action=Succes');

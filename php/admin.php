@@ -19,6 +19,8 @@ require('Controller/CMS/matchesController.php');
 require('Controller/CMS/cmsLoginController.php');
 require ('Controller/CMS/editSponsorItemsController.php');
 require ('Controller/CMS/editSponsorController.php');
+require ('Controller/CMS/editBannerItemsController.php');
+require ('Controller/CMS/editBannerController.php');
 require('Controller/CMS/Handlers/accessHandler.php');
 // require('Controller/CMS/lifetimeWishController.php');
 

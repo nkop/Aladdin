@@ -6,6 +6,7 @@ class homepageModel{
 	function __construct(){
 		include_once 'Model/DB/Database.class.php';
 		include_once 'Model/CMS/sponsor.class.php';
+		include_once 'Model/CMS/banner.class.php';
 	}
 
 	function getTexts() {
@@ -27,4 +28,19 @@ class homepageModel{
 		}
 		return $sponsoren;
 	}
+	
+	function GetBanners(){
+		//get all banners
+		$db = Database::getInstance ();
+		$sql = $db->getConnection ();
+		$banners = array();
+		$query = "SELECT * FROM banner";
+		$result = $sql->query ( $query );
+		while ( $row = $result->fetch_object ( 'banner' ) ) {
+			array_push ( $banners, $row );
+		}
+		return $banners;
+	}
+	
+	
 }
