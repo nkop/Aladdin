@@ -80,10 +80,15 @@
 						  </tbody>
 
 					  </table> 
+					  
 					            
 					</div>
+
 				</div><!--/span-->
-			
+								<form class="form-horizontal"
+							action="Controller/CMS/Handlers/matchesHandler.php" method="post">
+							<input name="matchesgenerator" value="Genereer matches" id="matcher"
+								class="btn btn-primary" type="button"></input> 
 			</div><!--/row-->
 
 	</div><!--/.fluid-container-->

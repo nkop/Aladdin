@@ -25,6 +25,10 @@ Class MatchesHandler{
 				header($this->__succes);
 			} else { header($this->__failure); }
 		}
+		if(isset($_POST["matcher"])){
+			$this->__matchModel->GenerateMatches();
+			header("location: ../../../admin.php?controller=matches&action=index");
+		}
 	}
 }
 
