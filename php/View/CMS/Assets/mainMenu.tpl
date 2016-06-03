@@ -20,7 +20,7 @@
 							<a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> Content</span><span class="label label-important"></span></a>
 							<ul>
 							<li class="dropdown-submenu">
-								<a class="dropmenu extraDropDown" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> Starttpagina</span><span class="label label-important"></span></a>
+								<a class="dropmenu extraDropDown" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> Startpagina</span><span class="label label-important"></span></a>
 									<ul class="secondlevel">
 										<li><a class="submenu secondlevelText" href="admin.php?controller=edithome&action=index"><i class="icon-file-alt"></i><span class="hidden-tablet "> Startpagina tekst</span></a></li>
 										<li><a class="submenu secondlevelText" href="admin.php?controller=editBannerItems"><i class="icon-file-alt"></i><span class="hidden-tablet "> banner</span></a></li>
@@ -29,6 +29,8 @@
 								<li><a class="submenu" href="admin.php?controller=editnewsitems"><i class="icon-file-alt"></i><span class="hidden-tablet"> Nieuwspagina</span></a></li>
 								<li><a class="submenu" href="admin.php?controller=editfaq"><i class="icon-file-alt"></i><span class="hidden-tablet"> F.A.Q.</span></a></li>
 								<li><a class="submenu" href="admin.php?controller=editregulations"><i class="icon-file-alt"></i><span class="hidden-tablet"> Regels</span></a></li>
+								<li><a class="submenu" href="admin.php?controller=editabout"><i class="icon-file-alt"></i><span class="hidden-tablet"> Over ons</span></a></li>
+								
 							</ul>	
 						</li>
 					</ul>
