@@ -1,15 +1,12 @@
 <?php
-class aboutController{
-	private $model = null;
-	
-	function Index($smarty){
-		include_once 'Model/homepageModel.php';
-		$this->model = new homepageModel();
+class aboutController{	
+function Index($smarty) {
+		include_once 'Model/CMS/aboutModel.php';
 		if ($smarty == null) {
 			global $smarty;
 		}
-		$smarty->assign('result', $this->model->getTexts());
-		$smarty->display('about.tpl');
+		$smarty->assign ( 'abouts', getAbouts () );
+		$smarty->display ( 'about.tpl' );
 	}
 
 }
