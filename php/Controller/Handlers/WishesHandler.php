@@ -1,11 +1,16 @@
 <?php
-include ('../../Model/wishesAndTalentsModel.php');
+
+
+/*
+ * @author: Jarric van Krieken
+ */
 
 $handler = new WishesHandler();
 
 class WishesHandler{
 	
 	public function __construct() {
+		include ('../../Model/wishesAndTalentsModel.php');
 		session_start();
 		$wishModel = new WishesAndTalentsModel();
 	

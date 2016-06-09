@@ -80,11 +80,15 @@
 						  </tbody>
 
 					  </table> 
+					  
 					            
 					</div>
+
 				</div><!--/span-->
-			
-			</div><!--/row-->
+				<form action="Controller/CMS/Handlers/matchesHandler.php" method="post">
+      				<button name="matchesgenerator" value="Genereer matches" id="matcher" class="btn btn-primary">Genereer matches</button>
+      			</form>
+				</div><!--/row-->
 
 	</div><!--/.fluid-container-->
 	
