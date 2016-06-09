@@ -9,9 +9,20 @@
 <body>
 {include '../view/Assets/php/NavTop.tpl'}
 
+   <!--=== Breadcrumbs ===-->
+    <div class="breadcrumbs">
+        <div class="container">
+            <h1 class="pull-left">Over Ons</h1>
+            <ul class="pull-right breadcrumb">
+                <li><a href="index.php?controller=homepageController&action=index">Homepagina</a></li>
+                <li class="active">Over Ons</li>
+            </ul>
+        </div><!--/container-->
+    </div><!--/breadcrumbs-->
+    <!--=== End Breadcrumbs ===-->
+
 <!-- Content Part -->
 <div class="container content">
-<h1 align="center">Over Ons</h1>
 <div class="row">
 				{foreach from=$abouts item=tekst}
 				<div class="col-md-12">
