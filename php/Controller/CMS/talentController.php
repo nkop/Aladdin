@@ -1,14 +1,19 @@
 <?php
+/*
+ * @author Wouter van de Ven
+ */
 include_once ('Model/talent.class.php');
 
 class TalentController{
 	private $succesfull = 0;
 	
+	// ** Function to accept a talent **
 	function Accept(){
 		$this->succesfull = 1;
 		$this->Index(null);
 	}
 	
+	// ** Function to decline a talent
 	function Decline(){
 		$this->succesfull = 2;
 		$this->Index(null);
@@ -25,12 +30,13 @@ class TalentController{
 			
 		$talentarray = array();
 		$talentModel = new TalentsModel();
-		// get all talentsModel that have not been accepted or declined
+		// get all talents that have not been accepted or declined
 		$talentarray = $talentModel->getOpenTalents();
 		
 		$talentObject = new Talent();
 		foreach($talentarray as $talentObject)
 		{
+			// get all tags for a talent
 			$talentObject->talentTags = $talentModel->getTags($talentObject->talentid);
 		}
 					

@@ -1,4 +1,7 @@
 <?php
+/*
+ * @author Wouter van de Ven
+ */
 include_once '/../DB/Database.class.php';
 
 class WishesModel{
@@ -18,6 +21,7 @@ class WishesModel{
 		return $wisharray;
 	}
 	
+	// ** ACCEPT **
 	function acceptWish($wishID)
 	{
 		$db = Database::getInstance();
@@ -29,6 +33,7 @@ class WishesModel{
 		$mysqli->query($sql_query);
 	}
 	
+	// ** DECLINE **
 	function declineWish($wishID)
 	{
 		$db = Database::getInstance();
@@ -40,6 +45,7 @@ class WishesModel{
 		$mysqli->query($sql_query);
 	}
 	
+	// function to get tags for a wish
 	function getTags($wishID)
 	{
 		$db = Database::getInstance ();
@@ -56,6 +62,7 @@ class WishesModel{
 			}
 		}
 	
+		// return an array with tags
 		return $tagArray;
 	}
 }
