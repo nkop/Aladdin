@@ -26,12 +26,12 @@ class TalentHandler{
 			$email = $db->getEmailByTalentId($_POST['talentID']);
 			$tekst = $db->getTalentTekstById($_POST['talentID']);
 			
-			#construct mail body, recipient, subject
+			// construct mail body, recipient, subject
 			$subject = "Aladdin - Talent afgewezen";
 			$message = "Beste $naam,<br/><br /> Uw recent aangemaakte talent:<br/><br/><b>$tekst</b><br/><br/> is afgewezen door onze administrator. Neem contact met ons op via onze website, of raadpleeg ons regelement.<br /><br /> Met vriendelijke groeten,<br /><br />Het Aladdin team";
 			$recipient = $email;
 
-			#Call SendMail (coming from /PHPMailer/Mailer.php)
+			// Call SendMail (coming from /PHPMailer/Mailer.php)
 			SendMail($recipient, $message, $subject);
 			
 			// ** DECLINE **

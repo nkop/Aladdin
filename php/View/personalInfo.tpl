@@ -17,8 +17,7 @@
 			<div class="container">
 				<h1 class="pull-left">Persoonlijke informatie</h1>
 				<ul class="pull-right breadcrumb">
-					<li><a href="homepageController.php">Home</a></li>
-					<li><a href="">Pages</a></li>
+					<li><a href=index.php?controller=home&action=index>Homepagina</a></li>
 					<li class="active">Persoonlijke informatie</li>
 				</ul>
 			</div>

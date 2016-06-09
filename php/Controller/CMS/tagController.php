@@ -6,11 +6,13 @@ class TagController{
 	
 	private $succesfull = 0;
 	
+	// ** Function to accept a tag **
 	function Accept(){
 		$this->succesfull = 1;
 		$this->Index(null);
 	}
 	
+	// ** Function to decline a tag **
 	function Decline(){
 		$this->succesfull = 2;
 		$this->Index(null);

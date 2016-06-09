@@ -1,14 +1,19 @@
 <?php
+/*
+ * @author Wouter van de Ven
+ */
 include_once ('Model/wish.class.php');
 
 class WishController{
 	private $succesfull = 0;
 	
+	// ** Function to accept a wish **
 	function Accept(){
 		$this->succesfull = 1;
 		$this->Index(null);
 	}
 	
+	// ** Function to decline a wish **
 	function Decline(){
 		$this->succesfull = 2;
 		$this->Index(null);
@@ -31,6 +36,7 @@ class WishController{
 		$wishObject = new Wish();
 		foreach($wisharray as $wishObject)
 		{
+			// get the tags for a wish
 			$wishObject->tags = $wishModel->getTags($wishObject->wensenid);
 		}
 		

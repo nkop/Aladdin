@@ -1,4 +1,7 @@
 <?php
+/*
+ * @author Wouter van de Ven
+ */
 include_once '/../DB/Database.class.php';
 
 class TagsModel{
@@ -18,6 +21,7 @@ class TagsModel{
 		return $tagarray;
 	}
 	
+	// ** ACCEPT **
 	function acceptTag($tagID)
 	{
 		$db = Database::getInstance();
@@ -29,6 +33,7 @@ class TagsModel{
 		$mysqli->query($sql_query);
 	}
 	
+	// ** DECLINE **
 	function declineTag($tagID)
 	{
 		$db = Database::getInstance();
@@ -41,10 +46,12 @@ class TagsModel{
 		
 	}
 	
+	// ** ADD **
 	function addTag($tagName)
 	{
 		$db = Database::getInstance ();
-		$mysqli = $db->getConnection();		
+		$mysqli = $db->getConnection();
+		// security 
 		$tagName = $mysqli->real_escape_string ( $tagName );	
 		$query = "INSERT INTO `tag`(`tagnaam`, `status`) VALUES ('$tagName', '1')";
 		$mysqli->query($query);
