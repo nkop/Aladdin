@@ -24,9 +24,12 @@ class HomepageController{
 		}
 		//give the banner a random slide effect
 		$smarty->assign('slideEffect', rand(1, 113));
-		$smarty->assign('banners',$this->model->GetBanners());
+		$smarty->assign('banners',$this->model->getBanners());
 		$smarty->assign('sponsoren', $this->model->getSponsor());
 		$smarty->assign('result', $this->model->getTexts());
+		$smarty->assign('userCount', $this->model->getCount("account"));
+		$smarty->assign('wishCount', $this->model->getCount("wens"));
+		$smarty->assign('talentCount', $this->model->getCount("talent"));
 		$smarty->display('index.tpl');
 	}
 

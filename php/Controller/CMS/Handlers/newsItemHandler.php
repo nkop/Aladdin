@@ -34,13 +34,19 @@ class NewsItemHandler{
 					}
 					$this->newsitem->isvideo = 0;
 				}
-				if ($this->newsitem->nieuwsitemid > 0)
-				 	echo $this->model->editNewItem($this->newsitem);
+				if ($this->newsitem->nieuwsitemid > 0){
+					if( $this->model->editNewItem($this->newsitem))
+				 		header('Location: ../../../admin.php?controller=editnewsitems&action=Succes');
+				 	else
+				 		header('Location: ../../../admin.php?controller=editnewsitems&action=Error');
+				}
+				else{
+					if( $this->model->InsertNewItem($this->newsitem))
+						header('Location: ../../../admin.php?controller=editnewsitems&action=Succes');
 					else
-					 echo $this->model->InsertNewItem($this->newsitem);
+						header('Location: ../../../admin.php?controller=editnewsitems&action=Error');
+				}
 			}
-			
-			header('Location: ../../../admin.php?controller=editnewsitems&action=Succes');
 	}
 	
 	//upload the image directly to the view directory
