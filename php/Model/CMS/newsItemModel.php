@@ -31,7 +31,7 @@ class NewsItemModel{
 		$sql = $db->getConnection ();
 		$newsItems = array();
 		$query = "select n.nieuwsitemid,n.titel,n.tekst,n.thumbnail,n.isvideo,n.bannerfoto,n.datum,n.auteur, CONCAT(a.voornaam , ' ' , a.tussenvoegsel , ' ' , a.achternaam) as volledignaam from nieuwsitems n
-				  left join account a on n.auteur = a.accountid order by datum ASC limit 5;";
+				  left join account a on n.auteur = a.accountid order by datum DESC limit 5;";
 		$result = $sql->query ( $query );
 		while ( $row = $result->fetch_object ( 'nieuwsItem' ) ) {
 			array_push ( $newsItems, $row );
@@ -78,8 +78,15 @@ class NewsItemModel{
 				`datum`,
 				`auteur`)
 				VALUES ('$titel', '$tekst', '$thumbnail', $isvideo,'$bannerfoto', NOW(), '$auteur')";
-		$sql->query($query);
-		return $query;
+		try {
+			$result = $sql->query($query);
+			if (!$result) {
+			return false;
+			}
+			return true;
+		} catch (Exception $e) {
+			return false;
+		}
 	}
 	
 	function editNewItem($newsitem){
@@ -106,8 +113,15 @@ class NewsItemModel{
 					`datum` = NOW(),
 					`auteur` = $auteur
 					WHERE `nieuwsitemid` = $nieuwsitemid;";
-		$sql->query($query);
-		return $query;
+		try {
+			$result = $sql->query($query);
+			if (!$result) {
+			return false;
+			}
+			return true;
+		} catch (Exception $e) {
+			return false;
+		}
 	}
 	
 	function DeleteNewsItem($id){
@@ -119,11 +133,14 @@ class NewsItemModel{
 		$query = "DELETE FROM `nieuwsitems`
 					WHERE `nieuwsitemid` = $nieuwsitemid;";
 		try {
-			$sql->query($query);
-			header('Location: admin.php?controller=editnewsitems&action=Succes');
+			$result = $sql->query($query);
+			if (!$result) {
+			return false;
+			}
+			return true;
 		} catch (Exception $e) {
-			header('Location: admin.php?controller=editnewsitems&action=Error');
-		} 
+			return false;
+		}
 	}
 	
 }

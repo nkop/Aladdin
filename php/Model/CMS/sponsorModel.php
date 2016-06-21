@@ -53,8 +53,15 @@ class sponsorModel{
 				`afbeelding`,
 				`cijfer`)
 				VALUES ('$naam', '$url', '$afbeelding', $cijfer)";
-		$sql->query($query);
-		return $query;
+		try {
+			$result = $sql->query($query);
+			if (!$result) {
+			return false;
+			}
+			return true;
+		} catch (Exception $e) {
+			return false;
+		}
 	}
 	
 	function EditSponsor($sponsor){
@@ -69,14 +76,21 @@ class sponsorModel{
 		$cijfer = $sponsor->cijfer;
 
 		$query = "UPDATE `sponsor`
-SET
-`naam` = '$naam',
-`url` = '$url',
-`afbeelding` = '$afbeelding',
-`cijfer` = $cijfer
-WHERE `sponsor_id` = $id";
-		$sql->query($query);
-		return $query;
+					SET
+					`naam` = '$naam',
+					`url` = '$url',
+					`afbeelding` = '$afbeelding',
+					`cijfer` = $cijfer
+					WHERE `sponsor_id` = $id";
+		try {
+			$result = $sql->query($query);
+			if (!$result) {
+			return false;
+			}
+			return true;
+		} catch (Exception $e) {
+			return false;
+		}
 	}
 	
 		function DeleteSponsor($id){
@@ -88,11 +102,14 @@ WHERE `sponsor_id` = $id";
 		$query = "DELETE FROM `sponsor`
 					WHERE `sponsor_id` = $Sponsorid;";
 		try {
-			$sql->query($query);
-			header('Location: admin.php?controller=editSponsorItems&action=Succes');
+			$result = $sql->query($query);
+			if (!$result) {
+			return false;
+			}
+			return true;
 		} catch (Exception $e) {
-			header('Location: admin.php?controller=editSponsorItems&action=Error');
-		} 
+			return false;
+		}
 	}
 	
 }
