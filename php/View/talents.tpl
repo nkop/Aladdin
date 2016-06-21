@@ -44,7 +44,7 @@
 							</div>
 			    		{/if}
 			    	{/if}
-			        <div class="faqHeader"><i class="fa fa-lightbulb-o"></i> Vul uw talent in</div>
+			        <div class="faqHeader"><i class="fa fa-star"></i> Vul uw talent in</div>
 			        <div class="">
 						 <form class="reg-page" action="Controller/Handlers/talentHandler.php" method="post">
 						 	<div class="panel panel-default">
@@ -79,23 +79,60 @@
 		                {/if}
 			        </div>
 			        {if !empty($talentArray)}
-			        	<div class="faqHeader"><i class="fa fa-lightbulb-o"></i> Dit zijn uw Talenten</div>
+			        	<div class="faqHeader"><i class="fa fa-star"></i> Dit zijn uw Talenten</div>
 			  	    	<div>
 			  	    		<table class="table table-striped">
 			  	    			<tr>
-			  	    				<th class="col col-md-7">Talent</th>
+			  	    				<th class="col col-md-6">Talent</th>
 			  	    				<th class="col col-md-4">Categori&euml;n</th>
-			  	    				<th class=" class="col col-md-1" wishestableright">Status</th>
+			  	    				<th class=" class="col col-md-2" wishestableright">Status</th>
 			  	    			</tr>
 							{foreach from=$talentArray item=talent}
 								<tr>
-									<td class="col-md-7"><p>{$talent->talentText}</p></td>
-									<td class="col col-md-4">{$talent->talentTags}</td>
-									<td class=" class="col col-md-1" wishestableright">{$talent->talentStatus}</td>
+									<td class="col-md-6"><p>{$talent->talentText}</p></td>
+									<td>
+										{foreach from=$talent->talentTags item=tag}
+											{$tag->tagName},
+										{/foreach}
+									</td>
+									<td class=" class="col col-md-2" wishestableright">{$talent->talentStatus}</td>
 								</tr>
 							{/foreach}
 							</table>
 				    	</div>	
+		        		<div class="col-lg-12 text-right">
+							<hr>
+		                </div>
+		                <div class="faqHeader"><i class="fa fa-check-circle"></i> Dit zijn uw mogelijke matches</div>
+
+				    	{if !empty($possibleMatchArray)}
+				  	    	<div>
+				  	    		<table class="table table-striped">
+				  	    			<tr>
+				  	    				<th class="col col-md-5">Uw talent</th>
+				  	    				<th class="col col-md-5">Wens</th>
+				  	    				<th class="col col-md-2">Keuze</th>
+				  	    			</tr>
+								{foreach from=$possibleMatchArray item=match}
+									<tr>
+										<form class="reg-page" action="Controller/Handlers/matchHandler.php" method="post">
+											<td class="col-md-5"><p >{$match->talent->talentText}</p></td>
+												<input type="hidden" name="talentId" value={$match->talent->talentId}>
+											<td class="col-md-5"><p>{$match->wish->wishtext}</p></td>
+												<input type="hidden" name="wishId" value={$match->wish->wishid}>
+							  				<td class="center col-md-2">
+							  					<button type="submit" name="submit" class="btn btn-success"><i class="fa fa-check"></i></button>
+							  
+							  					<button type="submit" name="decline" class="btn btn-danger"><i class="fa fa-close"></i></button>
+	                 						</td>
+                 						</form>
+									</tr>
+								{/foreach}
+								</table>
+					    	</div>			
+			    		{else} 
+			    			<div ><h3>Er zijn nog geen mogelijke matches</h3></div>
+			    		{/if}
 			    	{/if} 
 			    </div>
 			{else}

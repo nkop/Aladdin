@@ -1,4 +1,7 @@
 <?php
+/*
+ * @author Wouter van de Ven
+ */
 include_once '/../DB/Database.class.php';
 
 class RegistrationModel{
@@ -18,6 +21,7 @@ class RegistrationModel{
 		return $registrationarray;
 	}
 	
+	// ** ACCEPT **
 	function acceptRegistration($accountID)
 	{
 		$db = Database::getInstance();
@@ -29,6 +33,7 @@ class RegistrationModel{
 		$mysqli->query($sql_query);
 	}
 	
+	// ** DECLINE **
 	function declineRegistration($accountID)
 	{
 		$db = Database::getInstance();
