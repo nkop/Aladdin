@@ -58,8 +58,10 @@ class WishesAndTalentsModel {
 	function insertWish($wish,$userName) {
 		$mysqli = $this->getConnection();
 		$wish = $mysqli->real_escape_string ( $wish );
-		$date = date("Y-m-d");
-		$query = "insert into wens(tekst,plaatser,creatie_datum,status) values('$wish',(select accountid from account where gebruikersnaam= '$userName'),'$date',1) ";
+		$date = date('Y-m-d');
+		$effectiveDate = date('Y-m-d');
+		$effectiveDate = date('Y-m-d', strtotime("+6 months", strtotime($effectiveDate)));
+		$query = "insert into wens(tekst,plaatser,creatie_datum,status, verval_datum) values('$wish',(select accountid from account where gebruikersnaam= '$userName'),'$date',1, $effectiveDate) ";
 		return $mysqli->query ( $query );
 	}
 	
@@ -88,6 +90,21 @@ class WishesAndTalentsModel {
 		$tagid = $mysqli->real_escape_string ( $tagid );
 		$query = "insert into wens_has_tag(wens_wensenid,tag_tagid) values((SELECT wensenid FROM wens ORDER BY wensenid DESC limit 1),$tagid)";
 		return $mysqli->query ( $query );
+	}
+	
+	function getWishAmount($userName) {
+		$mysqli = $this->getConnection();
+		$count=0;
+	
+		$sql_query = "select * from wens where plaatser = (select accountid from account where gebruikersnaam = '$userName') and (status=1 or status=6)";
+		$result = $mysqli->query($sql_query);
+	
+		while ( $row = $result->fetch_object () ) {
+			$count++;
+		}
+		$result->close();
+		return $count;
+	
 	}
 }
 
