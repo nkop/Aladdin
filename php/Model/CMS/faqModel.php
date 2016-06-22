@@ -1,6 +1,8 @@
 <?php 
 include_once '/../DB/Database.class.php';
 
+Class FaqModel{
+
 function getCategories() {
 	//gets all the faq categories
 	$db = Database::getInstance ();
@@ -72,4 +74,5 @@ function deleteCategorie($categorie_id){
 		return $sql->query($query2);
 	}
 	return false;		
+}
 }
