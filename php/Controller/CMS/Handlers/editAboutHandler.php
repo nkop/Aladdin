@@ -3,7 +3,7 @@ include ('../../../Model/CMS/about.class.php');
 include ('../../../Model/CMS/aboutModel.php');
 
 
-class editRegulationsHandler{
+class editAboutHandler{
 	private $model = null;
 	public function __construct(){
 		$this->model = new aboutModel();
