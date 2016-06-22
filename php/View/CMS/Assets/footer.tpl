@@ -1,7 +1,7 @@
 <footer>
 		<p>
 			<span style="text-align: left; float: left">&copy; 2016 <a
-				href="aladdin.nl" alt="Bootstrap_Metro_Dashboard">Aladdin CMS</a></span>
+				href="admin.php" alt="Bootstrap_Metro_Dashboard">Aladdin CMS</a></span>
 		</p>
 		</footer>
 		<!-- start: JavaScript-->
