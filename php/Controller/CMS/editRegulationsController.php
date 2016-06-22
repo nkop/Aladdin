@@ -4,6 +4,14 @@ class EditRegulationsController {
 	private $_rules;
 	private $_smarty;
 	private $succesfull = 0;
+	private $model = null;
+	
+	function __construct(){
+		include ('Model/CMS/rule.class.php');
+		include ('Model/CMS/ruleCategorie.class.php');
+		include ('Model/CMS/regulationsModel.php');
+		$this->model = new regulationsModel();
+	}
 	
 	function Success(){
 		$this->succesfull = 1;
@@ -15,13 +23,9 @@ class EditRegulationsController {
 		$this->Index(null);
 	}
 	
-	function getAll() {
-		include ('Model/CMS/rule.class.php');
-		include ('Model/CMS/ruleCategorie.class.php');
-		include ('Model/CMS/regulationsModel.php');
-	
-		$this->_categorieen = getRuleCategories ();
-		$this->_rules = getRules();
+	function getAll() {	
+		$this->_categorieen = $this->model->getRuleCategories ();
+		$this->_rules = $this->model->getRules();
 	}
 	function Index($smarty) {
 		if ($smarty == null) {
