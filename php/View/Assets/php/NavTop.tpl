@@ -74,6 +74,8 @@
                         <ul class="dropdown-menu">
                             <li><a href="index.php?controller=wishes&action=index">Wensen</a></li>
                             <li><a href="index.php?controller=talents&action=index">Talenten</a></li>
+                            <li><a href="index.php?controller=matches&action=index">Matches</a></li>
+                            
                         </ul>
                     </li>
                     {/if}

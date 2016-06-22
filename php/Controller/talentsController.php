@@ -6,7 +6,7 @@
 
 class TalentsController {
 	function index() {
-		require_once 'Model/wishesandtalentsModel.php';
+		require_once 'Model/talentModel.php';
 		global $smarty;
 		$talentModel = new WishesAndTalentsModel();
 		
@@ -16,7 +16,6 @@ class TalentsController {
 			if($wishCount >= 0 || $wishCount != null)
 			$talentArray = $talentModel->getUserTalents($_SESSION['userName']);
 			$smarty->assign('talentArray', $talentArray);
-			$smarty->assign('possibleMatchArray',$talentModel->getPossibleMatches($_SESSION['userName']));
 			$smarty->assign('tagsArray', $talentModel->getTags());
 		}
 		if(isset($_GET["pass"])){
