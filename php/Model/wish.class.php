@@ -5,5 +5,6 @@ Class Wish{
 	public $wishstatus;
 	public $tags = array();
 	public $wishid;
+	public $isExtendable;
 }
 ?>

@@ -2,28 +2,28 @@
 /*
  * @author: Jarric van Krieken
  */
-
-
 class WishesController {
-	
-	function index() {
+	private $wishesModel;
+	function WishesController() {
 		require_once 'Model/wishesModel.php';
-		global $smarty;
-		$wishesModel = new WishesAndTalentsModel();
+		$this->wishesModel = new WishesModel ();
 		
-		if(isset($_SESSION['userName'])){
-			
-			$userWishes = $wishesModel->getUserWishes($_SESSION['userName']);
-			$smarty->assign('wishesArray', $userWishes);
-			if($userWishes==null || count($userWishes) < 3) {
-				$smarty->assign('tagsArray', $wishesModel->getTags());
+		
+	}
+	function index() {
+
+		global $smarty;
+		if (isset ( $_SESSION ['userName'] )) {
+			$userWishes = $this->wishesModel->getUserWishes ( $_SESSION ['userName'] );
+			$smarty->assign ( 'wishesArray', $userWishes );
+			if ($userWishes == null || count ( $userWishes ) < 3) {
+				$smarty->assign ( 'tagsArray', $wishesModel->getTags () );
 			}
 		}
-		
-		if(isset($_GET["pass"])){
-			$smarty->assign('pass', $_GET["pass"]);
+		if (isset ( $_GET ["pass"] )) {
+			$smarty->assign ( 'pass', $_GET ["pass"] );
 		}
-		$smarty->display("wishes.tpl");
+		$smarty->display ( "wishes.tpl" );
 	}
 }
 

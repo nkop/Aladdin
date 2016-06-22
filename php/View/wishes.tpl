@@ -40,7 +40,7 @@
 				{/if}
 				{if $pass == 'false'}
 	    			<div class="alert alert-danger">
-						<strong>Error!</strong> er ging iets niet goed
+						<strong>Error!</strong> Er ging iets niet goed
 					</div>
 	    		{/if}
 	    	{/if}
@@ -100,19 +100,28 @@
 	        	<div class="">
 	  	    		<table class="table table-striped">
 	  	    			<tr>
-	  	    				<th class="col col-md-6">Wens</th>
+	  	    				<th class="col col-md-4">Wens</th>
 	  	    				<th class="col col-md-4">Categori&euml;n</th>
-	  	    				<th class=" class="col col-md-2" wishestableright">Status</th>
+	  	    				<th class="col col-md-2">Status</th>
+	  	    				<th class=" class="col col-md-4" wishestableright">Verleng uw wens</th>
 	  	    			</tr>
 					{foreach from=$wishesArray item=wish}
 						<tr>
-							<td class="col col-md-6">{$wish->wishtext}</td>
+							<td class="col col-md-4">{$wish->wishtext}</td>
 								<td class="col col-md-4">
 									{foreach from=$wish->tags item=tag}
 										{$tag->tagName},
 									{/foreach}
 								</td>
-							<td class=" class="col col-md-2" wishestableright">{$wish->wishstatus}</td>
+							<td class="col col-md-2">{$wish->wishstatus}</td>
+							{if $wish->wishstatus == "Geaccepteerd" && $wish->isExtendable == true}
+								<form action="Controller/Handlers/WishesHandler.php" method="post">
+									<input type="hidden" value="{$wish->wishid}" name="wish"/>
+									<td class=" class="col col-md-4" wishestableright"><button class="btn btn-info" name="extend" type="submit">Verleng</button></td>									
+								</form>
+							{else}
+								<td/>
+							{/if}
 						</tr>
 					{/foreach}
 					</table>

@@ -12,7 +12,7 @@ class MatchHandler{
 	public function __construct() {
 		include ('../../Model/matchModel.php');
 		session_start();
-		$matchModel = new WishesAndTalentsModel();
+		$matchModel = new TalentsModel();
 		$action;
 
 		if(isset ($_POST["talentId"]) && isset($_POST["wishId"])){	
