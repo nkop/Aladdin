@@ -9,7 +9,7 @@ $handler = new TalentHandler();
 class TalentHandler{
 
 	public function __construct() {
-		include ('../../Model/wishesAndTalentsModel.php');
+		include ('../../Model/talentModel.php');
 		session_start();
 		$talentModel = new WishesAndTalentsModel();
 		

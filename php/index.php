@@ -20,6 +20,7 @@ require('Controller/regulationsController.php');
 require('Controller/contactController.php');
 require('Controller/wishesController.php');
 require('Controller/talentsController.php');
+require('Controller/matchesController.php');
 
 $controller;
 $actionName;
