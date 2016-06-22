@@ -11,7 +11,7 @@ class TalentHandler{
 	public function __construct() {
 		include ('../../Model/talentModel.php');
 		session_start();
-		$talentModel = new WishesAndTalentsModel();
+		$talentModel = new TalentsModel();
 		
 		if(isset($_POST["save"])) {
 			if(isset($_POST["talent"]) && isset($_SESSION["userName"])) {

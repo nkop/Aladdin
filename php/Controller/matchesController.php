@@ -8,7 +8,7 @@ class MatchesController {
 	function index() {
 		require_once 'Model/matchModel.php';
 		global $smarty;
-		$matchesModel = new WishesAndTalentsModel();
+		$matchesModel = new WishesModel();
 
 		if(isset($_SESSION['userName'])){
 			$smarty->assign('possibleMatchArray',$matchesModel->getPossibleMatches($_SESSION['userName']));

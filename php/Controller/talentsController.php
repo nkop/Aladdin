@@ -8,7 +8,7 @@ class TalentsController {
 	function index() {
 		require_once 'Model/talentModel.php';
 		global $smarty;
-		$talentModel = new WishesAndTalentsModel();
+		$talentModel = new WishesModel();
 		
 		if(isset($_SESSION['userName'])){
 			$wishCount = $talentModel->getWishAmount($_SESSION['userName']);
