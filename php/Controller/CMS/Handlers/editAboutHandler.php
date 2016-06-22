@@ -2,6 +2,11 @@
 include ('../../../Model/CMS/about.class.php');
 include ('../../../Model/CMS/aboutModel.php');
 
+
+class editAboutHandler{
+	private $model = null;
+	public function __construct(){
+		$this->model = new aboutModel();
 // mogelijke submits: submitfaq, deletefaq, deletecategorie, nieuwcat, nieuwfaq'
 
 if (isset ( $_POST ["submitabout"] ) && isset ( $_POST ["tekst"] )) {
@@ -11,15 +16,18 @@ if (isset ( $_POST ["submitabout"] ) && isset ( $_POST ["tekst"] )) {
 	$about->id = $_POST ["id"];
 	
 	
-	if (! saveAbout ( $about, true )) {
+	if (! $this->model->saveAbout ( $about, true )) {
 		header ( 'location: ../../../admin.php?controller=editabout&action=noSuccess' );
 	} else {
 		header ( 'location: ../../../admin.php?controller=editabout&action=Success' );
 	}
-	$about = getAbouts();
+	$about = $this->model->getAbouts();
 }
 
 if (isset ( $_POST ["resetpageabout"] )) {
 		header ( 'location: ../../../admin.php?controller=editabout');
-	$about = getAbouts();
+	$about = $this->model->getAbouts();
 }
+	}
+}
+$editAboutHandler = new EditAboutController();

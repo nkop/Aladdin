@@ -48,7 +48,7 @@ class MatchesModel {
 		$query = "UPDATE `match` SET `status` = 5 WHERE matchid = '$matchid'";
 		return $sql->query ( $query );
 	}
-	
+	//generates a list of possible matches based on 2 matching tags
 	function generateMatches() {
 		$foundMatch = false;
 		$possibleMatches = Array();
@@ -110,7 +110,8 @@ class MatchesModel {
 			$this->generateMatches();
 		}
 	}
-	
+	//helping function for generateMatches().
+	//Gets all wishes
 	function getAllWishes() {
 		$db = Database::getInstance ();
 		$mysqli = $db->getConnection ();
@@ -148,7 +149,8 @@ class MatchesModel {
 		return $wishArray;
 		
 	}
-	
+	//helping function for generateMatches
+	//gets all talents
 	function getAcceptedUserTalents() {
 		$db = Database::getInstance ();
 		$mysqli = $db->getConnection ();
@@ -187,7 +189,7 @@ class MatchesModel {
 		return $talentArray;
 		
 	}
-	
+	//gets all possible matches from the database
 	function getAllMatches() {
 		$db = Database::getInstance ();
 		$mysqli = $db->getConnection ();
@@ -214,7 +216,7 @@ class MatchesModel {
 			$result->close();
 			return $matchArray;
 	}
-	
+	//turns a possible match into a accepted match
 	function insertPossibleMatch($talentId,$wishId){
 		$db = Database::getInstance ();
 		$mysqli = $db->getConnection ();
