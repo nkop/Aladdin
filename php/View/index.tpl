@@ -120,6 +120,7 @@
 						<small>Studenten groep D Avans</small>
 					</blockquote>
 				</div>
+<!-- Donatiebutton				 -->
 				<div class="col-md-5 col-sm-12">
 					<div class="headline">
 						<h2>Help Aladdin!</h2>
@@ -145,6 +146,7 @@
 							width="1" height="1">
 					</form>
 				</div>
+<!-- /Donatiebutton				 -->
 				<!--/col-md-8-->
 			</div>
 			<!--/row-->
