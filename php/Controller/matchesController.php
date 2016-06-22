@@ -5,19 +5,28 @@
 */
 
 class MatchesController {
+	// constructor
 	function index() {
-		require_once 'Model/matchModel.php';
-		global $smarty;
-		$matchesModel = new WishesModel();
-
-		if(isset($_SESSION['userName'])){
-			$smarty->assign('possibleMatchArray',$matchesModel->getPossibleMatches($_SESSION['userName']));
+		require('CMS/Handlers/accessHandler.php');
+		$accessHandler = new AccessHandler();
+		// check if user is logged in
+		if($accessHandler->CheckLoginUser()){
+			require_once 'Model/matchModel.php';
+			global $smarty;
+			$matchesModel = new MatchModel();
+			if(isset($_SESSION['userName'])){
+				$smarty->assign('possibleMatchArray',$matchesModel->getPossibleMatches($_SESSION['userName']));
+			}
+			if(isset($_GET["pass"])){
+				$smarty->assign('pass', $_GET["pass"]);
+			}
+			
+			$smarty->display("matches.tpl");
+		}else{
+			header('location: index.php');
 		}
-		if(isset($_GET["pass"])){
-			$smarty->assign('pass', $_GET["pass"]);
-		}
+		
 
-		$smarty->display("matches.tpl");
 	}
 
 }

@@ -27,7 +27,6 @@
     <!--=== End Breadcrumbs ===-->
 
     <!--=== Content Part ===-->
-    {if ($text =='Logout')}
 	    <div class="container content minimalheight">
 	    <div class="panel-group">
 
@@ -103,7 +102,8 @@
 	  	    				<th class="col col-md-4">Wens</th>
 	  	    				<th class="col col-md-4">Categori&euml;n</th>
 	  	    				<th class="col col-md-2">Status</th>
-	  	    				<th class=" class="col col-md-4" wishestableright">Verleng uw wens</th>
+	  	    				<th class="col col-md-1">Verleng uw wens</th>
+	  	    				<th class="col col-md-1">Uw wens vervuld</th>
 	  	    			</tr>
 					{foreach from=$wishesArray item=wish}
 						<tr>
@@ -117,7 +117,15 @@
 							{if $wish->wishstatus == "Geaccepteerd" && $wish->isExtendable == true}
 								<form action="Controller/Handlers/WishesHandler.php" method="post">
 									<input type="hidden" value="{$wish->wishid}" name="wish"/>
-									<td class=" class="col col-md-4" wishestableright"><button class="btn btn-info" name="extend" type="submit">Verleng</button></td>									
+									<td class=" class="col col-md-1" wishestableright"><button class="btn btn-info" name="extend" type="submit">Verleng</button></td>									
+								</form>
+							{else}
+								<td/>
+							{/if}
+							{if $wish->wishstatus == "Gematchd"}
+								<form action="Controller/Handlers/WishesHandler.php" method="post">
+									<input type="hidden" value="{$wish->wishid}" name="wishId"/>
+									<td class=" class="col col-md-1" wishestableright"><button class="btn btn-info" name="fulfill" type="submit">Vervuld</button></td>									
 								</form>
 							{else}
 								<td/>
@@ -128,12 +136,6 @@
 		    	</div>
 	    	{/if} 
 	    </div>
-	{else}
-		<div class="container content">
-	    <div class="panel-group">
-	        <div class="faqHeader"><i class="fa fa-exclamation"></i> Log in om deze pagina te gebruiken	</div>
-	    </div>
-	{/if}
    <!--=== End Content Part ===-->
 </div>
  

@@ -12,9 +12,10 @@ class MatchHandler{
 	public function __construct() {
 		include ('../../Model/matchModel.php');
 		session_start();
-		$matchModel = new TalentsModel();
+		$matchModel = new MatchModel();
 		$action;
-
+		
+		//send a possible match
 		if(isset ($_POST["talentId"]) && isset($_POST["wishId"])){	
 			if(isset($_POST["submit"])) {
 

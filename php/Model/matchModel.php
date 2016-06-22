@@ -9,7 +9,7 @@ include "talent.class.php";
 include "match.class.php";
 
 class MatchModel {
-	
+	//database connection
 	function getConnection() {
 		require_once 'DB/Database.class.php';
 		$db = Database::getInstance();
@@ -17,6 +17,7 @@ class MatchModel {
 		return $sql;
 	}
 	
+	// get all by admin accepted user talents of a user
 	function getAcceptedUserTalents($userName) {
 		$mysqli = $this->getConnection();
 		$talentArray = array();
@@ -56,6 +57,7 @@ class MatchModel {
 		}
 	}
 
+	// calculate all possible matches for one user
 	function getPossibleMatches($userName) {
 		$possibleMatches = Array();
 		$wishArray = $this->getAllWishes($userName);
@@ -102,6 +104,7 @@ class MatchModel {
 		return $possibleMatches;
 	}
 	
+	// get all wishes of one user to prevent a match with a talent and wish of the same user
 	function getAllWishes($userName) {
 		$mysqli = $this->getConnection();
 		$wishArray = array();
@@ -139,6 +142,7 @@ class MatchModel {
 		}
 	}
 	
+	//get all matches that are linked to the user
 	function getAllMatches($userName) {
 		$mysqli = $this->getConnection();
 		$matchArray = array();
@@ -168,7 +172,7 @@ class MatchModel {
 		}
 	}
 	
-	
+	// insert a match that is a possible match
 	function insertMatch($talentId,$wishId){
 		$mysqli = $this->getConnection();
 		$talentId = $mysqli->real_escape_string ( $talentId );
@@ -177,6 +181,7 @@ class MatchModel {
 		return $mysqli->query ( $query );
 	}
 	
+	// insert a match that is declined by the user so it will not appear again
 	function insertDeclinedMatch($talentId,$wishId){
 		$mysqli = $this->getConnection();
 		$talentId = $mysqli->real_escape_string ( $talentId );
