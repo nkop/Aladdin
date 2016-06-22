@@ -83,21 +83,28 @@
 			  	    	<div>
 			  	    		<table class="table table-striped">
 			  	    			<tr>
-			  	    				<th class="col col-md-6">Talent</th>
+			  	    				<th class="col col-md-5">Talent</th>
 			  	    				<th class="col col-md-4">Categori&euml;n</th>
-			  	    				<th class=" class="col col-md-2" wishestableright">Status</th>
+			  	    				<th class="col col-md-2">Status</th>
+			  	    				<th class="col col-md-1">Verwijderen</th>
 			  	    			</tr>
 							{foreach from=$talentArray item=talent}
 								<tr>
-									<td class="col-md-6"><p>{$talent->talentText}</p></td>
-									<td>
-										{foreach from=$talent->talentTags item=tag}
-											{$tag->tagName},
-										{/foreach}
-									</td>
-									<td class=" class="col col-md-2" wishestableright">{$talent->talentStatus}</td>
+									<form class="reg-page" action="Controller/Handlers/matchHandler.php" method="post">
+										<td class="col-md-5"><p>{$talent->talentText}</p></td>
+										<th class="col col-md-4">
+											{foreach from=$talent->talentTags item=tag}
+												{$tag->tagName},
+											{/foreach}
+										</td>
+										<td class=" class="col col-md-2" wishestableright">{$talent->talentStatus}</td>
+										<td class="center col-md-2">	
+											<input type="hidden" name="talentId" value={$talent->talentId}>			  
+						  					<button type="submit" name="decline" class="btn btn-danger"><i class="fa fa-close"></i></button>
+	             						</td>
+             						</form>
 								</tr>
-							{/foreach}
+							{/foreach}							
 							</table>
 				    	</div>	
 			    	{/if} 
