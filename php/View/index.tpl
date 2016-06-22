@@ -22,7 +22,7 @@
 			style="width: 100%; height: 500px; margin: 0px auto;">
 			
 			{foreach from=$banners item=banner}	
-				<div class="ls-slide" data-ls="slidedelay:4500;transition2d:{$slideEffect};">
+				<div class="ls-slide" data-ls="slidedelay:6000;transition2d:{$slideEffect};">
 				<img src="{$banner->afbeelding_groot|replace:'../../../':''}" class="ls-bg"
 					alt="Slide background" />
 					{if $banner->afbeelding_klein != ""} 

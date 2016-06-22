@@ -26,7 +26,7 @@
                             {foreach from=$newsItems item=newsItem}
                                 <li>
                                     <a href="index.php?controller=newsItem&action=News&id={$newsItem->nieuwsitemid}">{$newsItem->titel}</a>
-                                    <small>{$newsItem->datum}</small>
+                                    <small>{$newsItem->datum|date_format}</small>
                                 </li>		  
 							{/foreach}
                             </ul>

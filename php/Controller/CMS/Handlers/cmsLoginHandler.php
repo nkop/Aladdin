@@ -3,7 +3,6 @@
 include '../../../Model/CMS/AdminLoginModel.php';
 
 class CmsLoginHandler{
-
    private $username;
    private $password;
    

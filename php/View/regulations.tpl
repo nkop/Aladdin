@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Regelement | Aladdin</title>
+    <title>Hoe werkt Aladdin? | Aladdin</title>
     {include '../view/Assets/php/Head.tpl'}
 
 

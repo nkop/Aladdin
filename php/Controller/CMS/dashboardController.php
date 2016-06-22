@@ -8,6 +8,7 @@ class DashboardController{
 		if ($smarty == null) {
 			global $smarty;
 		}
+		
 		$smarty->display('../View/CMS/dashboard.tpl');
 	}
 }

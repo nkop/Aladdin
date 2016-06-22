@@ -17,7 +17,7 @@ class NewsItemModel{
 		$sql = $db->getConnection ();
 		$newsItems = array();
 		$query = "select n.nieuwsitemid,n.titel,n.tekst,n.thumbnail,n.isvideo,n.bannerfoto,n.datum,n.auteur, CONCAT(a.voornaam , ' ' , a.tussenvoegsel , ' ' , a.achternaam) as volledignaam from nieuwsitems n
-				  left join account a on n.auteur = a.accountid";
+				  left join account a on n.auteur = a.accountid order by datum DESC";
 		$result = $sql->query ( $query );
 		while ( $row = $result->fetch_object ( 'nieuwsItem' ) ) {
 			array_push ( $newsItems, $row );

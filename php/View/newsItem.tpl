@@ -36,7 +36,7 @@
                 <div class="news-v3-in">
                     <ul class="list-inline posted-info">
                         <li>By {$newsitem->volledignaam}</li>
-                        <li>Geplaatst op {$newsitem->datum}</li>
+                        <li>Geplaatst op {$newsitem->datum|date_format}</li>
                     </ul>
                     <h2>{$newsitem->titel}</h2>
                    	{$newsitem->tekst|replace:'<div>':'<p>'|replace:'</div>':'</p>'|escape:'htmlentitydecode'}

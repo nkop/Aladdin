@@ -34,45 +34,6 @@
 					<p>{$tekst.tekst}</p>				 
 				</div>
 				{/foreach}
-<!-- 				{foreach from=$abouts item=tekst} -->
-<!-- 				{if $tekst.tekstvakid == 2} -->
-<!-- 				<div class="col-md-6 col-sm-12"> -->
-<!-- 					<h2 class="heading-sm"> -->
-<!-- 						<a class="link-bg-icon" href="#"> <i -->
-<!-- 							class="icon-custom icon-sm rounded-x icon-bg-red fa fa-star"></i> -->
-<!-- 							<span>{$tekst.header}</span> -->
-<!-- 						</a> -->
-<!-- 					</h2> -->
-<!-- 					<p> -->
-<!-- 						{$tekst.tekstvaktekst} -->
-<!-- 					</p> -->
-<!-- 				</div> -->
-<!-- 				{/if} -->
-<!-- 				{/foreach} -->
-<!-- 				<div class="col-md-6 col-sm-12"> -->
-<!-- 				{foreach from=$abouts item=tekst} -->
-<!-- 				{if $tekst.tekstvakid == 3} -->
-<!-- 					<h2 class="heading-sm"> -->
-<!-- 						<a class="link-bg-icon" href="#"> <i -->
-<!-- 							class="icon-custom icon-sm rounded-x icon-bg-red fa fa-thumbs-up"></i> -->
-<!-- 							<span>{$tekst.header}</span> -->
-<!-- 						</a> -->
-<!-- 					</h2> -->
-<!-- 					<p>{$tekst.tekstvaktekst}</p> -->
-<!-- 				{/if} -->
-<!-- 				{/foreach} -->
-<!-- 				{foreach from=$abouts item=tekst} -->
-<!-- 				{if $tekst.tekstvakid == 4} -->
-<!-- 					<h2 class="heading-sm"> -->
-<!-- 						<a class="link-bg-icon" href="#"> <i -->
-<!-- 							class="icon-custom icon-sm rounded-x icon-bg-red fa fa-thumbs-down"></i> -->
-<!-- 							<span>{$tekst.header}</span> -->
-<!-- 						</a> -->
-<!-- 					</h2> -->
-<!-- 					<p>{$tekst.tekstvaktekst}</p> -->
-<!-- 				{/if} -->
-<!-- 				{/foreach}				 -->
-<!-- 				</div> -->
 
 
 			</div>
