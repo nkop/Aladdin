@@ -1,5 +1,9 @@
 <?php
-include_once '/../DB/Database.class.php';
+
+class aboutModel{
+		function __construct() {
+		   include_once '/../DB/Database.class.php';
+   	}
 
 function getAbouts() {
 	//haalt alle regels op
@@ -26,5 +30,6 @@ function saveAbout($rule, $exists) {
 		$query = "INSERT INTO `about` (tekst) VALUES ('$tekst')";
 		return $sql->query($query);
 	}
+}
 }
 
