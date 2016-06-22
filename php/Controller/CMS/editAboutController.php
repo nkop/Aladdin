@@ -3,6 +3,14 @@ class EditAboutController {
 	private $_about;
 	private $_smarty;
 	private $succesfull = 0;
+	private $model = null;
+	
+	
+	function __construct(){
+		include ('Model/CMS/about.class.php');
+		include ('Model/CMS/aboutModel.php');
+		$this->model = new aboutModel();
+	}
 	
 	function Success(){
 		$this->succesfull = 1;
@@ -14,11 +22,8 @@ class EditAboutController {
 		$this->Index(null);
 	}
 	
-	function getAll() {
-		include ('Model/CMS/about.class.php');
-		include ('Model/CMS/aboutModel.php');
-	
-		$this->_about = getAbouts();
+	function getAll() {	
+		$this->_about = $this->model->getAbouts();
 	}
 	function Index($smarty) {
 		if ($smarty == null) {

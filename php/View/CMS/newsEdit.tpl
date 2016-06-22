@@ -71,8 +71,8 @@
 						                            <div class="control-group hidden-phone">
 														<br> <label class="control-label" for="textarea2">Tekst: </label>
 					
-														<div class="controls newstextbox" style="width: 683px !important">
-															<textarea name="tekst" id="textarea2" rows="15" style="width: 100% !important" required>
+														<div class="controls newstextbox" style="width: 90% !important">
+															<textarea name="tekst" id="textarea2" rows="15" style="width: 90% !important" required>
 																{$newsItem->tekst}
 															</textarea>
 														</div>

@@ -157,7 +157,22 @@ class Database
 		}else{
 			return false;
 		}
+	}
 
+		function getWensIdByMatchId($matchid){
+		$query = "SELECT wensenid FROM `match` WHERE matchid = '$matchid' ";
+
+		$result = mysqli_query($this->_connection, $query);
+
+		return mysqli_fetch_object($result)->wensenid;
+		}
+
+		function getTalentIdByMatchId($matchid){
+		$query = "SELECT talentid FROM `match` WHERE matchid = '$matchid' ";
+		
+		$result = mysqli_query($this->_connection, $query);
+
+		return mysqli_fetch_object($result)->talentid;
 	}
 
 }

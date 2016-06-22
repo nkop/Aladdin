@@ -9,7 +9,17 @@
 <body>
 {include '../view/Assets/php/NavTop.tpl'}
 
-
+   <!--=== Breadcrumbs ===-->
+    <div class="breadcrumbs">
+        <div class="container">
+            <h1 class="pull-left">Regels</h1>
+            <ul class="pull-right breadcrumb">
+                <li><a href="index.php?controller=homepageController&action=index">Homepagina</a></li>
+                <li class="active">Regels</li>
+            </ul>
+        </div><!--/container-->
+    </div><!--/breadcrumbs-->
+    <!--=== End Breadcrumbs ===-->
 
 <div class="container content">
 	<div class="col-md-4 col-sm-6">

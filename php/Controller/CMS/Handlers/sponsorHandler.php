@@ -23,13 +23,19 @@ class sponsorHandler{
 				if (!preg_match('/(\.jpg|\.png|\.bmp)$/', $this->sponsor->afbeelding)) {
 					$this->sponsor->afbeelding = $_POST['afbeeldingHidden'];
 				}
-				if ($this->sponsor->sponsor_id > 0)
-				 	echo $this->model->editSponsor($this->sponsor);
-				else
-					 echo $this->model->InsertSponsor($this->sponsor);
+				if ($this->sponsor->sponsor_id > 0){
+				 	if( $this->model->editSponsor($this->sponsor))
+				 		header('Location: ../../../admin.php?controller=editSponsorItems&action=Succes');
+				 	else
+				 		header('Location: ../../../admin.php?controller=editSponsorItems&action=Error');
+				}
+				else{
+					if( $this->model->InsertSponsor($this->sponsor))
+						header('Location: ../../../admin.php?controller=editSponsorItems&action=Succes');
+					else
+						header('Location: ../../../admin.php?controller=editSponsorItems&action=Error');
+				}
 			}
-			
-			header('Location: ../../../admin.php?controller=editSponsorItems&action=Succes');
 	}
 	
 	//upload the image directly to the view directory

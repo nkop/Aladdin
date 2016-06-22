@@ -11,7 +11,10 @@ class EditNewsController{
 		include_once 'Model/CMS/newsItemModel.php';
 		$model = new NewsItemModel();
 		if (ctype_digit($id))// Number is integer
-			$this->newsItems = $model->DeleteNewsItem($id);
+			if ($this->newsItems = $model->DeleteNewsItem($id))
+				header('Location: admin.php?controller=editNewsItems&action=Succes');
+			else 
+				header('Location: ../../../admin.php?controller=editNewsItems&action=Error');
 		else
 			$this->Index(null);
 	}

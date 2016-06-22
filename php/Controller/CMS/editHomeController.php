@@ -3,10 +3,13 @@ class EditHomeController {
 	private $_teksten;
 	private $_smarty;
 	private $_succesfull;
+	private $model;
+	
 	function getAll() {
 		include ('Model/CMS/editPagesModel.php');
 		include ('Model/CMS/textarea.class.php');
-		$this->_teksten = getTekstvakken ( "homepage" );
+		$this->model = new EditPagesModel();
+		$this->_teksten = $this->model->getTekstvakken ( "homepage" );
 	}
 	function Index($smarty) {
 		if ($smarty == null) {
