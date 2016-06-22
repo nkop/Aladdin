@@ -4,18 +4,19 @@
 */
   include_once '../../../Model/CMS/bannerModel.php';
 class bannerHandler{
+	//declare
 	private $banner, $model, $afbeelding_groot, $afbeelding_klein;
 	
 	public function __construct() {
-      
 		$this->model = new bannerModel();
 		$this->banner = $this->model->NewBanner();
-        var_dump($_POST);
+		//handle the post
 			if (isset($_POST['bannerID'])&&
 					(sizeof($_FILES)>1 || isset($_POST['afbeelding_grootHidden']))){
 				$this->banner->banner_id = $_POST['bannerID'];
 				$this->banner->tekst = $_POST['tekst'];
 				
+				//check format's
 				$this->banner->afbeelding_groot = $this->SaveImage('afbeelding_groot');
 				if (!preg_match('/(\.jpg|\.png|\.bmp)$/', $this->banner->afbeelding_groot)) {
 					$this->banner->afbeelding_groot = $_POST['afbeelding_grootHidden'];
@@ -24,7 +25,7 @@ class bannerHandler{
 				if (!preg_match('/(\.jpg|\.png|\.bmp)$/', $this->banner->afbeelding_klein)) {
 					$this->banner->afbeelding_klein = $_POST['afbeelding_kleinHidden'];
 				}
-				$actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+				
 				if ($this->banner->banner_id > 0){
 				 	if( $this->model->EditBanner($this->banner))
 				 		header('Location: ../../../admin.php?controller=editBannerItems&action=Succes');

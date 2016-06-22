@@ -4,6 +4,7 @@
 */
 include_once '../../../Model/CMS/newsItemModel.php';
 class NewsItemHandler{
+	//declare
 	private $newsitem, $model, $thumbnailVideo, $newThumb;
 	
 	public function __construct() {
@@ -20,8 +21,8 @@ class NewsItemHandler{
 				if (!preg_match('/(\.jpg|\.png|\.bmp)$/', $this->newsitem->bannerfoto)) {
 					$this->newsitem->bannerfoto = $_POST['bannerPictureHidden'];
 				}
-				//todo: get auteur id from session
-				$this->newsitem->auteur = 68;
+				session_start();
+				$this->newsitem->auteur = $_SESSION['user_id'];
 				
 				if (strlen($_POST['thumbnailVideo'])>0) {
 					$this->newsitem->thumbnail = $_POST['thumbnailVideo'];

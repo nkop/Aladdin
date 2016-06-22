@@ -30,6 +30,9 @@ class UserLoginModel {
 			session_start();
 			$_SESSION['email']=$email;
 			$_SESSION['userName']=$gebruikersnaam;
+			$query = "select accountid from account where gebruikersnaam = '$gebruikersnaam'";
+			$result = $sql->query ( $query );
+			$_SESSION['user_id'] = $result->fetch_row()[0];
 			return 0;
 			
 		}

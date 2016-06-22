@@ -145,15 +145,12 @@ $(document).ready(function () {
     $("[name=save]").click(function() {
         console.log("hoi");
       checked = $("input[type=checkbox]:checked").length;
-
       if(!checked) {
         alert("Je moet minstens een tag aanvinken!");
         return false;
       }
-
     });
 });
-
 </script>
 
 </body>
