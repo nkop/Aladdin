@@ -100,39 +100,6 @@
 							{/foreach}
 							</table>
 				    	</div>	
-		        		<div class="col-lg-12 text-right">
-							<hr>
-		                </div>
-		                <div class="faqHeader"><i class="fa fa-check-circle"></i> Dit zijn uw mogelijke matches</div>
-
-				    	{if !empty($possibleMatchArray)}
-				  	    	<div>
-				  	    		<table class="table table-striped">
-				  	    			<tr>
-				  	    				<th class="col col-md-5">Uw talent</th>
-				  	    				<th class="col col-md-5">Wens</th>
-				  	    				<th class="col col-md-2">Keuze</th>
-				  	    			</tr>
-								{foreach from=$possibleMatchArray item=match}
-									<tr>
-										<form class="reg-page" action="Controller/Handlers/matchHandler.php" method="post">
-											<td class="col-md-5"><p >{$match->talent->talentText}</p></td>
-												<input type="hidden" name="talentId" value={$match->talent->talentId}>
-											<td class="col-md-5"><p>{$match->wish->wishtext}</p></td>
-												<input type="hidden" name="wishId" value={$match->wish->wishid}>
-							  				<td class="center col-md-2">
-							  					<button type="submit" name="submit" class="btn btn-success"><i class="fa fa-check"></i></button>
-							  
-							  					<button type="submit" name="decline" class="btn btn-danger"><i class="fa fa-close"></i></button>
-	                 						</td>
-                 						</form>
-									</tr>
-								{/foreach}
-								</table>
-					    	</div>			
-			    		{else} 
-			    			<div ><h3>Er zijn nog geen mogelijke matches</h3></div>
-			    		{/if}
 			    	{/if} 
 			    </div>
 			{else}

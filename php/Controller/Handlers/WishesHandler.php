@@ -10,7 +10,7 @@ $handler = new WishesHandler();
 class WishesHandler{
 	
 	public function __construct() {
-		include ('../../Model/wishesAndTalentsModel.php');
+		include ('../../Model/wishesModel.php');
 		session_start();
 		$wishModel = new WishesAndTalentsModel();
 	
