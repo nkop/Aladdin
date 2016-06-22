@@ -8,7 +8,7 @@ include "tag.class.php";
 include "talent.class.php";
 include "match.class.php";
 
-class WishesAndTalentsModel {
+class TalentsModel {
 	
 	function getConnection() {
 		require_once 'DB/Database.class.php';
