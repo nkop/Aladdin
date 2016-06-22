@@ -9,62 +9,71 @@
 <body>
 {include '../view/Assets/php/NavTop.tpl'}
 
+   <!--=== Breadcrumbs ===-->
+    <div class="breadcrumbs">
+        <div class="container">
+            <h1 class="pull-left">Over Ons</h1>
+            <ul class="pull-right breadcrumb">
+                <li><a href="index.php?controller=homepageController&action=index">Homepagina</a></li>
+                <li class="active">Over Ons</li>
+            </ul>
+        </div><!--/container-->
+    </div><!--/breadcrumbs-->
+    <!--=== End Breadcrumbs ===-->
+
 <!-- Content Part -->
 <div class="container content">
-<h1 align="center">Over Ons</h1>
 <div class="row">
-				{foreach from=$result item=tekst}
-				{if $tekst.tekstvakid == 1}
+				{foreach from=$abouts item=tekst}
 				<div class="col-md-12">
 					<h2 class="heading-sm">
 						<a class="link-bg-icon" href="#"> <i
 							class="icon-custom icon-sm rounded-x icon-bg-red fa fa-heart"></i>
-							<span>{$tekst.header}</span>
+							<span>Aladdin</span>
 						</a>
 					</h2>
-					<p>{$tekst.tekstvaktekst}</p>				 
+					<p>{$tekst.tekst}</p>				 
 				</div>
-				{/if}
 				{/foreach}
-				{foreach from=$result item=tekst}
-				{if $tekst.tekstvakid == 2}
-				<div class="col-md-6 col-sm-12">
-					<h2 class="heading-sm">
-						<a class="link-bg-icon" href="#"> <i
-							class="icon-custom icon-sm rounded-x icon-bg-red fa fa-star"></i>
-							<span>{$tekst.header}</span>
-						</a>
-					</h2>
-					<p>
-						{$tekst.tekstvaktekst}
-					</p>
-				</div>
-				{/if}
-				{/foreach}
-				<div class="col-md-6 col-sm-12">
-				{foreach from=$result item=tekst}
-				{if $tekst.tekstvakid == 3}
-					<h2 class="heading-sm">
-						<a class="link-bg-icon" href="#"> <i
-							class="icon-custom icon-sm rounded-x icon-bg-red fa fa-thumbs-up"></i>
-							<span>{$tekst.header}</span>
-						</a>
-					</h2>
-					<p>{$tekst.tekstvaktekst}</p>
-				{/if}
-				{/foreach}
-				{foreach from=$result item=tekst}
-				{if $tekst.tekstvakid == 4}
-					<h2 class="heading-sm">
-						<a class="link-bg-icon" href="#"> <i
-							class="icon-custom icon-sm rounded-x icon-bg-red fa fa-thumbs-down"></i>
-							<span>{$tekst.header}</span>
-						</a>
-					</h2>
-					<p>{$tekst.tekstvaktekst}</p>
-				{/if}
-				{/foreach}				
-				</div>
+<!-- 				{foreach from=$abouts item=tekst} -->
+<!-- 				{if $tekst.tekstvakid == 2} -->
+<!-- 				<div class="col-md-6 col-sm-12"> -->
+<!-- 					<h2 class="heading-sm"> -->
+<!-- 						<a class="link-bg-icon" href="#"> <i -->
+<!-- 							class="icon-custom icon-sm rounded-x icon-bg-red fa fa-star"></i> -->
+<!-- 							<span>{$tekst.header}</span> -->
+<!-- 						</a> -->
+<!-- 					</h2> -->
+<!-- 					<p> -->
+<!-- 						{$tekst.tekstvaktekst} -->
+<!-- 					</p> -->
+<!-- 				</div> -->
+<!-- 				{/if} -->
+<!-- 				{/foreach} -->
+<!-- 				<div class="col-md-6 col-sm-12"> -->
+<!-- 				{foreach from=$abouts item=tekst} -->
+<!-- 				{if $tekst.tekstvakid == 3} -->
+<!-- 					<h2 class="heading-sm"> -->
+<!-- 						<a class="link-bg-icon" href="#"> <i -->
+<!-- 							class="icon-custom icon-sm rounded-x icon-bg-red fa fa-thumbs-up"></i> -->
+<!-- 							<span>{$tekst.header}</span> -->
+<!-- 						</a> -->
+<!-- 					</h2> -->
+<!-- 					<p>{$tekst.tekstvaktekst}</p> -->
+<!-- 				{/if} -->
+<!-- 				{/foreach} -->
+<!-- 				{foreach from=$abouts item=tekst} -->
+<!-- 				{if $tekst.tekstvakid == 4} -->
+<!-- 					<h2 class="heading-sm"> -->
+<!-- 						<a class="link-bg-icon" href="#"> <i -->
+<!-- 							class="icon-custom icon-sm rounded-x icon-bg-red fa fa-thumbs-down"></i> -->
+<!-- 							<span>{$tekst.header}</span> -->
+<!-- 						</a> -->
+<!-- 					</h2> -->
+<!-- 					<p>{$tekst.tekstvaktekst}</p> -->
+<!-- 				{/if} -->
+<!-- 				{/foreach}				 -->
+<!-- 				</div> -->
 
 
 			</div>

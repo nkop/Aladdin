@@ -1,5 +1,6 @@
 <?php
 include ("Database.class.php");
+include_once '/../password.php';
 
 class updatePasswordModel{
 

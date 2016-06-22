@@ -28,8 +28,20 @@ class homepageModel{
 		}
 		return $sponsoren;
 	}
+
+	function getCount($tablename){
+		//get all banners
+		$db = Database::getInstance ();
+		$sql = $db->getConnection ();
+		$banners = array();
+		$query = "SELECT count(*) FROM ".$tablename;
+		$result = $sql->query ( $query );
+		$row = $result->fetch_row();
+		
+		return $row[0];
+	}
 	
-	function GetBanners(){
+	function getBanners(){
 		//get all banners
 		$db = Database::getInstance ();
 		$sql = $db->getConnection ();

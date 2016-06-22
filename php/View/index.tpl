@@ -119,19 +119,17 @@
 							<p>Aladdin wil dat iedereen op de wereld een beetje gelukkiger word.</p>
 							<ul class="list-unstyled margin-bottom-20">
 								<li><i class="fa fa-check color-green"></i> Facebook zonder face maar met een hart.</li>
-								<li><i class="fa fa-check color-green"></i> .</li>
-								<li><i class="fa fa-check color-green"></i> consectetur
-									adipiscing elit.</li>
-								<li><i class="fa fa-check color-green"></i> consectetur
-									adipiscing elit.</li>
+								<li><i class="fa fa-check color-green"></i> Laat uw wensen in vervulling brengen.</li>
+								<li><i class="fa fa-check color-green"></i> Help andere mensen met het vervullen van hun wens.</li>
+								<li><i class="fa fa-check color-green"></i> Maak iedereen wat gelukkiger!</li>
 							</ul>
 							<button type="button" class="btn btn-danger grow">Meld je nu aan!</button><br>
 							</div>
 					</div>
 					<br />
 					<blockquote class="hero-unify">
-						<p>Alladin is een leuk initiatief en heeft veel potentie.</p>
-						<small>Karel</small>
+						<p>Aladdin is een leuk initiatief en een erg leuk project om aan gewerkt te hebben!</p>
+						<small>Studenten groep D Avans</small>
 					</blockquote>
 				</div>
 				<div class="col-md-5 col-sm-12">
@@ -163,17 +161,17 @@
 				<div class="row">
 					<div class="col-md-4 col-xs-6 md-margin-bottom-50">
 						<div class="features">
-							<span class="counter">5867</span> <span class="features-info">Gebruikers</span>
+							<span class="counter">{$userCount}</span> <span class="features-info">Gebruikers</span>
 						</div>
 					</div>
 					<div class="col-md-4 col-xs-6 md-margin-bottom-50">
 						<div class="features">
-							<span class="counter">7169</span> <span class="features-info">Wensen</span>
+							<span class="counter">{$wishCount}</span> <span class="features-info">Wensen</span>
 						</div>
 					</div>
 					<div class="col-md-4 col-xs-6">
 						<div class="features">
-							<span class="counter">19146</span> <span class="features-info">Talenten</span>
+							<span class="counter">{$talentCount}</span> <span class="features-info">Talenten</span>
 						</div>
 					</div>
 				</div>

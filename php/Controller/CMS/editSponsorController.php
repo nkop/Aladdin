@@ -14,10 +14,11 @@ class EditSponsorController{
     }
 	
 	function Delete($id){
-		
-		
 		if (ctype_digit($id))// Number is integer
-			$this->sponsor = $this->model->DeleteSponsor($id);
+			if ($this->sponsor = $this->model->DeleteSponsor($id))
+				header('Location: admin.php?controller=editSponsorItems&action=Succes');
+			else 
+				header('Location: ../../../admin.php?controller=editSponsorItems&action=Error');
 		else
 			$this->Index(null);
 	}

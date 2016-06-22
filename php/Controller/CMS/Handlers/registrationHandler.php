@@ -36,7 +36,6 @@ class RegistrationHandler{
 		{
 			$db = Database::getInstance();
 			// ** DECLINE **
-						//Execute some query's
 			$naam = $db->getNameByID($_POST['accountID']);
 			$email = $db->getEmailByID($_POST['accountID']);
 			

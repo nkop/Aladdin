@@ -23,16 +23,16 @@
         </div>
     </div><!--/breadcrumbs-->
     <!--=== End Breadcrumbs ===-->
+    
     <a href="https://www.google.nl/maps/place/Avans+Hogeschool/@51.6851577,5.2912576,14.5z/data=!4m2!3m1!1s0x47c6ee88559eae79:0x5d7ba4e903f8f190">
-      <img class="full_width" src="/Images/map.JPG" />
+      <img class="full_width" src="View/Images/map.JPG" />
 	</a>
     <!--=== Content Part ===-->
     <div class="container content">
     	<div class="row margin-bottom-30">
     		<div class="col-md-9 mb-margin-bottom-30">
                 <div class="headline"><h2>Contact formulier</h2></div>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas feugiat. Et harum quidem rerum facilis est et expedita distinctio lorem ipsum dolor sit amet, consectetur adipiscing elit landitiis.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna. Sed et quam lacus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas feugiat.</p><br>
+                <p>Neem hier contact met ons op.</p><br>
                 {if $ContactError}
                     <div class='alert alert-danger text-center'>
                       <strong>Error!</strong> Er is iets fout gegaan! Controleer uw internet verbinding!
@@ -60,15 +60,10 @@
 					<div class="form-group">
 						<label for="message" class="col-sm-2 control-label">Bericht</label>
 						<div class="col-sm-10">
-							<textarea class="form-control" rows="4" name="message" required="required"></textarea>
+							<textarea class="form-control" rows="4" name="message" required="required" placeholder="Uw bericht"></textarea>
 						</div>
 					</div>
-					<div class="form-group">
-						<label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
-						<div class="col-sm-10">
-							<input type="text" class="form-control" id="human" name="human" placeholder="Antwoord" required="required">
-						</div>
-					</div>
+
 					<div class="form-group">
 						<div class="col-sm-10 col-sm-offset-2">
 							<input id="submit" name="submit" type="submit" value="Verstuur" class="btn-u">
@@ -86,20 +81,14 @@
             	<!-- Contacts -->
                 <div class="headline"><h2>Contact</h2></div>
                 <ul class="list-unstyled who margin-bottom-30">
-                    <li><a href="#"><i class="fa fa-home"></i>25, Lorem Lis Street, Orange, Vught</a></li>
-                    <li><a href="#"><i class="fa fa-envelope"></i>info@anybiz.com</a></li>
-                    <li><a href="#"><i class="fa fa-phone"></i>800 123 3456</a></li>
-                    <li><a href="#"><i class="fa fa-globe"></i>http://www.aladdin.com</a></li>
+                    <li><a href="#"><i class="fa fa-home"></i>...</a></li>
+                    <li><a href="mailto:aladdingroepdcontact@gmail.com"><i class="fa fa-envelope"></i>aladdingroepdcontact@gmail.com</a></li>
+                    <li><a href="#"><i class="fa fa-phone"></i>...</a></li>
+                    <li><a href="http://student.aii.avans.nl/ICT/nkop1"><i class="fa fa-globe"></i>Aladdin</a></li>
                 </ul>
 
             	<!-- Why we are? -->
-                <div class="headline"><h2>Wat zijn we:</h2></div>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</p>
-                <ul class="list-unstyled">
-                	<li><i class="fa fa-check color-green"></i> Odio dignissimos ducimus</li>
-                	<li><i class="fa fa-check color-green"></i> Blanditiis praesentium volup</li>
-                	<li><i class="fa fa-check color-green"></i> Eos et accusamus</li>
-                </ul>
+               
             </div><!--/col-md-3-->
         </div><!--/row-->
     </div><!--/container-->

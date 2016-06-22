@@ -1,17 +1,21 @@
 <?php
+/*
+ * @author Wouter van de Ven
+ */
 class RegistrationController{
 	private $succesfull = 0;
 	
+	// ** ACCEPT **
 	function Accept(){
 		$this->succesfull = 1;
 		$this->Index(null);
 	}
 	
+	// ** DECLINE **
 	function Decline(){
 		$this->succesfull = 2;
 		$this->Index(null);
 	}
-	
 	
 	function Index($smarty)
 	{

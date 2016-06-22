@@ -1,5 +1,7 @@
 <?php
-//include "Model/talent.class.php";
+/*
+ * @author Wouter van de Ven
+ */
 include_once '/../DB/Database.class.php';
 
 class TalentsModel{
@@ -18,6 +20,7 @@ class TalentsModel{
 		return $talentarray;
 	}
 	
+	// ** ACCEPT **
 	function acceptTalent($talentID)
 	{
 		$db = Database::getInstance();
@@ -29,6 +32,7 @@ class TalentsModel{
 		$mysqli->query($sql_query);
 	}
 	
+	// ** DELINE **
 	function declineTalent($talentID)
 	{
 		$db = Database::getInstance();
@@ -40,6 +44,7 @@ class TalentsModel{
 		$mysqli->query($sql_query);
 	}
 	
+	// function to get tags for a talent
 	function getTags($talentID)
 	{
 		$db = Database::getInstance ();
@@ -56,6 +61,7 @@ class TalentsModel{
 			}			
 		}	
 		
+		// return an array with tags
 		return $tagArray;
 	}
 }

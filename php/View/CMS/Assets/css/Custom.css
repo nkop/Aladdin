@@ -6,5 +6,6 @@
 }
 
 #nieuws .nicEdit-main{
-	width: 100% !important;
+	width: 99% !important;
+    min-height: 100% !important;
 }

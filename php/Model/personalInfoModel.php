@@ -13,6 +13,7 @@ class PersonalInfoModel {
 		$sql_query = "select * from account where email = '$username'";
 		$result = $mysqli->query ( $sql_query );
 		while ( $row = $result->fetch_object () ) {
+			// assign personal info to the loggin in user
 			$user->accountid = $row->accountid;
 			$user->firstname = $row->voornaam;
 			$user->middlename = $row->tussenvoegsel;
@@ -45,6 +46,7 @@ class PersonalInfoModel {
 			$safeCity = mysqli_real_escape_string ( $mysqli, $city );
 			$safeEmail = mysqli_real_escape_string ( $mysqli, $email );
 			
+			// *** UPDATE ***
 			if ($safeAccountID > 0) {
 				$sql_query = "UPDATE `account` SET `accountid` = '" . $safeAccountID . "', `voornaam` = '" . $safeFirstname . "', `achternaam` = '" . $safeLastname . "', `tussenvoegsel` = '" . $safeMiddlename . "', `postcode` = '" . $safeZipcode . "', `huisnummer` = '" . $safeHousenumber . "', `straatnaam` = '" . $safeStreet . "', `woonplaats` = '" . $safeCity . "', `email` = '" . $safeEmail . "' WHERE `accountid` = " . $safeAccountID . ";";
 			}
