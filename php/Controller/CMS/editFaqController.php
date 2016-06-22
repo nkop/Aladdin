@@ -4,13 +4,16 @@ class EditFaqController {
 	private $_faqs;
 	private $_smarty;
 	private $_succesfull;
-	function getAll() {
+	private $_model;
+	function __construct(){
 		include ('Model/CMS/faq.class.php');
 		include ('Model/CMS/faqcategorie.class.php');
 		include ('Model/CMS/faqModel.php');
-		
-		$this->_categorieen = getCategories ();
-		$this->_faqs = getFaqs ();
+		$this->_model = new FaqModel();
+	}
+	function getAll() {		
+		$this->_categorieen = $this->_model->getCategories ();
+		$this->_faqs = $this->_model->getFaqs ();
 	}
 	function Index($smarty) {
 		if ($smarty == null) {
