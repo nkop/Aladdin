@@ -17,11 +17,10 @@
     <!--=== Breadcrumbs ===-->
     <div class="breadcrumbs">
         <div class="container">
-            <h1 class="pull-left">Registration</h1>
+            <h1 class="pull-left">Registratie</h1>
             <ul class="pull-right breadcrumb">
                 <li><a href="homepageController.php">Home</a></li>
-                <li><a href="">Pages</a></li>
-                <li class="active">Registration</li>
+                <li class="active">Registratie</li>
             </ul>
         </div><!--/container-->
     </div><!--/breadcrumbs-->

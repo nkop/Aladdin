@@ -24,15 +24,7 @@
 					</p>
 				</div>
 			</noscript>
-						{if $Succesfull == 1}
-		                <div class="alert alert-success">
-						  <strong>Succes!</strong> Het tekstvak is succesvol aangepast!
-						</div>
-		                {elseif $Succesfull == 2}
-		                <div class="alert alert-danger">
-						  <strong>Error!</strong> Er is iets misgegaan, controleer de velden en probeer het later opnieuw.
-						</div>
-		                {/if}
+
 			<!-- start: Content -->
 			<div id="content" class="span10">
 
@@ -40,6 +32,16 @@
 				{include 'View/CMS/Assets/breadcrumb.tpl'}
 
 				<div class="row-fluid sortable" id="naampje">
+				
+						{if $Succesfull == 1}
+		                <div class="alert alert-success">
+						  <strong>Succes!</strong> De gegevens zijn succesvol opgeslagen.
+						</div>
+		                {elseif $Succesfull == 2}
+		                <div class="alert alert-danger">
+						  <strong>Error!</strong> De gegevens zijn niet succesvol opgeslagen, controlleer de gegevens en probeer het later opnieuw.
+						</div>
+		                {/if}
 
 					<div id="faqq" class="box span12">
 						{foreach from=$categorieen item=categorie}

@@ -47,7 +47,7 @@
                 <div class="news-v3">
                     <ul class="list-inline posted-info">
                         <li>By {$newsItem->volledignaam}</li>
-                        <li>geplaatst op {$newsItem->datum}</li>
+                        <li>geplaatst op {$newsItem->datum|date_format}</li>
                     </ul>
                     <h2><a href="index.php?controller=newsItem&action=News&id={$newsItem->nieuwsitemid}">{$newsItem->titel}</a></h2>
                     {$newsItem->tekst|strip_tags|truncate:300:"...":true}

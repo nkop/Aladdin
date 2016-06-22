@@ -30,4 +30,4 @@ if (isset ( $_POST ["resetpageabout"] )) {
 }
 	}
 }
-$editAboutHandler = new EditAboutController();
+$editAboutHandler = new editAboutHandler();
