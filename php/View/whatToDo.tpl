@@ -30,9 +30,10 @@
 				<div class="heading heading-v1 margin-bottom-40">
 					<h2>Hoe Werkt Aladdin?</h2>
 					<p>Welkom op Aladdin, in het ondestaande stappenplan kunt u
-						precies zien hoe u de site kan gebruiken.</p>
+						precies zien hoe u de site kan gebruiken. Ook kunt u direct de handleiding downloaden op met de groene knop onderaan de pagina.</p>
 					<img src="view/images/proces.png" alt="het proces" />
 				</div>
+<a class="btn btn-success grow" href="./View/Assets/plugins/Handleiding.pdf" download>Download de handleiding!</a>
 			</div>
 
 		</div>

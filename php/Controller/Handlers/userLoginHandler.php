@@ -25,7 +25,7 @@ class UserLoginHandler{
 		//create the model object and try to login
 		$loginModel = new UserLoginModel();
 		if($loginModel->login($this->username,$this->password) == 0){
-			header('Location: ../../index.php?controller=personalInfo&action=Index');
+			header('Location: ../../index.php?controller=whatToDo&action=Index');
 		}
 		
 		else if ($loginModel->login($this->username,$this->password) == 1){
