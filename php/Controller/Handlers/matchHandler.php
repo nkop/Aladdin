@@ -10,7 +10,7 @@ $handler = new MatchHandler();
 class MatchHandler{
 	
 	public function __construct() {
-		include ('../../Model/wishesAndTalentsModel.php');
+		include ('../../Model/matchModel.php');
 		session_start();
 		$matchModel = new WishesAndTalentsModel();
 		$action;
@@ -25,10 +25,10 @@ class MatchHandler{
 			}
 		}
 		else{
-			header("Location: ../../index.php?controller=talents&action=index&pass=false");
+			header("Location: ../../index.php?controller=matches&action=index&pass=false");
 			exit();
 		}
-		header("Location: ../../index.php?controller=talents&action=index&pass=true");
+		header("Location: ../../index.php?controller=matches&action=index&pass=true");
 		exit();
 	}
 }

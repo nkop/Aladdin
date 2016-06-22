@@ -27,8 +27,7 @@
 				{foreach from=$abouts item=tekst}
 				<div class="col-md-12">
 					<h2 class="heading-sm">
-						<a class="link-bg-icon" href="#"> <i
-							class="icon-custom icon-sm rounded-x icon-bg-red fa fa-heart"></i>
+					 <i	class="icon-custom icon-sm rounded-x icon-bg-red fa fa-heart"></i>
 							<span>Aladdin</span>
 						</a>
 					</h2>

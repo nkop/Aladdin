@@ -7,7 +7,7 @@
 class WishesController {
 	
 	function index() {
-		require_once 'Model/wishesAndTalentsModel.php';
+		require_once 'Model/wishesModel.php';
 		global $smarty;
 		$wishesModel = new WishesAndTalentsModel();
 		
