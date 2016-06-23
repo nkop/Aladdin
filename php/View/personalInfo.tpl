@@ -135,12 +135,12 @@
 								class="form-control margin-bottom-20"
 								placeholder="Bevestig nieuw wachtwoord"
 								name="newPasswordConfirm" minlength="6" required />
+								<div class="modal-footer">
+									<button type="submit" class="btn-u">Opslaan</button>
+								</div>
 						</form>
 					</div>
 
-					<div class="modal-footer">
-						<button type="submit" class="btn-u">Opslaan</button>
-					</div>
 
 					<form action=""></form>
 				</div>
