@@ -32,7 +32,7 @@ file='../View/Assets/php/Head.tpl'}
 
 		<!--=== Content Part ===-->
 		<div class="minimalheight">
-			{if ($text =='Logout')}
+
 			<div class="container content">
 				<div class="panel-group">
 					{if (isset($pass))} {if $pass == 'true'}
@@ -58,8 +58,7 @@ file='../View/Assets/php/Head.tpl'}
 							</tr>
 							{foreach from=$possibleMatchArray item=match}
 							<tr>
-								<form class="reg-page"
-									action="Controller/Handlers/matchHandler.php" method="post">
+								<form class="reg-page" action="Controller/Handlers/matchHandler.php" method="post">
 									<td class="col-md-5"><p>{$match->talent->talentText}</p></td>
 									<input type="hidden" name="talentId" value={$match->talent->talentId}>
 									<td class="col-md-5"><p>{$match->wish->wishtext}</p></td> <input
@@ -84,15 +83,6 @@ file='../View/Assets/php/Head.tpl'}
 					</div>
 					{/if}
 				</div>
-				{else}
-				<div class="container content">
-					<div class="panel-group">
-						<div class="faqHeader">
-							<i class="fa fa-exclamation"></i> Log in om deze pagina te
-							gebruiken
-						</div>
-					</div>
-					{/if}
 				</div>
 				<!--=== End Content Part ===-->
 			</div>

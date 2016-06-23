@@ -7,6 +7,11 @@ class AccessHandler{
       return true;
     }
   }
+  function CheckLoginUser() {
+  	if(isset($_SESSION['userName'])){
+  		return true;
+  	} 	
+  }
 }
 
 ?>
