@@ -93,12 +93,8 @@
 						<h2>Contact</h2>
 					</div>
 					<ul class="list-unstyled who margin-bottom-30">
-						<li><a href="#"><i class="fa fa-home"></i>...</a></li>
 						<li><a href="mailto:aladdingroepdcontact@gmail.com"><i
 								class="fa fa-envelope"></i>aladdingroepdcontact@gmail.com</a></li>
-						<li><a href="#"><i class="fa fa-phone"></i>...</a></li>
-						<li><a href="http://student.aii.avans.nl/ICT/nkop1"><i
-								class="fa fa-globe"></i>Aladdin</a></li>
 					</ul>
 
 					<!-- Why we are? -->
